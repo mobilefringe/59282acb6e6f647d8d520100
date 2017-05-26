@@ -41,6 +41,12 @@ img {
     height: 100px;
     background: #B8B8B8;
 }
+.header_social {
+    .header_social_icon {
+        margin: 0 1.5;
+        width: 20px;
+    }
+}
 /* DESKTOP NAV */
 .menu_items_container {
     margin: 0 auto;
