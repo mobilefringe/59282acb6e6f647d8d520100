@@ -12,7 +12,7 @@ function init(e) {
             $("#s_sub_"+ id ).hide();               
         } else {
             if ($(".submenu_bar").is(":visible")){
-                $(".main_menu li").css({"background":"white", "color":"#4d4d4f"});
+                $(".dd_menu").css({"background":"white", "color":"#4d4d4f"});
                 $(".triangle_down").hide();
                 $("#triangle_"+id).show();
                 $(".dd_submenu").hide();
