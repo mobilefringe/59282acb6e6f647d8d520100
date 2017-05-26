@@ -109,7 +109,10 @@ footer {
         color: inherit;
     }
 }
-
+.footer_logo {
+    margin: 0 auto;
+    width: 200px;
+}
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   
