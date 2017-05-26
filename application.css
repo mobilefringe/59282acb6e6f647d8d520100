@@ -96,7 +96,8 @@ body{
 
 /* FOOTER */
 footer {
-    background: #ddd;
+    padding: 20px 0;
+    background: #6F6F6F;
     text-align: center;
 }
 
