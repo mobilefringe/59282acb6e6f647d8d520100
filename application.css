@@ -48,7 +48,10 @@ img {
     width: 20px;
 }
 
-
+.site_logo {
+    margin: 30px auto;
+    width: 328px;
+}
 /* DESKTOP NAV */
 .top_nav{
     border-top:2px solid #eee;
