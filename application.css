@@ -101,12 +101,9 @@ header {
 }
 
 .dropdown-menu2 li{
-    border-top: 2px solid #eee;
     padding: 5px 0;
     font-size: 19px;
-    color: #4A4A4A;
-    border-left: 2px solid #eee;
-    border-right: 2px solid #eee;
+    color: #FFF;
 }
 .dropdown-menu2>li>a:focus, .dropdown-menu2>li>a:hover{
     color:#E9B50A;
