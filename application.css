@@ -39,6 +39,8 @@ img {
 /* DESKTOP NAV */
 .menu_items_container {
     margin: 0 auto;
+    width: 100%;
+    height: 30px;
     position: relative;
 }
 .main_menu {
