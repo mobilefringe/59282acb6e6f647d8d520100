@@ -17,7 +17,7 @@ function init(e) {
                 $("#triangle_"+id).show();
                 $(".dd_submenu").hide();
                 $("#s_sub_"+id).show();
-                $("#m"+id).css({"background":"#7b929d", "color":"white"});
+                // $("#m"+id).css({"background":"#7b929d", "color":"white"});
             } else {
                 $("#triangle_"+id).show();
                 $("#s_sub_"+id).show();
