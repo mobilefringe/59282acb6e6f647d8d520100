@@ -62,8 +62,7 @@ header {
 }
 
 .top_nav_menu {
-    margin: 5px 12px;
-    padding: 0 22px;
+    margin: 0 22px;
     width: 130px;
     display: inline-block;
     position: relative;
