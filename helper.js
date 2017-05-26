@@ -22,7 +22,7 @@ function init(e) {
                 $("#triangle_"+id).show();
                 $("#s_sub_"+id).show();
                 $(".submenu_bar").slideDown()
-                $("#m"+id).css({"background":"#7b929d", "color":"white"});
+                // $("#m"+id).css({"background":"#7b929d", "color":"white"});
                 
             }
             
