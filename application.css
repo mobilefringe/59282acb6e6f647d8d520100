@@ -53,6 +53,9 @@ img {
     width: 328px;
 }
 /* DESKTOP NAV */
+header {
+    background: red;
+}
 .top_nav{
     text-align: center;
     margin-bottom: 8px;
@@ -70,7 +73,6 @@ img {
 
 .top_nav_menu a{
     color: #FFF;
-    font-weight:400;
 }
 
 .dropdown-menu2{
