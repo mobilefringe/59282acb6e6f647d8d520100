@@ -58,14 +58,18 @@ img {
     margin-bottom: 8px;
 }
 
-.top_nav_menu{
-    font-family: brandon;
-    font-size: 18px;
-    color: #4A4A4A;
-    line-height: 26px;
-    display: inline-block;
+.top_nav_menu {
     margin: 5px 12px;
-    position:relative;
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    
+    line-height: 26px;
+    color: #FFF;
+    text-transform: uppercase;
+    
+    
+    
 }
 
 .top_nav_menu a{
