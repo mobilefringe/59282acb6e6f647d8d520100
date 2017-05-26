@@ -125,7 +125,9 @@ footer {
         width: 25px;
     }
 }
-
+.footer_conduct, .footer_terms {
+    font-size: 14px;
+}
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
