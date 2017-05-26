@@ -96,58 +96,58 @@
                     </li>
                 </ul>            
             </div>
-            <div class="submenu_container">
-                <div class="submenu_bar">
-                    <div class="dd_submenu" id="s_sub_1">
-                        <ul>
-                            <li><a href="/stores">Store Directory</a></li>              
-                            <li><a href="/map">Interactive Map</a></li>
-                        </ul>
-                    </div>
-                    <div class="dd_submenu" id="s_sub_2">
-                        <ul>
-                            <li><a href="">hours</a></li>
-                            <li><a href="">getting here</a></li>
-                            <li><a href="">parking</a></li>
-                            <li><a href="">guest services</a></li>
-                            <li><a href="">visitor info</a></li>
-                        </ul>
-                    </div>
-                    <div class="dd_submenu" id="s_sub_3">
-                        <ul>
-                            <li><a href="">Weekly Promos</a></li>
-                        </ul>
-                    </div>
-                    <div class="dd_submenu" id="s_sub_4">
-                        <ul>
-                            <li><a href="">events</a></li>
-                        </ul>
-                    </div>
-                    <div class="dd_submenu" id="s_sub_5">
-                        <ul>              
-                            <li><a href="">Video</a></li>
-                            <li><a href="">Enewsletter</a></li>
-                        </ul>
-                    </div>
-                    <div class="dd_submenu" id="s_sub_6">
-                        <ul>
-                            <li><a href="">Gift Cards</a></li>
-                            <li><a href="">Jobs</a></li>
-                            <li><a href="">Leasing</a> </li>
-                            <li><a href="">Sustain</a></li>
-                            <li><a href="">Community</a></li>
-                            <li><a href="">Security</a></li>
-                            <li><a href="">news</a></li>
-                            <li><a href="">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="dd_submenu" id="s_sub_7">
-                        <ul>
-                            <li><a href="">Gift Cards</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="submenu_container">-->
+            <!--    <div class="submenu_bar">-->
+            <!--        <div class="dd_submenu" id="s_sub_1">-->
+            <!--            <ul>-->
+            <!--                <li><a href="/stores">Store Directory</a></li>              -->
+            <!--                <li><a href="/map">Interactive Map</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="dd_submenu" id="s_sub_2">-->
+            <!--            <ul>-->
+            <!--                <li><a href="">hours</a></li>-->
+            <!--                <li><a href="">getting here</a></li>-->
+            <!--                <li><a href="">parking</a></li>-->
+            <!--                <li><a href="">guest services</a></li>-->
+            <!--                <li><a href="">visitor info</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="dd_submenu" id="s_sub_3">-->
+            <!--            <ul>-->
+            <!--                <li><a href="">Weekly Promos</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="dd_submenu" id="s_sub_4">-->
+            <!--            <ul>-->
+            <!--                <li><a href="">events</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="dd_submenu" id="s_sub_5">-->
+            <!--            <ul>              -->
+            <!--                <li><a href="">Video</a></li>-->
+            <!--                <li><a href="">Enewsletter</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="dd_submenu" id="s_sub_6">-->
+            <!--            <ul>-->
+            <!--                <li><a href="">Gift Cards</a></li>-->
+            <!--                <li><a href="">Jobs</a></li>-->
+            <!--                <li><a href="">Leasing</a> </li>-->
+            <!--                <li><a href="">Sustain</a></li>-->
+            <!--                <li><a href="">Community</a></li>-->
+            <!--                <li><a href="">Security</a></li>-->
+            <!--                <li><a href="">news</a></li>-->
+            <!--                <li><a href="">Contact Us</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="dd_submenu" id="s_sub_7">-->
+            <!--            <ul>-->
+            <!--                <li><a href="">Gift Cards</a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
         </div>
     </header>
     <section class="site_container yield">
