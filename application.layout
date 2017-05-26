@@ -156,19 +156,21 @@
         {{yield}}
     </section>
     <footer>
-        <div class="row">
-            <img src="" /> <!--logo-->
-        </div>
-        <div class="row">
-            <p>The Gateway is located in the heart of Salt Lake City Utah</p>
-            <p>400 West, between 200 South & South Temple.</p>
-            <p>801-456-0000</p>
-        </div>
-        <div class="row">
-            <!-- social icons -->
-        </div>
-        <div class="row">
-            Powered by <a href="//www.mobilefringe.com" target="_blank">Mobile Fringe</a> | <a href="">Terms & Conditions</a>
+        <div class="site_container">
+            <div class="row">
+                <img src="" /> <!--logo-->
+            </div>
+            <div class="row">
+                <p>The Gateway is located in the heart of Salt Lake City Utah</p>
+                <p>400 West, between 200 South & South Temple.</p>
+                <p>801-456-0000</p>
+            </div>
+            <div class="row">
+                <!-- social icons -->
+            </div>
+            <div class="row">
+                Powered by <a href="//www.mobilefringe.com" target="_blank">Mobile Fringe</a> | <a href="">Terms & Conditions</a>
+            </div>
         </div>
     </footer>
 </body>
