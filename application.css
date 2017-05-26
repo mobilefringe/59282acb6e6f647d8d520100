@@ -102,6 +102,9 @@ footer {
     p {
         color: #FFF;
     }
+    a {
+        color: inherit;
+    }
 }
 
 /* Small devices (tablets, 768px and down) */
