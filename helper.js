@@ -1,4 +1,4 @@
-function init() {
+function init(e) {
     
     
     $(".dd_menu").click(function() {
