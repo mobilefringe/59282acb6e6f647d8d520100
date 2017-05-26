@@ -119,9 +119,13 @@ footer {
         color: inherit;
     }
 }
-.footer_social_icon {
-    width: 25px;
+.footer_social {
+    padding: 30px 0;
+    .footer_social_icon {
+        width: 25px;
+    }
 }
+
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
