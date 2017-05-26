@@ -76,99 +76,58 @@
                         <p>THE FOUNTAIN IS OFF TODAY</p>
                     </div> 
                     <div class="col-md-3">
-                        
+                        <span id="home_hours_container">
+                            <script id="home_hours_template" type="x-tmpl-mustache/text">
+                                <span class="open_now">{% raw %}{{open}}{% endraw %}</span> 
+                                <span class="opacity_hover">{% raw %}{{close}}{% endraw %}</span>
+                            </script>
+                        </span>    
                     </div> 
                 </div>
             </div>
         </div>
         <div class="site_container">
-            <div class="row">
+            <div class="site_logo">
+                <img src="" alt=""/>
                 
             </div>
-            <div class="menu_items_container">
-                <ul class="main_menu">
-                    <li class="dd_menu" id="1">
-                        Home
-                        <div class="triangle_down" id="triangle_1">&nbsp;</div>
+            <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="dd_link" href="#" id="mobile_nav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Stores <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="mobile_nav1">
+                            <li><a href="/stores">Directory</a></li>
+                            <li><a href="/map">Centre Map</a></li>
+                        </ul>
                     </li>
-                    <li class="dd_menu" id="2">
-                        Directory
-                        <div class="triangle_down" id="triangle_2">&nbsp;</div>
+                    <li>
+                        <a class="dd_link" href="#" id="mobile_nav2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Events <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="mobile_nav2">
+                            <li><a href="/events">Mall-Wide Events</a></li>
+                            <li><a href="/livingroomevents">The Living Room</a></li>
+                        </ul>
                     </li>
-                    <li class="dd_menu" id="3">
-                        Promotions
-                        <div class="triangle_down" id="triangle_3">&nbsp;</div>          
+                    <li><a href="/promotions">Promotions</a></li>
+                    <li>
+                        <a class="dd_link" href="#" id="mobile_nav3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Centre Information <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="mobile_nav3">
+                            <li><a href="/about_us">About Us</a></li>
+                        </ul>
                     </li>
-                    <li class="dd_menu" id="4">
-                        Events
-                        <div class="triangle_down" id="triangle_4">&nbsp;</div>            
+                    <li>
+                        <a class="dd_link" href="#" id="mobile_nav4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Guest Services <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="mobile_nav4">
+                            <li><a href="/guest_services">Guest Services</a></li>
+                        </ul>
                     </li>
-                    <li class="dd_menu" id="5">
-                        News/Buzz
-                        <div class="triangle_down" id="triangle_5">&nbsp;</div>   
+                    <li>
+                        <a class="dd_link" href="#" id="mobile_nav5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">The Living Room <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="mobile_nav5">
+                            <li><a href="/livingroom/about">About</a></li>
+                        </ul>
                     </li>
-                    <li class="dd_menu" id="6">
-                        Visit
-                        <div class="triangle_down" id="triangle_6">&nbsp;</div>             
-                    </li>
-                    <li class="dd_menu" id="7">
-                        About
-                        <div class="triangle_down" id="triangle_6">&nbsp;</div>             
-                    </li>
-                </ul>            
+                </ul>
             </div>
-            <!--<div class="submenu_container">-->
-            <!--    <div class="submenu_bar">-->
-            <!--        <div class="dd_submenu" id="s_sub_1">-->
-            <!--            <ul>-->
-            <!--                <li><a href="/stores">Store Directory</a></li>              -->
-            <!--                <li><a href="/map">Interactive Map</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--        <div class="dd_submenu" id="s_sub_2">-->
-            <!--            <ul>-->
-            <!--                <li><a href="">hours</a></li>-->
-            <!--                <li><a href="">getting here</a></li>-->
-            <!--                <li><a href="">parking</a></li>-->
-            <!--                <li><a href="">guest services</a></li>-->
-            <!--                <li><a href="">visitor info</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--        <div class="dd_submenu" id="s_sub_3">-->
-            <!--            <ul>-->
-            <!--                <li><a href="">Weekly Promos</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--        <div class="dd_submenu" id="s_sub_4">-->
-            <!--            <ul>-->
-            <!--                <li><a href="">events</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--        <div class="dd_submenu" id="s_sub_5">-->
-            <!--            <ul>              -->
-            <!--                <li><a href="">Video</a></li>-->
-            <!--                <li><a href="">Enewsletter</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--        <div class="dd_submenu" id="s_sub_6">-->
-            <!--            <ul>-->
-            <!--                <li><a href="">Gift Cards</a></li>-->
-            <!--                <li><a href="">Jobs</a></li>-->
-            <!--                <li><a href="">Leasing</a> </li>-->
-            <!--                <li><a href="">Sustain</a></li>-->
-            <!--                <li><a href="">Community</a></li>-->
-            <!--                <li><a href="">Security</a></li>-->
-            <!--                <li><a href="">news</a></li>-->
-            <!--                <li><a href="">Contact Us</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--        <div class="dd_submenu" id="s_sub_7">-->
-            <!--            <ul>-->
-            <!--                <li><a href="">Gift Cards</a></li>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--</div>-->
         </div>
     </header>
     <section class="site_container yield">
