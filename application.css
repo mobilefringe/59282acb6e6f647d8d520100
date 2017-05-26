@@ -35,7 +35,12 @@ img {
     font-size:150px;
     text-align:center;
 }
-
+/* TOP BAR */
+.top_bar {
+    width: 100%;
+    height: 100px;
+    background: #B8B8B8;
+}
 /* DESKTOP NAV */
 .menu_items_container {
     margin: 0 auto;
