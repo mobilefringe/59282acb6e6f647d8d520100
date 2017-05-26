@@ -9,6 +9,11 @@ body{
     font-family:'Open Sans';
 }
 
+.site_container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
 #content{
     margin-top:100px;
     font-size:150px;
@@ -18,7 +23,6 @@ body{
 /* DESKTOP NAV */
 .menu_items_container {
     margin: 0 auto;
-    max-width: 940px;
     position: relative;
 }
 .main_menu {
