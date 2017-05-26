@@ -65,28 +65,32 @@
         <div class="menu_items_container">
             <ul class="main_menu">
                 <li class="dd_menu" id="1">
-                  find a store
-                  <div class="triangle_down" id="triangle_1">&nbsp;</div>
+                    Home
+                    <div class="triangle_down" id="triangle_1">&nbsp;</div>
                 </li>
                 <li class="dd_menu" id="2">
-                  plan your visit
-                  <div class="triangle_down" id="triangle_2">&nbsp;</div>
+                    Directory
+                    <div class="triangle_down" id="triangle_2">&nbsp;</div>
                 </li>
                 <li class="dd_menu" id="3">
-                  Deals
-                  <div class="triangle_down" id="triangle_3">&nbsp;</div>          
+                    Promotions
+                    <div class="triangle_down" id="triangle_3">&nbsp;</div>          
                 </li>
                 <li class="dd_menu" id="4">
-                  events & contests
-                  <div class="triangle_down" id="triangle_4">&nbsp;</div>            
+                    Events
+                    <div class="triangle_down" id="triangle_4">&nbsp;</div>            
                 </li>
                 <li class="dd_menu" id="5">
-                  Our style
-                  <div class="triangle_down" id="triangle_5">&nbsp;</div>   
+                    News/Buzz
+                    <div class="triangle_down" id="triangle_5">&nbsp;</div>   
                 </li>
                 <li class="dd_menu" id="6">
-                  about us
-                  <div class="triangle_down" id="triangle_6">&nbsp;</div>             
+                    Visit
+                    <div class="triangle_down" id="triangle_6">&nbsp;</div>             
+                </li>
+                <li class="dd_menu" id="7">
+                    About
+                    <div class="triangle_down" id="triangle_6">&nbsp;</div>             
                 </li>
             </ul>            
         </div>
