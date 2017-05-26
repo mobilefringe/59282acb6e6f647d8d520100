@@ -88,7 +88,7 @@
         </div>
         <div class="site_container">
             <div class="site_logo">
-                <img src="" alt=""/>
+                <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495831394000/gateway_logo.png" alt="Property Logo"/>
                 
             </div>
             <div class="row top_nav hidden_phone">
@@ -104,10 +104,9 @@
                     </div>
                     <div class="top_nav_menu" id="top_nav_events">
                         <div class="dropdown">
-                            <a href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Events <i class="fa fa-caret-down"></i></a>
+                            <a href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dining</a>
                             <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu2">
                                 <li><a href="/events">Mall-Wide Events</a></li>
-                               
                                 <li><a href="/livingroomevents">The Living Room</a></li>
                             </ul>
                         </div>
