@@ -1,6 +1,5 @@
 function init(e) {
     
-    
     $(".dd_menu").click(function() {
         var id = $(this).attr("id");
         show_dd(id);
