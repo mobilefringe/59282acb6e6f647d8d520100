@@ -73,6 +73,7 @@ header {
 
 .top_nav_menu a{
     color: #FFF;
+    text-decoration: none;
 }
 
 .dropdown-menu2{
