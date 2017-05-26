@@ -1,0 +1,9 @@
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            
+        }
+        loadMallData(renderAll); 
+    })
+</script>
