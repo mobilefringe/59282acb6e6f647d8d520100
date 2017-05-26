@@ -169,7 +169,7 @@
                 <!-- social icons -->
             </div>
             <div class="footer_terms">
-                Powered by <a href="//www.mobilefringe.com" target="_blank">Mobile Fringe</a> | <a href="">Terms & Conditions</a>
+                <p>Powered by <a href="//www.mobilefringe.com" target="_blank">Mobile Fringe</a> | <a href="">Terms & Conditions</a></p>
             </div>
         </div>
     </footer>
