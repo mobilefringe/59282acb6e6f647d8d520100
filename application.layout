@@ -117,7 +117,7 @@
                         <div class="dropdown">
                             <a href="#" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Calendar</a>
                             <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu3">
-                                <li><a href="/about_us">About Us</a></li>>
+                                <li><a href="/about_us">About Us</a></li>
                             </ul>
                         </div>
                     </div>
