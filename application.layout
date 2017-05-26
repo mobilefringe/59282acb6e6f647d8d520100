@@ -156,8 +156,8 @@
     <footer>
         <div class="site_container">
             <div class="footer_content">
-                <p>The Gateway is located in the heart of Salt Lake City Utah</p>
-                <p>400 West, between 200 South & South Temple.</p>
+                <p>The Gateway is located in the heart of Salt Lake City, Utah,</p>
+                <p>along 400 West, between 200 South and South Temple.</p>
                 <p>801-456-0000</p>
             </div>
             <div class="footer_social">
@@ -170,7 +170,7 @@
                 <p><a href="">Code Of Conduct</a></p>
             </div>
             <div class="footer_terms">
-                <p>&copy; 2017 The Gateway All Rights Reserved | <a href="">Privacy Policy</a> | <a href="">Terms & Conditions</a></p>
+                <p>&copy; 2017 THE GATEWAY All Rights Reserved | <a href="">Privacy Policy</a> | <a href="">Terms & Conditions</a></p>
                 <p>Powered by <a href="//www.mobilefringe.com" target="_blank">Mobile Fringe</a></p>
             </div>
         </div>
