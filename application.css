@@ -4,6 +4,10 @@ For more information on asset types please see http://www.getcodecloud.com/docs#
 */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
+@font-face {
+    font-family: "Proxima Nova Light";
+    src: url("//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1308234250000/ProximaNova-Light.otf") format("Open Type");
+}
 body {
     color:#777;
     font-family:'Open Sans';
