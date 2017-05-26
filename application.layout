@@ -89,7 +89,6 @@
         <div class="site_container">
             <div class="site_logo">
                 <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495831394000/gateway_logo.png" alt="Property Logo"/>
-                
             </div>
             <div class="row top_nav hidden_phone">
                 <div class="top_nav_row">
@@ -112,47 +111,30 @@
                         </div>
                     </div>
                     <div class="top_nav_menu" id="top_nav_promotions">
-                        <a href="/promotions">Promotions</a>
+                        <a href="/promotions">Showtimes</a>
                     </div>
                     <div class="top_nav_menu" id="top_nav_centre_info">
                         <div class="dropdown">
-                            <a href="#" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Centre Information <i class="fa fa-caret-down"></i></a>
+                            <a href="#" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Calendar</a>
                             <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu3">
-                                <li><a href="/about_us">About Us</a></li>
-                                <li><a href="/hours">Operating Hours</a></li>
-                                <li><a href="/getting_here">Getting Here</a></li>
-                                <li><a href="/jobs">Careers</a></li>
-                                <li><a href="/non_profit_groups">Non-Profit Groups</a></li>
-                                <li><a href="/leasing">Leasing & Partnerships</a></li>
-                                <li><a href="/contact_us">Contact Us</a></li>
+                                <li><a href="/about_us">About Us</a></li>>
                             </ul>
                         </div>
                     </div>
                     <div class="top_nav_menu" id="top_nav_about_us">
                         <div class="dropdown">
-                            <a href="#" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Guest Services <i class="fa fa-caret-down"></i></a>
+                            <a href="#" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore</a>
                             <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu4">
                                 <li><a href="/guest_services">Guest Services</a></li>
-                                <li><a href="/gift_cards">Gift Cards</a></li>
-                                <li><a href="/group_tours">Group Tours</a></li>
-                                <li><a href="/mall_walkers_program">Mall Walker’s Program</a></li>
-                                <li><a href="/accessibility">Accessibility</a></li>
-                                <li><a href="/green_initiatives">Green Initiatives</a></li>
-                                <li><a href="/newsletter">Newsletter</a></li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="top_nav_menu" id="top_nav_livingroom">
                         <div class="dropdown">
-                            <a href="#" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">The Living Room <i class="fa fa-caret-down"></i></a>
+                            <a href="#" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Heritage</a>
                             <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu5">
                                 <li><a href="/livingroom/about">About</a></li>
-                                <li><a href="/livingroom/the_details">The Details</a></li>
-                                <li><a href="/livingroom/events_calendar">Events Calendar</a></li>
-                                <li><a href="/livingroom/book_this_space">Book This Space</a></li>
-                                <li><a href="/livingroom/dixie_living_room">#DixieLivingRoom</a></li>
-                                <li><a href="/livingroom/faq">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
