@@ -3,3 +3,15 @@
 
     
 </div>  
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            
+            show_content();
+            
+        }
+        loadMallData(renderAll); 
+    })
+</script>
