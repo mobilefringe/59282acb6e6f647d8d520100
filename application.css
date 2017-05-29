@@ -143,6 +143,7 @@ header {
     h3 {
         margin: 0;
         font-family: "LeagueGothic-Regular";
+        color: #000;
     }
     #subForm input {
         margin: 25px 0 ;
