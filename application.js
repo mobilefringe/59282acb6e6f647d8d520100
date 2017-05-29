@@ -1,4 +1,38 @@
-/*Created 2015-10-23  by RKS*/
+/*Created 2017-05-29  by RKS*/
+function renderBanner(banner_template,home_banner,banners){
+    var item_list = [];
+    var item_rendered = [];
+    var banner_template_html = $(banner_template).html();
+    Mustache.parse(banner_template_html);   // optional, speeds up future uses
+    $.each( banners , function( key, val ) {
+        today = new Date();
+        start = new Date (val.start_date);
+       
+        start.setDate(start.getDate());
+        if(val.url == "" || val.url === null){
+           val.css = "style=cursor:default;";
+           val.noLink = "return false";
+        }
+        if (start <= today){
+            if (val.end_date){
+                end = new Date (val.end_date);
+                end.setDate(end.getDate() + 1);
+                if (end >= today){
+                    item_list.push(val);  
+                }
+             
+            } else {
+                item_list.push(val);
+            }
+        }
+    });
+    $.each( item_list , function( key, val ) {
+        var repo_rendered = Mustache.render(banner_template_html,val);
+        item_rendered.push(repo_rendered);
+    });
+    $(home_banner).html(item_rendered.join(''));
+}
+
 function renderContest(container, template, collection){
     var item_list = [];
     var item_rendered = [];
@@ -12,43 +46,106 @@ function renderContest(container, template, collection){
 
     $(container).html(item_rendered.join(''));
 }
-    
-function renderBanner(banner_template,home_banner,banners){
+
+function renderEvents(container, template, collection){
+    var mall_name = getPropertyDetails().name;
     var item_list = [];
     var item_rendered = [];
-    var banner_template_html = $(banner_template).html();
-    Mustache.parse(banner_template_html);   // optional, speeds up future uses
-    $.each( banners , function( key, val ) {
-        today = new Date();
-        start = new Date (val.start_date);
-       
-        start.setDate(start.getDate());
-       if(val.url == "" || val.url === null){
-           val.css = "style=cursor:default;";
-           val.noLink = "return false";
-       }
-       if (start <= today){
-         if (val.end_date){
-             end = new Date (val.end_date);
-             end.setDate(end.getDate() + 1);
-             if (end >= today){
-               item_list.push(val);  
-             }
-             
-         } else {
-             item_list.push(val);
-         }
-       }
+    var template_html = $(template).html();
+    Mustache.parse(template_html); 
+    $.each( collection , function( key, val ) {
+        if (val.eventable_type == "Store") {
+            var store_details = getStoreDetailsByID(val.eventable_id);
+            val.store_detail_btn = store_details.slug ;
+            val.store_name = store_details.name;
+            
+            // var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
+            // var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
+            
+            // if(store_front_image != undefined) {
+            //     val.image_url = "//mallmaverick.com" + store_front_image;
+            // }
+            // if(store_front_image === undefined){
+            //     val.image_url = store_logo;
+            // }
+            // if(store_logo.indexOf('missing.png') > 0){
+            //     val.image_url  = default_image.image_url;
+            // }
+        }
+        else{
+            val.store_name = "Domain NORTHSIDE";
+            val.image_url = val.event_image_url_abs;
+            val.logo  = default_image.image_url;
+            if(val.image_url.indexOf('missing.png') > 0){
+                val.image_url  = val.logo;
+            }
+        }
+        
+        if (val.name.length > 30){
+            val.name_short = val.name.substring(0,30) + "...";
+        }
+        else {
+            val.name_short = val.name;
+        }
+        
+        var show_date = moment(val.show_on_web_date);
+        var start = moment(val.start_date).tz(getPropertyTimeZone());
+        var end = moment(val.end_date).tz(getPropertyTimeZone());
+        if (start.format("DMY") == end.format("DMY")){
+            val.dates = start.format("MMM D")
+        }
+        else{
+            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
+        }
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
     });
-
-    $.each( item_list , function( key, val ) {
-        var repo_rendered = Mustache.render(banner_template_html,val);
-        item_rendered.push(repo_rendered);
-       
-    });
-    $(home_banner).html(item_rendered.join(''));
-    
+    $(container).html(item_rendered.join(''));
 }
+
+function renderEventDetails(container, template, collection){
+    var mall_name = getPropertyDetails().name;
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html); 
+    item_list.push(collection);
+    $.each( item_list , function( key, val ) {
+        if (val.eventable_type == "Store") {
+            var store_details = getStoreDetailsByID(val.eventable_id);
+            val.store_detail_btn = store_details.slug;
+            val.store_name = store_details.name;
+            if (store_details.store_front_url_abs.indexOf('missing.png') > -1){
+                val.image_url = default_image.image_url;
+            }
+            else{
+                val.image_url = store_details.store_front_url_abs;
+            }
+        }
+        else{
+            val.store_name = "Domain NORTHSIDE";
+            val.image_url = default_image.image_url;
+        }
+        
+        if(val.event_image_url_abs.indexOf('missing.png') > -1){
+            val.promo_image_show="display:none";
+        }
+        
+        var show_date = moment(val.show_on_web_date);
+        var start = moment(val.start_date).tz(getPropertyTimeZone());
+        var end = moment(val.end_date).tz(getPropertyTimeZone());
+        if (start.format("DMY") == end.format("DMY")){
+            val.dates = start.format("MMM D")
+        }
+        else{
+            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
+        }
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    $(container).html(item_rendered.join(''));
+}
+
 function renderFeatureItems(container, template, collection){
     var item_list = [];
     var item_rendered = [];
@@ -77,93 +174,27 @@ function renderGeneral(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
-function renderStoreList(container, template, collection, type){
+function renderHomeHours(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    var store_initial="";
-    $.each(collection, function(key, val) {
-        if(type == "stores" || type == "category_stores"){
-            if(!val.store_front_url_abs ||  val.store_front_url_abs.indexOf('missing.png') > -1 || val.store_front_url_abs.length === 0){
-                val.store_front_url_abs = default_image.image_url;
-            } 
-        }
-        
-        var current_initial = val.name[0];
-        val.cat_list = val.categories.join(',')
-        if(store_initial.toLowerCase() == current_initial.toLowerCase()){
-            val.initial = "";
-            val.show = "display:none;";
-        } else {
-            val.initial = current_initial;
-            store_initial = current_initial;
-            val.show = "visibility: hidden";
-        }
-        
-        if(val.is_coming_soon_store == true){
-            val.coming_soon_store = "display: block";
-        } else {
-            val.coming_soon_store = "display:none";
-        }
-        
-        if(val.is_new_store == true){
-            val.new_store = "display: block";
-        } else {
-            val.new_store = "display: none";
-        }
-        if(val.total_published_promos != 0){
-            val.promotion_exist = "display: inline";
-            val.promotion_list = val.total_published_promos;
-        } else {
-            val.promotion_exist = "display: none";
-        }
-        
-        if (val.total_published_jobs != 0){
-            val.job_exist = "display: inline";
-            val.job_list = val.total_published_jobs;
-        } else {
-            val.job_exist = "display: none";
-        }
-        
-        val.block = current_initial + '-block';
-        var rendered = Mustache.render(template_html,val);
-        var upper_current_initial = current_initial.toUpperCase();
-        item_rendered.push(rendered);
-    });
-    
-    $(container).show();
-    $(container).html(item_rendered.join(''));
-}
-
-function renderStoreDetails(container, template, collection, slug){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    item_list.push(collection);
+    item_list.push(collection);    
     $.each( item_list , function( key, val ) {
-        if ((val.store_front_url).indexOf('missing.png') > -1){
-            val.alt_store_front_url = default_image.image_url;
+        val.day = get_day(val.day_of_week);
+        var d = new Date();
+        val.month = get_month(d.getMonth());
+        val.weekday = addZero(d.getDate());
+        if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
+            var open_time = in_my_time_zone(moment(val.open_time), "h:mma");
+            var close_time = in_my_time_zone(moment(val.close_time), "h:mma");
+            val.h = open_time + " - " + close_time;
         } else {
-            val.alt_store_front_url = getImageURL(val.store_front_url); 
+            val.h = "Closed";
         }
-        val.category_list = getCategoriesNamesByStoreSlug(slug);
-        val.map_x_coordinate = val.x_coordinate - 19;
-        val.map_y_coordinate = val.y_coordinate - 58;
-        val.property_map = getPropertyDetails().mm_host + getPropertyDetails().map_url;
-        if (val.website != null && val.website.length > 0){
-            val.show = "display:inline-block";
-        }
-        else{
-            val.show = "display:none";
-        }
-        
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
-    
-    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
@@ -212,7 +243,6 @@ function renderHours(container, template, collection, type){
         collection = [];
         collection = item_list;
     }
-    
     if (type == "holiday_hours") {
         $.each( collection , function( key, val ) {
             if (!val.store_id && val.is_holiday == true) {
@@ -231,16 +261,14 @@ function renderHours(container, template, collection, type){
         collection = [];
         collection = item_list;
     }
-    
     $.each( collection , function( key, val ) {
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
 
     });
-    
     $(container).show();
     $(container).html(item_rendered.join(''));
-};
+}
 
 function renderJobs(container, template, collection){
     var mall_name = getPropertyDetails().name;
@@ -367,7 +395,6 @@ function renderPromotions(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
-
 function renderPromoDetails(container, template, collection){
     var mall_name = getPropertyDetails().name;
     var item_list = [];
@@ -411,6 +438,18 @@ function renderPromoDetails(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
+function renderRepo(container, template, collection){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html); 
+    $.each( collection , function( key, val ) {
+        var repo_rendered = Mustache.render(template_html,val);
+        item_rendered.push(repo_rendered);
+    });
+    $(container).html(item_rendered.join(''));
+}
+
 function renderSimple(container, template, collection){
     var item_list = [];
     var item_rendered = [];
@@ -420,6 +459,96 @@ function renderSimple(container, template, collection){
     var repo_rendered = Mustache.render(template_html, collection);
     item_rendered.push(repo_rendered);
 
+    $(container).html(item_rendered.join(''));
+}
+
+function renderStoreList(container, template, collection, type){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+    var store_initial="";
+    $.each(collection, function(key, val) {
+        if(type == "stores" || type == "category_stores"){
+            if(!val.store_front_url_abs ||  val.store_front_url_abs.indexOf('missing.png') > -1 || val.store_front_url_abs.length === 0){
+                val.store_front_url_abs = default_image.image_url;
+            } 
+        }
+        
+        var current_initial = val.name[0];
+        val.cat_list = val.categories.join(',')
+        if(store_initial.toLowerCase() == current_initial.toLowerCase()){
+            val.initial = "";
+            val.show = "display:none;";
+        } else {
+            val.initial = current_initial;
+            store_initial = current_initial;
+            val.show = "visibility: hidden";
+        }
+        
+        if(val.is_coming_soon_store == true){
+            val.coming_soon_store = "display: block";
+        } else {
+            val.coming_soon_store = "display:none";
+        }
+        
+        if(val.is_new_store == true){
+            val.new_store = "display: block";
+        } else {
+            val.new_store = "display: none";
+        }
+        if(val.total_published_promos != 0){
+            val.promotion_exist = "display: inline";
+            val.promotion_list = val.total_published_promos;
+        } else {
+            val.promotion_exist = "display: none";
+        }
+        
+        if (val.total_published_jobs != 0){
+            val.job_exist = "display: inline";
+            val.job_list = val.total_published_jobs;
+        } else {
+            val.job_exist = "display: none";
+        }
+        
+        val.block = current_initial + '-block';
+        var rendered = Mustache.render(template_html,val);
+        var upper_current_initial = current_initial.toUpperCase();
+        item_rendered.push(rendered);
+    });
+    
+    $(container).show();
+    $(container).html(item_rendered.join(''));
+}
+
+function renderStoreDetails(container, template, collection, slug){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+    item_list.push(collection);
+    $.each( item_list , function( key, val ) {
+        if ((val.store_front_url).indexOf('missing.png') > -1){
+            val.alt_store_front_url = default_image.image_url;
+        } else {
+            val.alt_store_front_url = getImageURL(val.store_front_url); 
+        }
+        val.category_list = getCategoriesNamesByStoreSlug(slug);
+        val.map_x_coordinate = val.x_coordinate - 19;
+        val.map_y_coordinate = val.y_coordinate - 58;
+        val.property_map = getPropertyDetails().mm_host + getPropertyDetails().map_url;
+        if (val.website != null && val.website.length > 0){
+            val.show = "display:inline-block";
+        }
+        else{
+            val.show = "display:none";
+        }
+        
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    
+    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
@@ -468,141 +597,6 @@ function renderStoreDetailsHours(container, template, collection){
 
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-
-function renderEvents(container, template, collection){
-    var mall_name = getPropertyDetails().name;
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
-        if (val.eventable_type == "Store") {
-            var store_details = getStoreDetailsByID(val.eventable_id);
-            val.store_detail_btn = store_details.slug ;
-            val.store_name = store_details.name;
-            
-            // var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
-            // var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
-            
-            // if(store_front_image != undefined) {
-            //     val.image_url = "//mallmaverick.com" + store_front_image;
-            // }
-            // if(store_front_image === undefined){
-            //     val.image_url = store_logo;
-            // }
-            // if(store_logo.indexOf('missing.png') > 0){
-            //     val.image_url  = default_image.image_url;
-            // }
-        }
-        else{
-            val.store_name = "Domain NORTHSIDE";
-            val.image_url = val.event_image_url_abs;
-            val.logo  = default_image.image_url;
-            if(val.image_url.indexOf('missing.png') > 0){
-                val.image_url  = val.logo;
-            }
-        }
-        
-        if (val.name.length > 30){
-            val.name_short = val.name.substring(0,30) + "...";
-        }
-        else {
-            val.name_short = val.name;
-        }
-        
-        var show_date = moment(val.show_on_web_date);
-        var start = moment(val.start_date).tz(getPropertyTimeZone());
-        var end = moment(val.end_date).tz(getPropertyTimeZone());
-        if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D")
-        }
-        else{
-            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
-        }
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-function renderEventDetails(container, template, collection){
-    var mall_name = getPropertyDetails().name;
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    item_list.push(collection);
-    $.each( item_list , function( key, val ) {
-        if (val.eventable_type == "Store") {
-            var store_details = getStoreDetailsByID(val.eventable_id);
-            val.store_detail_btn = store_details.slug;
-            val.store_name = store_details.name;
-            if (store_details.store_front_url_abs.indexOf('missing.png') > -1){
-                val.image_url = default_image.image_url;
-            }
-            else{
-                val.image_url = store_details.store_front_url_abs;
-            }
-        }
-        else{
-            val.store_name = "Domain NORTHSIDE";
-            val.image_url = default_image.image_url;
-        }
-        
-        if(val.event_image_url_abs.indexOf('missing.png') > -1){
-            val.promo_image_show="display:none";
-        }
-        
-        var show_date = moment(val.show_on_web_date);
-        var start = moment(val.start_date).tz(getPropertyTimeZone());
-        var end = moment(val.end_date).tz(getPropertyTimeZone());
-        if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D")
-        }
-        else{
-            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
-        }
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-function renderHomeHours(container, template, collection){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    item_list.push(collection);    
-    $.each( item_list , function( key, val ) {
-        val.day = get_day(val.day_of_week);
-        var d = new Date();
-        val.month = get_month(d.getMonth());
-        val.weekday = addZero(d.getDate());
-        if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
-            var open_time = in_my_time_zone(moment(val.open_time), "h:mma");
-            var close_time = in_my_time_zone(moment(val.close_time), "h:mma");
-            val.h = open_time + " - " + close_time;
-        } else {
-            val.h = "Closed";
-        }
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-function renderRepo(container, template, collection){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
-        var repo_rendered = Mustache.render(template_html,val);
-        item_rendered.push(repo_rendered);
     });
     $(container).html(item_rendered.join(''));
 }
