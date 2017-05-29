@@ -52,9 +52,9 @@
     <script src="/application.js" type="text/javascript"></script>
     <script src="/helper.js" type="text/javascript"></script>
     
-    <!-- <script>
-        setEndPoint('');
-    </script> -->
+    <script>
+        setEndPoint('//dixieoutlet.mallmaverick.com/api/v3/dixieoutlet/all.json');
+    </script>
 </head>
 
 
