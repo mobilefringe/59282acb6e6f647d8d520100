@@ -13,6 +13,10 @@ For more information on asset types please see http://www.getcodecloud.com/docs#
     font-family: "Proxima Nova Bold";
     src: url("//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1335890102000/Proxima Nova Bold.otf") format("Open Type");
 }
+@font-face {
+    font-family: "LeagueGothic-Regular";
+    src: url("//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1347272700000/LeagueGothic-Regular.otf") format("Open Type");
+}
 
 body {
     color:#777;
