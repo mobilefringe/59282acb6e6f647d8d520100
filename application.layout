@@ -146,13 +146,14 @@
         {{yield}}
     </section>
     <section class="newsletter">
+        <h3>Sign Up to Receive Our Updates</h3>
         <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
             <p>
                 <label for="fieldEmail"></label><br/>
                 <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Enter Your Email"/>
             </p>
             <p>
-                <button type="submit">Subscribe</button>
+                <button type="submit">Sign Up</button>
             </p>
         </form>
     </section>
