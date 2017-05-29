@@ -75,9 +75,10 @@ header {
 }
 .top_nav{
     text-align: center;
+}
+.top_nav_row {
     margin-bottom: 52px;
 }
-
 .top_nav_menu {
     margin: 0 22px;
     width: 130px;
