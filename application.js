@@ -482,7 +482,7 @@ function renderStoreList(container, template, collection, type){
         } else {
             val.initial = current_initial;
             store_initial = current_initial;
-            val.show = "visibility: hidden";
+            // val.show = "visibility: hidden";
         }
         
         if(val.is_coming_soon_store == true){
