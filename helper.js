@@ -1,5 +1,5 @@
 function init(e) {
-    get_instagram("//dixieoutlet.mallmaverick.com/api/v2/dixieoutlet/social.json", 9, 'thumbnail', render_instagram);
+    get_instagram("//dixieoutlet.mallmaverick.com/api/v2/dixieoutlet/social.json", 5, 'thumbnail', render_instagram);
     
 }
 
