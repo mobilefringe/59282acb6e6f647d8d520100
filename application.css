@@ -136,6 +136,9 @@ header {
         height: 50px;
         border-radius: 4px;
     }
+    #subForm input::placeholder {
+        text-transform: uppercase;
+    }
 }
 /* FOOTER */
 footer {
