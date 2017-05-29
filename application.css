@@ -126,7 +126,12 @@ header {
     color:#E9B50A;
     background-color:transparent;
 }
-
+/* NEWSLETTER */
+.newsletter {
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
 /* FOOTER */
 footer {
     padding: 84px 0 10px 0;
