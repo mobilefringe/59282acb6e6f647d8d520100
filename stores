@@ -12,7 +12,7 @@
                 <div class="col-md-4">
                     <div class="promotions_header_container store_search" >
                         <label class="">
-                            <input type="text" placeholder="Search" id="store_search" />
+                            <input type="text" placeholder="Find Your Store" id="store_search" />
                             <img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1488985579000/search-512.png" class="pull-right" id="store_search_img" alt="">
                             <i id="close_search_results" class="fa fa-times-circle hidden_now"></i>
                         </label>
