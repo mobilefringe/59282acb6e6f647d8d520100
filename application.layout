@@ -87,55 +87,57 @@
             </div>
         </div>
         <div class="site_container">
-            <div class="site_logo">
-                <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495831394000/gateway_logo.png" alt="Property Logo"/>
-            </div>
-            <div class="row top_nav hidden_phone">
-                <div class="top_nav_row">
-                    <div class="top_nav_menu" id="top_nav_stores">
-                        <div class="dropdown">
-                            <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shopping</a>
-                            <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu1">
-                                <li><a href="/stores">Directory</a></li>
-                                <li><a href="/map">Centre Map</a></li>
-                            </ul>
+            <div class="nav_container">
+                <div class="site_logo">
+                    <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495831394000/gateway_logo.png" alt="Property Logo"/>
+                </div>
+                <div class="row top_nav hidden_phone">
+                    <div class="top_nav_row">
+                        <div class="top_nav_menu" id="top_nav_stores">
+                            <div class="dropdown">
+                                <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shopping</a>
+                                <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu1">
+                                    <li><a href="/stores">Directory</a></li>
+                                    <li><a href="/map">Centre Map</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="top_nav_menu" id="top_nav_events">
-                        <div class="dropdown">
-                            <a href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dining</a>
-                            <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu2">
-                                <li><a href="/events">Mall-Wide Events</a></li>
-                                <li><a href="/livingroomevents">The Living Room</a></li>
-                            </ul>
+                        <div class="top_nav_menu" id="top_nav_events">
+                            <div class="dropdown">
+                                <a href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dining</a>
+                                <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu2">
+                                    <li><a href="/events">Mall-Wide Events</a></li>
+                                    <li><a href="/livingroomevents">The Living Room</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="top_nav_menu" id="top_nav_promotions">
-                        <a href="/promotions">Showtimes</a>
-                    </div>
-                    <div class="top_nav_menu" id="top_nav_centre_info">
-                        <div class="dropdown">
-                            <a href="#" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Calendar</a>
-                            <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu3">
-                                <li><a href="/about_us">About Us</a></li>
-                            </ul>
+                        <div class="top_nav_menu" id="top_nav_promotions">
+                            <a href="/promotions">Showtimes</a>
                         </div>
-                    </div>
-                    <div class="top_nav_menu" id="top_nav_about_us">
-                        <div class="dropdown">
-                            <a href="#" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore</a>
-                            <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu4">
-                                <li><a href="/guest_services">Guest Services</a></li>
-                            </ul>
+                        <div class="top_nav_menu" id="top_nav_centre_info">
+                            <div class="dropdown">
+                                <a href="#" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Calendar</a>
+                                <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu3">
+                                    <li><a href="/about_us">About Us</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="top_nav_menu" id="top_nav_livingroom">
-                        <div class="dropdown">
-                            <a href="#" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Heritage</a>
-                            <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu5">
-                                <li><a href="/livingroom/about">About</a></li>
-                            </ul>
+                        <div class="top_nav_menu" id="top_nav_about_us">
+                            <div class="dropdown">
+                                <a href="#" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore</a>
+                                <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu4">
+                                    <li><a href="/guest_services">Guest Services</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="top_nav_menu" id="top_nav_livingroom">
+                            <div class="dropdown">
+                                <a href="#" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Heritage</a>
+                                <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu5">
+                                    <li><a href="/livingroom/about">About</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
