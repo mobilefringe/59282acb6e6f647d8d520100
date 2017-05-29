@@ -135,7 +135,7 @@ header {
         margin: 0;
     }
     #subForm input {
-        margin-top: 25px;
+        margin: 25px 0 ;
         padding: 5px;
         width: 350px;
         height: 50px;
