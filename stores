@@ -2,6 +2,9 @@
 <div class="site_container">
     <div class="header_content">
         <div class="row">
+            <h1>Shopping</h1>
+        </div>
+        <div class="row">
             <div class="col-md-4">
                 <div class="promotions_header_container store_search" >
                     <label class="">
