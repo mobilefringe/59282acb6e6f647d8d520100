@@ -146,16 +146,18 @@
         {{yield}}
     </section>
     <section id="sign_up" class="newsletter">
-        <h3>Sign Up to Receive Our Updates</h3>
-        <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
-            <p>
-                <label for="fieldEmail"></label><br/>
-                <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Enter Your Email"/>
-            </p>
-            <p>
-                <button type="submit">Sign Up</button>
-            </p>
-        </form>
+        <div class="site_container">
+            <h3>Sign Up to Receive Our Updates</h3>
+            <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
+                <p>
+                    <label for="fieldEmail"></label><br/>
+                    <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Enter Your Email"/>
+                </p>
+                <p>
+                    <button type="submit">Sign Up</button>
+                </p>
+            </form>
+        </div>
     </section>
     <footer>
         <div class="site_container">
