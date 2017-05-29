@@ -43,7 +43,7 @@ img {
     // top: 0;
     // z-index: 9;
     background: #B8B8B8;
-    p {
+    p, a {
         font-size: 18px;
     }
 }
