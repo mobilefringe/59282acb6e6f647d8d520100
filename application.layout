@@ -76,12 +76,12 @@
                         <p>THE FOUNTAIN IS OFF TODAY</p>
                     </div> 
                     <div class="col-md-3">
-                        <span id="home_hours_container">
+                        <div id="home_hours_container">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
-                                <span class="open_now">{% raw %}{{open}}{% endraw %}</span> 
-                                <span class="opacity_hover">{% raw %}{{hours}}{% endraw %}</span>
+                                <p class="open_now">{% raw %}{{open}}{% endraw %}</p> 
+                                <p class="opacity_hover">{% raw %}{{hours}}{% endraw %}</p>
                             </script>
-                        </span>    
+                        </div>    
                     </div> 
                 </div>
             </div>
