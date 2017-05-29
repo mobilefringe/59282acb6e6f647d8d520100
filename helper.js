@@ -49,3 +49,6 @@ function store_search() {
         }
     });
 }
+var default_image = {
+    "image_url" : "//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1490119146000/northside_logo_default.png",
+}
