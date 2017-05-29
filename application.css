@@ -49,6 +49,7 @@ img {
     }
     p, a {
         font-size: 18px;
+        color: #fff;
     }
 }
 .header_social {
