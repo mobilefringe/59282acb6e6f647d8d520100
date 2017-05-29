@@ -9,19 +9,13 @@
         </script>
     </ul>
 </div>
-<!--<div class="feature_row" id="feature_container">-->
-<!--    <script id="feature_template" type="x-tmpl-mustache/text">-->
-<!--        <div class="feature_item">-->
-<!--            <div class="yellow_line"></div>-->
-<!--            <a href="{{url}}" {{css}} onclick="{{noLink}}" class="darken">-->
-<!--                <h5 class="feature_header">{{name}}</h5>-->
-<!--                <img src="{{image_url}}" alt="{{name}}" />-->
-<!--            </a>-->
-<!--        </div>-->
-<!--    </script>    -->
-<!--</div>-->
-<!--<div class="clearfix"></div>-->
-<!--<div class="margin_40"></div>-->
+<div class="site_container">
+
+    
+</div>
+
+<div id="instafeed"></div>
+
 <script>
     $(document).ready(function(e){
         init(e);
