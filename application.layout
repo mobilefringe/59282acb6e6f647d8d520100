@@ -62,7 +62,7 @@
     <header>
         <div class="top_bar">
             <div class="site_container">
-                <div class="row">
+                <div class="row top_bar_wrapper">
                     <div class="col-md-3">
                         <div class="header_social">
                             <a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>
