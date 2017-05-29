@@ -185,9 +185,11 @@ function renderHomeHours(container, template, collection){
         if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone());
             var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-            val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
+            val.open = "Open Today";
+            val.hours = open_time.format("h a") + " - " + close_time.format("h a");
         } else {
-            val.h = "Closed";
+            val.open = "Closed Today";
+            val.hours = "";
         }
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
