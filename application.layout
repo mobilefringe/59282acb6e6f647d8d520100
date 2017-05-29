@@ -142,7 +142,7 @@
             </div>
         </div>
     </header>
-    <section class="site_container yield">
+    <section class="yield">
         {{yield}}
     </section>
     <section id="sign_up" class="newsletter">
