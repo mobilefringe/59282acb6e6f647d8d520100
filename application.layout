@@ -149,13 +149,13 @@
         <div class="site_container">
             <h3>Sign Up to Receive Our Updates</h3>
             <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
-                <p>
+                <div>
                     <label for="fieldEmail"></label><br/>
                     <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Enter Your Email"/>
-                </p>
-                <p>
+                </div>
+                <div>
                     <button type="submit">Sign Up</button>
-                </p>
+                </div>
             </form>
         </div>
     </section>
