@@ -1,9 +1,9 @@
 <script>
     $(document).ready(function(e){
         init(e);
-        // function renderAll(){
-            
-        // }
-        // loadMallData(renderAll); 
+        function renderAll(){
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
     });
 </script>
