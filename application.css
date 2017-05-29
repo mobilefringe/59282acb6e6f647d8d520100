@@ -10,7 +10,7 @@ For more information on asset types please see http://www.getcodecloud.com/docs#
     src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1335890102000/Proxima Nova Light.otf') format('Open Type');
 }
 @font-face {
-    font-family: "Proxima Nova Bold";
+    font-family: "ProximaNova-Bold";
     src: url("//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1335890102000/Proxima Nova Bold.otf") format("Open Type");
 }
 @font-face {
@@ -32,7 +32,9 @@ h3 {
 img {
     max-width: 100%;
 }
-
+.bold {
+    font-family: "ProximaNova-Bold", sans-serif;
+}
 .site_container {
     margin: 0 auto;
     width: 1140px;
@@ -64,6 +66,9 @@ img {
         font-size: 18px;
         line-height: 28px;
         color: #fff;
+    }
+    .open_now {
+        font-family: ;
     }
 }
 .header_social {
