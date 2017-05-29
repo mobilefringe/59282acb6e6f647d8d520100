@@ -52,7 +52,9 @@ img {
         display: inline-block;
     }
     p, a {
+        margin: 0;
         font-size: 18px;
+        line-height: 28px;
         color: #fff;
     }
 }
