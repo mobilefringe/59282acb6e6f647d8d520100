@@ -145,7 +145,7 @@
     <section class="site_container yield">
         {{yield}}
     </section>
-    <section class="newsletter">
+    <section id="sign_up" class="newsletter">
         <h3>Sign Up to Receive Our Updates</h3>
         <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
             <p>
