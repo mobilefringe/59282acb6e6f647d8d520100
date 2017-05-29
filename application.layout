@@ -164,7 +164,7 @@
             <div class="footer_content">
                 <p>The Gateway is located in the heart of Salt Lake City, Utah,</p>
                 <p>along 400 West, between 200 South and South Temple.</p>
-                <p class="bold">801-456-0000</p>
+                <h3>801-456-0000</h3>
             </div>
             <div class="footer_social">
                 <a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="footer_social_icon" alt="Facebook Icon"></a>
