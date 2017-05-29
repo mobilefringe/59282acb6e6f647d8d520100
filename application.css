@@ -44,6 +44,7 @@ img {
     // z-index: 9;
     background: #B8B8B8;
     .top_bar_wrapper {
+        padding-top: 30px;
         height: 100px;
     }
     .header_social {
