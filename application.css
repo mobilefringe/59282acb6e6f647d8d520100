@@ -137,6 +137,7 @@ header {
         border-radius: 4px;
     }
     #subForm input::placeholder {
+        text-align: center;
         text-transform: uppercase;
     }
 }
