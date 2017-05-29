@@ -79,7 +79,7 @@
                         <span id="home_hours_container">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
                                 <span class="open_now">{% raw %}{{open}}{% endraw %}</span> 
-                                <span class="opacity_hover">{% raw %}{{h}}{% endraw %}</span>
+                                <span class="opacity_hover">{% raw %}{{hours}}{% endraw %}</span>
                             </script>
                         </span>    
                     </div> 
