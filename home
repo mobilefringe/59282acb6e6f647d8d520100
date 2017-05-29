@@ -12,10 +12,10 @@
 <div class="site_container">
 
     
+
+
+    <div id="instafeed"></div>
 </div>
-
-<div id="instafeed"></div>
-
 <script>
     $(document).ready(function(e){
         init(e);
