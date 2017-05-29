@@ -138,6 +138,7 @@ header {
     text-transform: uppercase;
     h3 {
         margin: 0;
+        font-family: "LeagueGothic-Regular";
     }
     #subForm input {
         margin: 25px 0 ;
