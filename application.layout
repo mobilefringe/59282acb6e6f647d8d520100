@@ -148,7 +148,7 @@
     <section class="newsletter">
         <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
             <p>
-                <label for="fieldEmail">Email</label><br />
+                <label for="fieldEmail"></label><br/>
                 <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Enter Your Email"/>
             </p>
             <p>
