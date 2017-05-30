@@ -33,13 +33,13 @@
             </script>
         </div>
     </div>
-    
 </div>
 <script>
     $(document).ready(function(e){
         init(e);
         function renderAll(){
             var promotions = getPromotionsList().sortBy(function(o){ return o.end_date });
+            console.log(promotions)
             var published_promos = [];
             var cat_list = [];
             var cat_names = [];
