@@ -26,17 +26,24 @@
         <div id="promos_container">
             <script id="promos_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
-                    <div class="store_logo_container">
-                        <img src="{{image_url}}"/>
-                    </div>
-                    <div>
-                        <h4>{{name_short}}</h4>
-                    </div>
+                    <figure class="imghvr-fade">
+                        <img src="{{image_url}}">
+                        <figcaption>
+                            {{short_name}}
+                        </figcaption>
+                    </figure>
+                    
                 </div>
             </script>
         </div>
     </div>
 </div>
+<!--<div class="store_logo_container">-->
+<!--                        <img src="{{image_url}}"/>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <h4>{{name_short}}</h4>-->
+<!--                    </div>-->
 <script>
     $(document).ready(function(e){
         init(e);
