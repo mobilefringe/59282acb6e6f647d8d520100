@@ -27,12 +27,11 @@
             <script id="promos_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
                     <figure class="imghvr-zoom">
-                        <img src="{{image_url}}">
+                        <img src="{{image_url}}"/>
                         <figcaption>
-                            {{short_name}}
+                            {{name_short}}
                         </figcaption>
                     </figure>
-                    
                 </div>
             </script>
         </div>
