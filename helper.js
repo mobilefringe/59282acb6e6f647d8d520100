@@ -3,6 +3,22 @@ function init(e) {
     
 }
 
+function drop_pin(id){
+    map.marksHide();
+    var coords = map.get_coords(id);
+    var height = parseInt(coords["height"]);
+    var width = parseInt(coords["width"]);
+    var x_offset = (parseInt(width) / 2);
+    var y_offset = (parseInt(height) / 2);
+    map.setMarks([{ xy: [coords["x"] - 27 + x_offset, coords["y"] - 72 + y_offset],
+        attrs: {
+            src:  '//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1492031824000/northside_map_pin-01.png'
+        }
+    }]);
+    map.setViewBox(id);
+    $('#btnZoomIn').click()
+}
+
 function load_store_map(reg, store_details){
     this_region = {};
     this_region = store_details.svgmap_region;
