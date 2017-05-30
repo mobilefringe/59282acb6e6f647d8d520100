@@ -22,6 +22,17 @@
             <h4 class="center">All event dates and times are subject to change. Please contact The Gateway Concierge at 801-456-0000 for updated listings.</h4>
         </div>
     </div>
+    <div class="row">
+        <div id="promos_container">
+            <script id="promos_template" type="x-tmpl-mustache/text">
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                    <div class="store_logo_container">
+                        <img src="{{store_front_url_abs}}"/>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
     
 </div>
 <script>
