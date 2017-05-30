@@ -11,3 +11,53 @@
         </div>
     </div>
 </div>
+<div class="site_container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="bold">Please visit The Gateway to take advantage of many great family events and promotions.</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>All event dates and times are subject to change. Please contact The Gateway Concierge at 801-456-0000 for updated listings.</h3>
+        </div>
+    </div>
+    
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var promotions = getPromotionsList().sortBy(function(o){ return o.end_date });
+            var published_promos = [];
+            var cat_list = [];
+            var cat_names = [];
+            $.each(promotions, function(key, val){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_promos.push(val);
+                }
+                
+                var store_categories = getStoreDetailsByID(val.promotionable_id).categories[0];
+                cat_list.push(store_categories);
+            });
+            if(published_promos.length > 0){
+                renderPromotions("#promos_container","#promos_template", published_promos);
+            }
+            else{
+                $('#no_promos').show()
+            }
+            var category_info = [];
+            $.each(cat_list, function(key, val){
+                var category = getCategoryDetails(val);
+                category_info.push(category);
+            });
+            renderGeneral("#category_select", "#category_select_template", category_info);
+            $('#category_select').prepend('<li class="show_cat_stores" data-id="All">All</li>');
+                
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
