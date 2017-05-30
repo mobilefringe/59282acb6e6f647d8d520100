@@ -14,12 +14,12 @@
 <div class="site_container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="bold">Please visit The Gateway to take advantage of many great family events and promotions.</h3>
+            <h3 class="bold center">Please visit The Gateway to take advantage of many great family events and promotions.</h3>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h4>All event dates and times are subject to change. Please contact The Gateway Concierge at 801-456-0000 for updated listings.</h3>
+            <h4 calss="center">All event dates and times are subject to change. Please contact The Gateway Concierge at 801-456-0000 for updated listings.</h3>
         </div>
     </div>
     
