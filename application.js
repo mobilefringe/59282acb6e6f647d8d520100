@@ -581,11 +581,11 @@ function renderStoreDetailsHours(container, template, collection){
                 break;
             
         }
-        var open_time = in_my_time_zone(moment(val.open_time), "h:mmA");
-        var close_time = in_my_time_zone(moment(val.close_time), "h:mmA");
+        var open_time = moment(val.open_time).tz(getPropertyTimeZone());
+        var close_time = moment(val.close_time).tz(getPropertyTimeZone());
         
         if(val.is_closed == null || val.is_closed == false && val.open_full_day == false){
-            val.hour_string = open_time + " - " + close_time;
+            val.hour_string = open_time.format("h:mmA") + " - " + close_time.format("h:mmA");
         }       
         if(val.is_closed == true){
             val.hour_string = "Closed";
