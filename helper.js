@@ -3,16 +3,41 @@ function init(e) {
     
 }
 
+function load_store_map(reg, store_details){
+    this_region = {};
+    this_region = store_details.svgmap_region;
+    map = $('#mapsvg_store_detail').mapSvg({
+        source: getSVGMapURL(),    // Path to SVG map
+        colors: {stroke: '#aaa', hover: 0},
+        disableAll: true,
+        height:335,
+        width:848,
+        regions: reg,
+        tooltipsMode:'custom',
+        loadingText: "loading...",
+        zoom: true,
+        zoomButtons: {'show': true,'location': 'left' },
+        pan:true,
+        cursor:'pointer',
+        responsive:true,
+        zoomLimit: [0,5],
+        viewBox:[420,420,1650,1650]
+    });
+    // map.setViewBox(store_details.svgmap_region);
+    map.selectRegion(store_details.svgmap_region);
+    drop_pin(store_details.svgmap_region);
+}
+
+function render_instagram(data){
+    $('#instafeed').html(data)
+}
+
 function show_content(){
     $('.yield').fadeIn();
     $(".modal-backdrop").remove();
     
     var today_hours = getTodaysHours();
     renderHomeHours('#home_hours_container', '#home_hours_template', today_hours)
-}
-
-function render_instagram(data){
-    $('#instafeed').html(data)
 }
 
 function store_search() {
