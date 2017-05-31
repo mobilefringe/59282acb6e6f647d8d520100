@@ -16,6 +16,11 @@
     
         
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>
+        </div>
+    </div>
 </div>
 <script>
     $(document).ready(function(e){
