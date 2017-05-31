@@ -20,9 +20,9 @@
                         <a href="/events/{{slug}}">
                             <img src="{{image_url}}" alt="img">
                             <div class="info">
-                                <p>{{name_short}}</p>
+                                <h2>{{name_short}}</h2>
                                 <hr>
-                                <p>{{dates}}
+                                <p>{{dates}}</p>
                             </div>
                         </a>
                     </div>
