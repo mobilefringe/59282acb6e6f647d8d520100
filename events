@@ -16,15 +16,16 @@
         <div id="events_container">
             <script id="events_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3">
-                    <a href="/events/{{slug}}">
-                        <div class="img">
-                            <img src="{{image_url}}" alt="img">
-                        </div>
-                        <div class="info">
-                            <p>{{name_short}}</p>
-                        </div>
-                    </a>
-
+  
+                        <a href="/events/{{slug}}">
+                            <div class=" ih-item">
+                                <img src="{{image_url}}" alt="img">
+                            </div>
+                            <div class="info">
+                                <p>{{name_short}}</p>
+                            </div>
+                        </a>
+            
                 </div>
             </script>
         </div>
