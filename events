@@ -1,25 +1,3 @@
-
-<style>
-    .ih-item.circle {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-    .ih-item.circle.effect19 .info p {
-        color: #FFF;
-        margin: 30px;
-        border-top: none;
-        font-size: 20px;
-        font-style: normal;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 150px;  
-    }
-    .ih-item.circle.effect19 a:hover .info {
-        border-radius: 0;
-    }
-</style>
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
