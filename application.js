@@ -79,7 +79,7 @@ function renderEvents(container, template, collection){
             if(val.image_url.indexOf('missing.png') > 0){
                 val.image_url  = val.logo;
             }
-        }
+        // }
         
         if (val.name.length > 30){
             val.name_short = val.name.substring(0,30) + "...";
