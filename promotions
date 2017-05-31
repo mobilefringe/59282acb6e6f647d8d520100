@@ -69,6 +69,7 @@
     	transform: scale(1);
     	border-radius: 0;
     	opacity: 1;
+    	cursor: pointer;
     }
     
     .ch-item:hover .ch-info p {
