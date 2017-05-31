@@ -51,7 +51,7 @@
     	-o-transform: scale(1);
     	-ms-transform: scale(1);
     	transform: scale(1);
-    	/*border-radius: 0;*/
+    	border-radius: 0;
     	opacity: 1;
     }
     
@@ -83,6 +83,9 @@
             <h4 class="center">All event dates and times are subject to change. Please contact The Gateway Concierge at 801-456-0000 for updated listings.</h4>
         </div>
     </div>
+    <div class="col-md-12">
+        <h3 id="no_promos" class="hidden_now">There are currently no promotions available, please check back again later.</h3>
+    </div>
     <div class="row">
         <div id="promos_container">
             <script id="promos_template" type="x-tmpl-mustache/text">
@@ -97,13 +100,6 @@
         </div>
     </div>
 </div>
-<!--<div class="store_logo_container">-->
-<!--                        <img src="{{image_url}}"/>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <h4>{{name_short}}</h4>-->
-<!--                    </div>-->
-<script src="//s3.amazonaws.com/kodekloud/sites/59282acb6e6f647d8d520100/text/javascript/1337696380000/modernizr.custom.79639.js"></script>
 <script>
     $(document).ready(function(e){
         init(e);
@@ -129,14 +125,7 @@
             else{
                 $('#no_promos').show()
             }
-            var category_info = [];
-            $.each(cat_list, function(key, val){
-                var category = getCategoryDetails(val);
-                category_info.push(category);
-            });
-            renderGeneral("#category_select", "#category_select_template", category_info);
-            $('#category_select').prepend('<li class="show_cat_stores" data-id="All">All</li>');
-                
+            
             show_content();
         }
         loadMallDataCached(renderAll); 
