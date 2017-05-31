@@ -85,7 +85,7 @@
     </div>
     <div class="col-md-12">
         <div class="black_divider"></div> 
-        <p id="no_promos" class="hidden_now">There are currently no promotions available, please check back again later.</p>
+        <p id="no_promos" class="hidden_now center">There are currently no promotions available, please check back again later.</p>
         <div class="black_divider"></div> 
     </div>
     <div class="row">
