@@ -6,6 +6,11 @@
         height: 100%;
         border-radius: 0;
     }
+    .ih-item.circle.effect19 .info p {
+        color: #FFF;
+        margin: 30px;
+        font-size: 20px;
+    }
 </style>
 <div class="page_header">   
     <div class="site_container">
