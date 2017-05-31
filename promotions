@@ -33,13 +33,16 @@
         <div id="promos_container">
             <script id="promos_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
-                    <a href="/promotions/{{slug}}">
-                        <div class="hover-item" style="background-image:url({{image_url}});">
-                            <div class="hover-info">
-                                <p>{{name_short}}</p>
+                    <div class="ih-item circle effect19">
+                        <a href="/promotions/{{slug}}">
+                            <img src="{{image_url}}" alt="img">
+                            <div class="info">
+                                <h2>{{name_short}}</h2>
+                                <hr>
+                                <p>{{dates}}</p>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </script>
         </div>
