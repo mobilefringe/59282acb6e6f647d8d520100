@@ -86,6 +86,7 @@
 <!--                    <div>-->
 <!--                        <h4>{{name_short}}</h4>-->
 <!--                    </div>-->
+<script src="//s3.amazonaws.com/kodekloud/sites/59282acb6e6f647d8d520100/text/javascript/1337696380000/modernizr.custom.79639.js"></script>
 <script>
     $(document).ready(function(e){
         init(e);
