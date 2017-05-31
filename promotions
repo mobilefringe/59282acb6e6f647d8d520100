@@ -26,12 +26,11 @@
         <div id="promos_container">
             <script id="promos_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
-                    <figure class="imghvr-zoom">
-                        <img src="{{image_url}}"/>
-                        <figcaption>
-                            {{name_short}}
-                        </figcaption>
-                    </figure>
+                    <div class="ch-item" style="background-image:url({{}});">
+                        <div class="ch-info">
+                            <p>{{name_short}}</p>
+                        </div>
+                    </div>
                 </div>
             </script>
         </div>
