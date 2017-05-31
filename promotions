@@ -4,6 +4,7 @@
     	height: 170px;
     	background-position: center center;
     	background-size: contain;
+    	background-repeat: none;
     	border-radius: 50%;
     	position: relative;
     	cursor: default;
