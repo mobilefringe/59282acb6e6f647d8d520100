@@ -41,9 +41,12 @@
     	-webkit-backface-visibility: hidden;
     }
     .ch-info p {
-    	color: #fff;
-    	padding: 10px 5px;
-    	margin: 0 30px;
+        margin: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+    	text-align: center;
+    	
     	/*border-top: 1px solid rgba(255,255,255,0.5);*/
     	/*opacity: 0;*/
     	/*-webkit-transition: all 1s ease-in-out 0.4s;*/
@@ -64,11 +67,6 @@
     	letter-spacing: 1px;
     	padding-top: 4px;
     	font-family: 'Open Sans', Arial, sans-serif;
-    }
-    
-    .ch-info p a:hover {
-    	color: #fff222;
-    	color: rgba(255,242,34, 0.8);
     }
     .ch-item:hover {
     	/*box-shadow: */
