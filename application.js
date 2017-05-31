@@ -111,21 +111,6 @@ function renderEventDetails(container, template, collection){
     Mustache.parse(template_html); 
     item_list.push(collection);
     $.each( item_list , function( key, val ) {
-        // if (val.eventable_type == "Store") {
-        //     var store_details = getStoreDetailsByID(val.eventable_id);
-        //     val.store_detail_btn = store_details.slug;
-        //     val.store_name = store_details.name;
-        //     if (store_details.store_front_url_abs.indexOf('missing.png') > -1){
-        //         val.image_url = default_image.image_url;
-        //     }
-        //     else{
-        //         val.image_url = store_details.store_front_url_abs;
-        //     }
-        // }
-        // else{
-        //     val.store_name = "Domain NORTHSIDE";
-        //     val.image_url = default_image.image_url;
-        // }
         val.image_url = getImageURL(val.event_image_url);
         if(val.image_url.indexOf('missing.png') > 0){
             val.image_show = "display:none";
@@ -140,6 +125,7 @@ function renderEventDetails(container, template, collection){
         else{
             val.dates = start.format("MMM D") + " - " + end.format("MMM D")
         }
+        
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
