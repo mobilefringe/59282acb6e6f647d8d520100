@@ -21,6 +21,8 @@
                             <img src="{{image_url}}" alt="img">
                             <div class="info">
                                 <p>{{name_short}}</p>
+                                <hr>
+                                <p>{{dates}}
                             </div>
                         </a>
                     </div>
