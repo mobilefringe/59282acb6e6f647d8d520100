@@ -10,6 +10,7 @@
         color: #FFF;
         margin: 30px;
         font-size: 20px;
+        border-top: none;
     }
 </style>
 <div class="page_header">   
