@@ -9,8 +9,9 @@
     .ih-item.circle.effect19 .info p {
         color: #FFF;
         margin: 30px;
-        font-size: 20px;
         border-top: none;
+        font-size: 20px;
+        font-style: normal;
     }
     .ih-item.circle.effect19 a:hover .info {
         border-radius: 0;
