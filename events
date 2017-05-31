@@ -1,5 +1,12 @@
 
-
+<style>
+    .ih-item.circle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+</style>
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
