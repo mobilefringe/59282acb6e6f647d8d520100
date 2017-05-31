@@ -12,6 +12,9 @@
         border-top: none;
         font-size: 20px;
         font-style: normal;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 150px;  
     }
     .ih-item.circle.effect19 a:hover .info {
         border-radius: 0;
