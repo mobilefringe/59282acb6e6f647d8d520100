@@ -17,7 +17,11 @@
             <script id="events_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3">
                     <a href="/events/{{slug}}">
-                        <img src="{{image_url}}"/>
+                        <div class="hover-item" style="background-image:url({{image_url}});">
+                            <div class="hover-info">
+                                <p>{{name_short}}</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </script>
