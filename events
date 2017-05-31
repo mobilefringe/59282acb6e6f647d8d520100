@@ -18,16 +18,18 @@
         <div id="events_container">
             <script id="events_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3">
-                    <div class="ih-item circle effect19">
+                    
                         <a href="/events/{{slug}}">
-                            <div class="img">
+                            <div class="ih-item circle effect19">
+
                                 <img src="{{image_url}}" alt="img">
-                            </div>
-                            <div class="info">
-                                <p>{{name_short}}</p>
+   
+                                <div class="info">
+                                    <p>{{name_short}}</p>
+                                </div>
                             </div>
                         </a>
-                    </div>
+
                 </div>
             </script>
         </div>
