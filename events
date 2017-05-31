@@ -12,6 +12,9 @@
         font-size: 20px;
         border-top: none;
     }
+    .ih-item.circle.effect19 a:hover .info {
+        border-radius: 0;
+    }
 </style>
 <div class="page_header">   
     <div class="site_container">
