@@ -27,9 +27,7 @@
                 <div class="col-xs-6 col-sm-3">
                     <div class="ih-item circle effect19">
                         <a href="/events/{{slug}}">
-                          
-                                <img src="{{image_url}}" alt="img">
-                       
+                            <img src="{{image_url}}" alt="img">
                             <div class="info">
                                 <p>{{name_short}}</p>
                             </div>
