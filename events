@@ -13,8 +13,13 @@
 </div>
 <div class="wide_container">
     <div class="row">
-    
-        
+        <div id="events_container">
+            <script id="events_template" type="x-tmpl-mustache/text">
+                <div class="col-sm-3">
+                    <img src=""/>
+                </div>
+            </script>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -36,7 +41,7 @@
                 } 
             });
             if(published_events.length > 0){
-                renderEvents("#promos_container","#promos_template", published_events);
+                renderEvents("#events_container","#events_template", published_events);
             }
             else{
                 $('#no_events').show();
