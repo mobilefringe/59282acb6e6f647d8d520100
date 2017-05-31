@@ -67,7 +67,7 @@
         <div id="promos_container">
             <script id="promos_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
-                    <div class="ch-item" style="background-image:url({{}});">
+                    <div class="ch-item" style="background-image:url({{image_url}});">
                         <div class="ch-info">
                             <p>{{name_short}}</p>
                         </div>
