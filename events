@@ -11,3 +11,34 @@
         </div>
     </div>
 </div>
+<div class="site_container">
+    <div class="row">
+    
+        
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var published_events = [];
+            $.each( events , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_events.push(val);
+                } 
+            });
+            if(published_events.length > 0){
+                renderEvents("#promos_container","#promos_template", published_events);
+            }
+            else{
+                $('#no_events').show();
+            }
+
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
