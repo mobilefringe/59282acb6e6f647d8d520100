@@ -16,7 +16,7 @@
         <div id="events_container">
             <script id="events_template" type="x-tmpl-mustache/text">
                 <div class="col-sm-3">
-                    <img src=""/>
+                    <img src="{{image_url}}"/>
                 </div>
             </script>
         </div>
