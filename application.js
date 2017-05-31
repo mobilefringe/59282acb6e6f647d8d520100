@@ -54,26 +54,26 @@ function renderEvents(container, template, collection){
     var template_html = $(template).html();
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
-        if (val.eventable_type == "Store") {
-            var store_details = getStoreDetailsByID(val.eventable_id);
-            val.store_detail_btn = store_details.slug ;
-            val.store_name = store_details.name;
+        // if (val.eventable_type == "Store") {
+        //     var store_details = getStoreDetailsByID(val.eventable_id);
+        //     val.store_detail_btn = store_details.slug ;
+        //     val.store_name = store_details.name;
             
-            // var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
-            // var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
+        //     // var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
+        //     // var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
             
-            // if(store_front_image != undefined) {
-            //     val.image_url = "//mallmaverick.com" + store_front_image;
-            // }
-            // if(store_front_image === undefined){
-            //     val.image_url = store_logo;
-            // }
-            // if(store_logo.indexOf('missing.png') > 0){
-            //     val.image_url  = default_image.image_url;
-            // }
-        }
-        else{
-            val.store_name = "Domain NORTHSIDE";
+        //     // if(store_front_image != undefined) {
+        //     //     val.image_url = "//mallmaverick.com" + store_front_image;
+        //     // }
+        //     // if(store_front_image === undefined){
+        //     //     val.image_url = store_logo;
+        //     // }
+        //     // if(store_logo.indexOf('missing.png') > 0){
+        //     //     val.image_url  = default_image.image_url;
+        //     // }
+        // }
+        // else{
+            val.store_name = "The Gateway";
             val.image_url = val.event_image_url_abs;
             val.logo  = default_image.image_url;
             if(val.image_url.indexOf('missing.png') > 0){
