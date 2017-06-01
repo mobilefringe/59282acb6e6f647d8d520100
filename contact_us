@@ -27,13 +27,9 @@
             <h4 class="center caps">Contact Us for Questions, Comments, and more Information</h4>
             <form name="contact_form" id="contact_form" method="post">
                 <input name="name" id="name" class="form-control" type="text" value="" placeholder="Your Name" required>
-                <br>
                 <input name="email" id="email" class="form-control" type="text" value="" placeholder="Your Email" required>
-                <br>
                 <input name="subject" id="subject" class="form-control" type="text" placeholder="Subject" required>
-                <br>
                 <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
-                <br>
                 <button id="submit" class="btn btn-primary" type="submit">Submit</button>
             </form>
             <div id="send_contact_success" class="alert alert-success" role="alert" style="display:none">
