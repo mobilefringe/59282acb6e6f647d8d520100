@@ -116,7 +116,10 @@
                             <div class="dropdown">
                                 <a href="#" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Explore</a>
                                 <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu4">
-                                    <li><a href="/guest_services">Guest Services</a></li>
+                                    <li><a href="/hours">Hours</a></li>
+                                    <li><a href="/getting_here">Getting Here</a></li>
+                                    <li><a href="/parking">Parking</a></li>
+                                    <!--<li><a href="/tourism">Tourism</a></li>-->
                                 </ul>
                             </div>
                         </div>
@@ -124,7 +127,11 @@
                             <div class="dropdown">
                                 <a href="#" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Heritage</a>
                                 <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu5">
-                                    <li><a href="/livingroom/about">About</a></li>
+                                    <li><a href="/gateway">The Gateway</a></li>
+                                    <li><a href="/grand_hall">The Grand Hall</a></li>
+                                    <li><a href="/station_41">Station 41</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/contact_us">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
