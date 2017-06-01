@@ -85,7 +85,7 @@
                         $('#send_contact_error').fadeIn();
                     }
                 });
-    		}
+    		});
         }
         loadMallDataCached(renderAll); 
     })
