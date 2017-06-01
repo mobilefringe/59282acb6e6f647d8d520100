@@ -26,7 +26,7 @@
         <div class="col-md-8">
             <div id="parent_div">
         		<div id="zoom_container"  >
-        			<img alt="Store Directory Map" id="map_image" src=""/>
+        			<img alt="Store Directory Map" id="map_image" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496345737000/Pasted image at 2017_06_01 12_19 PM.png"/>
         			<div class="landmarks" data-show-at-zoom="100" data-allow-drag="true"></div>
         		</div>
         	</div>
@@ -40,7 +40,7 @@
             var stores = getStoresList();
             renderStoreList('#stores_container','#stores_template', stores, "A", "Z");
             
-            $("#map_image").attr("src", getPNGMapURL())
+            // $("#map_image").attr("src", getPNGMapURL())
         		$('#map_image').smoothZoom({
         		    width: 754,
                     height: 500,
