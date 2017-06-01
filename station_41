@@ -1,0 +1,43 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Station 41</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa diam, pretium at iaculis quis, suscipit id sapien. Aliquam turpis massa, interdum ut tempor sit amet, lobortis in enim. Vestibulum molestie facilisis sapien vel faucibus. Vestibulum iaculis semper metus in tincidunt. Aenean cursus dolor diam, sed lacinia metus fringilla id.</h3>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Contact Leasing</h2>  
+        <h2>To explore leasing opportunities at The Gateway, please call Mountain West Commercial Real Estate at 801-456-8800 or visit <a href="mtnwest.com" target="_blank">mtnwest.com</a>.</h2>
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/" + slug + ".json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    })
+</script>
