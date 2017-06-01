@@ -1,0 +1,34 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>The Gateway Hours</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="details_header caps">The Gateway Hours</h3>
+            <div class="thick_line"></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var hours = getPropertyHours();
+            renderHours('#reg_hours_container','#reg_hours_template', hours, 'reg_hours')
+            renderHours('#holiday_hours_container','#holiday_hours_template', hours, 'holiday_hours')
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    })
+</script>
+                    
