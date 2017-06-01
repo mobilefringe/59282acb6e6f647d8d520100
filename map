@@ -1,0 +1,38 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12" id="event_name_container">
+                    <script id="event_name_template" type="x-tmpl-mustache/text">
+                        <hr>
+                        <h1>{{name}}</h1>
+                        <hr>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+<div class="site_container">
+    <div class="row">
+        <div class="col-md-12">
+            
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var event_details = getEventDetailsBySlug(slug);
+            
+            renderEventDetails('#event_name_container', '#event_name_template', event_details)
+            renderEventDetails('#event_details_container', '#event_details_template', event_details)
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
