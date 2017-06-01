@@ -45,7 +45,8 @@
     <script src="//codecloud.cdn.speedyrails.net/sites/5639075d6e6f647b9f020000/text/javascript/1446569669000/instafeed.min.js"></script>
     <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507772000/moment.min.js"></script>
     <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
-    
+    <script src="//s3.amazonaws.com/kodekloud/sites/59282acb6e6f647d8d520100/text/javascript/1496345315000/smoothzoom.js"></script>
+    <script src="//s3.amazonaws.com/kodekloud/sites/59282acb6e6f647d8d520100/text/javascript/1496345357000/craftmap.js"></script>
     <!--MallMaverick SDK-->
     <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.1.js"></script>
     <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
