@@ -24,9 +24,12 @@
             </div>
         </div>
         <div class="col-md-8">
-            <div class="map">
-                <div id="mapsvg_store_detail"></div>  
-            </div>
+            <div id="parent_div">
+        		<div id="zoom_container"  >
+        			<img alt="Store Directory Map" id="map_image" src=""/>
+        			<div class="landmarks" data-show-at-zoom="100" data-allow-drag="true"></div>
+        		</div>
+        	</div>
         </div>
     </div>
 </div>
@@ -35,20 +38,27 @@
         init(e);
         function renderAll(){
             var stores = getStoresList();
-            regions = {}
-            $.each( stores , function( key, val ) {
-                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
-                    if(!val.store_front_url_abs ||  val.store_front_url_abs.indexOf('missing.png') > -1 || val.store_front_url_abs.length === 0){
-                        val.store_front_url_abs = '//codecloud.cdn.speedyrails.net/sites/55ddf3f86e6f640775000000/a22fcf023d728855c6f575ba100806d7/default.jpg'
-                    } 
-                    obj = {};
-                    obj["popover"] = "<p class='tooltip_name'>"+val.name+"</p> <a href='/stores/"+val.slug+"'>View Details</a>"
-                    obj["attr"] = {}
-                    // obj["attr"]["href"] = "/stores/"+val.slug
-                    regions[val.svgmap_region] = obj
-                }
-            });
             renderStoreList('#stores_container','#stores_template', stores, "A", "Z");
+            
+            $("#map_image").attr("src", getPNGMapURL())
+        		$('#map_image').smoothZoom({
+        		    width: 754,
+                    height: 500,
+        		    initial_ZOOM: 0,
+        			zoom_MIN: 0,
+        			zoom_MAX: 250,
+        			responsive: true,
+        		    responsive_maintain_ratio: true,
+        			zoom_BUTTONS_SHOW : 'YES',
+        			pan_BUTTONS_SHOW : 'NO',
+        			pan_LIMIT_BOUNDARY : 'NO',
+        			button_SIZE: 34,
+        			button_ALIGN: "top right",
+        			zoom_OUT_TO_FIT: "NO",
+        			container: 'zoom_container'
+        		});
+        	show_png_pin(".mapper", "#map_image");
+        	
             show_content();
         }
         loadMallDataCached(renderAll); 
