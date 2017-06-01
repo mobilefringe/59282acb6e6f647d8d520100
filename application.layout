@@ -110,12 +110,7 @@
                             <a href="/showtimes">Showtimes</a>
                         </div>
                         <div class="top_nav_menu" id="top_nav_centre_info">
-                            <div class="dropdown">
-                                <a href="#" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Calendar</a>
-                                <ul class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenu3">
-                                    <li><a href="/about_us">About Us</a></li>
-                                </ul>
-                            </div>
+                            <a href="/events">Calendar</a>
                         </div>
                         <div class="top_nav_menu" id="top_nav_about_us">
                             <div class="dropdown">
