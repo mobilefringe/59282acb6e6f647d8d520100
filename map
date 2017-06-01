@@ -13,8 +13,18 @@
 </div>
 <div class="site_container">
     <div class="row">
-        <div class="col-md-12">
-            
+        <div class="col-md-4 hidden_phone">
+            <p class='category_header'>Find Store</p>
+            <div id="stores_container">
+                <script id="stores_template" type="x-tmpl-mustache/text">
+                    <h5 class="category_name"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h5>
+                </script>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="map">
+                <div id="mapsvg_store_detail"></div>  
+            </div>
         </div>
     </div>
 </div>
