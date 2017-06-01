@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <h4 class="center caps">Contact Us for Questions, Comments, and more Information</h4>
+            <h4 class="center caps margin_30">Contact Us for Questions, Comments, and more Information</h4>
             <form name="contact_form" id="contact_form" method="post">
                 <input name="name" id="name" class="form-control" type="text" value="" placeholder="Your Name" required>
                 <input name="email" id="email" class="form-control" type="text" value="" placeholder="Your Email" required>
