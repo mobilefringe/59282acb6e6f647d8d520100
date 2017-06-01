@@ -14,11 +14,13 @@
 <div class="site_container">
     <div class="row">
         <div class="col-md-4 hidden_phone">
-            <h3 class="map_title center caps">Directory</h3>
-            <div id="stores_container">
-                <script id="stores_template" type="x-tmpl-mustache/text">
-                    <h5 class="category_name"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h5>
-                </script>
+            <div class="map_directory">
+                <h3 class="map_title center caps">Directory</h3>
+                <div id="stores_container">
+                    <script id="stores_template" type="x-tmpl-mustache/text">
+                        <h5 class="category_name"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h5>
+                    </script>
+                </div>
             </div>
         </div>
         <div class="col-md-8">
