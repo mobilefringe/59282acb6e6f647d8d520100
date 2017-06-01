@@ -27,6 +27,7 @@
             <h3 class="bold">Tel: <a href="tel:801-456-0000">801-456-0000</a> <br>
                 Fax: 801-456-0005
             </h3>
+            <div id="mm_page_content"></div>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5">
@@ -56,7 +57,15 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/" + slug + ".json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
             show_content();
             
             $('#contact_form').submit(function(e) {
