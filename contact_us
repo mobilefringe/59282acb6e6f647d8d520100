@@ -24,8 +24,9 @@
             <h3>18 N Rio Grande Street <br>
                 Slat Lake City, Utah, 84101
             </h3>
-            <h3>Tel: <a href="tel:801-456-0000">801-456-0000</a></h3>
-            <h3>Fax: 801-456-0005</h3>
+            <h3>Tel: <a href="tel:801-456-0000">801-456-0000</a> <br>
+                Fax: 801-456-0005
+            </h3>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5">
