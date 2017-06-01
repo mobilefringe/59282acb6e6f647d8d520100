@@ -32,7 +32,7 @@
                 <br>
                 <input name="subject" id="subject" class="form-control" type="text" placeholder="Subject" required>
                 <br>
-                <textarea name="message" id="message" rows="8" class="form-control" required></textarea>
+                <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
                 <br>
                 <button id="submit" class="btn btn-primary" type="submit">Submit</button>
             </form>
