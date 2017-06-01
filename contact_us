@@ -22,7 +22,7 @@
         <div class="col-md-6">
         
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-md-offset-1">
             <form name="contact_form" id="contact_form" method="post">
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
