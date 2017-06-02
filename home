@@ -1,7 +1,7 @@
 <style>
     .feature_image:nth-child(1) {
-        height: 279px;
-        width: 579px;
+        height: 280px;
+        width: 580px;
     }
 </style>
 <div class="flexslider">
