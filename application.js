@@ -344,7 +344,7 @@ function renderSinglePost(container, template, main_post){
     }
     main_post.description_short = main_post.description_short.replace("&amp;", "&");
     
-    main_post.slug = "our_style/" + main_post.slug;
+    main_post.slug = "blog/" + main_post.slug;
     
     main_post.twitter_title = main_post.title + " via @shopHSC";
     
@@ -374,7 +374,7 @@ function renderPosts(container, template, collection){
         }
         val.description_short = val.description_short.replace("&amp;", "&");
         
-        val.slug = "our_style/" + val.slug;
+        val.slug = "blog/" + val.slug;
         
         val.twitter_title = val.title + " via @shopHSC";
         
