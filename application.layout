@@ -55,7 +55,7 @@
     <script src="/helper.js" type="text/javascript"></script>
     
     <script>
-        setEndPoint('//halifaxcentre.mallmaverick.com/api/v3/halifaxcentre/all.json');
+        setEndPoint('//pencenter.mallmaverick.com/api/v3/pencenter/all.json');
     </script>
 </head>
 
