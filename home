@@ -9,11 +9,10 @@
         </script>
     </ul>
 </div>
-<div class="site_container">
-
-    
-
-
+<div class="wide_container">
+    <div class="site_container">
+        <h3>In Our Feed</h3>
+    </div>
     <div id="instafeed"></div>
 </div>
 <script>
