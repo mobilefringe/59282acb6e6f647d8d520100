@@ -1,13 +1,11 @@
-<style>
-    /*.feature_image:nth-child(1) {*/
-    /*    height: 580px;*/
-    /*    width: 280px;*/
-    /*}*/
-    /*.feature_image:nth-child(2) {*/
-    /*    height: 280px;*/
-    /*    width: 580px;*/
-    /*}*/
-</style>
+<!-- POP UP -->
+<div class="popup_home hidden_now">
+    <a href="#" target="_blank">
+        <img src="#" alt="pop up" />
+    </a>
+    <i class="fa fa-remove close_popup"></i>
+</div>
+<!-- -->
 <div class="flexslider">
     <ul class="slides" id="home_banner">
         <script id="banner_template" type="x-tmpl-mustache/text">
