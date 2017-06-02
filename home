@@ -1,5 +1,9 @@
 <style>
     .feature_image:nth-child(1) {
+        height: 580px;
+        width: 280px;
+    }
+    .feature_image:nth-child(2) {
         height: 280px;
         width: 580px;
     }
