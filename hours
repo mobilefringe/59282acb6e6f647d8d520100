@@ -26,6 +26,14 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Some stores, restaurants and entertainment venues hours will vary. <br>
+                Contact The Gateway Concierge at 801-456-0000 for a complete listing.
+            </p>
+        </div>
+    </div>
 </div>
 <script>
     $(document).ready(function(e){
