@@ -1,0 +1,35 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Parking</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="details_header caps">Parking</h3>
+            <div class="thick_line"></div>
+        </div>
+    </div>
+    <div class="row">
+        
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    })
+</script>
+                    
