@@ -58,7 +58,7 @@
     <script src="/helper.js" type="text/javascript"></script>
     
     <script>
-        setEndPoint('//thepencentre.mallmaverick.com/api/v3/thepencentre/all.json');
+        setEndPoint('//northside.mallmaverick.com/api/v3/northside/all.json');
     </script>
 </head>
 
