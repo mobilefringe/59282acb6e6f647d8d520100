@@ -36,11 +36,8 @@
             </script>
         </div>
     </div>
-    <div class="row hidden_phone">
-        <div class="col-md-12">
-            <div class="blog_30"></div>
-            <h4 class="previous_title caps">Previous</h4>
-        </div>
+    <div class="hidden_phone">
+        <h4 class="previous_title caps">Previous</h4>
     </div>
     <div class="row_fluid">
         <div id="posts_container">
