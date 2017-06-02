@@ -16,7 +16,7 @@
         <div class="col-md-12">
             <h3 class="details_header caps">The Gateway Hours</h3>
             <div class="thick_line"></div>
-            <div id="reg_hours_container" class="hours_container">
+            <div id="reg_hours_container">
                 <script id="reg_hours_template" type="x-tmpl-mustache/text">
                     <div class="hours_div">
                         <div class="hours_day">{{day}}:</div>
