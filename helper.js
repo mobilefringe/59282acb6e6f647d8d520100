@@ -19,6 +19,21 @@ function drop_pin(id){
     $('#btnZoomIn').click()
 }
 
+function load_more(num){
+    var n = parseInt(num);
+    for(i = n; i < n + 3; i++){
+        var id = i.toString();
+        $('#show_' + id ).fadeIn();
+    }
+    var posts = getBlogDataBySlug('halifaxcentre-our-style').posts;
+    var total_posts = posts.length;
+    if(i >= total_posts){
+        $('#loaded_posts').hide();
+        $('#all_loaded').show();
+    }
+    $('#num_loaded').val(i);
+}
+
 function load_store_map(reg, store_details){
     this_region = {};
     this_region = store_details.svgmap_region;
