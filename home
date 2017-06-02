@@ -14,17 +14,17 @@
     <div class="feature_container" id="feature_container">
         <!-- <script id="feature_template" type="x-tmpl-mustache/text"> -->
             <!--<a class="feature_image" href="{{url}}"><img class="" src="{{image_url}}"/></a>-->
-            <a class="feature_image" href="{{url}}"><img class="" src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1496417242000/560.png"/></a>
+            <a class="feature_image" href="{{url}}"><img class="" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496417242000/560.png"/></a>
             
-            <a class="feature_image" href="{{url}}"><img class="" src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1496417307000/1160.png"/></a>
+            <a class="feature_image" href="{{url}}"><img class="" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496417307000/1160.png"/></a>
             
-            <a class="feature_image" href="{{url}}"><img class="" src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1496417345000/560x560.png"/></a>
+            <a class="feature_image" href="{{url}}"><img class="" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496417345000/560x560.png"/></a>
             
-            <a class="feature_image" href="{{url}}"><img class="" src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1496417242000/560.png"/></a>
+            <a class="feature_image" href="{{url}}"><img class="" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496417242000/560.png"/></a>
             
-            <a class="feature_image" href="{{url}}"><img class="" src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1496417345000/560x560.png"/></a>
+            <a class="feature_image" href="{{url}}"><img class="" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496417345000/560x560.png"/></a>
             
-            <a class="feature_image" href="{{url}}"><img class="" src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1496417242000/560.png"/></a>
+            <a class="feature_image" href="{{url}}"><img class="" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496417242000/560.png"/></a>
             
         <!-- </script> -->
     </div>
