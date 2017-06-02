@@ -149,6 +149,26 @@ function renderFeatureItems(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
+function renderGallery(container, template, collection){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+    $.each( collection , function( key, val ) {
+        if (val.photo_url.indexOf('missing.png') > -1) {
+            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+        } else {
+            val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
+        }
+
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    
+    $(container).show();
+    $(container).html(item_rendered.join(''));
+}
+
 function renderGeneral(container, template, collection){
     var item_list = [];
     var item_rendered = [];
