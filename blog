@@ -39,7 +39,7 @@
     <div class="row hidden_phone">
         <div class="col-md-12">
             <div class="blog_30"></div>
-            <h4 class="previous_title">Previous</h4>
+            <h4 class="previous_title caps">Previous</h4>
         </div>
     </div>
     <div class="row_fluid">
