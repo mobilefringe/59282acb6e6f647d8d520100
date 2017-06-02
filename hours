@@ -13,7 +13,7 @@
 </div>
 <div class="site_container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h3 class="details_header caps">The Gateway Hours</h3>
             <div class="thick_line"></div>
             <div id="reg_hours_container">
@@ -25,7 +25,7 @@
                 </script>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <p>
                 Some stores, restaurants and entertainment venues hours will vary. <br>
                 Contact The Gateway Concierge at 801-456-0000 for a complete listing.
