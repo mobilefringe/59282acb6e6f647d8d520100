@@ -114,7 +114,6 @@
             show_content();
             
             store_search();
-            
         }
         loadMallData(renderAll); 
     })
