@@ -325,6 +325,126 @@ function renderJobDetails(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
+function renderSinglePost(container, template, main_post){
+    var item_list = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+
+    if (main_post.image_url.indexOf('missing.png') > 0) {
+        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+    } else {
+        main_post.post_image = main_post.image_url;
+    }
+        
+    if(main_post.body.length > 235){
+        main_post.description_short = main_post.body.substring(0,235) + "...";
+    }
+    else{
+        main_post.description_short = main_post.body;
+    }
+    main_post.description_short = main_post.description_short.replace("&amp;", "&");
+    
+    main_post.slug = "our_style/" + main_post.slug;
+    
+    main_post.twitter_title = main_post.title + " via @shopHSC";
+    
+    var rendered = Mustache.render(template_html, main_post);
+    item_list.push(rendered);
+    $(container).html(item_list.join(''));
+}
+
+function renderPosts(container, template, collection){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    var counter = 1;
+    Mustache.parse(template_html);   // optional, speeds up future uses
+    $.each( collection , function( key, val ) {
+        if (val.image_url.indexOf('missing.png') > -1) {
+            val.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+        } else {
+            val.post_image = val.image_url;
+        }
+        
+        if(val.body.length > 175){
+            val.description_short = val.body.substring(0, 175) + "...";
+        }
+        else{
+            val.description_short = val.body;
+        }
+        val.description_short = val.description_short.replace("&amp;", "&");
+        
+        val.slug = "our_style/" + val.slug;
+        
+        val.twitter_title = val.title + " via @shopHSC";
+        
+        var date_blog = new Date(val.publish_date);
+        val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
+    
+        val.counter = counter;
+        
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+        counter = counter + 1;
+    });
+    
+    $(container).show();
+    $(container).html(item_rendered.join(''));
+}
+
+function renderPostDetails(container, template, collection, blog_posts){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    $.each(collection , function( key, val ) {
+        if (val.image_url.indexOf('missing.png') > -1) {
+            val.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+        } else {
+            val.post_image = val.image_url;
+        }
+        
+        if(val.body.length > 100){
+            val.description_short = val.body.substring(0,100) + "...";
+        }
+        else{
+            val.description_short = val.body;
+        }
+
+        var blog_list = [];
+        $.each(blog_posts, function(key, val) {
+            var slug = val.slug;
+            blog_list.push(val.slug);
+        });
+        var current_slug = val.slug;
+        var index = blog_list.indexOf(current_slug);
+        if(index >= 0 && index < blog_list.length){
+          var next_slug = blog_list[index + 1];
+            if(next_slug != undefined || next_slug != null){
+                val.next_post = "/blog/" + next_slug;
+                val.next_show = "display: block";
+            } else {
+                val.next_show = "display: none";
+            }
+        }
+        if(index >= 0 && index < blog_list.length){
+            var prev_slug = blog_list[index - 1];
+            if(prev_slug != undefined || prev_slug != null){
+                val.prev_post = "/blog/" + prev_slug;
+                val.prev_show = "display: block";
+            } else {
+                val.prev_show = "display: none";
+            }
+        }
+
+        val.twitter_title = val.title + " via @shopHSC";
+        
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    
+    $(container).html(item_rendered.join(''));
+}
+
 function renderPromotions(container, template, collection){
     var mall_name = getPropertyDetails().name;
     var item_list = [];
