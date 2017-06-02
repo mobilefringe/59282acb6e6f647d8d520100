@@ -1,0 +1,102 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Blog</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container">
+    <div class="row">
+        <div id="main_post_container">
+            <script id="main_post_template" type="x-tmpl-mustache">
+                <div class="main_post_container">
+                    <div class="main_post_image_container">
+                        <img src="{{post_image}}" alt="{{title}}">
+                    </div>
+                    <div class="main_post_content">
+                        <div class="main_post_share_icons">
+                            <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                                <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
+                            </a>
+                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                                <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
+                            </a>
+                        </div>
+                        <a href="{{slug}}"><h2 class="main_post_header">{{title}}</h2></a>
+                        <div class="post_text">{{description_short}}</div>
+                        <a class="main_read_more" href="{{slug}}">Read More</a>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+    <div class="row hidden_phone">
+        <div class="col-md-12">
+            <div class="blog_30"></div>
+            <p class="previous_title">Previous</p>
+        </div>
+    </div>
+    <div class="row_fluid">
+        <div id="posts_container">
+            <script id="posts_template" type="x-tmpl-mustache">
+                <div class="post_container hidden_now" id="show_{{counter}}">
+                    <div class="post_image_container">
+                        <img src="{{post_image}}" alt="{{title}}">
+                    </div>
+                    <div class="post_content">
+                        <div class="post_share_icons">
+                            <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                                <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
+                            </a>
+                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                                <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
+                            </a>
+                        </div>
+                        <a href="{{slug}}"><h2 class="post_header">{{title}}</h2></a>
+                        <div class="post_text">{{description_short}}</div>
+                        <a class="post_read_more" href="{{slug}}">Read More</a>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="hidden" value="1" id="num_loaded" />
+            <p class="hidden_now" id ="all_loaded">No More Posts</p>
+            <p class="" id="loaded_posts">
+                <a href="#" class="red" id="load_more_posts"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490624975000/down.png" class="load_more_arrow" alt=""><span class="post_details_link">Load More</span></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPageData);
+    });
+    
+    function renderPageData(){
+        var blog_posts = getBlogDataBySlug('halifaxcentre-our-style').posts.reverse();
+        var main_post = blog_posts[0];
+        renderSinglePost('#main_post_container', "#main_post_template", main_post);
+
+        var posts = blog_posts.splice(1);
+        renderPosts('#posts_container', '#posts_template', posts);
+        show_content();
+        load_more(1);
+            
+        $('#load_more_posts').click(function(e){
+            var i = $('#num_loaded').val();
+            load_more(i);
+            e.preventDefault();
+        });
+    }
+</script>
