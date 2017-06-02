@@ -58,7 +58,7 @@
                                 <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
                             </a>
                         </div>
-                        <a href="{{slug}}"><h2 class="post_header">{{title}}</h2></a>
+                        <a href="{{slug}}"><h4 class="post_header">{{title}}</h4></a>
                         <div class="post_text">{{description_short}}</div>
                         <a class="post_read_more" href="{{slug}}">Read More</a>
                     </div>
