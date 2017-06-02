@@ -48,6 +48,8 @@
     <script src="//s3.amazonaws.com/kodekloud/sites/59282acb6e6f647d8d520100/text/javascript/1496345315000/smoothzoom.js"></script>
     <script src="//s3.amazonaws.com/kodekloud/sites/59282acb6e6f647d8d520100/text/javascript/1496345357000/craftmap.js"></script>
     <script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/601617fe9ab691b1b62a66ac3ca3e8b7/jquery.cookie.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    
     <!--MallMaverick SDK-->
     <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.1.js"></script>
     <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
