@@ -378,8 +378,8 @@ function renderPosts(container, template, collection){
         
         val.twitter_title = val.title + " via @shopHSC";
         
-        var date_blog = new Date(val.publish_date);
-        val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
+        // var date_blog = new Date(val.publish_date);
+        // val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
     
         val.counter = counter;
         
