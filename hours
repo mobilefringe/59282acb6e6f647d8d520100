@@ -19,8 +19,8 @@
             <div id="reg_hours_container" class="hours_container">
                 <script id="reg_hours_template" type="x-tmpl-mustache/text">
                     <div class="hours_div">
-                        <span class="hours_day">{{day}}:</span>
-                        <span>{{h}}</span>
+                        <div class="hours_day">{{day}}:</div>
+                        <div>{{h}}</div>
                     </div>
                 </script>
             </div>
