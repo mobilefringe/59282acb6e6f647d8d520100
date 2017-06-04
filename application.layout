@@ -77,7 +77,9 @@
                         <a href="#sign_up">Sign Up</a>
                     </div> 
                     <div class="col-md-6">
-                        <p>THE FOUNTAIN IS OFF TODAY</p>
+                        <div class="message">
+                            <p>THE FOUNTAIN IS OFF TODAY</p>
+                        </div>
                     </div> 
                     <div class="col-md-3">
                         <div id="home_hours_container">
