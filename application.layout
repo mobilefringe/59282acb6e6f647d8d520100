@@ -101,8 +101,8 @@
                         <ul>
                             <li class="menu_item"><a href="#">Shopping</a>
                                 <ul>
-                                    <li><a href="/stores">Directory</a></li>
-                                    <li><a href="/map">Center Map</a></li>
+                                    <li class="dropdown_item"><a href="/stores">Directory</a></li>
+                                    <li class="dropdown_item"><a href="/map">Center Map</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="/dine">Dine</a></li>
@@ -110,19 +110,19 @@
                             <li class="menu_item"><a href="/events">Calendar</a></li>
                             <li class="menu_item"><a href="#">Explore</a>
                                 <ul>
-                                    <li><a href="/hours">Hours</a></li>
-                                    <li><a href="/getting_here">Getting Here</a></li>
-                                    <li><a href="/parking">Parking</a></li>
-                                    <li><a href="/tourism">Tourism</a></li>
+                                    <li class="dropdown_item"><a href="/hours">Hours</a></li>
+                                    <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
+                                    <li class="dropdown_item"><a href="/parking">Parking</a></li>
+                                    <li class="dropdown_item"><a href="/tourism">Tourism</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="#">Heritage</a>
                                 <ul>
-                                    <li><a href="/gateway">The Gateway</a></li>
-                                    <li><a href="/grand_hall">The Grand Hall</a></li>
-                                    <li><a href="/station_41">Station 41</a></li>
-                                    <li><a href="/blog">Blog</a></li>
-                                    <li><a href="/contact_us">Contact Us</a></li>
+                                    <li class="dropdown_item"><a href="/gateway">The Gateway</a></li>
+                                    <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
+                                    <li class="dropdown_item"><a href="/station_41">Station 41</a></li>
+                                    <li class="dropdown_item"><a href="/blog">Blog</a></li>
+                                    <li class="dropdown_item"><a href="/contact_us">Contact Us</a></li>
                                 </ul>
                             </li>
                         </ul>
