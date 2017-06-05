@@ -48,10 +48,10 @@
             <!--<a class="feature_image" href="{{url}}"><img class="" src="{{image_url}}"/></a>-->
             <div class="grid">
                 <div class="grid-sizer"></div>
+                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
                 <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+                <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/1280"/></div>
   
                 <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div> 
                 <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>  
