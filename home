@@ -12,6 +12,7 @@
             <li>
                 <a href="{{url}}" {{css}} onclick="{{noLink}}">
                     <img alt="banner" src="{{image_url}}" />
+                    <h1>{{description}}</h1>
                 </a>
             </li>
         </script>
