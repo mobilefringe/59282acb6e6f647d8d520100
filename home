@@ -56,8 +56,9 @@
             });
 
             $('.grid').masonry({
-                itemSelector: '.grid-item',
                 columnWidth: '.grid-sizer',
+                horizontalOrder: false,
+                itemSelector: '.grid-item',
                 percentPosition: true
             });
 
