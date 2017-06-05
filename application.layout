@@ -144,7 +144,7 @@
                     <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Email"/>
                 </div>
                 <div>
-                    <button class="form_submit" type="submit">Sign Up</button>
+                    <button class="form_submit" type="submit"></button>
                 </div>
             </form>
         </div>
