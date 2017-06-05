@@ -19,7 +19,7 @@
 </div>
 <div class="wide_container">
     <div class="site_container">
-        <h3>In Our Feed</h3>
+        <h3>Title 1</h3>
     </div>
     <div class="feature_container" id="feature_container">
         <!-- <script id="feature_template" type="x-tmpl-mustache/text"> -->
@@ -40,7 +40,7 @@
     </div>
     
     <div class="site_container">
-        <h3>In Our Feed</h3>
+        <h3>Title 2</h3>
     </div>
     <div class="feature_container" id="feature_container">
         <!-- <script id="feature_template" type="x-tmpl-mustache/text"> -->
