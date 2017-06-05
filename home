@@ -54,7 +54,13 @@
             $('.flexslider').flexslider({
                 animation: "slide",
             });
-            
+
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                percentPosition: true
+            });
+
             if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
                 var popup = getPopups()[0];
