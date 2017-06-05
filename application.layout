@@ -59,7 +59,7 @@
     <script src="/helper.js" type="text/javascript"></script>
     
     <script>
-        setEndPoint('//northside.mallmaverick.com/api/v3/northside/all.json');
+        setEndPoint('//thegateway.mallmaverick.com/api/v3/thegateway/all.json');
     </script>
 </head>
 
