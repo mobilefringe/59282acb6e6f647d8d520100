@@ -24,6 +24,7 @@
             <!--<a class="feature_image" href="{{url}}"><img class="" src="{{image_url}}"/></a>-->
             
             <div class="grid">
+                <div class="grid-sizer"></div>
                 <div class="grid-item grid-item--height2"></div>
                 <div class="grid-item grid-item--width2"></div>
                 <div class="grid-item"></div>
