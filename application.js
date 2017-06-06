@@ -606,7 +606,7 @@ function renderStoreList(container, template, collection, type){
         
         var current_initial = val.name[0];
         val.cat_list = val.categories.join(',')
-        if(store_initial.toLowerCase() == current_initial.toLowerCase()){
+        if(store_initial.toUpperCase() == current_initial.toUpperCase()){
             val.initial = "";
             val.show = "display:none;";
         } else {
