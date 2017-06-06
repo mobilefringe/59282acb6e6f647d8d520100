@@ -1,5 +1,13 @@
 function init(e) {
     get_instagram("//dixieoutlet.mallmaverick.com/api/v2/dixieoutlet/social.json", 6, 'thumbnail', render_instagram);
+    
+    $(".alpha_list a").click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $(id).offset().top -120
+        }, 1500);
+    });
 }
 
 function drop_pin(id){
