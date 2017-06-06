@@ -57,6 +57,8 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            var repo = getRepoDetailsByName("Contact Us Banner");
+            console.log(repo);
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-contact-us.json"
             $.getJSON(pages_json).done(function(data) {
