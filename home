@@ -26,37 +26,45 @@
     <div class="site_container">
         <h3>Explore The Gateway</h3>
     </div>
-    <div class="feature_container" id="feature_container">
-        <!-- <script id="feature_template" type="x-tmpl-mustache/text"> -->
-            <!--<a class="feature_image" href="{{url}}"><img class="" src="{{image_url}}"/></a>-->
-            <div class="grid">
-                <div class="grid-sizer"></div>
-                <div class="grid-item">
-                    
-                    <div class="ih-item circle effect19">
-                        <a href="/events/{{slug}}">
-                            <img src="https://unsplash.it/640/640"/>
-                            <div class="info">
-                                <h2>{{name_short}}</h2>
-                                <hr>
-                                <p>{{dates}}</p>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-                <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-  
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-                <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>  
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-                <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-            </div>
-        <!-- </script> -->
+    
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>  
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
     </div>
     
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item" id="feature_0"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>  
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+    </div>
+    
+ 
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        
+                <div class="grid-item">
+                    
+                </script>
+            </div>
+        </div>
+    </div>
+
+        
     <div class="site_container">
         <h3>What's Happening</h3>
     </div>
@@ -102,6 +110,7 @@
                 columnWidth: '.grid-sizer',
                 horizontalOrder: false,
                 itemSelector: '.grid-item',
+                originLeft: false,
                 percentPosition: true
             });
 
@@ -121,5 +130,22 @@
             });
         }
         loadMallData(renderAll); 
+        
+        function renderFeatureItems(){
+            var items = getFeatureList();
+            $.each(items, function(i, val){
+                $('#feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><h2>'+ val.name +'</h2><hr><p>' + val.name + '</p></div></a></div>')
+            })
+        }
     })
+    <div class="ih-item circle effect19">
+                        <a href="{{url}}">
+                            <img src="{{image_url}}"/>
+                            <div class="info">
+                                <h2>{{name_short}}</h2>
+                                <hr>
+                                <p>{{dates}}</p>
+                            </div>
+                        </a>
+                    </div>
 </script>
