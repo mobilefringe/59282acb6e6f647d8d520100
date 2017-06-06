@@ -9,7 +9,7 @@
 <div class="flexslider">
     <ul class="slides" id="home_banner">
         <script id="banner_template" type="x-tmpl-mustache/text">
-            <li>
+            <li class="position_relative">
                 <a href="{{url}}" {{css}} onclick="{{noLink}}">
                     <img class="banner_img" alt="banner" src="{{image_url}}" />
                     <div class="banner_title">
@@ -26,6 +26,19 @@
     <div class="site_container">
         <h3 class="home_page_title caps">Explore The Gateway</h3>
     </div>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div id="feature_0" class="grid-item"></div>
+        <div id="feature_1" class="grid-item"></div>
+        <div id="feature_2" class="grid-item grid-item--width2"></div>
+        <div id="feature_3" class="grid-item"></div>
+
+        <div id="feature_4" class="grid-item"></div>
+        <div id="feature_5" class="grid-item grid-item--width2"></div>  
+        <div id="feature_6" class="grid-item"></div>
+        <div id="feature_7" class="grid-item"></div>
+    </div>
+    <div class="margin_30"></div>
     
     <!--<div class="grid">-->
     <!--    <div class="grid-sizer"></div>-->
@@ -40,19 +53,7 @@
     <!--    <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>-->
     <!--</div>-->
     
-    <div class="grid">
-        <div class="grid-sizer"></div>
-        <div id="feature_0" class="grid-item"></div>
-        <div id="feature_1" class="grid-item"></div>
-        <div id="feature_2" class="grid-item grid-item--width2"></div>
-        <div id="feature_3" class="grid-item"></div>
-
-        <div id="feature_4" class="grid-item"></div>
-        <div id="feature_5" class="grid-item grid-item--width2"></div>  
-        <div id="feature_6" class="grid-item"></div>
-        <div id="feature_7" class="grid-item"></div>
-    </div>
-    <div class="margin_30"></div>
+    
  
    
 
@@ -61,8 +62,7 @@
         <h3 class="home_page_title caps">What's Happening</h3>
     </div>
     <div class="feature_container" id="feature_container">
-        <!-- <script id="feature_template" type="x-tmpl-mustache/text"> -->
-            <!--<a class="feature_image" href="{{url}}"><img class="" src="{{image_url}}"/></a>-->
+        
             <div class="grid">
                 <div class="grid-sizer"></div>
                 <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
@@ -72,10 +72,7 @@
                 <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>
                 <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
                 <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-                  
-               
             </div>
-        <!-- </script> -->
     </div>
     
     <div class="site_container">
