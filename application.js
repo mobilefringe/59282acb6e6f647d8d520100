@@ -384,7 +384,7 @@ function renderPosts(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.image_url.indexOf('missing.png') > -1) {
-            val.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.post_image = "";
         } else {
             val.post_image = val.image_url;
         }
@@ -399,7 +399,7 @@ function renderPosts(container, template, collection){
         
         val.slug = "blog/" + val.slug;
         
-        val.twitter_title = val.title + " via @shopHSC";
+        val.twitter_title = val.title + " via @ShopTheGateway";
         
         // var date_blog = new Date(val.publish_date);
         // val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
@@ -421,7 +421,7 @@ function renderPostDetails(container, template, collection, blog_posts){
     var template_html = $(template).html();
     $.each(collection , function( key, val ) {
         if (val.image_url.indexOf('missing.png') > -1) {
-            val.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.post_image = "";
         } else {
             val.post_image = val.image_url;
         }
@@ -459,7 +459,7 @@ function renderPostDetails(container, template, collection, blog_posts){
             }
         }
 
-        val.twitter_title = val.title + " via @shopHSC";
+        val.twitter_title = val.title + " via @ShopTheGateway";
         
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
