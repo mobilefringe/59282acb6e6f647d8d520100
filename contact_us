@@ -60,7 +60,7 @@
             var repo = getRepoDetailsByName("Contact Us Banner").images[0];
             var banner = getImageURL(repo.photo_url);
             console.log(banner);
-            $(".page_header").css({backgroundImage: "banner"});
+            $(".page_header").css({background-image: "banner"});
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-contact-us.json"
             $.getJSON(pages_json).done(function(data) {
