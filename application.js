@@ -606,11 +606,11 @@ function renderStoreList(container, template, collection, type){
         
         var current_initial = val.name[0];
         val.cat_list = val.categories.join(',')
-        if(store_initial.toUpperCase() == current_initial.toUpperCase()){
+        if(store_initial.toLowerCase() == current_initial.toLowerCase()){
             val.initial = "";
             val.show = "display:none;";
         } else {
-            val.initial = current_initial;
+            val.initial = current_initial.toUpperCase();
             store_initial = current_initial;
             // val.show = "visibility: hidden";
         }
