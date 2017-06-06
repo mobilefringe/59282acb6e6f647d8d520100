@@ -605,7 +605,7 @@ function renderStoreList(container, template, collection, type){
         }
         
         var current_initial = val.name[0];
-        if (current_initial === parseInt(current_initial, 10)) {
+        if (current_initial == parseInt(current_initial, 10)) {
             console.log("data is integer")
         }
         console.log(current_initial);
