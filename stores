@@ -105,11 +105,10 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            // var repo = getRepoDetailsByName("Stores Banner").images[0];
-            // if(repo != undefined){
-            //     var banner = getImageURL(repo.photo_url)
-            //     $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-            // }
+            var repo = getRepoDetailsByName("Stores Banner").images[0];
+            var banner = getImageURL(repo.photo_url)
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
             
             var categories = getStoreCategories().sortBy(function(o){ return o.name});
             renderGeneral("#category_select", "#category_select_template", categories);
