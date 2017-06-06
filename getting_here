@@ -30,9 +30,19 @@
             var banner = getImageURL(repo.photo_url);
             $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/thegateway-contact-us.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            });
+            
             show_content();
         }
         loadMallDataCached(renderAll); 
-    })
+    });
 </script>
                     
