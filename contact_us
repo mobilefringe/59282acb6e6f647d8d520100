@@ -57,7 +57,7 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Contact Us Banner")images[0];
+            var repo = getRepoDetailsByName("Contact Us Banner").images[0];
             console.log(repo);
             // var banner = repo.;
             // console.log(banner);
