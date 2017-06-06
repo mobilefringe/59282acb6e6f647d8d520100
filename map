@@ -18,7 +18,7 @@
                 <h3 class="map_title center caps">Directory</h3>
                 <div id="stores_container" class="directory_list">
                     <script id="stores_template" type="x-tmpl-mustache/text">
-                        <h4 class="directory_name caps"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h4>
+                        <h5 class="directory_name caps"><a class="map_pin_a" href="#" data-value='{{svgmap_region}}/{{slug}}'>{{name}}</a></h5>
                     </script>
                 </div>
             </div>
