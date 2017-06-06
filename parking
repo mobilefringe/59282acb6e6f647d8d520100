@@ -19,7 +19,9 @@
         </div>
     </div>
     <div class="row">
-        <div id="mm_page_content"></div>    
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>    
+        </div>
     </div>
 </div>
 <script>
