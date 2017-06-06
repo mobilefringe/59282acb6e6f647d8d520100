@@ -42,27 +42,19 @@
     
     <div class="grid">
         <div class="grid-sizer"></div>
-        <div class="grid-item" id="feature_0"><img src="https://unsplash.it/640/640"/></div>
-        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>
-        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div id="feature_0" class="grid-item"></div>
+        <div id="feature_1" class="grid-item"></div>
+        <div id="feature_2" class="grid-item grid-item--width2"></div>
+        <div id="feature_3" class="grid-item"></div>
 
-        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"/></div>  
-        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
-        <div class="grid-item"><img src="https://unsplash.it/640/640"/></div>
+        <div id="feature_4" class="grid-item"></div>
+        <div id="feature_5" class="grid-item grid-item--width2"></div>  
+        <div id="feature_6" class="grid-item"></div>
+        <div id="feature_7" class="grid-item"></div>
     </div>
     
  
-    <div class="grid">
-        <div class="grid-sizer"></div>
-        
-                <div class="grid-item">
-                    
-                </script>
-            </div>
-        </div>
-    </div>
+   
 
         
     <div class="site_container">
@@ -99,6 +91,7 @@
             var feature_items = getFeatureList();
             renderBanner('#banner_template','#home_banner',banners);
             // renderFeatureItems('#feature_container','#feature_template', feature_items);
+            renderFeatureItems();
             
             show_content();
             
