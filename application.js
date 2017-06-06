@@ -156,7 +156,7 @@ function renderGallery(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.photo_url.indexOf('missing.png') > -1) {
-            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.gallery_image = "";
         } else {
             val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
         }
@@ -354,7 +354,7 @@ function renderSinglePost(container, template, main_post){
     Mustache.parse(template_html);   // optional, speeds up future uses
 
     if (main_post.image_url.indexOf('missing.png') > 0) {
-        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+        main_post.post_image = "";
     } else {
         main_post.post_image = main_post.image_url;
     }
@@ -369,7 +369,7 @@ function renderSinglePost(container, template, main_post){
     
     main_post.slug = "blog/" + main_post.slug;
     
-    main_post.twitter_title = main_post.title + " via @shopHSC";
+    main_post.twitter_title = main_post.title + " via @ShopTheGateway";
     
     var rendered = Mustache.render(template_html, main_post);
     item_list.push(rendered);
