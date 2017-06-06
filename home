@@ -112,6 +112,7 @@
                 horizontalOrder: false,
                 itemSelector: '.grid-item',
                 originLeft: false,
+                originTop: false,
                 percentPosition: true
             });
 
