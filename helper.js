@@ -7,6 +7,7 @@ function init(e) {
         $('html, body').animate({
             scrollTop: $(id).offset().top -75
         }, 1500);
+        $("#fieldEmail").focus();
     });
     
     $(".alpha_list a").click(function(e) {
