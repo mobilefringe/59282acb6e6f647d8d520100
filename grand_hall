@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="row">
-        
+        <div id="mm_page_content"></div>     
     </div>
 </div>
 <script>
