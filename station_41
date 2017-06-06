@@ -36,7 +36,7 @@
             $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             
             var prefix = get_prefix();
-            var pages_json = prefix + "//pages/thegateway-station41.json"
+            var pages_json = prefix + "/pages/thegateway-station41.json"
             $.getJSON(pages_json).done(function(data) {
                 $('#mm_page_content').html(data.body);
             }).fail(function(jqXHR) {
