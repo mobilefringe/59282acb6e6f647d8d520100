@@ -103,7 +103,6 @@
                 columnWidth: '.grid-sizer',
                 horizontalOrder: false,
                 itemSelector: '.grid-item',
-                originLeft: false,
                 percentPosition: true
             });
 
