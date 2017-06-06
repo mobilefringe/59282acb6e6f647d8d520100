@@ -1,11 +1,17 @@
 function init(e) {
     get_instagram("//dixieoutlet.mallmaverick.com/api/v2/dixieoutlet/social.json", 6, 'thumbnail', render_instagram);
     
-    $(".alpha_list a").click(function(e) {
-        
+    $("#signup").click(function(e) {
         e.preventDefault();
         var id = $(this).attr("href");
-        console.log(id)
+        $('html, body').animate({
+            scrollTop: $(id).offset().top -75
+        }, 1500);
+    });
+    
+    $(".alpha_list a").click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr("href");
         $('html, body').animate({
             scrollTop: $(id).offset().top -75
         }, 1500);
