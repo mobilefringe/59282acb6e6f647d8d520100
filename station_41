@@ -31,9 +31,9 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            // var repo = getRepoDetailsByName("Station41 Banner").images[0];
-            // var banner = getImageURL(repo.photo_url);
-            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            var repo = getRepoDetailsByName("Station41 Banner").images[0];
+            var banner = getImageURL(repo.photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-station41.json"
@@ -48,5 +48,5 @@
             show_content();
         }
         loadMallDataCached(renderAll); 
-    })
+    });
 </script>
