@@ -164,10 +164,10 @@
                 <a href="" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816065000/snapchat_icon.png" class="footer_social_icon" alt="SnapChat Icon"></a>
             </div>
             <div class="footer_conduct">
-                <a href=""><p class="bold line">Code Of Conduct</p></a>
+                <a href="/pages/thegateway-code-of-conduct"><p class="bold line">Code Of Conduct</p></a>
             </div>
             <div class="footer_terms">
-                <p>&copy; 2017 THE GATEWAY All Rights Reserved | <a href="">Privacy Policy</a> | <a href="" class="line">Terms & Conditions</a></p>
+                <p>&copy; 2017 THE GATEWAY All Rights Reserved | <a href="/pages/thegateway-privacy-policy">Privacy Policy</a> | <a href="/pages/thegateway-terms-conditions" class="line">Terms & Conditions</a></p>
                 <p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>
             </div>
         </div>
