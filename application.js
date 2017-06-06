@@ -605,6 +605,7 @@ function renderStoreList(container, template, collection, type){
         }
         
         var current_initial = val.name[0];
+        console.log(current_initial);
         val.cat_list = val.categories.join(',')
         if(store_initial.toLowerCase() == current_initial.toLowerCase()){
             val.initial = "";
