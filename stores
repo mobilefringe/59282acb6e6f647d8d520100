@@ -73,6 +73,31 @@
 </div>
 <div class="site_container">
     <div class="row">
+        <div id="num_store_list_container">
+            <script id="num_store_list_template" type="x-tmpl-mustache/text">
+                <div style="{{show}}" class="store_initial" id="#{{initial}}">
+                    <div class="col-xs-6 col-sm-3 col-md-2 cats_row" data-cat="{{cat_list}}">
+                        <div class="store_logo_container">
+                            {{initial}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2 cats_row" data-cat="{{cat_list}}">
+                    <div class="store_logo_container" id="{{initial}}">
+                        <a href="/stores/{{slug}}">
+                            <img style="{{initial_img}}" src="{{store_front_url_abs}}"/>
+                            <div class="store_coming_soon" style="{{coming_soon_store}}">
+                                <div class="new_store">Coming soon</div>
+                            </div>
+                            <div class="store_list_promos">
+                                <span class="promo_exist" style="{{job_exist}}"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000358000/jobs.png" class="" alt=""> {{job_list}}</span>
+                                <span class="promo_exist" style="{{promotion_exist}}"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000371000/promotions.png" class="" alt=""> {{promotion_list}}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </script>
+        </div>
         <div id="store_list_container">
             <script id="store_list_template" type="x-tmpl-mustache/text">
                 <div style="{{show}}" class="store_initial" id="#{{initial}}">
@@ -114,7 +139,8 @@
             $('#category_select').prepend('<li class="show_cat_stores" data-id="000" name="All">ALL</li>');
             
             var store_list = getStoresList();
-            renderStoreList('#store_list_container','#store_list_template', store_list, "stores","#", "Z" );
+            renderStoreList('#num_store_list_container','#num_store_list_template', store_list, "stores","#", "Z" );
+            renderStoreList('#store_list_container','#store_list_template', store_list, "stores");
             show_content();
             
             store_search();
