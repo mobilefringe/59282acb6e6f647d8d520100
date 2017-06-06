@@ -43,6 +43,5 @@
             show_content();
         }
         loadMallDataCached(renderAll); 
-    })
+    });
 </script>
-                    
