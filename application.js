@@ -605,6 +605,9 @@ function renderStoreList(container, template, collection, type){
         }
         
         var current_initial = val.name[0];
+        if (current_initial === parseInt(current_initial, 10)) {
+            alert("data is integer")
+        }
         console.log(current_initial);
         val.cat_list = val.categories.join(',')
         if(store_initial.toLowerCase() == current_initial.toLowerCase()){
