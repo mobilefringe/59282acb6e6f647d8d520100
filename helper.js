@@ -5,7 +5,7 @@ function init(e) {
         e.preventDefault();
         var id = $(this).attr("href");
         $('html, body').animate({
-            scrollTop: $(id).offset().top
+            scrollTop: $(id).offset().top -75
         }, 1500);
     });
 }
@@ -24,10 +24,6 @@ function drop_pin(id){
     }]);
     map.setViewBox(id);
     $('#btnZoomIn').click()
-}
-
-function isInt(value) {
-    return !isNaN(value) && parseInt(Number(value)) == value && !isNaN(parseInt(value, 10));
 }
 
 function load_store_map(reg, store_details){
