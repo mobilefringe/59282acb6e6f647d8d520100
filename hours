@@ -42,7 +42,7 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Grand Hall Banner").images[0];
+            var repo = getRepoDetailsByName("Hours Banner").images[0];
             var banner = getImageURL(repo.photo_url);
             $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             
@@ -51,7 +51,7 @@
             renderHours('#holiday_hours_container','#holiday_hours_template', hours, 'holiday_hours');
             
             var prefix = get_prefix();
-            var pages_json = prefix + "/pages/thegateway-grand-hall.json"
+            var pages_json = prefix + "/pages/thegateway-hours.json"
             $.getJSON(pages_json).done(function(data) {
                 $('#mm_page_content').html(data.body);
             }).fail(function(jqXHR) {
