@@ -57,10 +57,10 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Contact Us Banner");
+            var repo = getRepoDetailsByName("Contact Us Banner")images[0];
             console.log(repo);
-            var banner = repo.images[0];
-            console.log(banner);
+            var banner = repo.;
+            // console.log(banner);
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-contact-us.json"
             $.getJSON(pages_json).done(function(data) {
