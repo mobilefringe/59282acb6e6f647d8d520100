@@ -67,7 +67,7 @@ function render_instagram(data){
 }
 
 function show_content(){
-    $('.yield').fadeIn();
+    $('.page_content').fadeIn();
     $(".modal-backdrop").remove();
     
     var today_hours = getTodaysHours();
