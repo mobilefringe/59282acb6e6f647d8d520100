@@ -79,7 +79,7 @@
     </div>
     
     <div class="site_container">
-        <h3 class="home_page_title">In Our Feed</h3>
+        <h3 class="home_page_title caps">In Our Feed</h3>
     </div>
     <div id="instafeed"></div>
 </div>
