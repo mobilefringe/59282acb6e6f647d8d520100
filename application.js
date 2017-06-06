@@ -606,27 +606,13 @@ function renderStoreList(container, template, collection, type){
         
         var current_initial = val.name[0];
         val.cat_list = val.categories.join(',')
-        // if(store_initial.toLowerCase() == current_initial.toLowerCase()){
-        //     val.initial = "";
-        //     val.show = "display:none;";
-        // } else {
-        //     val.initial = current_initial.toUpperCase();
-        //     store_initial = current_initial;
-        // }
-        
         if(store_initial.toLowerCase() == current_initial.toLowerCase()){
-            val.data_initial = current_initial;
-            store_initial = current_initial;
             val.initial = "";
             val.show = "display:none;";
-        }
-        else {
-            val.data_initial = current_initial;
-            val.initial = current_initial;
+        } else {
+            val.initial = current_initial.toUpperCase();
             store_initial = current_initial;
-            val.show = "display:block;";
         }
-        
         
         if(val.is_coming_soon_store == true){
             val.coming_soon_store = "display: block";
