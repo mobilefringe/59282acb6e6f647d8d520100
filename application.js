@@ -1,4 +1,4 @@
-/*Created 2017-05-29  by RKS*/
+/*Created 2017-05-29  by Caitlin*/
 function renderBanner(banner_template,home_banner,banners){
     var item_list = [];
     var item_rendered = [];
