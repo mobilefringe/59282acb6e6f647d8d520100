@@ -14,7 +14,7 @@
 <div class="site_container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa diam, pretium at iaculis quis, suscipit id sapien. Aliquam turpis massa, interdum ut tempor sit amet, lobortis in enim. Vestibulum molestie facilisis sapien vel faucibus. Vestibulum iaculis semper metus in tincidunt. Aenean cursus dolor diam, sed lacinia metus fringilla id.</h3>
+            <h3 class="center" id="mm_page_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa diam, pretium at iaculis quis, suscipit id sapien. Aliquam turpis massa, interdum ut tempor sit amet, lobortis in enim. Vestibulum molestie facilisis sapien vel faucibus. Vestibulum iaculis semper metus in tincidunt. Aenean cursus dolor diam, sed lacinia metus fringilla id.</h3>
         </div>
     </div>
     <div class="row">
