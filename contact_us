@@ -59,7 +59,7 @@
         function renderAll(){
             var repo = getRepoDetailsByName("Contact Us Banner")images[0];
             console.log(repo);
-            var banner = repo.;
+            // var banner = repo.;
             // console.log(banner);
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-contact-us.json"
