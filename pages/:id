@@ -14,7 +14,7 @@
 <div class="site_container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="details_header caps">Tourism</h3>
+            <h3 id="mm_page_title" class="details_header caps"></h3>
             <div class="thick_line"></div>
         </div>
     </div>
@@ -37,6 +37,7 @@
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/" + slug + ".json"
             $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_title').html(data.title);
                 $('#mm_page_content').html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
