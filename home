@@ -58,7 +58,7 @@
 
         
     <div class="site_container">
-        <h3 class="home_page_title">What's Happening</h3>
+        <h3 class="home_page_title caps">What's Happening</h3>
     </div>
     <div class="feature_container" id="feature_container">
         <!-- <script id="feature_template" type="x-tmpl-mustache/text"> -->
