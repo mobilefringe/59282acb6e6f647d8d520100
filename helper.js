@@ -26,6 +26,10 @@ function drop_pin(id){
     $('#btnZoomIn').click()
 }
 
+function isInt(value) {
+    return !isNaN(value) && parseInt(Number(value)) == value && !isNaN(parseInt(value, 10));
+}
+
 function load_store_map(reg, store_details){
     this_region = {};
     this_region = store_details.svgmap_region;
