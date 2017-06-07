@@ -145,5 +145,5 @@ function store_search() {
 }
 
 var default_image = {
-    "image_url" : "//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1496850625000/gateway_default.jpg",
+    "image_url" : "//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496850961000/LogoBox.png",
 }
