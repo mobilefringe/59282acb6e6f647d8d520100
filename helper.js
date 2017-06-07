@@ -145,5 +145,5 @@ function store_search() {
 }
 
 var default_image = {
-    "image_url" : "//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1490119146000/northside_logo_default.png",
+    "image_url" : "//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1496850625000/gateway_default.jpg",
 }
