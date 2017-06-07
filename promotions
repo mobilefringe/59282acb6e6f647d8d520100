@@ -37,7 +37,7 @@
                         <a href="/promotions/{{slug}}">
                             <img src="{{image_url}}" alt="img">
                             <div class="info">
-                                <h4>{{name_short}}</h4>
+                                <h5>{{name_short}}</h5>
                                 <hr>
                                 <p>{{dates}}</p>
                             </div>
