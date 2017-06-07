@@ -485,7 +485,7 @@ function renderPromotions(container, template, collection){
             val.image_url = default_image.image_url;
         }
         
-        var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
+        // var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
         var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
         
         if(store_front_image != undefined) {
