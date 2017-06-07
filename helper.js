@@ -7,7 +7,7 @@ function init(e) {
 		$(this).toggleClass('open');
 		$('#menu').slideToggle();
 	});
-
+    
     $("#signup").click(function(e) {
         e.preventDefault();
         var id = $(this).attr("href");
