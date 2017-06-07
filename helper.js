@@ -3,6 +3,23 @@ function init(e) {
     
     get_instagram("//dixieoutlet.mallmaverick.com/api/v2/dixieoutlet/social.json", 6, 'thumbnail', render_instagram);
     
+    $('#menu-icon').click(function(){
+		$(this).toggleClass('open');
+		$('#menu').slideToggle();
+	});
+    
+    $('#open_menu').click(function(){
+        $('#menu').slideDown();
+        $(this).hide();
+        $('#close_menu').show();
+    });
+    
+    $('#close_menu').click(function(){
+        $('#menu').slideUp();
+        $(this).hide();
+        $('#open_menu').show();
+    });
+    
     $("#signup").click(function(e) {
         e.preventDefault();
         var id = $(this).attr("href");
