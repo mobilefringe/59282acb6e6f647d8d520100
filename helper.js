@@ -6,6 +6,7 @@ function init(e) {
     $('#menu-icon').click(function(){
 		$(this).toggleClass('open');
 		$('#primary_nav').slideToggle();
+		$('body').addClass('no_scroll');
 	});
     
     $("#signup").click(function(e) {
