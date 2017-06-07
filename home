@@ -12,11 +12,6 @@
             <li class="position_relative">
                 <a href="{{url}}" {{css}} onclick="{{noLink}}">
                     <img class="banner_img" alt="banner" src="{{image_url}}" />
-                    <div class="banner_title">
-                        <hr>
-                        <h1 class="caps">{{description}}</h1>
-                        <hr>
-                    </div>
                 </a>
             </li>
         </script>
