@@ -42,6 +42,10 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            // var repo = getRepoDetailsByName("Events Banner").images[0];
+            // var banner = getImageURL(repo.photo_url)
+            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
             var events = getEventsList().sortBy(function(o){ return o.start_date });
             var published_events = [];
             $.each( events , function( key, val ){
