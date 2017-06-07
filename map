@@ -37,6 +37,10 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            // var repo = getRepoDetailsByName("Map Banner").images[0];
+            // var banner = getImageURL(repo.photo_url)
+            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
             var stores = getStoresList();
             renderStoreList('#stores_container','#stores_template', stores, "A", "Z");
             
