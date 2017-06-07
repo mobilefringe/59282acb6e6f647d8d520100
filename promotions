@@ -52,8 +52,11 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            // var repo = getRepoDetailsByName("Promotions Banner").images[0];
+            // var banner = getImageURL(repo.photo_url)
+            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
             var promotions = getPromotionsList().sortBy(function(o){ return o.end_date });
-            console.log(promotions)
             var published_promos = [];
             var cat_list = [];
             var cat_names = [];
