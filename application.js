@@ -287,8 +287,6 @@ function renderJobs(container, template, collection){
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
         if(val.jobable_type == "Store"){
-            var store_details = getStoreDetailsByID(val.jobable_id);
-            console.log(store_details);
             val.store_name = getStoreDetailsByID(val.jobable_id).name;
             val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
             val.image_url = getStoreDetailsByID(val.jobable_id).store_front_url_abs;
@@ -305,7 +303,8 @@ function renderJobs(container, template, collection){
             val.dates = start.format("MMM D")
         }
         else{
-            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
+            val.dates = start.format("MMM D") + " - " + end.format("MMM D");
+            val.end_date = end.format("MMM D");
         }
         
         var rendered = Mustache.render(template_html,val);
