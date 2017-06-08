@@ -19,9 +19,9 @@
         <div class="col-md-8 col-md-offset-2" id="contest_details_container">
             <script id="contest_details_template" type="x-tmpl-mustache/text">
                 <h3 class="center caps">{{name}}</h3>
-                <div class="margin_30"></div>
+                <div class="margin_20"></div>
                 <img src="{{alt_photo_url}}" class="details_image" style="{{promo_image}}" />
-                
+                <div class="margin_20"></div>
                 <div class="details_desc margin_30">{{{rich_description}}}</div>
                 
                 <form id="contest_form">
