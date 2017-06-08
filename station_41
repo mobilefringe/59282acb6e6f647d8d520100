@@ -19,15 +19,6 @@
     <div class="modal_50">
         <h4 id="modal_name">Heading</h4>
         <p id ="modal_desc">desc</p>
-        <div class="sharer_icons">
-            <p class="pull-left">Share This Post:</p>
-            <a id="share_fb" target="_blank" href="#">
-                <img class="modal_share_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
-            </a>
-            <a id="share_twitter" target="_blank" href="#">
-                <img class="modal_share_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
-            </a>
-        </div>
     </div>
     <div class="clearfix"></div>
 </div>
@@ -93,6 +84,22 @@
             $.each(gallery, function(key, val) {
                 var id = val.id;
                 id_list.push(val.id);
+            });
+            
+            var window_width = $( window ).width();
+            if (window_width < 769) {
+                $('a').removeClass('open_details_modal');
+            }
+            $('.custom-modal-backdrop').click(function(){
+                $('body').removeClass('gallery_no_scroll');
+                $('.custom_modal').fadeOut();
+                $('.custom-modal-backdrop').fadeOut();
+            });
+            
+            $('.modal_close').click(function(){
+                $('body').removeClass('gallery_no_scroll');
+                $('.custom_modal').fadeOut();
+                $('.custom-modal-backdrop').fadeOut();
             });
         
             $('.open_details_modal').click(function(e){
