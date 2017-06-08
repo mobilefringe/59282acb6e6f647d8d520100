@@ -29,7 +29,7 @@
             <script id="promos_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
                     <div class="ih-item circle effect19">
-                        <a href="/promotions/{{slug}}">
+                        <a href="/jobs/{{slug}}">
                             <img src="{{image_url}}" alt="img">
                             <div class="info">
                                 <h4>{{name_short}}</h4>
