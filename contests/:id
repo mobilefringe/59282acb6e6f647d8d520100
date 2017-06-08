@@ -37,7 +37,7 @@
                             <input class="form-control" id="last_name" name="contest[last_name]" type="text" required data-validation="required" />
                         </div>
                     </div>
-                    <div class="row ">
+                    <div class="row">
                         <div class="col-md-6 margin_30">
                             <label for="email">Email*</label> 
                             <input class="form-control" id="email" name="contest[email]" type="email" required data-validation-regexp="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" data-validation-error-msg="The input value is incorrect email address" data-validation="custom" />
@@ -87,9 +87,9 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            // var repo = getRepoDetailsByName("Jobs Banner").images[0];
-            // var banner = getImageURL(repo.photo_url)
-            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            var repo = getRepoDetailsByName("Contest Banner").images[0];
+            var banner = getImageURL(repo.photo_url)
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
                 
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
