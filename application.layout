@@ -78,6 +78,9 @@
                         <a id="signup" href="#sign_up">Sign Up</a>
                     </div> 
                     <div class="col-md-6">
+                        <div class="news-ticker" data-speed="5000">
+                            <ul class="bulletin" id="bulletin"></ul>
+                        </div>
                         <div class="message">
                             <p>THE FOUNTAIN IS OFF TODAY</p>
                         </div>
