@@ -21,10 +21,10 @@
                     </div>
                     <div class="main_post_content">
                         <div class="main_post_share_icons">
-                            <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                            <a href="https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com//{{slug}}" target="_blank">
                                 <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
                             </a>
-                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.shopthegateway.com/{{slug}}" target="_blank">
                                 <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
                             </a>
                         </div>
@@ -48,10 +48,10 @@
                     </div>
                     <div class="post_content">
                         <div class="post_share_icons">
-                            <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                            <a href="https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/{{slug}}" target="_blank">
                                 <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
                             </a>
-                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
+                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.shopthegateway.com/{{slug}}" target="_blank">
                                 <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
                             </a>
                         </div>
@@ -81,7 +81,7 @@
     });
     
     function renderPageData(){
-        var blog_posts = getBlogDataBySlug('halifaxcentre-our-style').posts.reverse();
+        var blog_posts = getBlogDataBySlug('').posts.reverse();
         var main_post = blog_posts[0];
         renderSinglePost('#main_post_container', "#main_post_template", main_post);
 
