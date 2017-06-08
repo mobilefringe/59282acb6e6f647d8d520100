@@ -34,7 +34,7 @@
                             <div class="info">
                                 <h4>{{name_short}}</h4>
                                 <hr>
-                                <p>{{dates}}</p>
+                                <p>End Date: {{end_date}}</p>
                             </div>
                         </a>
                     </div>
