@@ -45,7 +45,7 @@ function init(e) {
                     var slideCount = ($('.news-ticker li').length) - 1;
                     
                     var startTicker = setInterval(function(){
-                        $('.news-ticker ul li').eq(currentSlide).fadeOut(500)
+                        $('.news-ticker ul li').eq(currentSlide).fadeOut(1000)
                         
                         if (currentSlide < slideCount) {
                             currentSlide += 1;
@@ -53,7 +53,7 @@ function init(e) {
                             currentSlide = 0;
                         }
                         
-                        $('.news-ticker ul li').eq(currentSlide).fadeIn(500)
+                        $('.news-ticker ul li').eq(currentSlide).fadeIn(1000)
                     
                     }, tickerSpeed);
                 }
