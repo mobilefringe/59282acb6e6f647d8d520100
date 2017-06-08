@@ -53,7 +53,7 @@ function init(e) {
                             currentSlide = 0;
                         }
                         
-                        $('.news-ticker ul li').eq(currentSlide).fadeIn(1000)
+                        $('.news-ticker ul li').eq(currentSlide).fadeIn(500)
                     
                     }, tickerSpeed);
                 }
