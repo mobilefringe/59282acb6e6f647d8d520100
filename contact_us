@@ -37,7 +37,7 @@
                 <input name="email" id="email" class="form-control" type="text" value="" placeholder="Your Email" required>
                 <input name="subject" id="subject" class="form-control" type="text" placeholder="Subject" required>
                 <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
-                <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+                <button id="submit" class="contact_btn" type="submit">Submit</button>
             </form>
             <br>
             <div id="send_contact_success" class="alert alert-success hidden_now" role="alert">
