@@ -65,47 +65,6 @@ function init(e) {
     });
 }
 
-function drop_pin(id){
-    map.marksHide();
-    var coords = map.get_coords(id);
-    var height = parseInt(coords["height"]);
-    var width = parseInt(coords["width"]);
-    var x_offset = (parseInt(width) / 2);
-    var y_offset = (parseInt(height) / 2);
-    map.setMarks([{ xy: [coords["x"] - 27 + x_offset, coords["y"] - 72 + y_offset],
-        attrs: {
-            src:  '//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1492031824000/northside_map_pin-01.png'
-        }
-    }]);
-    map.setViewBox(id);
-    $('#btnZoomIn').click()
-}
-
-function load_store_map(reg, store_details){
-    this_region = {};
-    this_region = store_details.svgmap_region;
-    map = $('#mapsvg_store_detail').mapSvg({
-        source: getSVGMapURL(),    // Path to SVG map
-        colors: {stroke: '#aaa', hover: 0},
-        disableAll: true,
-        height:335,
-        width:848,
-        regions: reg,
-        tooltipsMode:'custom',
-        loadingText: "loading...",
-        zoom: true,
-        zoomButtons: {'show': true,'location': 'right' },
-        pan:true,
-        cursor:'pointer',
-        responsive:true,
-        zoomLimit: [0,5],
-        viewBox:[420,420,1650,1650]
-    });
-    // map.setViewBox(store_details.svgmap_region);
-    map.selectRegion(store_details.svgmap_region);
-    drop_pin(store_details.svgmap_region);
-}
-
 function render_instagram(data){
     $('#instafeed').html(data)
 }
