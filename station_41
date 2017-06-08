@@ -52,6 +52,7 @@
             $(".station_header").css({backgroundImage: "url(" + banner + ")"});
             
             var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
+            console.log(gallery);
             renderGallery("#gallery_container", "#gallery_template", gallery);
             
             var prefix = get_prefix();
