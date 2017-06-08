@@ -93,7 +93,7 @@
         function renderFeatureItems(){
             var items = getFeatureList();
             $.each(items, function(i, val){
-                $('#feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><h2>'+ val.name +'</h2><hr><h3>' + val.description + '</h3></div></a></div>')
+                $('#feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><h2>'+ val.name +'</h2><hr><p>' + val.description + '</p></div></a></div>')
             })
         }
     })
