@@ -17,7 +17,7 @@
         <img class="modal_img" src="http://placehold.it/337x337" />
     </div>
     <div class="modal_50">
-        <h4 id="modal_name">Heading</h4>
+        <h4 id="modal_name" class="bold">Heading</h4>
         <p id ="modal_desc">desc</p>
     </div>
     <div class="clearfix"></div>
