@@ -1,3 +1,8 @@
+<style>
+    .gallery_image {
+        max-width: 100%;
+    }
+</style>
 <div class="station_header">   
     <div class="site_container">
         <div class="header_content">
