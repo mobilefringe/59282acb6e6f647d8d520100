@@ -98,6 +98,9 @@ $(document).ready(function(e){
             e.preventDefault();
             $('.contest_btn').prop('disabled', true);
             submit_contest(slug);
-        })
+        });
     }
+        
+    loadMallDataCached(renderAll); 
+});    
 </script>
