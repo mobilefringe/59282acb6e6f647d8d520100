@@ -16,7 +16,7 @@
 </div>
 <div class="site_container">
     <div class="row">
-        <div id="contest_details_container">
+        <div class="col-md-8 col-md-offset-2" id="contest_details_container">
             <script id="contest_details_template" type="x-tmpl-mustache/text">
                 <img src="{{alt_photo_url}}" class="details_image" style="{{promo_image}}" />
                 <p class="colored_link">{{name}}</p>
