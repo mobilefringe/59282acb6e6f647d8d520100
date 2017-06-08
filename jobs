@@ -25,8 +25,8 @@
         </div>
     </div>
     <div class="row">
-        <div id="promos_container">
-            <script id="promos_template" type="x-tmpl-mustache/text">
+        <div id="jobs_container">
+            <script id="jobs_template" type="x-tmpl-mustache/text">
                 <div class="col-xs-6 col-sm-3 col-md-2">
                     <div class="ih-item circle effect19">
                         <a href="/jobs/{{slug}}">
