@@ -126,8 +126,6 @@
                 $('.modal_img').attr('src', fi.gallery_image);
                 $('#modal_name').html(fi.caption);
                 $('#modal_desc').html(fi.description);
-                $('#share_fb').attr('href', "https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/blog/"+ slug);
-                $('#share_twitter').attr('href', "https://twitter.com/home?status=" + post_title + " via @ShopTheGateway https://www.shopthegateway.com/blog/" + slug);
                 $('#prev').attr('data-modal-id', prev);
                 $('#next').attr('data-modal-id', next);
             });
