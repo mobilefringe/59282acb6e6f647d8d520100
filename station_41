@@ -3,6 +3,35 @@
         max-width: 100%;
     }
 </style>
+<!-- GALLERY MODAL -->
+<div class="custom-modal-backdrop"></div>
+<div class="custom_modal">
+    <span class="modal_close"><i class="fa fa-times" aria-hidden="true"></i></span>
+    <a class="open_details_modal" id="prev" data-modal-id="id">
+        <i class="fa fa-chevron-left prev_arrow" aria-hidden="true"></i>
+    </a>
+    <a class="open_details_modal" id="next" data-modal-id="id">
+        <i class="fa fa-chevron-right next_arrow" aria-hidden="true"></i>
+    </a>
+    <div class="modal_50">
+        <img class="modal_img" src="http://placehold.it/337x337" />
+    </div>
+    <div class="modal_50">
+        <h4 id="modal_name">Heading</h4>
+        <p id ="modal_desc">desc</p>
+        <div class="sharer_icons">
+            <p class="pull-left">Share This Post:</p>
+            <a id="share_fb" target="_blank" href="#">
+                <img class="modal_share_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
+            </a>
+            <a id="share_twitter" target="_blank" href="#">
+                <img class="modal_share_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
+            </a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- -->
 <div class="station_header">   
     <div class="site_container">
         <div class="header_content">
