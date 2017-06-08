@@ -28,7 +28,7 @@ function init(e) {
 }
 
 jQuery(document).ready(function($){
-    $.getJSON("//halifaxcentre.mallmaverick.com/api/v3/halifaxcentre/messages.json").done(function(data){
+    $.getJSON("//http://thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
         var messages = data.messages.bulletin
         if (messages != undefined){
             if (messages.length == 0){
