@@ -74,7 +74,7 @@
                             <div class="margin_30"></div>
                             <button class="contest_btn">Submit</button>
                             <br /><br />
-                            <p class="" id="succes_msg" style="display:none">Thank you! Your entry have been received.</p>
+                            <p class="" id="succes_msg" style="display:none">Thank you! Your entry has been received.</p>
                         </div>
                     </div>
                 </form>    
