@@ -36,6 +36,8 @@
             var banner = getImageURL(repo.photo_url);
             $(".station_header").css({backgroundImage: "url(" + banner + ")"});
             
+            var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
+            
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-station41.json"
             $.getJSON(pages_json).done(function(data) {
