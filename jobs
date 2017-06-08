@@ -52,6 +52,7 @@
             // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             
             var jobs = getJobsList().sortBy(function(o){ return o.name});
+            console.log(jobs);
             var published_jobs = [];
             $.each(jobs , function( key, val ){
                 today = moment();
