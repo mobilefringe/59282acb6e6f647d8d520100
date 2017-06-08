@@ -81,9 +81,6 @@
                         <div class="news-ticker" data-speed="5000">
                             <ul class="bulletin" id="bulletin"></ul>
                         </div>
-                        <!--<div class="message">-->
-                        <!--    <p>THE FOUNTAIN IS OFF TODAY</p>-->
-                        <!--</div>-->
                     </div> 
                     <div class="col-md-3">
                         <div id="home_hours_container">
