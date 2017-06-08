@@ -5,7 +5,7 @@ function init(e) {
     
     $('#menu-icon').click(function(){
 		$(this).toggleClass('open');
-		$('#primary_nav').slideToggle();
+		$('#mobile_nav').slideToggle();
 		$('body').toggleClass('no_scroll');
 	});
     
