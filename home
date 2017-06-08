@@ -60,20 +60,18 @@
             renderBanner('#banner_template','#home_banner',banners);
             renderFeatureItems();
             
-            $('.grid').masonry({
-                columnWidth: '.grid-sizer',
-                horizontalOrder: false,
-                itemSelector: '.grid-item',
-                percentPosition: true
-            });
-            
             show_content();
             
             $('.flexslider').flexslider({
                 animation: "slide",
             });
 
-            
+            $('.grid').masonry({
+                columnWidth: '.grid-sizer',
+                horizontalOrder: false,
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
 
             if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
