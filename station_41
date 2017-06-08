@@ -89,6 +89,43 @@
             console.log(gallery);
             renderGallery("#gallery_container", "#gallery_template", gallery);
             
+            $('.open_details_modal').click(function(e){
+                e.preventDefault();
+                $('body').addClass('gallery_no_scroll');
+                
+                var modal_id = $(this).attr('data-modal-id');
+                $.each(gallery, function(fi_i, fi_val){
+                    if (fi_val.id == modal_id){
+                        fi = fi_val;
+                    }
+                });
+                var current_id = fi.id;
+                var index = id_list.indexOf(current_id);
+                if(index >= 0 && index < id_list.length){
+                   var next = id_list[index + 1];
+                   $('.next_arrow').show();
+                   if(next === undefined) {
+                       $('.next_arrow').hide();
+                   }
+                }
+                if(index >= 0 && index < id_list.length){
+                   var prev = id_list[index - 1];
+                   $('.prev_arrow').show();
+                   if(prev === undefined) {
+                       $('.prev_arrow').hide();
+                   }
+                }
+                $('.custom-modal-backdrop').fadeIn();
+                $('.custom_modal').fadeIn();
+                $('.modal_img').attr('src', fi.gallery_image);
+                $('#modal_name').html(fi.caption);
+                $('#modal_desc').html(fi.description);
+                $('#share_fb').attr('href', "https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/blog/"+ slug);
+                $('#share_twitter').attr('href', "https://twitter.com/home?status=" + post_title + " via @ShopTheGateway https://www.shopthegateway.com/blog/" + slug);
+                $('#prev').attr('data-modal-id', prev);
+                $('#next').attr('data-modal-id', next);
+            });
+        
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-station41.json"
             $.getJSON(pages_json).done(function(data) {
