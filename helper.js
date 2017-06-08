@@ -28,7 +28,7 @@ function init(e) {
 }
 
 jQuery(document).ready(function($){
-    $.getJSON("//http://thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
+    $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
         var messages = data.messages.bulletin
         if (messages != undefined){
             if (messages.length == 0){
