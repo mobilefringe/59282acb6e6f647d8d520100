@@ -291,7 +291,6 @@ function renderJobs(container, template, collection){
             console.log(store_details);
             val.store_name = getStoreDetailsByID(val.jobable_id).name;
             val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
-            val.image_url = 
         }
         else{
             val.store_name = mall_name;
