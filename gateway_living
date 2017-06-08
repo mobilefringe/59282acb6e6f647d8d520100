@@ -1,0 +1,50 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>The Gateway Living</h1></h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="details_header caps">The Gateway Living</h3>
+            <div class="thick_line"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>     
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Gateway Living Banner").images[0];
+            var banner = getImageURL(repo.photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/thegateway-living-at-the-gateway.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            });
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    })
+</script>
+                    
