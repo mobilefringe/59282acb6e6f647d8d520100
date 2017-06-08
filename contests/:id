@@ -18,17 +18,6 @@
     <div class="row">
         <div id="contest_details_container">
             <script id="contest_details_template" type="x-tmpl-mustache/text">
-                
-            </script>
-        </div>
-    </div>
-</div>
-    <div class="details_row">
-        <div class="details_col_3 hidden_phone">
-            <img src="//codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000/image/jpeg/undefined/dgvr_440x1200_side_events.jpg" />
-        </div>
-        <div class="details_col_9" id="contest_details_container">
-            <script id="contest_details_template" type="x-tmpl-mustache/text">
                 <img src="{{alt_photo_url}}" class="details_image" style="{{promo_image}}" />
                 <p class="colored_link">{{name}}</p>
                 <div class="details_desc margin_30">{{{rich_description}}}</div>
@@ -86,20 +75,19 @@
                             <p class="" id="succes_msg" style="display:none">Thank you! Your entry have been received.</p>
                         </div>
                     </div>
-                </form>
+                </form>    
             </script>
         </div>
     </div>
 </div>
-
-
 <script>
-    $(document).ready(function(e){
-        init(e);
-        loadMallDataCached(renderPage);
-    })
-    
-    function renderPage(){
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        // var repo = getRepoDetailsByName("Jobs Banner").images[0];
+        // var banner = getImageURL(repo.photo_url)
+        // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         contest_details = getContestBySlug(slug);
