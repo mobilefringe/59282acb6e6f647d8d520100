@@ -27,9 +27,9 @@
         <div id="feature_1" class="grid-item"></div>
         <div id="feature_2" class="grid-item"></div>
         <div id="feature_3" class="grid-item"></div>
-        <div id="feature_4" class="grid-item grid-item--width2"></div>
+        <div id="feature_4" class="grid-item "></div>
         <div id="feature_5" class="grid-item grid-item--width2"></div>  
-        <div id="feature_6" class="grid-item"></div>
+        <div id="feature_6" class="grid-item grid-item--width2"></div>
     </div>
     <div class="margin_30"></div>
     
