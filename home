@@ -56,8 +56,8 @@
         init(e);
         function renderAll(){
             var banners = getBanners();
-            var feature_items = getFeatureList();
             renderBanner('#banner_template','#home_banner',banners);
+            var feature_items = getFeatureList();
             renderFeatureItems();
             
             show_content();
