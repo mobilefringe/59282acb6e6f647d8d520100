@@ -25,9 +25,8 @@ function init(e) {
             scrollTop: $(id).offset().top -75
         }, 1500);
     });
-}
-
-jQuery(document).ready(function($){
+    
+    // BANNER MESSAGE
     $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
         var messages = data.messages.bulletin
         if (messages != undefined){
@@ -57,7 +56,6 @@ jQuery(document).ready(function($){
                         $('.news-ticker ul li').eq(currentSlide).fadeIn(500)
                     
                     }, tickerSpeed);
-                    
                 }
             $('.news-ticker').show();
             }
@@ -65,7 +63,11 @@ jQuery(document).ready(function($){
             $('.news-ticker').hide();
         }
     });
-});
+}
+
+// jQuery(document).ready(function($){
+    
+// });
 
 
 
