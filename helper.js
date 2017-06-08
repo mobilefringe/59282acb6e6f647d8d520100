@@ -45,7 +45,7 @@ function init(e) {
                     var slideCount = ($('.news-ticker li').length) - 1;
                     
                     var startTicker = setInterval(function(){
-                        $('.news-ticker ul li').eq(currentSlide).fadeOut(1000)
+                        $('.news-ticker ul li').eq(currentSlide).fadeOut(500)
                         
                         if (currentSlide < slideCount) {
                             currentSlide += 1;
