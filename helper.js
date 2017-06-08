@@ -65,13 +65,6 @@ function init(e) {
     });
 }
 
-// jQuery(document).ready(function($){
-    
-// });
-
-
-
-
 function drop_pin(id){
     map.marksHide();
     var coords = map.get_coords(id);
