@@ -1,10 +1,28 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<div class="header_banner events_banner">
-    <div class="main_container">
-        <h4 class="header_banner_heading">Contest</h4>
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12" id="contest_name_container">
+                    <script id="contest_name_template" type="x-tmpl-mustache/text">
+                        <hr>
+                        <h1>{{name}}</h1>
+                        <hr>
+                    </script>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="main_container mobile_padding">
+<div class="site_container">
+    <div class="row">
+        <div id="contest_details_container">
+            <script id="contest_details_template" type="x-tmpl-mustache/text">
+                
+            </script>
+        </div>
+    </div>
+</div>
     <div class="details_row">
         <div class="details_col_3 hidden_phone">
             <img src="//codecloud.cdn.speedyrails.net/sites/57f3bee46e6f643959000000/image/jpeg/undefined/dgvr_440x1200_side_events.jpg" />
