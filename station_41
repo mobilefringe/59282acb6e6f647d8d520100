@@ -23,6 +23,21 @@
         </div>
     </div>
     <div class="row">
+        <script id="gallery_template" type="x-tmpl-mustache/text">
+            <div class="col-md-4">
+                <div class="gallery_content mobile_padding">
+                    <div class="gallery_image">
+                        <a class="open_details_modal" data-modal-id="{{id}}">
+                            <img src="{{gallery_image}}">
+                        </a>
+                    </div>
+                    <div class="gallery_description">{{{description}}}</div>
+                    <div class="gallery_caption bold">{{caption}}</div>
+                </div>
+            </div>
+        </script>
+    </div>
+    <div class="row">
         <h2 class="leasing_title center caps">Contact Leasing</h2>  
         <h3 class="margin_20 center">To explore leasing opportunities at The Gateway, please call Mountain West Commercial Real Estate at 801-456-8800 or visit <a href="//www.mtnwest.com" target="_blank">mtnwest.com</a>.</h3>
         <div class="thick_line_center"></div>
