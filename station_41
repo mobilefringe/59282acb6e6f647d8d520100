@@ -22,18 +22,20 @@
             <img class="video_still" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496328770000/station41_screenshot.png" alt="Station 41"/>
         </div>
     </div>
-    <div class="row" id="gallery_container">
-        <script id="gallery_template" type="x-tmpl-mustache/text">
-            <div class="col-md-3">
-                <div class="gallery_content mobile_padding">
-                    <div class="gallery_image">
-                        <a class="open_details_modal" data-modal-id="{{id}}">
-                            <img src="{{gallery_image}}">
-                        </a>
+    <div class="row">
+        <div id="gallery_container">
+            <script id="gallery_template" type="x-tmpl-mustache/text">
+                <div class="col-md-3">
+                    <div class="gallery_content">
+                        <div class="gallery_image">
+                            <a class="open_details_modal" data-modal-id="{{id}}">
+                                <img src="{{gallery_image}}">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </script>
+            </script>
+        </div>
     </div>
     <div class="row">
         <h2 class="leasing_title center caps">Contact Leasing</h2>  
