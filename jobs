@@ -32,7 +32,7 @@
                         <a href="/jobs/{{slug}}">
                             <img src="{{image_url}}" alt="img">
                             <div class="info">
-                                <h4>{{name_short}}</h4>
+                                <h4>{{name}}</h4>
                                 <hr>
                                 <p>End Date: {{end_date}}</p>
                             </div>
