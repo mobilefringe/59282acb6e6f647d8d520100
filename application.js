@@ -287,8 +287,11 @@ function renderJobs(container, template, collection){
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
         if(val.jobable_type == "Store"){
+            var store_details = getStoreDetailsByID(val.promotionable_id);
+            console.log(store_details);
             val.store_name = getStoreDetailsByID(val.jobable_id).name;
             val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
+            val.image_url = 
         }
         else{
             val.store_name = mall_name;
