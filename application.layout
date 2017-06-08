@@ -59,7 +59,7 @@
     
     <script>
         // setEndPoint('//thegateway.mallmaverick.com/api/v3/thegateway/all.json');
-        setEndPoint('//northside.mallmaverick.com/api/v3/northside/all.json');
+        setEndPoint('//halifaxcentre.mallmaverick.com/api/v3/halifaxcentre/all.json');
     </script>
 </head>
 
