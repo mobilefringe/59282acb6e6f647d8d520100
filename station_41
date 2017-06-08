@@ -31,8 +31,6 @@
                             <img src="{{gallery_image}}">
                         </a>
                     </div>
-                    <div class="gallery_description">{{{description}}}</div>
-                    <div class="gallery_caption bold">{{caption}}</div>
                 </div>
             </div>
         </script>
