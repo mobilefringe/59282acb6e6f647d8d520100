@@ -72,7 +72,7 @@
                             </label>
                             <p>For more details about personal privacy, please read our <a href="/pages/thegateway-privacy-policy" target="_blank">Privacy Policy.</a></p>
                             <div class="margin_30"></div>
-                            <button class="main_btn animated_btn contest_btn">Submit</button>
+                            <button class="contest_btn">Submit</button>
                             <br /><br />
                             <p class="" id="succes_msg" style="display:none">Thank you! Your entry have been received.</p>
                         </div>
