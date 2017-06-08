@@ -65,12 +65,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 margin_30">
+                        <div class="col-md-12">
                             <label>
                                 <input id="newsletter_signup" type="checkbox" name="contest[newsletter]" /> 
                                 I agree to receive newsletters from {{property_name}}. You can unsubscribe anytime.
                             </label>
                             <p>For more details about personal privacy, please read our <a href="/pages/thegateway-privacy-policy" target="_blank">Privacy Policy.</a></p>
+                            <div class="margin_30"></div>
                             <button class="main_btn animated_btn contest_btn">Submit</button>
                             <br /><br />
                             <p class="" id="succes_msg" style="display:none">Thank you! Your entry have been received.</p>
