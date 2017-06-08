@@ -89,6 +89,12 @@
             console.log(gallery);
             renderGallery("#gallery_container", "#gallery_template", gallery);
             
+            var id_list = [];
+            $.each(gallery, function(key, val) {
+                var id = val.id;
+                id_list.push(val.id);
+            });
+        
             $('.open_details_modal').click(function(e){
                 e.preventDefault();
                 $('body').addClass('gallery_no_scroll');
