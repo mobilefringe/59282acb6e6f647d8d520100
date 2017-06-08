@@ -45,7 +45,8 @@
         <div id="feature_11" class="grid-item grid-item--width2"></div>
         <div id="feature_12" class="grid-item grid-item--width2"></div>
     </div>
-
+    <div class="margin_30"></div>
+    
     <div class="site_container">
         <h3 class="home_page_title caps">In Our Feed</h3>
     </div>
