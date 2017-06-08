@@ -28,9 +28,9 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Gateway Living Banner").images[0];
-            var banner = getImageURL(repo.photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            // var repo = getRepoDetailsByName("Gateway Living Banner").images[0];
+            // var banner = getImageURL(repo.photo_url);
+            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-living-at-the-gateway.json"
