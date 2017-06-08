@@ -17,6 +17,7 @@
             <h3 class="bold center">Do they want a message on this page?.</h3>
         </div>
     </div>
+    <div class="margin_30"></div>
     <div class="col-md-12">
         <div id="no_promos" class="hidden_now">
             <div class="black_divider"></div> 
