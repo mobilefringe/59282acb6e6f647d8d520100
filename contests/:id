@@ -18,8 +18,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2" id="contest_details_container">
             <script id="contest_details_template" type="x-tmpl-mustache/text">
+                <h3 class="center caps">{{name}}</h3>
+                <div class="margin_30"></div>
                 <img src="{{alt_photo_url}}" class="details_image" style="{{promo_image}}" />
-                <p class="colored_link">{{name}}</p>
+                
                 <div class="details_desc margin_30">{{{rich_description}}}</div>
                 
                 <form id="contest_form">
