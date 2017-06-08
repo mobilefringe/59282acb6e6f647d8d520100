@@ -1,0 +1,74 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Careers</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="bold center">Do they want a message on this page?.</h3>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div id="no_promos" class="hidden_now">
+            <div class="black_divider"></div> 
+            <p class="center">There are currently no job opportunities available, please check back again later.</p>
+            <div class="black_divider"></div> 
+        </div>
+    </div>
+    <div class="row">
+        <div id="promos_container">
+            <script id="promos_template" type="x-tmpl-mustache/text">
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                    <div class="ih-item circle effect19">
+                        <a href="/promotions/{{slug}}">
+                            <img src="{{image_url}}" alt="img">
+                            <div class="info">
+                                <h4>{{name_short}}</h4>
+                                <hr>
+                                <p>{{dates}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            // var repo = getRepoDetailsByName("Jobs Banner").images[0];
+            // var banner = getImageURL(repo.photo_url)
+            // $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            
+            var jobs = getJobsList().sortBy(function(o){ return o.name});
+            var published_jobs = [];
+            $.each(jobs , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_jobs.push(val);
+                } 
+            });
+            if(published_jobs.length > 0){
+                renderJobs('#jobs_container', '#jobs_template', published_jobs);
+            }
+            else{
+                $('#no_jobs').show()
+            }
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
