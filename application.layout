@@ -89,8 +89,8 @@
                                 <p class="opacity_hover">{% raw %}{{hours}}{% endraw %}</p>
                             </script>
                         </div> 
-                        <div id="openweathermap-widget-24"></div>
-<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 24,cityid: '5780993',appid: 'c225dc6aeb2d6a1b39e8a463cedb62bd',units: 'metric',containerid: 'openweathermap-widget-24',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+<!--                        <div id="openweathermap-widget-24"></div>-->
+<!--<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 24,cityid: '5780993',appid: 'c225dc6aeb2d6a1b39e8a463cedb62bd',units: 'metric',containerid: 'openweathermap-widget-24',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>-->
                     </div> 
                     <div id="menu-icon">
                         <span></span>
