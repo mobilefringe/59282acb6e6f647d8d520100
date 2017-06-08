@@ -298,16 +298,6 @@ function renderJobs(container, template, collection){
             val.image_url = default_image.image_url;
         }
         
-        if (val.promotionable_type == "Store") {
-            var store_details = getStoreDetailsByID(val.promotionable_id);
-            val.store_detail_btn = store_details.slug ;
-            val.store_name = store_details.name;
-        }
-        else{
-            val.store_name = mall_name;
-            val.image_url = default_image.image_url;
-        }
-        
         var show_date = moment(val.show_on_web_date);
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
