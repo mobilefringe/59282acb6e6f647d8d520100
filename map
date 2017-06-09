@@ -18,7 +18,7 @@
                 <h3 class="map_title center caps">Directory</h3>
                 <div id="stores_container" class="directory_list">
                     <script id="stores_template" type="x-tmpl-mustache/text">
-                        <a class="map_pin_a" href="#" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>
+                        <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}><h5 class="directory_name caps">{{name}}</h5></a>
                     </script>
                 </div>
             </div>
