@@ -65,13 +65,16 @@ function init(e) {
     });
     
     //WEATHER
-    $.ajax({
-        url : "http://api.wunderground.com/api/Your_Key/geolookup/conditions/q/IA/Salt_Lake_City.json",
-        dataType : "jsonp",
-        success : function(parsed_json) {
-            var location = parsed_json['location']['city'];
-            var temp_f = parsed_json['current_observation']['temp_f'];
-            alert("Current temperature in " + location + " is: " + temp_f);
+    $.simpleWeather({
+        location: 'Salt Lake City, Utah',
+        woeid: '',
+        unit: 'f',
+        success: function(weather) {
+            html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+            $("#weather").html(html);
+        },
+        error: function(error) {
+            $("#weather").html('<p>'+error+'</p>');
         }
     });
 }
