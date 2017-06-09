@@ -81,6 +81,12 @@
     });
     
     function renderPageData(){
+        var repo = getRepoDetailsByName("Blog Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+            
         var blog_posts = getBlogDataBySlug('').posts.reverse();
         var main_post = blog_posts[0];
         renderSinglePost('#main_post_container', "#main_post_template", main_post);
