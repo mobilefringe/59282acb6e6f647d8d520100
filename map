@@ -103,7 +103,8 @@
             }
             
             var stores = getStoresList();
-            renderStoreList('#stores_container','#stores_template', stores, "A", "Z");
+            renderStoreList('#stores_container','#stores_template', stores, "stores");
+            renderStoreList('#stores_mobile_container','#stores_mobile_template', stores, "stores");
             
             $("#zoom_image").attr("src", getPNGMapURL());
     		$('#zoom_image').smoothZoom({
