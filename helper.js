@@ -66,7 +66,7 @@ function init(e) {
     
     //WEATHER
     $.ajax({
-        url : "http://api.wunderground.com/api/Your_Key/geolookup/conditions/q/IA/Cedar_Rapids.json",
+        url : "http://api.wunderground.com/api/Your_Key/geolookup/conditions/q/IA/Salt_Lake_City.json",
         dataType : "jsonp",
         success : function(parsed_json) {
             var location = parsed_json['location']['city'];
