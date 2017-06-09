@@ -116,7 +116,7 @@ i {
 
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
-    .hidden_phone {
+    #weather.hidden_phone {
         display: none;
     }
 }
