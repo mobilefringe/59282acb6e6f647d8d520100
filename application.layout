@@ -98,7 +98,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <div class="mobile_nav_container">
+                    <div class="mobile_nav_container visible_phone">
                         <nav id="mobile_nav">
                             <ul>
                                 <li class="menu_item"><a href="#">Shopping</a>
