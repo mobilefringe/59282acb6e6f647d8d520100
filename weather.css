@@ -21,10 +21,11 @@
 }
 
 #weather {
-  width: 500px;
-  margin: 0px auto;
-  text-align: center;
-  text-transform: uppercase;
+    margin: 0px auto;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 i {
