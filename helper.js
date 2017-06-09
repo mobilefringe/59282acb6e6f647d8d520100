@@ -70,7 +70,7 @@ function init(e) {
         woeid: '',
         unit: 'f',
         success: function(weather) {
-            html = '<i class="icon-'+weather.code+'"></i> <h2> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+            html = '<i class="icon-'+weather.code+'"></i><p> '+weather.temp+'&deg;'+weather.units.temp+'</p>';
             $("#weather").html(html);
         },
         error: function(error) {
