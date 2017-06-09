@@ -60,7 +60,7 @@
     
     <script>
         // setEndPoint('//thegateway.mallmaverick.com/api/v3/thegateway/all.json');
-        setEndPoint('//dixieoutlet.mallmaverick.com/api/v3/dixieoutlet/all.json');
+        setEndPoint('//tecumseh.mallmaverick.com/api/v3/tecumseh/all.json');
     </script>
 </head>
 
