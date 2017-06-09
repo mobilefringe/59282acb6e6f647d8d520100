@@ -79,6 +79,38 @@ function init(e) {
     });
 }
 
+function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name){
+	var name = store_name;
+	var x_coordinate = store_x_coordinate;
+	var y_coordinate = store_y_coordinate;
+	var mark = "mark_store_" + pin_id;
+
+    // Remove existing landmark
+    $('#zoom_image').smoothZoom('removeLandmark');
+
+	// Add new landmark
+	$('#zoom_image').smoothZoom('addLandmark', 
+		[
+		'<div class="item mark" data-show-at-zoom="0" data-position="' + x_coordinate + ',' + y_coordinate + '" id="' + mark + '">\
+			<div>\
+				<div class="text">\
+				<strong>' + name + '</strong>\
+			</div>\
+			<img src="//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png" width="40px" height="65px" alt="' + name +'" />\
+			</div>\
+		</div>'
+		]
+	);
+
+	// Focus on new landmark
+	$('#zoom_image').smoothZoom('focusTo',{
+		x: x_coordinate,
+		y: y_coordinate,
+		zoom: 120,
+		speed: 5
+	});
+}
+	
 function render_instagram(data){
     $('#instafeed').html(data)
 }
