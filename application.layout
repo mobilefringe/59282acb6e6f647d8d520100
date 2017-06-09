@@ -90,7 +90,7 @@
                                 <p class="opacity_hover">{% raw %}{{hours}}{% endraw %}</p>
                             </script>
                         </div> 
-                        <div id="weather"></div>
+                        <div id="weather" class="hidden_phone"></div>
                     </div> 
                     <div id="menu-icon">
                         <span></span>
