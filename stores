@@ -12,8 +12,8 @@
                 <div class="col-md-4">
                     <div class="promotions_header_container store_search" >
                         <label class="">
-                            <input type="text" placeholder="Find Your Store <img src='//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496082956000/search_icon.png'>" id="store_search" />
-                            <!--<img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496082956000/search_icon.png" class="pull-right" id="store_search_img" alt="">-->
+                            <input type="text" placeholder="Find Your Store" id="store_search" />
+                            <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496082956000/search_icon.png" class="pull-right" id="store_search_img" alt="">
                             <i id="close_search_results" class="fa fa-times-circle hidden_now"></i>
                         </label>
                         <div class="search_results" id="store_search_results"></div>
