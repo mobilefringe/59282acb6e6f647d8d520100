@@ -28,9 +28,11 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Generic Page Banner").images[0];
-            var banner = getImageURL(repo.photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            var repo = getRepoDetailsByName("Generic Page Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
             
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
