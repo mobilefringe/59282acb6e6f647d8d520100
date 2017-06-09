@@ -35,6 +35,7 @@
     <link href="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/text/css/1438916432000/ihover.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/application.css" rel="stylesheet">
+    <link href="/weather.css" rel="stylesheet">
     
     <!--Javascript-->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
