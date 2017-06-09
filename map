@@ -33,6 +33,7 @@
         </div>
     </div>
 </div>
+<script src="//kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>  
 <script>
     $(document).ready(function(e){
         init(e);
