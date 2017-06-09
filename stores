@@ -122,9 +122,7 @@
             
             store_search();
             
-            $("#store_cat_list").click(function() {
-                $(".category_selector").toggleClass("cat_background");
-            })
+            
         }
         loadMallData(renderAll); 
     })
