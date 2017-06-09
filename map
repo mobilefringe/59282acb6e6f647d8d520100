@@ -28,7 +28,7 @@
     	border-radius: 4px;
     	background-color: rgba(0,0,0,0.8);
     	padding: 2px 5%;
-    	min-width: 75px;	
+    	min-width: 135px;	
     }
     .truncate {
       width: 100%;
