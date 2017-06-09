@@ -29,7 +29,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 hidden_phone">
                     <a href="/map">
                         <div class="promotions_header_container directory_btn">View Map</div>
                     </a>
