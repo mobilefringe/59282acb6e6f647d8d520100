@@ -74,7 +74,6 @@ function init(e) {
             alert("Current temperature in " + location + " is: " + temp_f);
         }
     });
-});
 }
 
 function render_instagram(data){
