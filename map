@@ -46,6 +46,7 @@
             var stores = getStoresList();
             renderStoreList('#stores_container','#stores_template', stores, "A", "Z");
             
+            
             $("#map_image").attr("src", getPNGMapURL());
     		$('#map_image').smoothZoom({
     		    width: 2000,
@@ -63,7 +64,23 @@
     			zoom_OUT_TO_FIT: "NO",
     			container: 'zoom_container'
     		});
-        	show_png_pin(".mapper", "#map_image");
+    		
+    		$('.map_pin_a').click(function(e){
+                e.preventDefault();
+                var store_x_coordinate = $(this).attr('store_x_coordinate');
+        		var store_y_coordinate = $(this).attr('store_y_coordinate');
+                var pin_id = $(this).attr('store_id');
+                var store_name = $(this).attr('store_name');
+    
+                $('.show_pin').hide();
+                $('.no_pin').show();
+                $('#show_pin_store_' + pin_id).show();
+                $('#no_pin_store_' + pin_id).hide();
+                
+                add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
+            });
+            
+        // 	show_png_pin(".mapper", "#map_image");
         	
             show_content();
         }
