@@ -25,7 +25,8 @@
     	padding: 4px;	
     }	
     .zoom_container .landmarks .mark .text{
-    	background-color:#000000;
+    	border-radius: 4px;
+    	background-color: rgba(0,0,0,0.8);
     	padding:2px 6px;
     	min-width: 75px;	
     }
