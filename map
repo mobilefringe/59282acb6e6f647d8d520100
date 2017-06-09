@@ -67,7 +67,7 @@
 				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
 				</div>
             </div>
-            <div class="controls hidden-md hidden-lg">
+            <div class="controls visible_phone">
     		    <div class="dropdown custom_dropdown">
     		        <button class="btn-prime" data-toggle="dropdown" style="margin-bottom:4px;width:50px">
     					<div>
