@@ -1,9 +1,9 @@
 <style>
     #zoom_image{
-		width:2000px;
-		height: 1000px;
-		min-width:2000px;
-		min-height: 1000px;
+		/*width:2000px;*/
+		/*height: 1000px;*/
+		/*min-width:2000px;*/
+		/*min-height: 1000px;*/
 	}
 	
     .zoom_container .landmarks{
@@ -82,7 +82,6 @@
             
             var stores = getStoresList();
             renderStoreList('#stores_container','#stores_template', stores, "A", "Z");
-            
             
             $("#zoom_image").attr("src", getPNGMapURL());
     		$('#zoom_image').smoothZoom({
