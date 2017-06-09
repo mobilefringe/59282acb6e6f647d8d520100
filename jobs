@@ -48,9 +48,11 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Jobs Banner").images[0];
-            var banner = getImageURL(repo.photo_url)
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            var repo = getRepoDetailsByName("Jobs Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
             
             var jobs = getJobsList().sortBy(function(o){ return o.name});
             var published_jobs = [];
