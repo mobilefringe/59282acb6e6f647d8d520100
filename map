@@ -67,6 +67,27 @@
 				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
 				</div>
             </div>
+            <div class="controls hidden-md hidden-lg">
+    		    <div class="dropdown custom_dropdown">
+    		        <button class="btn-prime" data-toggle="dropdown" style="margin-bottom:4px;width:50px">
+    					<div>
+    					    <img alt="Icon_search" src="//codecloud.cdn.speedyrails.net/sites/587659fb6e6f641648010000/image/png/1485140254000/search_icon.png" style="height:24px" />
+    				    </div>
+    		        </button>
+    		        <ul class="dropdown-menu bottom" style="">  
+    			        <div class="arrow" style="left:25px"></div>
+    		            <div class="store_list">
+    		                <div class="stores_table light_border" id="store_list_mobile_container">
+                                <script id="store_list_mobile_template" type="x-tmpl-mustache/text">
+
+                			        <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>
+                            				
+                    			</script>
+                    		</div>
+                		</div>
+                	</ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
