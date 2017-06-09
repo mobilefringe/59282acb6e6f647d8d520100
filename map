@@ -77,8 +77,8 @@
     		        <ul class="dropdown-menu bottom" style="">  
     			        <div class="arrow" style="left:25px"></div>
     		            <div class="store_list">
-    		                <div class="stores_table light_border" id="store_list_mobile_container">
-                                <script id="store_list_mobile_template" type="x-tmpl-mustache/text">
+    		                <div class="stores_table light_border" id="stores_mobile_container">
+                                <script id="stores_mobile_template" type="x-tmpl-mustache/text">
 
                 			        <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>
                             				
