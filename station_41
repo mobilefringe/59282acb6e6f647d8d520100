@@ -50,7 +50,7 @@
     <div class="row">
         <div id="gallery_container">
             <script id="gallery_template" type="x-tmpl-mustache/text">
-                <div class="col-md-3">
+                <div class="col-sm-6 col-md-3">
                     <div class="gallery_content">
                         <div class="gallery_image">
                             <a class="open_details_modal" data-modal-id="{{id}}">
