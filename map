@@ -7,13 +7,12 @@
 	}
 	
     .zoom_container .landmarks{
-    	position:absolute;
-    	z-index:10;	
-    	top:0px;
-    	left:0px;
-    	font-family: Helvetica, Arial, Verdana;
-    	font-size:12px;
-    	color: #ffffff;
+    	position: absolute;
+    	z-index: 10;	
+    	top: 0px;
+    	left: 0px;
+    	font-size: 16px;
+    	color: #FFF;
     }	
     .zoom_container .landmarks .item {
     	position:absolute;		
