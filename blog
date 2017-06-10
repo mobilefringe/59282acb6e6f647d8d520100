@@ -39,7 +39,11 @@
         </div>
     </div>
     <div class="hidden_phone">
-        <h4 class="previous_title caps">Previous</h4>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h4 class="previous_title caps">Previous</h4>
+            </div>
+        </div>
     </div>
     <div class="row_fluid">
         <div id="posts_container">
