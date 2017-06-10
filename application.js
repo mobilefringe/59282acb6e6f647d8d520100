@@ -606,6 +606,10 @@ function renderStoreList(container, template, collection, type){
             if(!val.store_front_url_abs ||  val.store_front_url_abs.indexOf('missing.png') > -1 || val.store_front_url_abs.length === 0){
                 val.store_front_url_abs = default_image.image_url;
             } 
+            if(val.assets != undefined){
+                var hover_url = val.assets[0].url;
+                console.log(hover_url);
+            }
         }
         
         var current_initial = val.name[0];
@@ -629,6 +633,7 @@ function renderStoreList(container, template, collection, type){
         } else {
             val.new_store = "display: none";
         }
+        
         if(val.total_published_promos != 0){
             val.promotion_exist = "display: inline";
             val.promotion_list = val.total_published_promos;
