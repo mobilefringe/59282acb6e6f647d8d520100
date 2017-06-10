@@ -120,10 +120,16 @@
             var store_list = getStoresList();
             console.log(store_list);
             renderStoreList('#store_list_container','#store_list_template', store_list, "stores");
+            
+            
             show_content();
             
             store_search();
             
+            $(".store_logo_container").hover(function() {
+                $(this + $(".store_img")).hide();
+                $(this + $(".store_hover")).show();
+            })
             
         }
         loadMallData(renderAll); 
