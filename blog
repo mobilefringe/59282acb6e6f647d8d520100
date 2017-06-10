@@ -81,12 +81,10 @@
 </div>
 
 <script>
-    $(document).ready(function(e){
-        init(e);
-        loadMallDataCached(renderPageData);
-    });
+$(document).ready(function(e){
+    init(e);
     
-    function renderPageData(){
+    function renderAll(){
         var repo = getRepoDetailsByName("Blog Banner");
         if (repo != undefined) {
             var banner = getImageURL(repo.images[0].photo_url);
@@ -99,7 +97,9 @@
 
         var posts = blog_posts.splice(1);
         renderPosts('#posts_container', '#posts_template', posts);
+        
         show_content();
+        
         load_more(1);
             
         $('#load_more_posts').click(function(e){
@@ -108,4 +108,7 @@
             e.preventDefault();
         });
     }
+
+    loadMallDataCached(renderAll);
+});
 </script>
