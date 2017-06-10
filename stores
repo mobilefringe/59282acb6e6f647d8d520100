@@ -126,6 +126,7 @@
             
             store_search();
             
+            $(".store_img").show();
             $(".store_logo_container").hover(function() {
                 $(".store_img", this).hide();
                 $(".store_hover", this).show();
