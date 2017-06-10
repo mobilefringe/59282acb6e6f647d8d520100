@@ -130,7 +130,10 @@
             $(".store_logo_container").hover(function() {
                 $(".store_img", this).hide();
                 $(".store_hover", this).show();
-            })
+            }, function() {
+                $(".store_img", this).show();
+                $(".store_hover", this).hide();
+            });
             
         }
         loadMallData(renderAll); 
