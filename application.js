@@ -608,9 +608,9 @@ function renderStoreList(container, template, collection, type){
             } 
             if(val.assets != undefined){
                 var hover_url = val.assets[0].url;
-                console.log(hover_url);
                 val.hover_img = getImageURL(hover_url);
-                console.log(val.hover_img);
+            } else {
+                val.hover_img = val.store_front_url_abs;
             }
         }
         
