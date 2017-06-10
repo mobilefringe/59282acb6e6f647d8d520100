@@ -127,8 +127,8 @@
             store_search();
             
             $(".store_logo_container").hover(function() {
-                $(this + $(".store_img")).hide();
-                $(this + $(".store_hover")).show();
+                $(".store_img", this).hide();
+                $(".store_hover", this).show();
             })
             
         }
