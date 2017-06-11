@@ -25,22 +25,6 @@ function init(e) {
             scrollTop: $(id).offset().top -75
         }, 1500);
     });
-    
-    
-    
-    //WEATHER
-    $.simpleWeather({
-        location: 'Salt Lake City, Utah',
-        woeid: '',
-        unit: 'f',
-        success: function(weather) {
-            html = '<i class="icon-'+weather.code+'"></i><p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
-            $("#weather").html(html);
-        },
-        error: function(error) {
-            $("#weather").html('<p>'+error+'</p>');
-        }
-    });
 }
 
 function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name){
