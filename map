@@ -5,7 +5,6 @@
 		/*min-width:2000px;*/
 		/*min-height: 1000px;*/
 	}
-	
     .zoom_container .landmarks{
     	position: absolute;
     	z-index: 10;	
@@ -61,35 +60,25 @@
             </div>
         </div>
         <div class="col-md-8">
-            <!--<div class="visible_phone">-->
-            
-            <!--    <div class="promotions_header_container dropdown category_selector">-->
-            <!--            <a id="store_cat_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sort By Category <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>-->
-            <!--            <ul class="dropdown-menu cat_list" aria-labelledby="dropdownMenu1" id="category_select">-->
-            <!--                <script id="category_select_template" type="x-tmpl-mustache/text">-->
-    				    <!--        <li class="show_cat_stores" data-id="{{id}}" name="{{name}}">{{name}}</li>-->
-    				    <!--    </script>-->
-            <!--            </ul>-->
-            <!--        </div>-->
-
-    		      <!--          <div class="stores_table light_border" id="stores_mobile_container">-->
-            <!--                    <script id="stores_mobile_template" type="x-tmpl-mustache/text">-->
-
-            <!--    			        <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>-->
-                            				
-            <!--        			</script>-->
-            <!--        		</div>-->
-            <!--    		</div>-->
-            <!--    	</ul>-->
-            <!--    </div>-->
-            <!--</div>-->
+            <div class="visible_phone">
+                <div class="promotions_header_container dropdown category_selector">
+                    <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
+                    <ul class="dropdown-menu cat_list" aria-labelledby="dropdownMenu1" id="category_select">
+                        <script id="category_select_template" type="x-tmpl-mustache/text">
+                        
+                            <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>
+                            
+				            <li class="show_cat_stores" data-id="{{id}}" name="{{name}}">{{name}}</li>
+				        </script>
+                    </ul>
+                </div>
+            </div>
             <div class="map light_border">
 			    <div class="zoom_container" id="zoom_container_directory">
     			    <img alt="Centre Map" id="zoom_image" src=""/>
 				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
 				</div>
             </div>
-            
         </div>
     </div>
 </div>
