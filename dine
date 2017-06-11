@@ -60,38 +60,38 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(e){
-        init(e);
-        function renderAll(){
-            var repo = getRepoDetailsByName("Dine Banner");
-            if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-            }
-            
-            var dining = getStoresListByCategoryID(5034);
-            var late_night = getStoresListByCategoryID(5035);
-            var specialty_foods = getStoresListByCategoryID(5039);
-
-            var dine_list = dining.concat(late_night, specialty_foods).sortBy(function(o){ return o.name});
-            var sorted_list = _.uniq(dine_list, function(o){ return o.name; });
-            renderStoreList('#store_list_container','#store_list_template', sorted_list, "stores");
-            
-            show_content();
-            
-            store_search();
-            
-            var window_width = $( window ).width();
-            if (window_width > 769) {
-                $(".store_logo_container").hover(function() {
-                    $(".store_img", this).hide();
-                    $(".store_hover", this).show();
-                }, function() {
-                    $(".store_img", this).show();
-                    $(".store_hover", this).hide();
-                });
-            }
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Dine Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
         }
-        loadMallDataCached(renderAll); 
-    });
+        
+        var dining = getStoresListByCategoryID(5034);
+        var late_night = getStoresListByCategoryID(5035);
+        var specialty_foods = getStoresListByCategoryID(5039);
+
+        var dine_list = dining.concat(late_night, specialty_foods).sortBy(function(o){ return o.name});
+        var sorted_list = _.uniq(dine_list, function(o){ return o.name; });
+        renderStoreList('#store_list_container','#store_list_template', sorted_list, "stores");
+        
+        show_content();
+        
+        store_search();
+        
+        var window_width = $( window ).width();
+        if (window_width > 769) {
+            $(".store_logo_container").hover(function() {
+                $(".store_img", this).hide();
+                $(".store_hover", this).show();
+            }, function() {
+                $(".store_img", this).show();
+                $(".store_hover", this).hide();
+            });
+        }
+    }
+    loadMallDataCached(renderAll); 
+});
 </script>
