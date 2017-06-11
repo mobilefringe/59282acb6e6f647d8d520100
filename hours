@@ -59,7 +59,7 @@
                 }
             });
             
-            show_content();
+            // show_content();
         }
         loadMallDataCached(renderAll); 
     })
