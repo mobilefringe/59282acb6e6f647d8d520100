@@ -93,6 +93,7 @@ $(document).ready(function(e){
         var stores = getStoresList();
         renderStoreList('#stores_container','#stores_template', stores, "stores");
         renderStoreList('#stores_mobile_container','#stores_mobile_template', stores, "stores");
+        $(".map_list").hide();
         
         $("#zoom_image").attr("src", getPNGMapURL());
 		$('#zoom_image').smoothZoom({
