@@ -1,9 +1,9 @@
 <style>
     #zoom_image{
-		width:2000px;
-		height: 1000px;
-		min-width:2000px;
-		min-height: 1000px;
+		width: 954px;
+		height: 732px;
+		/*min-width:2000px;*/
+		/*min-height: 1000px;*/
 	}
 	
     .zoom_container .landmarks{
