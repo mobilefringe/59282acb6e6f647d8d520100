@@ -39,33 +39,33 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(e){
-        init(e);
-        function renderAll(){
-            var repo = getRepoDetailsByName("Events Banner");
-            if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-            }
-            
-            var events = getEventsList().sortBy(function(o){ return o.start_date });
-            var published_events = [];
-            $.each( events , function( key, val ){
-                today = moment();
-                webDate = moment(val.show_on_web_date)
-                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                    published_events.push(val);
-                } 
-            });
-            if(published_events.length > 0){
-                renderEvents("#events_container","#events_template", published_events);
-            }
-            else{
-                $('#no_events').show();
-            }
-
-            show_content();
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Events Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
         }
-        loadMallDataCached(renderAll); 
-    });
+        
+        var events = getEventsList().sortBy(function(o){ return o.start_date });
+        var published_events = [];
+        $.each( events , function( key, val ){
+            today = moment();
+            webDate = moment(val.show_on_web_date)
+            if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                published_events.push(val);
+            } 
+        });
+        if(published_events.length > 0){
+            renderEvents("#events_container","#events_template", published_events);
+        }
+        else{
+            $('#no_events').show();
+        }
+
+        show_content();
+    }
+    loadMallDataCached(renderAll); 
+});
 </script>
