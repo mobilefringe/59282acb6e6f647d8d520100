@@ -84,33 +84,33 @@
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <script>
-    $(document).ready(function(e){
-        init(e);
-        function renderAll(){
-            var repo = getRepoDetailsByName("Contest Banner");
-            if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-            }
-                
-            var pathArray = window.location.pathname.split( '/' );
-            var slug = pathArray[pathArray.length-1];
-            contest_details = getContestBySlug(slug);
-            
-            renderContest("#contest_name_container", '#contest_name_template', contest_details);
-            renderContest("#contest_details_container", '#contest_details_template', contest_details);
-            
-            show_content();
-            
-            $.validate();
-            
-            $('#contest_form').submit(function(e){
-                e.preventDefault();
-                $('.contest_btn').prop('disabled', true);
-                submit_contest(slug);
-            });
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Contest Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
         }
             
-        loadMallDataCached(renderAll); 
-    });    
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        contest_details = getContestBySlug(slug);
+        
+        renderContest("#contest_name_container", '#contest_name_template', contest_details);
+        renderContest("#contest_details_container", '#contest_details_template', contest_details);
+        
+        show_content();
+        
+        $.validate();
+        
+        $('#contest_form').submit(function(e){
+            e.preventDefault();
+            $('.contest_btn').prop('disabled', true);
+            submit_contest(slug);
+        });
+    }
+        
+    loadMallDataCached(renderAll); 
+});    
 </script>
