@@ -61,7 +61,7 @@
         </div>
         <div class="col-md-8">
             <div class="visible_phone">
-                <div class="">
+                <div class="map_dropdown">
                     <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="stores_mobile_container">
                         <script id="stores_mobile_template" type="x-tmpl-mustache/text">
