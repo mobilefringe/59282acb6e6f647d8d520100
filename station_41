@@ -72,12 +72,13 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Station41 Banner").images[0];
-            var banner = getImageURL(repo.photo_url);
-            $(".station_header").css({backgroundImage: "url(" + banner + ")"});
+            var repo = getRepoDetailsByName("Station41 Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
             
             var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
-            console.log(gallery);
             renderGallery("#gallery_container", "#gallery_template", gallery);
             
             var id_list = [];
