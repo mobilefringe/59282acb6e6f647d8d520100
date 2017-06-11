@@ -120,6 +120,20 @@ function show_content(){
         }
     });
     
+    //WEATHER
+    $.simpleWeather({
+        location: 'Salt Lake City, Utah',
+        woeid: '',
+        unit: 'f',
+        success: function(weather) {
+            html = '<i class="icon-'+weather.code+'"></i><p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
+            $("#weather").html(html);
+        },
+        error: function(error) {
+            $("#weather").html('<p>'+error+'</p>');
+        }
+    });
+    
     var today_hours = getTodaysHours();
     renderHomeHours('#home_hours_container', '#home_hours_template', today_hours)
 }
