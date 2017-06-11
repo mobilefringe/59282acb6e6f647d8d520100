@@ -63,8 +63,8 @@
             <div class="visible_phone">
                 <div class="promotions_header_container dropdown category_selector">
                     <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
-                    <ul class="dropdown-menu cat_list" aria-labelledby="dropdownMenu1" id="category_select">
-                        <script id="category_select_template" type="x-tmpl-mustache/text">
+                    <ul class="dropdown-menu cat_list" aria-labelledby="dropdownMenu1" id="stores_mobilecontainer">
+                        <script id="stores_mobile_template" type="x-tmpl-mustache/text">
                             <li><a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a></li>
 				        </script>
                     </ul>
