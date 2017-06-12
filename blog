@@ -91,7 +91,7 @@ $(document).ready(function(e){
             $(".page_header").css({backgroundImage: "url(" + banner + ")"});
         }
             
-        var blog_posts = getBlogDataBySlug('halifaxcentre-our-style').posts.reverse();
+        var blog_posts = getBlogDataBySlug('thegateway-blog').posts.reverse();
         var main_post = blog_posts[0];
         renderSinglePost('#main_post_container', "#main_post_template", main_post);
 
