@@ -69,7 +69,7 @@
         <div class="top_bar">
             <div class="site_container">
                 <div class="row top_bar_wrapper">
-                    <div class="col-md-3 hidden_phone">
+                    <div class="col-sm-3 hidden_phone">
                         <div class="header_social">
                             <a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>
                             <a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>
@@ -77,12 +77,12 @@
                         </div> 
                         <a id="signup" href="#sign_up">Sign Up</a>
                     </div> 
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="news-ticker" data-speed="5000">
                             <ul class="bulletin" id="bulletin"></ul>
                         </div>
                     </div> 
-                    <div class="col-md-3">
+                    <div class="col-sm-3">
                         <div id="home_hours_container">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
                                 <p class="open_now bold">{% raw %}{{open}}{% endraw %}</p> 
