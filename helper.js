@@ -65,7 +65,7 @@ function load_more(num){
         var id = i.toString();
         $('#show_' + id ).fadeIn();
     }
-    var posts = getBlogDataBySlug('halifaxcentre-our-style').posts;
+    var posts = getBlogDataBySlug('thegateway-blog').posts;
     var total_posts = posts.length;
     if(i >= total_posts){
         $('#loaded_posts').hide();
