@@ -72,7 +72,8 @@
             $('.flexslider').flexslider({
                 animation: "slide",
             });
-
+            $(".flex-prev").html(" ");
+            $(".flex-next").html(" ");
             
 
             if($.cookie("popup_viewed") != "true"){
