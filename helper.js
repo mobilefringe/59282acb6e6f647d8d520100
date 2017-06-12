@@ -18,8 +18,9 @@ function init(e) {
         $("#fieldEmail").focus();
     });
     
-    $(".flex-prev").html("");
-    $(".flex-next").html("")
+    $(".flex-prev").html(" ");
+    $(".flex-next").html(" ");
+    
     $(".alpha_list a").click(function(e) {
         e.preventDefault();
         var id = $(this).attr("href");
