@@ -85,8 +85,8 @@
                     <div class="col-sm-3">
                         <div id="home_hours_container">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
-                                <p class="open_now bold">{% raw %}{{open}}{% endraw %}</p> 
-                                <p class="opacity_hover">{% raw %}{{hours}}{% endraw %}</p>
+                                <p class="open_now">{% raw %}{{open}}{% endraw %}</p> 
+                                <p class="">{% raw %}{{hours}}{% endraw %}</p>
                             </script>
                         </div> 
                         <div id="weather" class="pull-right hidden_phone"></div>
