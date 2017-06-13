@@ -182,7 +182,7 @@
                 <div>
                     <!--<label for="fieldEmail"></label>-->
                     <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Email"/>
-                    <button class="form_submit" type="submit"></button>
+                    <button class="form_submit" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
                 <!--<div>-->
                 <!--    <button class="form_submit" type="submit"></button>-->
