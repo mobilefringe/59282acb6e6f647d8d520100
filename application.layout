@@ -90,7 +90,6 @@
                                 <p class="todays_hours">{% raw %}{{hours}}{% endraw %}</p>
                             </script>
                         </div> 
-                        
                     </div> 
                     <div id="menu-icon">
                         <span></span>
