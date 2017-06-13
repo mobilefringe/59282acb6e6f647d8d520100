@@ -180,13 +180,9 @@
             <h3>Stay up to date on all of our happenings</h3>
             <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
                 <div>
-                    <!--<label for="fieldEmail"></label>-->
                     <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Email"/>
                     <button class="form_submit" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
-                <!--<div>-->
-                <!--    <button class="form_submit" type="submit"></button>-->
-                <!--</div>-->
             </form>
         </div>
     </section>
