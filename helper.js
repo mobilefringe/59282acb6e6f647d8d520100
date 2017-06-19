@@ -113,9 +113,9 @@ function show_content(){
             loop: function(){
             $('.marquee .news-ticker').css({
                 position: 'relative',
-                right: '-200%'
+                right: '-100%'
             }).animate({
-                right: '100%'
+                right: '200%'
             }, 15000, 'linear' );
             setTimeout(marquee.loop, 15010);
             }
