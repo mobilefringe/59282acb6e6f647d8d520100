@@ -81,6 +81,25 @@ function render_instagram(data){
     $('#instafeed').html(data)
 }
 
+function bulletinAnimate(){
+    var marquee = {
+        init: function(){
+            $('.marquee').css({
+            overflow: 'hidden'
+        });
+        marquee.loop();
+    },
+    loop: function(){
+        $('.marquee .bulletin').css({
+            position: 'relative',
+            right: '-100%'
+        }).animate({
+            right: '100%'
+        }, 15000, 'linear' );
+        setTimeout(marquee.loop, 15010);
+    }
+};
+
 function show_content(){
     $('.page_content').fadeIn();
     $(".modal-backdrop").remove();
