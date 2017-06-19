@@ -124,25 +124,26 @@ function show_content(){
     });
 
     $(function(){
-      var rightJQ = {
-        init: function(){
-        $('.rightJQ').css({
-            overflow: 'hidden'
-          });
-          rightJQ.loop();
-        },
-        loop: function(){
-          $('.rightJQ div').css({
-            position: 'relative',
-            right: '-100%'
-          }).animate({
-            right: '100%'
-          }, 15000, 'linear' );
-          setTimeout(rightJQ.loop, 15010);
-        }
-      };
-      rightJQ.init();
-    }); 
+        var marquee = {
+            init: function(){
+                $('.marquee').css({
+                    overflow: 'hidden'
+                  });
+                marquee.loop();
+            },
+            loop: function(){
+            $('.rightJQ div').css({
+                position: 'relative',
+                right: '-100%'
+            }).animate({
+                right: '100%'
+            }, 15000, 'linear' );
+            setTimeout(marquee.loop, 15010);
+            }
+        };
+        rightJQ.init();
+    });
+    
     //WEATHER
     $.simpleWeather({
         location: 'Salt Lake City, Utah',
