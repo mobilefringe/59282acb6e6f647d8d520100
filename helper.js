@@ -141,7 +141,7 @@ function show_content(){
             $('.news-ticker').hide();
         }
     });
-    
+    bulletinAnimate();
     //WEATHER
     $.simpleWeather({
         location: 'Salt Lake City, Utah',
