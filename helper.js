@@ -123,7 +123,7 @@ function show_content(){
         }
     });
 
-    $(function(){
+    function bulletinAnimate(){
         var marquee = {
             init: function(){
                 $('.marquee').css({
@@ -142,7 +142,7 @@ function show_content(){
             }
         };
         marquee.init();
-    });
+    }
     
     //WEATHER
     $.simpleWeather({
