@@ -141,7 +141,7 @@ function show_content(){
             setTimeout(marquee.loop, 15010);
             }
         };
-        rightJQ.init();
+        marquee.init();
     });
     
     //WEATHER
