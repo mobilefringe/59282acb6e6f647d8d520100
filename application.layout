@@ -78,7 +78,7 @@
                         <a id="signup" href="#sign_up">Sign Up</a>
                     </div> 
                     <div class="col-md-6">
-                        <div class="news-ticker" data-speed="5000">
+                        <div class="news-ticker">
                             <ul class="bulletin" id="bulletin"></ul>
                         </div>
                     </div> 
