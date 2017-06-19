@@ -132,7 +132,7 @@ function show_content(){
                 marquee.loop();
             },
             loop: function(){
-            $('.rightJQ div').css({
+            $('.marquee .news-ticker').css({
                 position: 'relative',
                 right: '-100%'
             }).animate({
