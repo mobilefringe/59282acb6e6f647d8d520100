@@ -93,7 +93,7 @@ function show_content(){
                 $('.news-ticker').hide();
             } else {
                 $.each(messages, function(key ,val){
-                    $('#bulletin').append('<span class="caps"><strong>' + val.messages[0].title + ' </strong>'  + val.messages[0].body +  '</span>')
+                    $('#bulletin').append('<li class="caps"><strong>' + val.messages[0].title + ' </strong>'  + val.messages[0].body +  '</li>')
                 });
                 if ($('#bulletin li').length > 1){
                     var tickerSpeed = $('.news-ticker').attr('data-speed');
