@@ -150,7 +150,12 @@
                 }
             }); 
             
-            $(".youtube").YouTubeModal({autoplay:0, width:640, height:480});
+            $(".youtube").YouTubeModal({
+                autoplay:0, 
+                cssClass: "youtubePlayer", 
+                height:480,
+                width:640
+            });
             
             show_content();
         }
