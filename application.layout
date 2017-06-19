@@ -80,7 +80,7 @@
                     <div class="col-md-6">
                         <div class="news-ticker" data-speed="5000">
                             <div class="marquee">
-                                <ul class="bulletin" id="bulletin"></ul>
+                                <div class="bulletin" id="bulletin"></div>
                             </div>
                         </div>
                     </div> 
