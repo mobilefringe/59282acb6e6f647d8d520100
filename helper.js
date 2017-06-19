@@ -102,26 +102,26 @@ function show_content(){
         }
     });
 
-    $(function(){
-        var marquee = {
-            init: function(){
-                $('.marquee').css({
-                    overflow: 'hidden'
-                  });
-                marquee.loop();
-            },
-            loop: function(){
-            $('.marquee .news-ticker').css({
-                position: 'relative',
-                right: '-100%'
-            }).animate({
-                right: '200%'
-            }, 15000, 'linear' );
-            setTimeout(marquee.loop, 15010);
-            }
-        };
-        marquee.init();
-    });
+    // $(function(){
+    //     var marquee = {
+    //         init: function(){
+    //             $('.marquee').css({
+    //                 overflow: 'hidden'
+    //               });
+    //             marquee.loop();
+    //         },
+    //         loop: function(){
+    //         $('.marquee .news-ticker').css({
+    //             position: 'relative',
+    //             right: '-100%'
+    //         }).animate({
+    //             right: '200%'
+    //         }, 15000, 'linear' );
+    //         setTimeout(marquee.loop, 15010);
+    //         }
+    //     };
+    //     marquee.init();
+    // });
     
     //WEATHER
     $.simpleWeather({
