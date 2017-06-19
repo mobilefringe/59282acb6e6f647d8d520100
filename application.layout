@@ -79,7 +79,9 @@
                     </div> 
                     <div class="col-md-6">
                         <div class="news-ticker">
-                            <ul class="bulletin" id="bulletin"></ul>
+                            <div class="marquee">
+                                <ul class="bulletin" id="bulletin"></ul>
+                            </div>
                         </div>
                     </div> 
                     <div class="col-md-3">
