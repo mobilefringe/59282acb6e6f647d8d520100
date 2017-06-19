@@ -78,8 +78,9 @@
                         <a id="signup" href="#sign_up">Sign Up</a>
                     </div> 
                     <div class="col-md-6">
-                        <div class="news-ticker">
-                            <div class="marquee">
+                        <div class="marquee">
+                            <div class="news-ticker">
+                            
                                 <ul class="bulletin" id="bulletin"></ul>
                             </div>
                         </div>
