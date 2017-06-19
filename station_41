@@ -149,7 +149,9 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
-        
+            
+            $(".youtube").YouTubeModal({autoplay:0, width:640, height:480});
+            
             show_content();
         }
         loadMallDataCached(renderAll); 
