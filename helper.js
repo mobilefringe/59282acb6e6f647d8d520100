@@ -113,7 +113,7 @@ function show_content(){
             loop: function(){
             $('.marquee .news-ticker').css({
                 position: 'relative',
-                right: '-100%'
+                right: '-200%'
             }).animate({
                 right: '100%'
             }, 15000, 'linear' );
