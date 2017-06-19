@@ -80,7 +80,6 @@
                     <div class="col-md-6">
                         <div class="marquee">
                             <div class="news-ticker">
-                            
                                 <ul class="bulletin" id="bulletin"></ul>
                             </div>
                         </div>
