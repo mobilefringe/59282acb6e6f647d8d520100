@@ -154,7 +154,7 @@
                 autoplay:0, 
                 cssClass: "youtubePlayer", 
                 // height:480,
-                width:80%
+                width:80%,
             });
             
             show_content();
