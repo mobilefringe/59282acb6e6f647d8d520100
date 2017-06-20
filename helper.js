@@ -126,9 +126,9 @@ function show_content(){
                 } else {
                     $('.marquee .news-ticker').css({
                         position: 'relative',
-                        right: '-200%'
+                        right: '-100%'
                     }).animate({
-                        right: '200%'
+                        right: '300%'
                     }, 15000, 'linear' );
                 }
                 setTimeout(marquee.loop, 15010);
