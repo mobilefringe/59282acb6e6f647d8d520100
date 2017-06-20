@@ -44,7 +44,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <img class="video_still youtube" rel="ZNqPZz99KMs" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496952900000/Video Image.png" alt="Station 41"/>
+            <img class="video_still youtube" rel="ZNqPZz99KMs" data-aspect-ratio="16:9" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496952900000/Video Image.png" alt="Station 41"/>
         </div>
     </div>
     <div class="row">
@@ -167,7 +167,6 @@
             	    .attr('data-aspectRatio', this.height / this.width)
             	    .removeAttr('height')
             	    .removeAttr('width');
-        
         	    });
         	    $(window).resize(function() {
         	        var newWidth = $fluidEl.width();
