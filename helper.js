@@ -28,6 +28,11 @@ function init(e) {
             scrollTop: $(id).offset().top -75
         }, 1500);
     });
+    
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
 }
 
 function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name){
