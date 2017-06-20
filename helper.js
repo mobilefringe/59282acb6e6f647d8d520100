@@ -104,6 +104,10 @@ function show_content(){
 
     // MARQUEE SCROLL EFFECT 
     $(function(){
+        var window_width = $( window ).width();
+        if (window_width < 769) {
+            $('a').removeClass('open_details_modal');
+        }
         var marquee = {
             init: function(){
                 $('.marquee').css({
@@ -112,13 +116,22 @@ function show_content(){
                 marquee.loop();
             },
             loop: function(){
-            $('.marquee .news-ticker').css({
-                position: 'relative',
-                right: '-100%'
-            }).animate({
-                right: '200%'
-            }, 15000, 'linear' );
-            setTimeout(marquee.loop, 15010);
+                if (window_width > 769) {
+                    $('.marquee .news-ticker').css({
+                        position: 'relative',
+                        right: '-100%'
+                    }).animate({
+                        right: '200%'
+                    }, 15000, 'linear' );
+                } else {
+                    $('.marquee .news-ticker').css({
+                        position: 'relative',
+                        right: '-200%'
+                    }).animate({
+                        right: '200%'
+                    }, 15000, 'linear' );
+                }
+                setTimeout(marquee.loop, 15010);
             }
         };
         marquee.init();
