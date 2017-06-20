@@ -153,8 +153,8 @@
             $(".youtube").YouTubeModal({
                 autoplay:0, 
                 cssClass: "youtubePlayer", 
-                // height:480,
-                width: 80
+                height:480,
+                width:640
             });
             
             show_content();
