@@ -44,8 +44,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <!--<a href="https://vimeo.com/223487697" data-remote="https://player.vimeo.com/video/223487697" data-toggle="lightbox" data-width="640">-->
-            <a href="https://www.youtube.com/watch?v=ZNqPZz99KMs" data-toggle="lightbox" data-width="640">
+            <a href="https://vimeo.com/223487697" data-remote="https://player.vimeo.com/video/223487697" data-toggle="lightbox">
                 <img class="video_still" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496952900000/Video Image.png" alt="Station 41"/>
             </a>
         </div>
