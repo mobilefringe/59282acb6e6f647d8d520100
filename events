@@ -17,7 +17,7 @@
     background: #FFF;
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 70%;
     -webkit-transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
