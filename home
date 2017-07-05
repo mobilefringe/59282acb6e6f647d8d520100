@@ -99,9 +99,9 @@
             //         percentPosition: true
             //     });
             // });
-            
             $('.grid .desktop').masonry({
                 columnWidth: '.grid-sizer',
+                horizontalOrder: true,
                 itemSelector: '.grid-item',
                 // originLeft: false,
                 percentPosition: true
@@ -109,6 +109,7 @@
             
             $('.grid .mobile').masonry({
                 columnWidth: '.grid-sizer',
+                // horizontalOrder: true,
                 itemSelector: '.grid-item',
                 originLeft: false,
                 percentPosition: true
