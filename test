@@ -12,3 +12,11 @@
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item"><img src="https://placehold.it/640/640"></div>
     </div>
+    
+    
+    <script>
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 200
+        });
+    </script>
