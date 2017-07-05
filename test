@@ -4,6 +4,7 @@
     .grid-item--width2 { width: 40%; }
 </style>
 <div class="grid">
+        <div class="grid-sizer"></div>
         <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
         <div class="grid-item"><img src="https://placehold.it/320/320"></div>
         <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
