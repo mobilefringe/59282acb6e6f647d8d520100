@@ -108,7 +108,7 @@
                 percentPosition: true
             });
             
-            $('.grid_desktop').masonry({
+            $('.grid_mobile').masonry({
                 columnWidth: '.grid-sizer',
                 // horizontalOrder: true,
                 itemSelector: '.grid-item',
