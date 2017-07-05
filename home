@@ -69,9 +69,11 @@
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
-        <div class="grid-item grid-item--height2"><img src="https://unsplash.it/640/1280"></div>
+        
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item" style="right: 0% !important;"><img src="https://unsplash.it/640/640"></div>
+        <div class="grid-item grid-item--height2"><img src="https://unsplash.it/640/1280"></div>
+        
         <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"></div>
     </div>
     
