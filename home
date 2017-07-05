@@ -100,11 +100,19 @@
             //     });
             // });
             
-            $('.grid').masonry({
+            $('.grid_desktop').masonry({
                 columnWidth: '.grid-sizer',
                 // horizontalOrder: true,
                 itemSelector: '.grid-item',
                 // originLeft: false,
+                percentPosition: true
+            });
+            
+            $('.grid_desktop').masonry({
+                columnWidth: '.grid-sizer',
+                // horizontalOrder: true,
+                itemSelector: '.grid-item',
+                originLeft: false,
                 percentPosition: true
             });
             
