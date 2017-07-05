@@ -1,6 +1,6 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <style>
-    .grid-item { width: 200px; }
+    .grid-item { width: 640px; }
     .grid-item--width2 { width: 400px; }
 </style>
 <div class="grid">
