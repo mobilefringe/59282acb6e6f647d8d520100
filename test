@@ -3,25 +3,20 @@
     .grid-item { width: 20%; }
     .grid-item--width2 { width: 40%; }
 </style>
-
 <div class="grid">
-    <div class="grid-sizer"></div>
-    <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
-    <div class="grid-item"><img src="https://placehold.it/320/320"></div>
-    <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
-    <div class="grid-item"><img src="https://unsplash.it/320/640"></div>
-    <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
-    <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
-    <div class="grid-item"><img src="https://placehold.it/320/320"></div>
-</div>
+        <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
+        <div class="grid-item"><img src="https://placehold.it/320/320"></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
+        <div class="grid-item"><img src="https://unsplash.it/320/640"></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
+        <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
+        <div class="grid-item"><img src="https://placehold.it/320/320"></div>
+    </div>
     
     
     <script>
         $('.grid').masonry({
-  // set itemSelector so .grid-sizer is not used in layout
-  itemSelector: '.grid-item',
-  // use element for option
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-})
+            itemSelector: '.grid-item',
+            columnWidth: 320
+        });
     </script>
