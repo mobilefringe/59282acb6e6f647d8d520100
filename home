@@ -103,7 +103,7 @@
             $('.grid .desktop').masonry({
                 columnWidth: '.grid-sizer',
                 itemSelector: '.grid-item',
-                originLeft: false,
+                // originLeft: false,
                 percentPosition: true
             });
             
