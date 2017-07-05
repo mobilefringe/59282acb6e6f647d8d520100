@@ -1,22 +1,22 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <style>
-    .grid-item { width: 640px; }
-    .grid-item--width2 { width: 1280px; }
+    .grid-item { width: 320px; }
+    .grid-item--width2 { width: 640px; }
 </style>
 <div class="grid">
-        <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
-        <div class="grid-item"><img src="https://placehold.it/640/640"></div>
-        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"></div>
-        <div class="grid-item"><img src="https://unsplash.it/640/1280"></div>
-        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"></div>
-        <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
-        <div class="grid-item"><img src="https://placehold.it/640/640"></div>
+        <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
+        <div class="grid-item"><img src="https://placehold.it/320/320"></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
+        <div class="grid-item"><img src="https://unsplash.it/320/640"></div>
+        <div class="grid-item grid-item--width2"><img src="https://unsplash.it/640/320"></div>
+        <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
+        <div class="grid-item"><img src="https://placehold.it/320/320"></div>
     </div>
     
     
     <script>
         $('.grid').masonry({
             itemSelector: '.grid-item',
-            columnWidth: 640
+            columnWidth: 320
         });
     </script>
