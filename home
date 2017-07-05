@@ -74,14 +74,22 @@
             var banners = getBanners();
             renderBanner('#banner_template','#home_banner',banners);
             var feature_items = getFeatureList();
-            renderFeatureItems(function() {
-                $('.grid').masonry({
-                    columnWidth: '.grid-sizer',
-                    horizontalOrder: true,
-                    itemSelector: '.grid-item',
-                    originLeft: false,
-                    percentPosition: true
-                });
+            renderFeatureItems();
+            // renderFeatureItems(function() {
+            //     $('.grid').masonry({
+            //         columnWidth: '.grid-sizer',
+                    
+            //         itemSelector: '.grid-item',
+            //         percentPosition: true
+            //     });
+            // });
+            
+            $('.grid').masonry({
+                columnWidth: '.grid-sizer',
+                horizontalOrder: true,
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
             });
             
             show_content();
