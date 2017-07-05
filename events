@@ -7,7 +7,7 @@
     font-family: "LeagueGothic-Regular", sans-serif;
     text-align: center;
     vertical-align: middle;
-    line-height: 317px; 
+    line-height: 145px; 
 }
 
 .events.ih-item.circle.effect19 .info h2:after {
