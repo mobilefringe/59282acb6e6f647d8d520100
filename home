@@ -109,7 +109,6 @@
             
             $('.grid_mobile').masonry({
                 columnWidth: '.grid-sizer',
-                // horizontalOrder: true,
                 itemSelector: '.grid-item',
                 originLeft: false,
                 percentPosition: true
