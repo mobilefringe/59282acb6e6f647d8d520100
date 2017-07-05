@@ -100,7 +100,7 @@
             
             $('.grid').masonry({
                 columnWidth: '.grid-sizer',
-                horizontalOrder: true,
+                // horizontalOrder: true,
                 itemSelector: '.grid-item',
                 // originLeft: false,
                 percentPosition: true
