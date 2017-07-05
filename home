@@ -99,7 +99,7 @@
             //         percentPosition: true
             //     });
             // });
-            $('.grid .desktop').masonry({
+            $('.grid-desktop').masonry({
                 columnWidth: '.grid-sizer',
                 // horizontalOrder: true,
                 itemSelector: '.grid-item',
