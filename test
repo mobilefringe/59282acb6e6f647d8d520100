@@ -2,6 +2,7 @@
 <style>
     .grid-item { width: 320px; }
     .grid-item--width2 { width: 640px; }
+    .grid-item--height2{height: 640px;}
 </style>
 <div class="grid">
         <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
