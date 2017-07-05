@@ -62,16 +62,16 @@
     <div class="site_container">
         <h3 class="home_page_title caps">What's Happening</h3>
     </div>
-    <div class="grid">
-        <div class="grid-sizer"></div>
-        <div id="feature_7" class="grid-item grid-item--width2"></div>
-        <div id="feature_8" class="grid-item grid-item--width2"></div>
-        <div id="feature_9" class="grid-item"></div>
-        <div id="feature_10" class="grid-item"></div>
-        <div id="feature_11" class="grid-item grid-item--width2"></div>
-        <div id="feature_12" class="grid-item"></div>
-        <div id="feature_13" class="grid-item"></div>
-    </div>
+    <!--<div class="grid">-->
+    <!--    <div class="grid-sizer"></div>-->
+    <!--    <div id="feature_7" class="grid-item grid-item--width2"></div>-->
+    <!--    <div id="feature_8" class="grid-item grid-item--width2"></div>-->
+    <!--    <div id="feature_9" class="grid-item"></div>-->
+    <!--    <div id="feature_10" class="grid-item"></div>-->
+    <!--    <div id="feature_11" class="grid-item grid-item--width2"></div>-->
+    <!--    <div id="feature_12" class="grid-item"></div>-->
+    <!--    <div id="feature_13" class="grid-item"></div>-->
+    <!--</div>-->
     
     <div class="grid grid_desktop hidden_phone">
         <div class="grid-sizer"></div>
