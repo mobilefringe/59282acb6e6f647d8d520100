@@ -33,7 +33,7 @@
     <!--    <div id="feature_6" class="grid-item grid-item--width2"></div>-->
     <!--</div>-->
     
-    <div class="grid .grid_desktop hidden_phone">
+    <div class="grid hidden_phone">
         <div class="grid-sizer"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
@@ -45,7 +45,7 @@
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
     </div>
     
-    <div class="grid .grid_mobile visible_phone">
+    <div class="grid visible_phone">
         <div class="grid-sizer"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
@@ -100,16 +100,9 @@
             //     });
             // });
             
-            $('.grid_desktop').masonry({
+            $('.grid').masonry({
                 columnWidth: '.grid-sizer',
-                horizontalOrder: true,
-                itemSelector: '.grid-item',
-                // originLeft: false,
-                percentPosition: true
-            });
-            
-            $('.grid_mobile').masonry({
-                columnWidth: '.grid-sizer',
+                // horizontalOrder: true,
                 itemSelector: '.grid-item',
                 originLeft: false,
                 percentPosition: true
