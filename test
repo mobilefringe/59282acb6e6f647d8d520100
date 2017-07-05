@@ -1,4 +1,8 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<style>
+    .grid-item { width: 200px; }
+    .grid-item--width2 { width: 400px; }
+</style>
 <div class="grid">
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="grid-item"><img src="https://unsplash.it/640/640"></div>
