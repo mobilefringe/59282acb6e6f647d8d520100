@@ -1,7 +1,7 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <style>
-    .grid-item { width: 20%; }
-    .grid-item--width2 { width: 40%; }
+    .grid-item { width: 320px; }
+    .grid-item--width2 { width: 640px; }
 </style>
 <div class="grid">
         <div class="grid-item"><img src="https://unsplash.it/320/320"></div>
