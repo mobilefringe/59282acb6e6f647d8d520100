@@ -52,7 +52,7 @@
         <div class="feature_2 grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="feature_3 grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="feature_6 grid-item"><img src="https://unsplash.it/640/640"></div>
-        <div class="feature_4 grid-item grid-item--height2"><img src="https://unsplash.it/640/1280"></div>
+        <div class="feature_4 grid-item grid-item--height2"></div>
         <div class="feature_7 grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="feature_5 grid-item grid-item--width2"><img src="https://unsplash.it/1280/640"></div>
     </div>
