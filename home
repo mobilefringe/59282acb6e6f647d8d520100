@@ -117,9 +117,9 @@
             //         percentPosition: true
             //     });
             // });
-            var $grid = $('.grid_desktop').imagesLoaded( function() {
+            var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
                 // init Masonry after all images have loaded
-                $grid.masonry({
+                $grid_desktop.masonry({
                     columnWidth: '.grid-sizer',
                     itemSelector: '.grid-item',
                     percentPosition: true
