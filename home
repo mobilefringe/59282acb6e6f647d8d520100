@@ -125,20 +125,30 @@
                     percentPosition: true
                 });
             });
-
+            
+            var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
+                // init Masonry after all images have loaded
+                $grid_mobile.masonry({
+                    columnWidth: '.grid-sizer',
+                    itemSelector: '.grid-item',
+                    originLeft: false,
+                    percentPosition: true
+                });
+            });
+            
             // $('.grid_desktop').masonry({
             //     columnWidth: '.grid-sizer',
             //     itemSelector: '.grid-item',
             //     percentPosition: true
             // });
             
-            $('.grid_mobile').masonry({
-                columnWidth: '.grid-sizer',
-                // horizontalOrder: true,
-                itemSelector: '.grid-item',
-                originLeft: false,
-                percentPosition: true
-            });
+            // $('.grid_mobile').masonry({
+            //     columnWidth: '.grid-sizer',
+            //     // horizontalOrder: true,
+            //     itemSelector: '.grid-item',
+            //     originLeft: false,
+            //     percentPosition: true
+            // });
             
             show_content();
             
