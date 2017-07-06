@@ -47,7 +47,7 @@
     
     <div class="grid grid_mobile visible_phone">
         <div class="grid-sizer"></div>
-        <div class="faeture_0 grid-item"><img src="https://unsplash.it/640/640"></div>
+        <div class="feature_0 grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="feature_1 grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="feature_2 grid-item"><img src="https://unsplash.it/640/640"></div>
         <div class="feature_3 grid-item"><img src="https://unsplash.it/640/640"></div>
