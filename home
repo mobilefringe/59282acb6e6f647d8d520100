@@ -117,12 +117,20 @@
             //         percentPosition: true
             //     });
             // });
-            
-            $('.grid_desktop').masonry({
-                columnWidth: '.grid-sizer',
-                itemSelector: '.grid-item',
-                percentPosition: true
+            var $grid = $('.grid_desktop').imagesLoaded( function() {
+                // init Masonry after all images have loaded
+                $grid.masonry({
+                    columnWidth: '.grid-sizer',
+                    itemSelector: '.grid-item',
+                    percentPosition: true
+                });
             });
+
+            // $('.grid_desktop').masonry({
+            //     columnWidth: '.grid-sizer',
+            //     itemSelector: '.grid-item',
+            //     percentPosition: true
+            // });
             
             $('.grid_mobile').masonry({
                 columnWidth: '.grid-sizer',
