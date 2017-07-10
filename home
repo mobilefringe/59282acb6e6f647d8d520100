@@ -32,6 +32,7 @@
                 <a href="https://www.facebook.com/shopthegateway/">
                     <img src="https://unsplash.it/640/640" alt="Facebook"/>
                     <div class="info">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
                         <h2>FACEBOOK</h2>
                     </div>
                 </a>
@@ -44,6 +45,7 @@
                 <a href="https://www.instagram.com/shopthegateway/">
                     <img src="https://unsplash.it/640/640" alt="Instagram"/>
                     <div class="info">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
                         <h2>INSTAGRAM</h2>
                     </div>
                 </a>
