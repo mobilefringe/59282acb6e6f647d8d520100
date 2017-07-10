@@ -28,7 +28,7 @@
         <div class="feature_1 grid-item"></div>
         <div class="feature_2 grid-item"></div>
         <div class="grid-item">
-            <div class="ih-item circle effect19">
+            <div class="social ih-item circle effect19">
                 <a href="https://www.facebook.com/shopthegateway/">
                     <img src="https://unsplash.it/640/640" alt="Facebook"/>
                     <div class="info">
@@ -41,7 +41,7 @@
         <div class="feature_3 grid-item grid-item--width2"></div>
         <div class="feature_4 grid-item grid-item--width2"></div>
         <div class="grid-item">
-            <div class="ih-item circle effect19">
+            <div class="social ih-item circle effect19">
                 <a href="https://www.instagram.com/shopthegateway/">
                     <img src="https://unsplash.it/640/640" alt="Instagram"/>
                     <div class="info">
@@ -60,7 +60,7 @@
         <div class="feature_3 grid-item grid-item--width2"></div>
         <div class="feature_4 grid-item grid-item--width2"></div>
         <div class="grid-item">
-            <div class="ih-item circle effect19">
+            <div class="social ih-item circle effect19">
                 <a href="https://www.facebook.com/shopthegateway/">
                     <img src="https://unsplash.it/640/640" alt="Facebook"/>
                     <div class="info">
@@ -71,7 +71,7 @@
             </div>
         </div>
         <div class="grid-item">
-            <div class="ih-item circle effect19">
+            <div class="social ih-item circle effect19">
                 <a href="https://www.instagram.com/shopthegateway/">
                     <img src="https://unsplash.it/640/640" alt="Instagram"/>
                     <div class="info">
