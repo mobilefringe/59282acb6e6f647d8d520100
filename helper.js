@@ -273,12 +273,11 @@ var default_image = {
 
 $('#subForm').submit(function(e){
     e.preventDefault();
-    $('.form_submit').prop('disabled', true);
-    // if ($("#newsletter_agree").prop("checked") != true){
-    //     alert("Please agree to receive newsletters from " + site_json.name + "." );
-    //     $("#newsletter_agree").focus();
-    //     return false;
-    // }
+    if ($("#newsletter_agree").prop("checked") != true){
+        alert("Please agree to receive newsletters from " + site_json.name + "." );
+        $("#newsletter_agree").focus();
+        return false;
+    }
     $.getJSON(
         this.action + "?callback=?",
         $(this).serialize(),
