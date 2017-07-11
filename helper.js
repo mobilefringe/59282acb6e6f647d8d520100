@@ -142,6 +142,37 @@ function get_instagram_feed(url, total, size, callback){
     });
 }
 
+function show_cat_stores(){
+    $('.show_cat_stores').click(function(e){
+        var cat_id = $(this).attr('data-id');
+        var cat_name = $(this).attr('name');
+        var rows = $('.cats_row');
+        if(cat_id != "000") {
+            rows.hide();
+            // $('#cat_name').text($(this).text());
+            // $('#cat_name').css('display', 'block');
+            $.each(rows, function(i, val){
+                var cat_array = val.getAttribute('data-cat').split(',');
+                if ($.inArray(cat_id, cat_array) >= 0){
+                    $(val).show();
+                }
+            });
+        } else {
+            rows.show();
+            $.each($('.store_initial'), function(i, val){
+                if ($(val).text().length > 0){
+                    $(val).show();
+                } 
+            });
+            $('#cat_name').hide();    
+        }
+        $('.dropdown-menu .cat_list').css('display', 'none');
+        $('#store_cat_list').html(cat_name + '<span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span>');
+        $('html, body').animate({scrollTop : 0},800);
+        e.preventDefault();
+    });
+}
+
 function show_content(){
     $('.page_content').fadeIn();
     $('.custom_backdrop').remove();
