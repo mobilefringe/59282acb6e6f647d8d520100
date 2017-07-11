@@ -169,7 +169,7 @@
                                     <li class="dropdown_item"><a href="/hours">Hours</a></li>
                                     <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
                                     <li class="dropdown_item"><a href="/parking">Parking</a></li>
-                                    <li class="dropdown_item"><a href="/tourism">Tourism</a></li>
+                                    <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="#">Heritage</a>
