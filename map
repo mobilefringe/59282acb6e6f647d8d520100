@@ -1,4 +1,10 @@
 <style>
+    .map_directory {
+        max-height: 770px;
+    }
+    .directory_list {
+        max-height: 628px;
+    }
     #zoom_container {
         width: 700px !important;
         height: 700px !important;
