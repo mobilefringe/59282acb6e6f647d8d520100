@@ -83,6 +83,10 @@ function load_more(num){
     $('#num_loaded').val(i);
 }
 
+function render_instagram_single(data){
+    $('#instafeed_single').html(data)
+}
+
 function render_instagram(data){
     $('#instafeed_single').html(data)
     $('#instafeed').html(data)
