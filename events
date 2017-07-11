@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<div class="site_container">
+<div class="site_container page_content">
     <div class="row">
         <div class="col-md-12">
             <h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>
