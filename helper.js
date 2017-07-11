@@ -292,4 +292,3 @@ $('#subForm').submit(function(e){
         }
     );
 });
-}
