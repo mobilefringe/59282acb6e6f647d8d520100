@@ -88,7 +88,6 @@ function render_instagram_single(data){
 }
 
 function render_instagram(data){
-    $('#instafeed_single').html(data)
     $('#instafeed').html(data)
 }
 
