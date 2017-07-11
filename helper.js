@@ -34,6 +34,26 @@ function init(e) {
         event.preventDefault();
         $(this).ekkoLightbox();
     });
+    
+    $('#subForm').submit(function (e) {
+        // if ($("#agree_terms").prop("checked") != true){
+        //     alert("Please agree to the term and conditions.");
+        //     $("#agree_terms").focus();
+        //     return false;
+        // }
+        e.preventDefault();
+        $.getJSON(
+            this.action + "?callback=?",
+            $(this).serialize(),
+            function (data) {
+                if (data.Status === 400) {
+                    alert("Please try again later.");
+                } else { // 200
+                    $('#subForm').trigger('reset');
+                    $("#success_subscribe").fadeIn();
+                }
+        });
+    });
 }
 
 function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name){
