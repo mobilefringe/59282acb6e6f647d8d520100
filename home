@@ -41,16 +41,17 @@
         <div class="feature_3 grid-item grid-item--width2"></div>
         <div class="feature_4 grid-item grid-item--width2"></div>
         <div class="grid-item">
-            <div id="instafeed_single"></div>
-            <!--<div class="social ih-item circle effect19">-->
-            <!--    <a href="https://www.instagram.com/shopthegateway/">-->
-            <!--        <img src="https://unsplash.it/640/640" alt="Instagram"/>-->
-            <!--        <div class="info">-->
-            <!--            <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>-->
-            <!--            <h2>@ShopGateway</h2>-->
-            <!--        </div>-->
-            <!--    </a>-->
-            <!--</div>-->
+            <!--<div id="instafeed_single"></div>-->
+            <div class="social ih-item circle effect19">
+                <a href="https://www.instagram.com/shopthegateway/">
+                    <div id="instafeed_single"></div>
+                    <!--<img src="https://unsplash.it/640/640" alt="Instagram"/>-->
+                    <div class="info">
+                        <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
+                        <h2>@ShopGateway</h2>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="grid grid_mobile visible_phone">
