@@ -66,8 +66,8 @@ $(document).ready(function(e){
         
         $("#zoom_image").attr("src", map_url);
 		$('#zoom_image').smoothZoom({
-		    width: "2500px",
-            height: "2500px",
+		    width: "1000px",
+            height: "500px",
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
 			zoom_MAX: 250,
