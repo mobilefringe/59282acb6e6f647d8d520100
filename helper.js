@@ -35,13 +35,13 @@ function init(e) {
         $(this).ekkoLightbox();
     });
     
-    $('#subForm').submit(function (e) {
-        // if ($("#agree_terms").prop("checked") != true){
-        //     alert("Please agree to the term and conditions.");
-        //     $("#agree_terms").focus();
+    $('#subForm').submit(function(e){
+        e.preventDefault();
+        // if ($("#newsletter_agree").prop("checked") != true){
+        //     alert("Please agree to receive newsletters from " + site_json.name + "." );
+        //     $("#newsletter_agree").focus();
         //     return false;
         // }
-        e.preventDefault();
         $.getJSON(
             this.action + "?callback=?",
             $(this).serialize(),
@@ -49,10 +49,12 @@ function init(e) {
                 if (data.Status === 400) {
                     alert("Please try again later.");
                 } else { // 200
-                    $('#subForm').trigger('reset');
-                    $("#success_subscribe").fadeIn();
+                    $("#success_subscribe").fadeIn()
+                    $('#success_subscribe').delay(2000).fadeOut();
+                    $('#subForm').trigger('reset')
                 }
-        });
+            }
+        );
     });
 }
 
