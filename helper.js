@@ -1,7 +1,7 @@
 function init(e) {
     $('<div class="modal-backdrop custom_backdrop"><div class="loader">Loading...</div></div>').appendTo(document.body);
     
-    get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 1, 'standard_resolution', 'most-liked', render_instagram_single);
+    get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 1, 'standard_resolution', render_instagram_single);
     get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 6, 'standard_resolution', render_instagram);
     
     $('#menu-icon').click(function(){
