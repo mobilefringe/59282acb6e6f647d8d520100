@@ -120,7 +120,6 @@ function get_instagram_feed(url, total, size, callback){
     log('fetching instagram data from: ' + url);
     $.getJSON(url).done(function(data) {
         var insta_feed = data.social.instagram
-        console.log(insta_feed)
         if(insta_feed != null){
             $.each(insta_feed, function(i,v){
                 var feed_obj = {}
