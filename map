@@ -58,7 +58,8 @@ $(document).ready(function(e){
         renderStoreList('#stores_container','#stores_template', stores, "stores");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
-        $("#zoom_image").attr("src", getPNGMapURL());
+        var map_url = getPNGMapURL();
+        $("#zoom_image").attr("src", map_url);
 		$('#zoom_image').smoothZoom({
 		    width: "2500px",
             height: "2500px",
