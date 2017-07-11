@@ -84,7 +84,7 @@ function load_more(num){
 }
 
 function render_instagram_single(data){
-    $('#instafeed_single').html(data)
+    $('.instafeed_single').html(data)
 }
 
 function render_instagram(data){
