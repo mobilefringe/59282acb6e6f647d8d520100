@@ -273,7 +273,7 @@ var default_image = {
 
 $('#subForm').submit(function(e){
     e.preventDefault();
-    $('.contest_btn').prop('disabled', true);
+    $('.form_submit').prop('disabled', true);
     // if ($("#newsletter_agree").prop("checked") != true){
     //     alert("Please agree to receive newsletters from " + site_json.name + "." );
     //     $("#newsletter_agree").focus();
