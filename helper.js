@@ -271,13 +271,13 @@ var default_image = {
     "image_url" : "//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496850961000/LogoBox.png",
 }
 
-$('#subForm').submit(function(e){
+$('#subForm').submit(function (e) {
+    // if ($("#agree_terms").prop("checked") != true){
+    //     alert("Please agree to the term and conditions.");
+    //     $("#agree_terms").focus();
+    //     return false;
+    // }
     e.preventDefault();
-    if ($("#newsletter_agree").prop("checked") != true){
-        alert("Please agree to receive newsletters from " + site_json.name + "." );
-        $("#newsletter_agree").focus();
-        return false;
-    }
     $.getJSON(
         this.action + "?callback=?",
         $(this).serialize(),
@@ -285,10 +285,8 @@ $('#subForm').submit(function(e){
             if (data.Status === 400) {
                 alert("Please try again later.");
             } else { // 200
-                $("#success_subscribe").fadeIn()
-                $('#success_subscribe').delay(2000).fadeOut();
-                $('#subForm').trigger('reset')
+                $('#subForm').trigger('reset');
+                $("#success_subscribe").fadeIn();
             }
-        }
-    );
+    });
 });
