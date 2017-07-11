@@ -4,7 +4,7 @@
         height: 700px !important;
     }
     #zoom_image{
-		width:2500px;
+		width: 2500px;
 		height: 2500px;
 		/*min-width:2500px;*/
 		/*min-height: 2500px;*/
