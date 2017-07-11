@@ -198,6 +198,7 @@
                     <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Email"/>
                     <button class="form_submit" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
+                <p class="hidden_now" id="success_subscribe">Thank you for subscribing!</p>
             </form>
         </div>
     </section>
