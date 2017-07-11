@@ -160,12 +160,12 @@ function show_cat_stores(){
             $(".store_initial").css("display", "none");
         } else {
             rows.show();
-            // $.each($('.store_initial'), function(i, val){
-            //     if ($(val).text().length > 0){
-            //         $(val).show();
-            //     } 
-            // });
-            $(".store_initial").css("display", "block");
+            $.each($('.store_initial'), function(i, val){
+                if ($(val).text().length > 0){
+                    $(val).show();
+                } 
+            });
+            // $(".store_initial").css("display", "block");
             $('#cat_name').hide();    
         }
         $('.dropdown-menu .cat_list').css('display', 'none');
