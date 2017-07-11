@@ -88,7 +88,7 @@ function render_instagram(data){
 
 function show_content(){
     $('.page_content').fadeIn();
-    $(''.custom_backdrop').remove();
+    $('.custom_backdrop').remove();
     
     // BANNER MESSAGE
     $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
