@@ -165,6 +165,7 @@ function show_cat_stores(){
             //         $(val).show();
             //     } 
             // });
+            $(".store_initial").css("display", "block");
             $('#cat_name').hide();    
         }
         $('.dropdown-menu .cat_list').css('display', 'none');
