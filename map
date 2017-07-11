@@ -91,7 +91,9 @@ $(document).ready(function(e){
             add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
         });
         
-        show_content();
+        setTimeout(function() {
+            show_content();
+        }, 500);
     }
     loadMallDataCached(renderAll); 
 });
