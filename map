@@ -70,15 +70,9 @@
                     </ul>
                 </div>
             </div>
-    <!--        <div class="map light_border">-->
-			 <!--   <div class="zoom_container" id="zoom_container_directory">-->
-    <!--			    <img alt="Centre Map" id="zoom_image" src=""/>-->
-				<!--    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">-->
-				<!--</div>-->
-    <!--        </div>-->
             <div class="map light_border">
 			    <div class="zoom_container" id="zoom_container_directory">
-    			    <img alt="Centre Map" id="zoom_image" src=""/>
+    			    <img alt="Centre Map" id="zoom_image" src="https://www.mallmaverick.com/system/properties/maps/000/000/264/original/gateway_jun17_2500x2500_1.png?1499714930"/>
 				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
 				</div>
             </div>
@@ -100,42 +94,40 @@ $(document).ready(function(e){
         renderStoreList('#stores_container','#stores_template', stores, "stores");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
-        $("#zoom_image").attr("src", getPNGMapURL());
-    		$('#zoom_image').smoothZoom({
-    		    width: "100%",
-                height: "100%",
-    		    initial_ZOOM: 0,
-    			zoom_MIN: 0,
-    			zoom_MAX: 250,
-    			responsive: true,
-    		    responsive_maintain_ratio: true,
-    			zoom_BUTTONS_SHOW : 'YES',
-    			pan_BUTTONS_SHOW : 'NO',
-    			pan_LIMIT_BOUNDARY : 'NO',
-    			button_SIZE: 34,
-    			button_ALIGN: "top right",
-    			zoom_OUT_TO_FIT: "YES",
-    			container: 'zoom_container_directory'
-    		});
+        // $("#zoom_image").attr("src", getPNGMapURL());
+		$('#zoom_image').smoothZoom({
+		    width: "100%",
+            height: "100%",
+		    initial_ZOOM: 0,
+			zoom_MIN: 0,
+			zoom_MAX: 250,
+			responsive: true,
+		    responsive_maintain_ratio: true,
+			zoom_BUTTONS_SHOW : 'YES',
+			pan_BUTTONS_SHOW : 'NO',
+			pan_LIMIT_BOUNDARY : 'NO',
+			button_SIZE: 34,
+			button_ALIGN: "top right",
+			zoom_OUT_TO_FIT: "YES",
+			container: 'zoom_container_directory'
+		});
     
-            $('.map_pin_a').click(function(e){
-                e.preventDefault();
-                var store_x_coordinate = $(this).attr('store_x_coordinate');
-        		var store_y_coordinate = $(this).attr('store_y_coordinate');
-                var pin_id = $(this).attr('store_id');
-                var store_name = $(this).attr('store_name');
-    
-                $('.show_pin').hide();
-                $('.no_pin').show();
-                $('#show_pin_store_' + pin_id).show();
-                $('#no_pin_store_' + pin_id).hide();
-                
-                add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
-            });
+        $('.map_pin_a').click(function(e){
+            e.preventDefault();
+            var store_x_coordinate = $(this).attr('store_x_coordinate');
+    		var store_y_coordinate = $(this).attr('store_y_coordinate');
+            var pin_id = $(this).attr('store_id');
+            var store_name = $(this).attr('store_name');
+
+            $('.show_pin').hide();
+            $('.no_pin').show();
+            $('#show_pin_store_' + pin_id).show();
+            $('#no_pin_store_' + pin_id).hide();
             
-            show_content();
+            add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
+        });
         
-        
+        show_content();
     }
     loadMallDataCached(renderAll); 
 });
