@@ -159,11 +159,11 @@ function show_cat_stores(){
             });
         } else {
             rows.show();
-            $.each($('.store_initial'), function(i, val){
-                if ($(val).text().length > 0){
-                    $(val).show();
-                } 
-            });
+            // $.each($('.store_initial'), function(i, val){
+            //     if ($(val).text().length > 0){
+            //         $(val).show();
+            //     } 
+            // });
             $('#cat_name').hide();    
         }
         $('.dropdown-menu .cat_list').css('display', 'none');
