@@ -41,11 +41,9 @@
         <div class="feature_3 grid-item grid-item--width2"></div>
         <div class="feature_4 grid-item grid-item--width2"></div>
         <div class="grid-item">
-            <!--<div id="instafeed_single"></div>-->
             <div class="social ih-item circle effect19">
                 <a href="https://www.instagram.com/shopthegateway/">
                     <div id="instafeed_single"></div>
-                    <!--<img src="https://unsplash.it/640/640" alt="Instagram"/>-->
                     <div class="info">
                         <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
                         <h2>@SHOPGATEWAY</h2>
@@ -67,22 +65,21 @@
                     <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1499787583000/gateway_facebook.png" alt="Facebook"/>
                     <div class="info">
                         <i class="fa fa-facebook hover_icon" aria-hidden="true"></i>
-                        <h2>ShopGateway</h2>
+                        <h2>SHOPGATEWAY</h2>
                     </div>
                 </a>
             </div>
         </div>
         <div class="grid-item">
-            <div id="instafeed_single"></div>
-            <!--<div class="social ih-item circle effect19">-->
-            <!--    <a href="https://www.instagram.com/shopthegateway/">-->
-            <!--        <img src="https://unsplash.it/640/640" alt="Instagram"/>-->
-            <!--        <div class="info">-->
-            <!--            <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>-->
-            <!--            <h2>@ShopGateway</h2>-->
-            <!--        </div>-->
-            <!--    </a>-->
-            <!--</div>-->
+            <div class="social ih-item circle effect19">
+                <a href="https://www.instagram.com/shopthegateway/">
+                    <div id="instafeed_single"></div>
+                    <div class="info">
+                        <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
+                        <h2>@SHOPGATEWAY</h2>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div class="margin_30"></div>
