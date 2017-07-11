@@ -72,7 +72,7 @@
             </div>
             <div class="map light_border">
 			    <div class="zoom_container" id="zoom_container_directory">
-    			    <img alt="Centre Map" id="zoom_image" src="https://www.mallmaverick.com/system/properties/maps/000/000/264/original/gateway_jun17_2500x2500_1.png?1499714930"/>
+    			    <img alt="Centre Map" id="zoom_image" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1499808612000/gateway_map.png"/>
 				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
 				</div>
             </div>
