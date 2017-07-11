@@ -59,6 +59,11 @@ $(document).ready(function(e){
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
         var map_url = getPNGMapURL();
+        
+        setTimeout(function() {
+            show_content();
+        }, 500);
+        
         $("#zoom_image").attr("src", map_url);
 		$('#zoom_image').smoothZoom({
 		    width: "2500px",
@@ -92,9 +97,7 @@ $(document).ready(function(e){
             add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
         });
         
-        setTimeout(function() {
-            show_content();
-        }, 500);
+        
     }
     loadMallDataCached(renderAll); 
 });
