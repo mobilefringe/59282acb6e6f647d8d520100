@@ -2,7 +2,7 @@ function init(e) {
     $('<div class="modal-backdrop custom_backdrop"><div class="loader">Loading...</div></div>').appendTo(document.body);
     
     get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 1, 'standard_resolution', render_instagram_single);
-    get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 6, 'standard_resolution', render_instagram);
+    get_instagram_feed("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 6, 'standard_resolution', render_instagram);
     
     $('#menu-icon').click(function(){
 		$(this).toggleClass('open');
@@ -111,6 +111,35 @@ function render_instagram_single(data){
 
 function render_instagram(data){
     $('#instafeed').html(data)
+}
+
+function get_instagram_feed(url, total, size, callback){
+    var html = '<a class="ig-image" target="_blank" href="{{{link}}}" ><img src="{{{image}}}" alt="{{caption}}" /></a>'
+    var item_rendered = [];
+    Mustache.parse(html); 
+    log('fetching instagram data from: ' + url);
+    $.getJSON(url).done(function(data) {
+        var insta_feed = data.social.instagram
+        if(insta_feed != null){
+            $.each(insta_feed, function(i,v){
+                var feed_obj = {}
+                if(v.caption != null){
+                    feed_obj.caption = v.caption.text
+                }
+                else{
+                    feed_obj.caption = ""
+                }
+                feed_obj.image = v.images[size].url
+                feed_obj.link = v.link
+                if (i < total){
+                    
+                    var ig_rendered =  Mustache.render(html,feed_obj);
+                    item_rendered.push(ig_rendered.trim());
+                }
+            })
+            callback(item_rendered.join(''))
+        }
+    });
 }
 
 function show_content(){
