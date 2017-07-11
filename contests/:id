@@ -13,7 +13,7 @@
         </div>
     </div>
 </div>
-<div class="site_container">
+<div class="site_container page_content">
     <div class="row">
         <div class="col-md-8 col-md-offset-2" id="contest_details_container">
             <script id="contest_details_template" type="x-tmpl-mustache/text">
