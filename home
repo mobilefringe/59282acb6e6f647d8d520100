@@ -43,7 +43,7 @@
         <div class="grid-item">
             <div class="social ih-item circle effect19">
                 <a href="https://www.instagram.com/shopthegateway/">
-                    <div id="instafeed_single"></div>
+                    <div class="instafeed_single"></div>
                     <div class="info">
                         <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
                         <h2>@SHOPGATEWAY</h2>
@@ -73,7 +73,7 @@
         <div class="grid-item">
             <div class="social ih-item circle effect19">
                 <a href="https://www.instagram.com/shopthegateway/">
-                    <div id="instafeed_single"></div>
+                    <div class="instafeed_single"></div>
                     <div class="info">
                         <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
                         <h2>@SHOPGATEWAY</h2>
