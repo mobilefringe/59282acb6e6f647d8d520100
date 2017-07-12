@@ -181,14 +181,14 @@ $(document).ready(function(e){
                 x_coord = store_x_coordinate;
                 y_coord = store_y_coordinate;
             
-                $(map).smoothZoom('removeLandmark')
+                $("#map_image").smoothZoom('removeLandmark')
                 if (isMobile) {
-                    $(map).smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:100});    
+                    $("#map_image").smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:100});    
                 } else {
-                    $(map).smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:150});
+                    $("#map_image").smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:150});
                 }
                 
-                $(map).smoothZoom('addLandmark', 
+                $("#map_image").smoothZoom('addLandmark', 
         			[
         			'<div class="item mark" data-show-at-zoom="0" data-position="' + x_coord + ',' + y_coord + '">\
         				<div>\
