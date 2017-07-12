@@ -169,7 +169,6 @@ function show_png_pin(trigger, map){
         var zoomData = $(map).smoothZoom('getZoomData');
         x_coord = parseInt($(this).attr('store_x_coordinate'));
         y_coord = parseInt($(this).attr('store_y_coordinate'));
-        floor = (coords[3])
         
         name = $(this).text();
         $(map).smoothZoom('removeLandmark')
