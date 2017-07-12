@@ -134,8 +134,6 @@ $(document).ready(function(e){
         }
         
         var stores = getStoresList();
-        renderStoreList('#stores_container','#stores_template', stores, "stores");
-        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
         $("#zoom_image").attr("src", getPNGMapURL());
 		$('#zoom_image').smoothZoom({
