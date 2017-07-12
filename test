@@ -139,7 +139,7 @@ $(document).ready(function(e){
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
         show_content();
-        $("#zoom_image").attr("src", getPNGMapURL());
+        $("#png_map").attr("src", getPNGMapURL());
 		$('#png_map').smoothZoom({
 		    height: 496,
 		    width: 619,
