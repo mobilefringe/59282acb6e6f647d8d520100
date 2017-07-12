@@ -122,7 +122,8 @@ function get_instagram_feed(url, total, size, callback){
         var insta_feed = data.social.instagram
         console.log(insta_feed)
         if(insta_feed != null){
-            $.each(insta_feed, function(i,v){
+            main_feed = insta_feed.splice(1,1);
+            $.each(main_feed, function(i,v){
                 var feed_obj = {}
                 if(v.caption != null){
                     feed_obj.caption = v.caption.text
