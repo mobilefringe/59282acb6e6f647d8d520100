@@ -144,7 +144,6 @@ $(document).ready(function(e){
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
 			zoom_MAX: 500,
-			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
 			pan_BUTTONS_SHOW : 'NO',
