@@ -55,7 +55,6 @@
 		show_png_pin(".map_pin_a", "#png_map")
         
     }
-</script>
 
 function show_png_pin(trigger, map){
     $(trigger).click(function(e) {
