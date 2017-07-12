@@ -100,7 +100,7 @@
         $.each(collection, function(key, val) {
             
             var rendered = Mustache.render(template_html,val);
-            console.log(rendered)
+            
             item_rendered.push(rendered);
         });
         
