@@ -130,7 +130,7 @@ $(document).ready(function(e){
         var stores = getStoresList();
         
 		$('#zoom_image').smoothZoom({
-		    width: 500,
+		    width: 768,
             height: 500,
 		    initial_ZOOM: 0,
 		    responsive_maintain_ratio: true,
