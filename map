@@ -27,10 +27,10 @@
     /*.directory_list {*/
     /*    max-height: 628px;*/
     /*}*/
-    /*#zoom_container {*/
-    /*    width: 700px !important;*/
-    /*    height: 700px !important;*/
-    /*}*/
+    #zoom_container {
+        width: 700px !important;
+        height: 700px !important;
+    }
  /*   #zoom_image{*/
 	/*	width: 2500px;*/
 	/*	height: 2500px;*/
