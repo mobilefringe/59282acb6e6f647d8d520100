@@ -167,8 +167,8 @@ function show_png_pin(trigger, map){
         var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
         coords = $(this).attr('data-value').split(",");
         var zoomData = $(map).smoothZoom('getZoomData');
-        x_coord = parseInt(coords[0])
-        y_coord = parseInt(coords[1])
+        x_coord = parseInt($(this).attr('store_x_coordinate');)
+        y_coord = parseInt($(this).attr('store_x_coordinate');)
         floor = (coords[3])
         
         name = $(this).text();
