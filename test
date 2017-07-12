@@ -1,13 +1,4 @@
-<script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
 <style>
-.demo1 {
-    float: left;
-    margin-bottom: 29px;
-    height: 750px;
-    width: 100%;
-    background-color: #FFFFFF;
-    border: 1px solid #b2aaab;
-}
     .map_directory {
         max-height: 770px;
     }
@@ -123,12 +114,10 @@
                 </div>
             </div>
             <div class="map light_border">
-			    <div class="map">
-            <div class="demo1 map3" style="">            
-                <img alt="map_image" id="map_image" src="//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/png/1481818765000/map-2016-12-15.png" />   
-                	
-    		</div>
-        </div>
+			    <div class="zoom_container" id="zoom_container_directory">
+    			    <img alt="Centre Map" id="zoom_image" src=""/>
+				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
+				</div>
             </div>
         </div>
     </div>
@@ -148,15 +137,23 @@ $(document).ready(function(e){
         renderStoreList('#stores_container','#stores_template', stores, "stores");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
-		$('.map3').craftmap({
-                image:{
-                    width:1975,
-                    height:1278
-                },
-                map: {
-                    position: '0 190'
-                }
-            });
+        $("#zoom_image").attr("src", getPNGMapURL());
+		$('#zoom_image').smoothZoom({
+		    width: 2500,
+            height: 2500,
+		    initial_ZOOM: 0,
+			zoom_MIN: 0,
+			zoom_MAX: 500,
+			responsive: true,
+		    responsive_maintain_ratio: true,
+			zoom_BUTTONS_SHOW : 'YES',
+			pan_BUTTONS_SHOW : 'NO',
+			pan_LIMIT_BOUNDARY : 'NO',
+			button_SIZE: 34,
+			button_ALIGN: "top right",
+			zoom_OUT_TO_FIT: "YES",
+			container: 'zoom_container_directory'
+		});
     
         $('.map_pin_a').click(function(e){
             e.preventDefault();
