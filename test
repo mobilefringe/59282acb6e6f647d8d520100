@@ -130,7 +130,7 @@ $(document).ready(function(e){
 		$('#zoom_image').smoothZoom({
 		    width: 2500,
             height: 2500,
-		    initial_ZOOM: 0,
+		    initial_ZOOM: 50,
 			zoom_MIN: 0,
 			zoom_MAX: 500,
 			responsive: true,
