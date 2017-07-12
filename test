@@ -131,7 +131,7 @@ function show_png_pin(trigger, map){
 			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_coord+','+y_coord+'">\
 				<div>\
 					<div class="text">\
-					+ name + \
+					<span>'+ name+ '</span>\
 				</div>\
 				<img src="//codecloud.cdn.speedyrails.net/sites/54cfab316e6f6433ad020000/530d3a9b7bc13ce4a511089c23463f99/10dundas_pin.png" width="40px" height="59px" alt="marker" />\
 				</div>\
