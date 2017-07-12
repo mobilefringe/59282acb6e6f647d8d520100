@@ -139,7 +139,6 @@ $(document).ready(function(e){
         renderStoreList('#stores_container','#stores_template', stores, "stores");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
-        $("#zoom_image").attr("src", getPNGMapURL());
 		$('.map3').craftmap({
                 image:{
                     width:1975,
