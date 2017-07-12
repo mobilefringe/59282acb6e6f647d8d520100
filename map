@@ -18,52 +18,31 @@
 		min-height: 100%;
 	}
 	
-    /*#zoom_container .landmarks{*/
-    /*	position:absolute;*/
-    /*	z-index:10;	*/
-    /*	top:0px;*/
-    /*	left:0px;*/
-    /*	font-family: Helvetica, Arial, Verdana;*/
-    /*	font-size:12px;*/
-    /*	color: #ffffff;*/
-    /*}	*/
-    /*#zoom_container .landmarks .item {*/
-    /*	position:absolute;		*/
-    /*	text-align:center;		*/
-    /*	display: none;*/
-    /*}	*/
-    /*#zoom_container .landmarks .lable div {*/
-    /*	width: 100px;*/
-    /*	padding: 4px;	*/
-    /*}	*/
-    /*#zoom_container .landmarks .mark .text{*/
-    /*	background-color:#000000;*/
-    /*	padding:2px 6px;*/
-    /*	min-width: 75px;	*/
-    /*}*/
+    #zoom_container .landmarks{
+    	position:absolute;
+    	z-index:10;	
+    	top:0px;
+    	left:0px;
+    	font-family: Helvetica, Arial, Verdana;
+    	font-size:12px;
+    	color: #ffffff;
+    }	
+    #zoom_container .landmarks .item {
+    	position:absolute;		
+    	text-align:center;		
+    	display: none;
+    }	
+    #zoom_container .landmarks .lable div {
+    	width: 100px;
+    	padding: 4px;	
+    }	
+    #zoom_container .landmarks .mark .text{
+    	background-color:#000000;
+    	padding:2px 6px;
+    	min-width: 75px;	
+    }
     
-    #zoom_container .landmarks {
-    position: absolute;
-    z-index: 10;
-    top: 0px;
-    left: 0px;
-    font-family: Helvetica, Arial, Verdana;
-    font-size: 12px;
-    color: #ffffff;
-    text-align: center;
-}
-
-#zoom_container .landmarks .mark {
-    background-color: transparent;
-}
-
-#zoom_container .landmarks .mark .text {
-    margin-bottom: 5px;
-    padding: 2px 6px;
-    background-color: #000;
-    border-radius: 4px;
-    text-align: center;
-}
+    
 
 </style>
 <div class="page_header">   
