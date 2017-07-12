@@ -1,5 +1,13 @@
 <script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
 <style>
+.demo1 {
+    float: left;
+    margin-bottom: 29px;
+    height: 655px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #b2aaab;
+}
     .map_directory {
         max-height: 770px;
     }
