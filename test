@@ -1,1 +1,172 @@
-<script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
+<style>
+    .map_directory {
+        max-height: 770px;
+    }
+    .directory_list {
+        max-height: 628px;
+    }
+
+    .zoom_container {
+        width: 800px !important;
+        max-width: 100%;
+        min-height: 700px;
+        border: 1px solid #666666;
+    }
+    #zoom_image{
+		width: 2500px;
+		max-width: 100%;
+	}
+	
+ /*   #zoom_container .landmarks{*/
+ /*   	position:absolute;*/
+ /*   	z-index:10;	*/
+ /*   	top:0px;*/
+ /*   	left:0px;*/
+ /*   	font-family: Helvetica, Arial, Verdana;*/
+ /*   	font-size:12px;*/
+ /*   	color: #ffffff;*/
+ /*   }	*/
+ /*   #zoom_container .landmarks .item {*/
+ /*   	position:absolute;		*/
+ /*   	text-align:center;		*/
+ /*   	display: none;*/
+ /*   }	*/
+ /*   #zoom_container .landmarks .lable div {*/
+ /*   	width: 100px;*/
+ /*   	padding: 4px;	*/
+ /*   }	*/
+ /*   #zoom_container .landmarks .mark .text{*/
+ /*   	background-color:#000000;*/
+ /*   	padding:2px 6px;*/
+ /*   	min-width: 75px;	*/
+ /*   }*/
+    
+ /*    #zoom_image{*/
+	/*	width:2000px;*/
+	/*	height: 1000px;*/
+	/*	min-width:2000px;*/
+	/*	min-height: 1000px;*/
+	/*}*/
+	
+    .zoom_container .landmarks{
+    	position:absolute;
+    	z-index:10;	
+    	top:0px;
+    	left:0px;
+    	font-family: Helvetica, Arial, Verdana;
+    	font-size:12px;
+    	color: #ffffff;
+    }	
+    .zoom_container .landmarks .item {
+    	position:absolute;		
+    	text-align:center;		
+    	display: none;
+    }	
+    .zoom_container .landmarks .lable div {
+    	width: 100px;
+    	padding: 4px;	
+    }	
+    .zoom_container .landmarks .mark .text{
+    	background-color:#000000;
+    	padding:2px 6px;
+    	min-width: 75px;	
+    }
+    .truncate {
+      width: 100%;
+      white-space: normal;
+    }
+
+</style>
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Center Map</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-4 hidden_phone">
+            <div class="map_directory">
+                <h3 class="map_title center caps">Directory</h3>
+                <div id="stores_container" class="directory_list">
+                    <script id="stores_template" type="x-tmpl-mustache/text">
+                        <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="visible_phone">
+                <div class="map_dropdown dropdown">
+                    <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
+                    <ul class="dropdown-menu map_list" aria-labelledby="dropdownMenu2" id="stores_mobile_container">
+                        <script id="stores_mobile_template" type="x-tmpl-mustache/text">
+                            <li><a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a></li>
+				        </script>
+                    </ul>
+                </div>
+            </div>
+            <div class="map light_border">
+			    <div class="zoom_container" id="zoom_container_directory">
+    			    <img alt="Centre Map" id="zoom_image" src=""/>
+				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>  
+<script>
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Map Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+        
+        var stores = getStoresList();
+        renderStoreList('#stores_container','#stores_template', stores, "stores");
+        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
+        
+        $("#zoom_image").attr("src", getPNGMapURL());
+		$('#zoom_image').smoothZoom({
+		    width: 2500,
+            height: 2500,
+		    initial_ZOOM: 0,
+			zoom_MIN: 0,
+			zoom_MAX: 500,
+			responsive: true,
+		    responsive_maintain_ratio: true,
+			zoom_BUTTONS_SHOW : 'YES',
+			pan_BUTTONS_SHOW : 'NO',
+			pan_LIMIT_BOUNDARY : 'NO',
+			button_SIZE: 34,
+			button_ALIGN: "top right",
+			zoom_OUT_TO_FIT: "YES",
+			container: 'zoom_container_directory'
+		});
+    
+        $('.map_pin_a').click(function(e){
+            e.preventDefault();
+            var store_x_coordinate = $(this).attr('store_x_coordinate');
+    		var store_y_coordinate = $(this).attr('store_y_coordinate');
+            var pin_id = $(this).attr('store_id');
+            var store_name = $(this).attr('store_name');
+
+            add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
+        });
+
+        show_content();
+    }
+    loadMallDataCached(renderAll); 
+});
+</script>
