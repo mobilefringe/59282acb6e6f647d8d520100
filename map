@@ -162,7 +162,8 @@ $(document).ready(function(e){
             $('#show_pin_store_' + pin_id).show();
             $('#no_pin_store_' + pin_id).hide();
             
-            add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
+            // add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
+            show_png_pin(".mapper", "#map_image");
         });
         
         function show_png_pin(trigger, map){
