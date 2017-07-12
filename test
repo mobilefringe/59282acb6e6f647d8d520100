@@ -74,10 +74,9 @@
         Mustache.parse(template_html);   // optional, speeds up future uses
         var store_initial="";
         $.each(collection, function(key, val) {
-            if(val.x_coordinate != null){
                 var rendered = Mustache.render(template_html,val);
                 item_rendered.push(rendered);
-            }
+            
         });
         
         $(container).show();
