@@ -110,7 +110,7 @@ $(document).ready(function(e){
             height: 2500,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
-			zoom_MAX: 250,
+			zoom_MAX: 500,
 			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
