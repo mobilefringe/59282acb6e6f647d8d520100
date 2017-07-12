@@ -142,7 +142,7 @@ $(document).ready(function(e){
 		    width: 768,
             height: 768,
 		    initial_ZOOM: 0,
-			zoom_MIN: 0,
+			zoom_MIN: 300,
 			zoom_MAX: 200,
 			responsive: true,
 		    responsive_maintain_ratio: true,
