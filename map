@@ -166,8 +166,8 @@ $(document).ready(function(e){
             show_png_pin(store_x_coordinate, store_y_coordinate ".mapper", "#map_image");
         });
         
-        function show_png_pin(trigger, map){
-            $(trigger).bind("change", function(e) {
+        function show_png_pin(store_x_coordinate, store_y_coordinate, trigger, map){
+            // $(trigger).bind("change", function(e) {
                 e.preventDefault()
                 
                 var selectedOption = $("select.mapper").val().split(",");
@@ -200,7 +200,7 @@ $(document).ready(function(e){
         			</div>'
         			]
         		);
-            });
+            // });
         }
         
         
