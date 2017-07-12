@@ -139,19 +139,20 @@ $(document).ready(function(e){
         
         show_content();
         $("#zoom_image").attr("src", getPNGMapURL());
-		$('#zoom_image').smoothZoom({
-		    width: 768,
-            height: 768,
+		$("#png_map").attr("src", getPNGMapURL())
+		$('#png_map').smoothZoom({
+		    height: 496,
+		    width: 619,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
-			zoom_MAX: 500,
+			zoom_MAX: 100,
+			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
 			pan_BUTTONS_SHOW : 'NO',
 			pan_LIMIT_BOUNDARY : 'NO',
-			button_SIZE: 34,
-			button_ALIGN: "top right",
-			container: 'zoom_container_directory'
+			button_ALIGN: "top left",
+			container: 'zoom_container'
 		});
     
         $('.map_pin_a').click(function(e){
