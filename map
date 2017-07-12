@@ -194,8 +194,11 @@ function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name
     console.log(store_x_coordinate, store_y_coordinate, pin_id, store_name)
 	var name = store_name;
 	var x_coordinate = store_x_coordinate;
+	console.log(x_coordinate)
 	var y_coordinate = store_y_coordinate;
+	console.log(y_coordinate)
 	var mark = "mark_store_" + pin_id;
+	console.log(mark)
 
     // Remove existing landmark
     $('#map_image').smoothZoom('removeLandmark');
