@@ -120,10 +120,8 @@ function get_instagram_feed(url, total, size, callback){
     log('fetching instagram data from: ' + url);
     $.getJSON(url).done(function(data) {
         var insta_feed = data.social.instagram
-        console.log(insta_feed)
         if(insta_feed != null){
             main_feed = insta_feed.splice(1,6);
-            console.log(main_feed)
             $.each(main_feed, function(i,v){
                 var feed_obj = {}
                 if(v.caption != null){
