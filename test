@@ -165,7 +165,7 @@ function show_png_pin(trigger, map){
     $(trigger).click(function(e) {
         e.preventDefault()
         var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
-        coords = $(this).attr('data-value').split(",");
+        
         var zoomData = $(map).smoothZoom('getZoomData');
         x_coord = parseInt($(this).attr('store_x_coordinate'));
         y_coord = parseInt($(this).attr('store_y_coordinate'));
