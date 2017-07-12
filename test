@@ -20,6 +20,8 @@
     border-radius: 5px;
     margin-bottom: 10px;
     padding-top: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 </style>
 <div class="page_header">   
