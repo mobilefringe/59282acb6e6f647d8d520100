@@ -141,7 +141,6 @@ $(document).ready(function(e){
 		$('#zoom_image').smoothZoom({
 		    width: 768,
             height: 768,
-		    initial_ZOOM: 0,
 			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
