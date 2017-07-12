@@ -82,12 +82,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="map light_border">
-			    <div class="zoom_container" id="zoom_container_directory">
-    			    <img alt="Centre Map" id="zoom_image" src=""/>
-				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
-				</div>
-            </div>
+    <!--        <div class="map light_border">-->
+			 <!--   <div class="zoom_container" id="zoom_container_directory">-->
+    <!--			    <img alt="Centre Map" id="zoom_image" src=""/>-->
+				<!--    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">-->
+				<!--</div>-->
+    <!--        </div>-->
+            <div id="zoom_container"  >
+			<img alt="Store Directory Map" id="map_image" src=""/>
+			<div class="landmarks" data-show-at-zoom="100" data-allow-drag="true"></div>
+		</div>
         </div>
     </div>
 </div>
