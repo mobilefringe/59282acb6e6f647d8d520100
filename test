@@ -89,7 +89,7 @@
         loadMallDataCached(renderPage);
     })
     
-    function renderStoreList(container, template, collection, type){
+    function rr(container, template, collection, type){
         var item_list = [];
         var item_rendered = [];
         var template_html = $(template).html();
@@ -156,7 +156,7 @@
     
     function renderPage(){
          var stores = getStoresList();
-        renderStoreList('#stores_container','#stores_template', stores, "stores", "A", "Z");
+        rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
         show_content();
         $('#top_nav_stores').addClass('active_yellow')
         
