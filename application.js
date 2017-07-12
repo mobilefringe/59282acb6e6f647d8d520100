@@ -394,7 +394,7 @@ function renderPosts(container, template, collection){
         }
         
         if(val.body.length > 175){
-            val.description_short = val.body.substring(0, 175) + "...";
+            val.description_short = val.body.substring(0, 170) + "...";
         }
         else{
             val.description_short = val.body;
