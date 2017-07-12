@@ -206,7 +206,7 @@ function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name
 	// Add new landmark
 	$('#map_image').smoothZoom('addLandmark', 
 		[
-		'<div class="item mark" data-show-at-zoom="0" data-position="' + x_coordinate + ',' + y_coordinate + '" id="' + mark + '">\
+		'<div class="item mark" data-show-at-zoom="0" data-position="' + x_coordinate + ',' + y_coordinate + '">\
 			<div>\
 				<div class="text">\
 				<strong>' + name + '</strong>\
