@@ -12,6 +12,7 @@
 #zoom_container .landmarks .item {
     position: absolute;
     text-align: center;
+    background: transparent;
 }
 #zoom_container .landmarks .mark .text {
     background-color: #6e6e6e;
