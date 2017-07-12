@@ -141,7 +141,7 @@ $(document).ready(function(e){
         show_content();
         $("#png_map").attr("src", getPNGMapURL());
 		$('#png_map').smoothZoom({
-		    height: 496,
+		    height: 768,
 		    width: 619,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
