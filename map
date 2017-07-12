@@ -14,8 +14,8 @@
     #zoom_image{
 		width: 2500px;
 		height: 2500px;
-		min-width:2500px;
-		min-height: 2500px;
+		max-width: 100%;
+		min-height: 100%;
 	}
 	
     /*#zoom_container .landmarks{*/
