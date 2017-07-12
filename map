@@ -9,7 +9,8 @@
     .zoom_container {
         width: 800px !important;
         max-width: 100%;
-        height: 700px !important;
+        min-height: 700px;
+        border: 1px solid #666666;
     }
     #zoom_image{
 		width: 2500px;
