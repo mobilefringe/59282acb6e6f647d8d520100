@@ -193,7 +193,7 @@ $(document).ready(function(e){
         			'<div class="item mark" data-show-at-zoom="0" data-position="' + x_coord + ',' + y_coord + '">\
         				<div>\
         					<div class="text">\
-        					<strong>'+ selectedOptionName + '</strong>\
+        					<strong>'+  + '</strong>\
         				</div>\
         				<img src="//www.heritageplace.ca/assets/map_pin_default.png" width="40px" height="59px" alt="marker" />\
         				</div>\
