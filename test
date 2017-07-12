@@ -143,7 +143,7 @@ $(document).ready(function(e){
             height: 768,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
-			zoom_MAX: 500,
+			zoom_MAX: 200,
 			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
