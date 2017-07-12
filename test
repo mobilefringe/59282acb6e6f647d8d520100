@@ -145,16 +145,6 @@ $(document).ready(function(e){
 			zoom_OUT_TO_FIT: "YES",
 			container: 'zoom_container_directory'
 		});
-    
-        $('.map_pin_a').click(function(e){
-            e.preventDefault();
-            var store_x_coordinate = $(this).attr('store_x_coordinate');
-    		var store_y_coordinate = $(this).attr('store_y_coordinate');
-            var pin_id = $(this).attr('store_id');
-            var store_name = $(this).attr('store_name');
-
-            add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
-        });
 
         show_content();
     }
