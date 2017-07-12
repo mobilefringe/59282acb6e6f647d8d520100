@@ -18,7 +18,7 @@
 		min-height: 2500px;
 	}
 	
-    .zoom_container .landmarks{
+    #zoom_container .landmarks{
     	position:absolute;
     	z-index:10;	
     	top:0px;
@@ -27,16 +27,16 @@
     	font-size:12px;
     	color: #ffffff;
     }	
-    .zoom_container .landmarks .item {
+    #zoom_container .landmarks .item {
     	position:absolute;		
     	text-align:center;		
     	display: none;
     }	
-    .zoom_container .landmarks .lable div {
+    #zoom_container .landmarks .lable div {
     	width: 100px;
     	padding: 4px;	
     }	
-    .zoom_container .landmarks .mark .text{
+    #zoom_container .landmarks .mark .text{
     	background-color:#000000;
     	padding:2px 6px;
     	min-width: 75px;	
