@@ -1,148 +1,45 @@
-<style>
-    .map_directory {
-        max-height: 770px;
-    }
-    .directory_list {
-        max-height: 628px;
-    }
-
-    .zoom_container {
-        width: 800px !important;
-        max-width: 100%;
-        min-height: 700px;
-        border: 1px solid #666666;
-    }
-    #zoom_image{
-		width: 2500px;
-		max-width: 100%;
-	}
-	
- /*   #zoom_container .landmarks{*/
- /*   	position:absolute;*/
- /*   	z-index:10;	*/
- /*   	top:0px;*/
- /*   	left:0px;*/
- /*   	font-family: Helvetica, Arial, Verdana;*/
- /*   	font-size:12px;*/
- /*   	color: #ffffff;*/
- /*   }	*/
- /*   #zoom_container .landmarks .item {*/
- /*   	position:absolute;		*/
- /*   	text-align:center;		*/
- /*   	display: none;*/
- /*   }	*/
- /*   #zoom_container .landmarks .lable div {*/
- /*   	width: 100px;*/
- /*   	padding: 4px;	*/
- /*   }	*/
- /*   #zoom_container .landmarks .mark .text{*/
- /*   	background-color:#000000;*/
- /*   	padding:2px 6px;*/
- /*   	min-width: 75px;	*/
- /*   }*/
-    
- /*    #zoom_image{*/
-	/*	width:2000px;*/
-	/*	height: 1000px;*/
-	/*	min-width:2000px;*/
-	/*	min-height: 1000px;*/
-	/*}*/
-	
-    .zoom_container .landmarks{
-    	position:absolute;
-    	z-index:10;	
-    	top:0px;
-    	left:0px;
-    	font-family: Helvetica, Arial, Verdana;
-    	font-size:12px;
-    	color: #ffffff;
-    }	
-    .zoom_container .landmarks .item {
-    	position:absolute;		
-    	text-align:center;		
-    	display: none;
-    }	
-    .zoom_container .landmarks .lable div {
-    	width: 100px;
-    	padding: 4px;	
-    }	
-    .zoom_container .landmarks .mark .text{
-    	background-color:#000000;
-    	padding:2px 6px;
-    	min-width: 75px;	
-    }
-    .truncate {
-      width: 100%;
-      white-space: normal;
-    }
-
-</style>
-<div class="page_header">   
-    <div class="site_container">
-        <div class="header_content">
-            <div class="row">
-                <div class="col-md-12">
-                    <hr>
-                    <h1>Center Map</h1>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </div>  
+<div class="header_banner stores_banner">
+    <div class="main_container">
+        <h4 class="header_banner_heading">Center Map</h4>
+    </div>
 </div>
-<div class="site_container page_content">
-    <div class="row">
-        <div class="col-md-4 hidden_phone">
-            <div class="map_directory">
-                <h3 class="map_title center caps">Directory</h3>
-                <div id="stores_container" class="directory_list">
-                    <script id="stores_template" type="x-tmpl-mustache/text">
-                        <a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a>
-                    </script>
-                </div>
+<div class="main_container mobile_padding">
+    <div class="details_row">
+        <div class="details_col_3">
+            <p class='colored_link'>Find Store</p>
+            <div id="stores_container">
+                <script id="stores_template" type="x-tmpl-mustache/text">
+                    <h5 class="stores_map"><a class="map_pin_a" href="#" data-value='{{x_coordinate}},{{y_coordinate}},{{id}}'>{{name}}</a></h5>
+                </script>
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="visible_phone">
-                <div class="map_dropdown dropdown">
-                    <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
-                    <ul class="dropdown-menu map_list" aria-labelledby="dropdownMenu2" id="stores_mobile_container">
-                        <script id="stores_mobile_template" type="x-tmpl-mustache/text">
-                            <li><a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a></li>
-				        </script>
-                    </ul>
-                </div>
-            </div>
-            <div class="map light_border">
-			    <div id="zoom_container">
-                    <img id="png_map" class="png_map" alt="center map" src="" />
-                    <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
-            	    </div>    
-                </div>
+        <div class="details_col_9">
+            <div id="zoom_container">
+                <img id="png_map" class="png_map" alt="center map" src="" />
+                <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
+        	    </div>    
             </div>
         </div>
     </div>
 </div>
-<script src="//kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>  
+<script src="//kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>
 <script>
-$(document).ready(function(e){
-    init(e);
-    function renderAll(){
-        var repo = getRepoDetailsByName("Map Banner");
-        if (repo != undefined) {
-            var banner = getImageURL(repo.images[0].photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-        }
-        
-        var stores = getStoresList();
-        renderStoreList('#stores_container','#stores_template', stores, "stores");
-        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
-        
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+    })
+    
+    function renderPage(){
+         var stores = getStoresList();
+        renderStoreList('#stores_container','#stores_template', stores, "stores", "A", "Z");
+        renderStoreList('#landmark_container','#landmark_template', stores, "stores", "A", "Z");
         show_content();
-        $("#png_map").attr("src", getPNGMapURL());
+        $('#top_nav_stores').addClass('active_yellow')
+        
+        $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
-		    height: 768,
-		    width: 768,
+		    height: 496,
+		    width: 619,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
 			zoom_MAX: 100,
@@ -154,12 +51,11 @@ $(document).ready(function(e){
 			button_ALIGN: "top left",
 			container: 'zoom_container'
 		});
-    
-        show_png_pin(".map_pin_a", "#png_map")
-
+		
+		show_png_pin(".map_pin_a", "#png_map")
+        
     }
-    loadMallDataCached(renderAll); 
-});
+</script>
 
 function show_png_pin(trigger, map){
     $(trigger).click(function(e) {
