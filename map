@@ -122,7 +122,7 @@ function show_png_pin(trigger, map){
 					<div class="text">\
 					<span>'+ name+ '</span>\
 				</div>\
-				<img src="//codecloud.cdn.speedyrails.net/sites/54cfab316e6f6433ad020000/530d3a9b7bc13ce4a511089c23463f99/10dundas_pin.png" width="40px" height="59px" alt="marker" />\
+				<img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496847563000/map_marker.png" width="40px" height="59px" alt="marker" />\
 				</div>\
 			</div>'
 			]
