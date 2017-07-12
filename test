@@ -91,7 +91,7 @@
     
     function renderPage(){
          var stores = getStoresList();
-        
+        renderStoreList('#stores_container','#stores_template', stores, "stores", "A", "Z");
         show_content();
         $('#top_nav_stores').addClass('active_yellow')
         
