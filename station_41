@@ -77,6 +77,7 @@
         init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Station41 Banner");
+            console.log(repo)
             if (repo != undefined) {
                 var banner = getImageURL(repo.images[0].photo_url);
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
