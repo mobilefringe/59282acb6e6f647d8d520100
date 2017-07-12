@@ -195,7 +195,7 @@ function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name
 	);
 
 	// Focus on new landmark
-	$('#zoom_image').smoothZoom('focusTo',{
+	$('#map_image').smoothZoom('focusTo',{
 		x: x_coordinate,
 		y: y_coordinate,
 		zoom: 120,
