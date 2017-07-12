@@ -78,11 +78,11 @@
 
 </style>
 <div class="map light_border">
-			    <div class="zoom_container" id="zoom_container_directory">
-    			    <img alt="Centre Map" id="zoom_image" src="https://mallmaverick.cdn.speedyrails.net/system/properties/maps/000/000/264/original/gateway_jun17_2500x2500_1.png?1499714930" />
-				    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
-				</div>
-            </div>
+    <div class="zoom_container" id="zoom_container_directory">
+	    <img alt="Centre Map" id="zoom_image" src="https://mallmaverick.cdn.speedyrails.net/system/properties/maps/000/000/264/original/gateway_jun17_2500x2500_1.png?1499714930" />
+	    <div class="landmarks" data-show-at-zoom="0" data-allow-drag="true">
+	</div>
+</div>
 <script src="//kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>  
 <script>
 $(document).ready(function(e){
