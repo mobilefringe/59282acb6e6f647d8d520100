@@ -53,6 +53,17 @@
             </div>
         </div>
         <div class="col-md-8">
+            <div class="visible_phone">
+                <div class="map_dropdown dropdown">
+                    <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
+                    <ul class="dropdown-menu map_list" aria-labelledby="dropdownMenu2" id="stores_mobile_container">
+                        <script id="stores_mobile_template" type="x-tmpl-mustache/text">
+                            <li><a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a></li>
+				        </script>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="map light_border">
 			    <div id="zoom_container">
                     <img id="png_map" class="png_map" alt="center map" src="" />
@@ -89,8 +100,10 @@
     function renderPage(){
          var stores = getStoresList();
         rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
+        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
+        
         show_content();
-        $('#top_nav_stores').addClass('active_yellow')
+    
         
         $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
