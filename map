@@ -1,14 +1,36 @@
 <style>
-    .map_directory {
-        max-height: 770px;
-    }
-    .directory_list {
-        max-height: 628px;
-    }
-    #zoom_container {
-        width: 700px !important;
-        height: 700px !important;
-    }
+    #zoom_container .landmarks {
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    font-family: Helvetica, Arial, Verdana;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#zoom_container .landmarks .mark {
+    background-color: transparent;
+}
+
+#zoom_container .landmarks .mark .text {
+    margin-bottom: 5px;
+    padding: 2px 6px;
+    background-color: #000;
+    border-radius: 4px;
+    text-align: center;
+}
+    /*.map_directory {*/
+    /*    max-height: 770px;*/
+    /*}*/
+    /*.directory_list {*/
+    /*    max-height: 628px;*/
+    /*}*/
+    /*#zoom_container {*/
+    /*    width: 700px !important;*/
+    /*    height: 700px !important;*/
+    /*}*/
  /*   #zoom_image{*/
 	/*	width: 2500px;*/
 	/*	height: 2500px;*/
@@ -16,33 +38,33 @@
 		/*min-height: 2500px;*/
 	/*}*/
 	
-    .zoom_container .landmarks{
-    	position:absolute;
-    	z-index:10;	
-    	top:0px;
-    	left:0px;
-    	font-family: Helvetica, Arial, Verdana;
-    	font-size:12px;
-    	color: #ffffff;
-    }	
-    .zoom_container .landmarks .item {
-    	position:absolute;		
-    	text-align:center;		
-    	display: none;
-    }	
-    .zoom_container .landmarks .lable div {
-    	width: 100px;
-    	padding: 4px;	
-    }	
-    .zoom_container .landmarks .mark .text{
-    	background-color:#000000;
-    	padding:2px 6px;
-    	min-width: 75px;	
-    }
-    .truncate {
-      width: 100%;
-      white-space: normal;
-    }
+    /*.zoom_container .landmarks{*/
+    /*	position:absolute;*/
+    /*	z-index:10;	*/
+    /*	top:0px;*/
+    /*	left:0px;*/
+    /*	font-family: Helvetica, Arial, Verdana;*/
+    /*	font-size:12px;*/
+    /*	color: #ffffff;*/
+    /*}	*/
+    /*.zoom_container .landmarks .item {*/
+    /*	position:absolute;		*/
+    /*	text-align:center;		*/
+    /*	display: none;*/
+    /*}	*/
+    /*.zoom_container .landmarks .lable div {*/
+    /*	width: 100px;*/
+    /*	padding: 4px;	*/
+    /*}	*/
+    /*.zoom_container .landmarks .mark .text{*/
+    /*	background-color:#000000;*/
+    /*	padding:2px 6px;*/
+    /*	min-width: 75px;	*/
+    /*}*/
+    /*.truncate {*/
+    /*  width: 100%;*/
+    /*  white-space: normal;*/
+    /*}*/
 </style>
 <div class="page_header">   
     <div class="site_container">
