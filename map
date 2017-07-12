@@ -6,7 +6,7 @@
         max-height: 628px;
     }
 
-    #zoom_container {
+    .zoom_container {
         width: 800px !important;
         max-width: 100%;
         height: 700px !important;
