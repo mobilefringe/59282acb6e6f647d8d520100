@@ -132,24 +132,6 @@ $(document).ready(function(e){
         renderStoreList('#stores_container','#stores_template', stores, "stores");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
-//         $("#zoom_image").attr("src", getPNGMapURL());
-// 		$('#zoom_image').smoothZoom({
-// 		    width: "100%",
-//             height: "100%",
-// 		    initial_ZOOM: 0,
-// 			zoom_MIN: 0,
-// 			zoom_MAX: 250,
-// 			responsive: true,
-// 		    responsive_maintain_ratio: true,
-// 			zoom_BUTTONS_SHOW : 'YES',
-// 			pan_BUTTONS_SHOW : 'NO',
-// 			pan_LIMIT_BOUNDARY : 'NO',
-// 			button_SIZE: 34,
-// 			button_ALIGN: "top right",
-// 			zoom_OUT_TO_FIT: "YES",
-// 			container: 'zoom_container_directory'
-// 		});
-        
         $("#map_image").attr("src", getPNGMapURL())
 		$('#map_image').smoothZoom({
 		    width: 2500,
@@ -188,38 +170,4 @@ $(document).ready(function(e){
     }
     loadMallDataCached(renderAll); 
 });
-
-function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name){
-    console.log("Made it this far!")
-    console.log(store_x_coordinate, store_y_coordinate, pin_id, store_name)
-	var name = store_name;
-	var x_coordinate = store_x_coordinate;
-	var y_coordinate = store_y_coordinate;
-	var mark = "mark_store_" + pin_id;
-
-    // Remove existing landmark
-    $('#map_image').smoothZoom('removeLandmark');
-
-	// Add new landmark
-	$('#map_image').smoothZoom('addLandmark', 
-		[
-		'<div class="item mark" data-show-at-zoom="0" data-position="' + x_coordinate + ',' + y_coordinate + '" id="' + mark + '">\
-			<div>\
-				<div class="text">\
-				<strong>' + name + '</strong>\
-			</div>\
-			<img src="//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png" width="40px" height="65px" alt="' + name +'" />\
-			</div>\
-		</div>'
-		]
-	);
-
-	// Focus on new landmark
-	$('#map_image').smoothZoom('focusTo',{
-		x: x_coordinate,
-		y: y_coordinate,
-		zoom: 120,
-		speed: 5
-	});
-}
 </script>
