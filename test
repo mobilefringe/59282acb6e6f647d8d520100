@@ -132,7 +132,17 @@ $(document).ready(function(e){
 		$('#zoom_image').smoothZoom({
 		    width: 2500,
             height: 2500,
-		    
+		    initial_ZOOM: 50,
+			zoom_MIN: 0,
+			zoom_MAX: 500,
+			responsive: true,
+		    responsive_maintain_ratio: true,
+			zoom_BUTTONS_SHOW : 'YES',
+			pan_BUTTONS_SHOW : 'NO',
+			pan_LIMIT_BOUNDARY : 'NO',
+			button_SIZE: 34,
+			button_ALIGN: "top right",
+			zoom_OUT_TO_FIT: "YES",
 			container: 'zoom_container_directory'
 		});
 
