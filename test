@@ -124,49 +124,67 @@
 </div>
 <script src="//kodekloud.s3.amazonaws.com/sites/54d4e9206e6f64691f000000/d9e054e28dd1bad70a952dd85777e93f/jquery.smoothZoom.min.js"></script>  
 <script>
-$(document).ready(function(e){
-    init(e);
-    function renderAll(){
-        var repo = getRepoDetailsByName("Map Banner");
-        if (repo != undefined) {
-            var banner = getImageURL(repo.images[0].photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-        }
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+    })
+    
+    function renderPage(){
+         var stores = getStoresList();
+        renderStoreList('#stores_container','#stores_template', stores, "stores", "A", "Z");
+        renderStoreList('#landmark_container','#landmark_template', stores, "stores", "A", "Z");
+        show_content();
+        $('#top_nav_stores').addClass('active_yellow')
         
-        var stores = getStoresList();
-        renderStoreList('#stores_container','#stores_template', stores, "stores");
-        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
-        
-        $("#zoom_image").attr("src", getPNGMapURL());
-		$('#zoom_image').smoothZoom({
-		    width: 2500,
-            height: 2500,
+        $("#png_map").attr("src", getPNGMapURL())
+		$('#png_map').smoothZoom({
+		    height: 496,
+		    width: 619,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
-			zoom_MAX: 500,
+			zoom_MAX: 400,
 			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
 			pan_BUTTONS_SHOW : 'NO',
 			pan_LIMIT_BOUNDARY : 'NO',
-			button_SIZE: 34,
 			button_ALIGN: "top right",
-			zoom_OUT_TO_FIT: "YES",
-			container: 'zoom_container_directory'
+			container: 'zoom_container'
 		});
-    
-        $('.map_pin_a').click(function(e){
-            e.preventDefault();
-            var store_x_coordinate = $(this).attr('store_x_coordinate');
-    		var store_y_coordinate = $(this).attr('store_y_coordinate');
-            var pin_id = $(this).attr('store_id');
-            var store_name = $(this).attr('store_name');
-
-            add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name);
-        });
-
-        show_content();
+		
+		show_png_pin(".map_pin_a", "#png_map")
+        
     }
-    loadMallDataCached(renderAll); 
-});
+
+function show_png_pin(trigger, map){
+    $(trigger).click(function(e) {
+        e.preventDefault()
+        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+        
+        var zoomData = $(map).smoothZoom('getZoomData');
+        x_coord = parseInt($(this).attr('store_x_coordinate'));
+        y_coord = parseInt($(this).attr('store_y_coordinate'));
+        
+        name = $(this).text();
+        $(map).smoothZoom('removeLandmark')
+        if (isMobile) {
+            $(map).smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:200});    
+        } else {
+            $(map).smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:300});
+        }
+        
+        $(map).smoothZoom('addLandmark', 
+			[
+			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_coord+','+y_coord+'">\
+				<div>\
+					<div class="text">\
+					<strong>'+ name+ '</strong>\
+				</div>\
+				<img src="//codecloud.cdn.speedyrails.net/sites/54cfab316e6f6433ad020000/530d3a9b7bc13ce4a511089c23463f99/10dundas_pin.png" width="40px" height="59px" alt="marker" />\
+				</div>\
+			</div>'
+			]
+		);
+    });
+}
 </script>
