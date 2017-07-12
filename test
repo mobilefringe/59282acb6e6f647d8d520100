@@ -127,15 +127,7 @@
 $(document).ready(function(e){
     init(e);
     function renderAll(){
-        var repo = getRepoDetailsByName("Map Banner");
-        if (repo != undefined) {
-            var banner = getImageURL(repo.images[0].photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-        }
-        
         var stores = getStoresList();
-        renderStoreList('#stores_container','#stores_template', stores, "stores");
-        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
 		$('#zoom_image').smoothZoom({
 		    width: 2500,
