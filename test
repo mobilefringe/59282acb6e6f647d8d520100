@@ -133,7 +133,6 @@ $(document).ready(function(e){
 		    width: 2500,
             height: 2500,
 		    initial_ZOOM: 50,
-			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
 			pan_BUTTONS_SHOW : 'NO',
