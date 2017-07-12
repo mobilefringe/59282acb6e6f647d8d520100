@@ -42,7 +42,7 @@
 		    width: 619,
 		    initial_ZOOM: 0,
 			zoom_MIN: 0,
-			zoom_MAX: 100,
+			zoom_MAX: 400,
 			responsive: true,
 		    responsive_maintain_ratio: true,
 			zoom_BUTTONS_SHOW : 'YES',
