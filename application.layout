@@ -62,8 +62,7 @@
     <script src="/helper.js" type="text/javascript"></script>
     
     <script>
-        // setEndPoint('//thegateway.mallmaverick.com/api/v3/thegateway/all.json');
-        setEndPoint('//stoneroadmall.mallmaverick.com/api/v3/stoneroadmall/all.json');
+        setEndPoint('//thegateway.mallmaverick.com/api/v3/thegateway/all.json');
     </script>
 </head>
 
