@@ -114,7 +114,7 @@ function render_instagram(data){
 }
 
 function get_instagram_feed(url, total, size, callback){
-    var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h2>{{{caption}}}</h2></div></a>'
+    // var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h2>{{{caption}}}</h2></div></a>'
     var item_rendered = [];
     Mustache.parse(html); 
     log('fetching instagram data from: ' + url);
@@ -124,6 +124,7 @@ function get_instagram_feed(url, total, size, callback){
             main_feed = insta_feed.splice(1,6);
             $.each(main_feed, function(i,v){
                 var feed_obj = {}
+                var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h2>{{{caption}}}</h2></div></a>'
                 if(v.caption != null){
                     feed_obj.caption = v.caption.text
                 }
