@@ -114,7 +114,7 @@ function render_instagram(data){
 }
 
 function get_instagram_feed(url, total, size, callback){
-    var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h2>{{{caption}}}</h2></div></a></div>'
+    var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><p>{{{caption}}}</p></div></a></div>'
     var item_rendered = [];
     Mustache.parse(html); 
     log('fetching instagram data from: ' + url);
