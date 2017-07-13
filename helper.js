@@ -142,16 +142,9 @@ function get_instagram_feed(url, total, size, callback){
         }
     });
 }
+// <div class="social ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h2>{{{caption}}}</h2></div></a>
 
-<div class="social ih-item circle effect19">
-                <a href="https://www.facebook.com/shopthegateway/">
-                    <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1499787583000/gateway_facebook.png" alt="Facebook"/>
-                    <div class="info">
-                        <i class="fa fa-facebook hover_icon" aria-hidden="true"></i>
-                        <h2>SHOPGATEWAY</h2>
-                    </div>
-                </a>
-            </div>
+// <a class="ig-image" target="_blank" href="{{{link}}}" ><img src="{{{image}}}" alt="{{caption}}" /></a>
 
 function show_cat_stores(){
     $('.show_cat_stores').click(function(e){
