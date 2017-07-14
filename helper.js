@@ -125,7 +125,7 @@ function get_instagram_feed(url, total, size, callback){
             $.each(main_feed, function(i,v){
                 var feed_obj = {}
                 if(v.caption != null){
-                    if(v.caption.length > 175){
+                    if(v.caption.text.length > 175){
                         feed_obj.caption_short = v.caption.substring(0,175) + "...";
                     }
                     // feed_obj.caption = v.caption.text
