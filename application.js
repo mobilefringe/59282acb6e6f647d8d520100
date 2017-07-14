@@ -189,6 +189,29 @@ function renderHomeHours(container, template, collection){
     item_list.push(collection);    
     $.each( item_list , function( key, val ) {
         var d = moment();
+        switch(val.day_of_week) {
+            case 0:
+                val.day = "Sunday";
+                break;
+            case 1:
+                val.day = "Monday";
+                break;
+            case 2:
+                val.day = "Tuesday";
+                break;
+            case 3:
+                val.day = "Wednesday";
+                break;
+            case 4:
+                val.day = "Thursday";
+                break;
+            case 5:
+                val.day = "Friday";
+                break;
+            case 6:
+                val.day = "Saturday";
+                break;
+        }
         if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone());
             var close_time = moment(val.close_time).tz(getPropertyTimeZone());
