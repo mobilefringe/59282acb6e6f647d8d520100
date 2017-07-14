@@ -209,7 +209,7 @@
             <p>There’s a lot happening at The Gateway. Sign up for our newsletter so you don’t miss a thing. And trust us, we won’t bother you unless it’s something really important.</p>
             <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
                 <div>
-                    <input id="fieldEmail" name="cm-milyku-milyku" type="email" required placeholder="Email"/>
+                    <input id="fieldEmail" name="cm-milyku-milyku" type="email" required/>
                     <button class="form_submit" type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
                 <p class="hidden_now" id="success_subscribe">Thank you for subscribing!</p>
