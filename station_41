@@ -16,7 +16,7 @@
     <a class="open_details_modal" id="next" data-modal-id="id">
         <i class="fa fa-chevron-right next_arrow" aria-hidden="true"></i>
     </a>
-    <div class="modal_50">
+    <div class="">
         <img class="modal_img" src="http://placehold.it/337x337" />
     </div>
     <div class="clearfix"></div>
