@@ -136,3 +136,7 @@
         loadMallData(renderAll); 
     })
 </script>
+
+<!--<div class="store_logo_container no_hover" id="{{initial}}">-->
+<!--                            {{initial}}-->
+<!--                        </div>-->
