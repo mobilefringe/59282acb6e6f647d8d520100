@@ -112,8 +112,9 @@
     </div>
     <div class="grid grid_mobile visible_phone">
         <div class="grid-sizer"></div>
-        <div class="feature_7 grid-item grid-item--height2"></div>
         <div class="feature_8 grid-item grid-item--width2"></div>
+        <div class="feature_7 grid-item grid-item--height2"></div>
+        <div class="feature_9 grid-item grid-item--height2"></div>
         <div class="grid-item"> <!--INSTAGRAM-->
             <div class="social ih-item circle effect19">
                 <a href="https://www.instagram.com/shopthegateway/">
@@ -127,7 +128,7 @@
                 </a>
             </div>
         </div>
-        <div class="feature_9 grid-item grid-item--height2"></div>
+        
         <div class="grid-item"> <!--FACEBOOK-->
             <div class="social ih-item circle effect19">
                 <a href="https://www.facebook.com/shopthegateway/">
