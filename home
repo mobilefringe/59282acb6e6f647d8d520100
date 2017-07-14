@@ -33,7 +33,7 @@
                     <div class="info">
                         <div id="home_hours_container">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
-                                {{hours}}
+                                
                                 <h5>SHOPPING HOURS</h5>
                                 <span>{{hours}}</span>
                             </script>
