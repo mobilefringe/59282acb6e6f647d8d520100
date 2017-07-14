@@ -29,7 +29,7 @@
                             <div class="info">
                                 <div class="content">
                                     <h3>{{name_short}}</h3>
-                                    <h4>{{dates}}</h4>
+                                    <h5>{{dates}}</h5>
                                 </div>
                             </div>
                         </a>
