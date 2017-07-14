@@ -86,8 +86,10 @@
                 <a href="https://www.instagram.com/shopthegateway/">
                     <div class="instafeed_single"></div>
                     <div class="info">
-                        <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
-                        <h2>@SHOPGATEWAY</h2>
+                        <div class="content">
+                            <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
+                            <h3>@SHOPGATEWAY</h3>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -98,8 +100,10 @@
                 <a href="https://www.facebook.com/shopthegateway/">
                     <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977125000/12.jpg" alt="Facebook"/>
                     <div class="info">
-                        <i class="fa fa-facebook hover_icon" aria-hidden="true"></i>
-                        <h2>SHOPGATEWAY</h2>
+                        <div class="content">
+                            <i class="fa fa-facebook hover_icon" aria-hidden="true"></i>
+                            <h2>SHOPGATEWAY</h2>
+                        </div>
                     </div>
                 </a>
             </div>
