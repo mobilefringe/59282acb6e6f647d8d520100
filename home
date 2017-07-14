@@ -139,7 +139,9 @@
                     percentPosition: true
                 });
             });
-
+            
+            renderHomeHours('#home_hours_container', '#home_hours_template', today_hours);
+            
             show_content();
             
             $('.flexslider').flexslider({
