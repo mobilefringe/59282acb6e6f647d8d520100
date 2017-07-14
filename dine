@@ -66,15 +66,8 @@
     <div class="row">
         <div id="store_list_container">
             <script id="store_list_template" type="x-tmpl-mustache/text">
-                <div style="{{show}}" class="store_initial" >
-                    <div class="col-xs-6 col-sm-3 col-md-2 cats_row" data-cat="{{cat_list}}">
-                        <div class="store_logo_container no_hover" id="{{initial}}">
-                            {{initial}}
-                        </div>
-                    </div>
-                </div>
                 <div class="col-xs-6 col-sm-3 col-md-2 cats_row" data-cat="{{cat_list}}">
-                    <div class="store_logo_container">
+                    <div class="store_logo_container" id="{{initial}}">
                         <a href="/stores/{{slug}}">
                             <img class="store_img" style="{{initial_img}}" src="{{store_front_url_abs}}"/>
                             <img class="store_hover" style="{{initial_img}}" src="{{hover_img}}"/>
