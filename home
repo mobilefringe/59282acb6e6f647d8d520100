@@ -31,7 +31,7 @@
                 <a href="https://www.instagram.com/shopthegateway/">
                     <img src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1499787583000/gateway_facebook.png" class="" alt="">
                     <div class="info" id="home_hours_container">
-                        <script id="home_hours_template2" type="x-tmpl-mustache/text">
+                        <script id="home_hours_template" type="x-tmpl-mustache/text">
                             <h5>SHOPPING HOURS</h5>
                             <span class="hours_today">{{h}}</span>
                         </script>
@@ -59,7 +59,7 @@
                 <a href="https://www.instagram.com/shopthegateway/">
                     <img src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1499787583000/gateway_facebook.png" class="" alt="">
                     <div class="info" id="home_hours_container_mobile">
-                        <script id="home_hours_template2" type="x-tmpl-mustache/text">
+                        <script id="home_hours_template_mobile" type="x-tmpl-mustache/text">
                             <h5>SHOPPING HOURS</h5>
                             <span class="hours_today">{{h}}</span>
                         </script>
