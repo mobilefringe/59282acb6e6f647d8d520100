@@ -114,7 +114,7 @@ function render_instagram(data){
 }
 
 function get_instagram_feed(url, total, size, callback){
-    var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h5>{{{caption}}}</h5></div></a></div>'
+    var html = '<div class="insta ih-item circle effect19"><a class="ig-image" target="_blank" href="{{{link}}}"><img src="{{{image}}}" alt="{{caption}}"/><div class="info"><h5>{{{caption_short}}}</h5></div></a></div>'
     var item_rendered = [];
     Mustache.parse(html); 
     log('fetching instagram data from: ' + url);
@@ -128,7 +128,7 @@ function get_instagram_feed(url, total, size, callback){
                     if(v.caption.length > 175){
                         v.caption_short = v.caption.substring(0,175) + "...";
                     }
-                    feed_obj.caption = v.caption.text
+                    // feed_obj.caption = v.caption.text
                 }
                 else{
                     feed_obj.caption = ""
