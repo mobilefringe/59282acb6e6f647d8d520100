@@ -132,6 +132,11 @@
         function renderAll(){
             var banners = getBanners();
             renderBanner('#banner_template','#home_banner',banners);
+            
+            var today_hours = getTodaysHours();
+            renderHomeHours('#home_hours_container', '#home_hours_template', today_hours);
+            renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
+            
             var feature_items = getFeatureList();
             renderFeatureItems();
 
@@ -154,9 +159,7 @@
                 });
             });
             
-            var today_hours = getTodaysHours();
-            renderHomeHours('#home_hours_container', '#home_hours_template', today_hours);
-            renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
+            
             
             show_content();
             
