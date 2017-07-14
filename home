@@ -33,7 +33,7 @@
                     <div class="info" id="home_hours_container_desktop">
                         <script id="home_hours_template_desktop" type="x-tmpl-mustache/text">
                             <h5>HOURS</h5>
-                            <p>{{}}</p>
+                            <p>{{day}}</p>
                             <p>{{hours}}</p>
                             <hr>
                         </script>
