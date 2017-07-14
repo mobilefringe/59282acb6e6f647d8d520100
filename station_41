@@ -2,6 +2,9 @@
     .gallery_image {
         max-width: 100%;
     }
+    .custom_modal {
+        width: auto;
+    }
 </style>
 <!-- GALLERY MODAL -->
 <div class="custom-modal-backdrop"></div>
