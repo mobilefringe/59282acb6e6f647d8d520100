@@ -105,7 +105,7 @@
         </div>
         <div class="feature_10 grid-item grid-item--width2"></div>
     </div>
-    <div class="grid grid_mobile hidden_phone">
+    <div class="grid grid_mobile visible_phone">
         <div class="grid-sizer"></div>
         <div class="feature_7 grid-item grid-item--height2"></div>
         <div class="feature_8 grid-item grid-item--width2"></div>
