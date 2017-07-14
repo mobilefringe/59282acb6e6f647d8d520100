@@ -22,6 +22,7 @@
         <div class="col-md-12">
             <div id="mm_page_content"></div>    
         </div>
+        <div class="margin_60"></div>
     </div>
 </div>
 <script>
