@@ -83,7 +83,7 @@
                             <a href="" target="_blank"><div class="social_snapchat"></div></a>
                             <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
                         </div> 
-                        <a id="signup" href="#sign_up"><div>Sign Up</div></a>
+                        <a id="signup" href="#sign_up">Sign Up</a>
                     </div> 
                     <div class="col-md-6">
                         <div class="marquee">
