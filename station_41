@@ -9,6 +9,11 @@
         width: 100%;
         height: 555px;
     }
+    @media (max-width: 768px) {
+        iframe {
+            height: 455px;
+        }
+    }    
 </style>
 <!-- GALLERY MODAL -->
 <div class="custom-modal-backdrop"></div>
