@@ -12,11 +12,11 @@ function init(e) {
 				position : 'fixed',
 				top : '0'
 			});
-			$('.nav_container').addClass('.sticky');
+			$('.nav_container').addClass('sticky');
 		}
 		if($(window).scrollTop() < scrollTop){
 			$('.nav_container').removeAttr('style');	
-			$('.nav_container').removeClass('.sticky');
+			$('.nav_container').removeClass('sticky');
 		}
 	})
 	
