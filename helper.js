@@ -8,7 +8,7 @@ function init(e) {
     $(window).scroll(function(){
 		    var scrollTop = 142;
     		if($(window).scrollTop() >= scrollTop){
-    			$('nav').css({
+    			$('.nav_container').css({
     				position : 'fixed',
     				top : '0'
     			});
