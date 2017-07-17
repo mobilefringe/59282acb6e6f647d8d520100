@@ -56,8 +56,8 @@
             <div class="hours ih-item circle effect19">
                 <a href="/hours">
                     <img src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1499787583000/gateway_facebook.png" class="" alt="">
-                    <div class="info" id="home_hours_container_desktop">
-                        <script id="home_hours_template_desktop" type="x-tmpl-mustache/text">
+                    <div class="info" id="home_hours_container_mobile">
+                        <script id="home_hours_template_mobile" type="x-tmpl-mustache/text">
                             <div class="content">
                                 <h4 class="bold caps">HOURS</h4>
                                 <p class="caps">{{day}}</p>
