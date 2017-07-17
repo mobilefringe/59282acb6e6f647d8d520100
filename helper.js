@@ -5,7 +5,7 @@ function init(e) {
     get_instagram_feed("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 6, 'standard_resolution', render_instagram);
     
     // jQuery(document).ready(function ($) {
-     var window_width = $( window ).width();
+    var window_width = $( window ).width();
     if (window_width > 769) {
         $(window).scroll(function(){
             var scrollTop = 300;
