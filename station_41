@@ -13,7 +13,12 @@
         iframe {
             height: 455px;
         }
-    }    
+    } 
+    @media (max-width: 425px) {
+        iframe {
+            height: 215px;
+        }
+    } 
 </style>
 <!-- GALLERY MODAL -->
 <div class="custom-modal-backdrop"></div>
