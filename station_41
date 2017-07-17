@@ -5,6 +5,10 @@
     .custom_modal {
         width: auto;
     }
+    iframe.video_still {
+        width: 100%;
+        height: 555px;
+    }
 </style>
 <!-- GALLERY MODAL -->
 <div class="custom-modal-backdrop"></div>
