@@ -4,15 +4,15 @@ function init(e) {
     get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 1, 'standard_resolution', render_instagram_single);
     get_instagram_feed("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 6, 'standard_resolution', render_instagram);
     
-    jQuery(document).ready(function ($) {
-	$(window).scroll(function(){
-		var scrollTop = 142;
-		if($(window).scrollTop() >= scrollTop){
-			$('nav').css({
-				position : 'fixed',
-				top : '0'
-			});
-		}
+    // jQuery(document).ready(function ($) {
+    $(window).scroll(function(){
+		    var scrollTop = 142;
+    		if($(window).scrollTop() >= scrollTop){
+    			$('nav').css({
+    				position : 'fixed',
+    				top : '0'
+    			});
+    		}
 		if($(window).scrollTop() < scrollTop){
 			$('nav').removeAttr('style');	
 		}
