@@ -5,21 +5,39 @@ function init(e) {
     get_instagram_feed("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 6, 'standard_resolution', render_instagram);
     
     // jQuery(document).ready(function ($) {
-    $(window).scroll(function(){
-        var scrollTop = 300;
-		if($(window).scrollTop() >= scrollTop){
-			$('.nav_container').css({
-				position : 'fixed',
-				top : '0'
-			});
-			$('.nav_container').addClass('sticky');
-			$('.nav_container').fadeIn();
-		}
-		if($(window).scrollTop() < scrollTop){
-			$('.nav_container').removeAttr('style');	
-			$('.nav_container').removeClass('sticky');
-		}
-	})
+     var window_width = $( window ).width();
+    if (window_width > 769) {
+        $(window).scroll(function(){
+            var scrollTop = 300;
+    		if($(window).scrollTop() >= scrollTop){
+    			$('.nav_container').css({
+    				position : 'fixed',
+    				top : '0'
+    			});
+    			$('.nav_container').addClass('sticky');
+    			$('.nav_container').fadeIn();
+    		}
+    		if($(window).scrollTop() < scrollTop){
+    			$('.nav_container').removeAttr('style');	
+    			$('.nav_container').removeClass('sticky');
+    		}
+    	})
+    }
+//     $(window).scroll(function(){
+//         var scrollTop = 300;
+// 		if($(window).scrollTop() >= scrollTop){
+// 			$('.nav_container').css({
+// 				position : 'fixed',
+// 				top : '0'
+// 			});
+// 			$('.nav_container').addClass('sticky');
+// 			$('.nav_container').fadeIn();
+// 		}
+// 		if($(window).scrollTop() < scrollTop){
+// 			$('.nav_container').removeAttr('style');	
+// 			$('.nav_container').removeClass('sticky');
+// 		}
+// 	})
 	
     $('#menu-icon').click(function(){
 		$(this).toggleClass('open');
