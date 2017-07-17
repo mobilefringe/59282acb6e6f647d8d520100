@@ -86,7 +86,7 @@
             }
             
             $('.video_still').click(function(){
-                video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+                video = '<iframe class="station_video" src="'+ $(this).attr('data-video') +'"></iframe>';
                 $(this).replaceWith(video);
             });
             var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
