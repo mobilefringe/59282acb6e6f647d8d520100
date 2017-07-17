@@ -43,9 +43,9 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <a href="https://vimeo.com/223487697" data-remote="https://player.vimeo.com/video/223487697" data-toggle="lightbox">
-                <img class="video_still" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1500064745000/Gateway Video Image.png" alt="Station 41"/>
-            </a>
+            <!--<a href="https://vimeo.com/223487697" data-remote="https://player.vimeo.com/video/223487697" data-toggle="lightbox">-->
+                <img class="video_still" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1500064745000/Gateway Video Image.png" alt="Station 41" data-video="https://player.vimeo.com/video/223487697"/>
+            <!--</a>-->
         </div>
     </div>
     <div class="row">
@@ -76,12 +76,15 @@
         init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Station41 Banner");
-            console.log(repo)
             if (repo != undefined) {
                 var banner = getImageURL(repo.images[0].photo_url);
                 $(".station_header").css({backgroundImage: "url(" + banner + ")"});
             }
             
+            $('.video_still').click(function(){
+                video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+                $(this).replaceWith(video);
+            });
             var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
             renderGallery("#gallery_container", "#gallery_template", gallery);
             
