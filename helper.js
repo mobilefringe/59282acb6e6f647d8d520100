@@ -6,15 +6,17 @@ function init(e) {
     
     // jQuery(document).ready(function ($) {
     $(window).scroll(function(){
-		    var scrollTop = 142;
-    		if($(window).scrollTop() >= scrollTop){
-    			$('.nav_container').css({
-    				position : 'fixed',
-    				top : '0'
-    			});
-    		}
+        var scrollTop = 142;
+		if($(window).scrollTop() >= scrollTop){
+			$('.nav_container').css({
+				position : 'fixed',
+				top : '0'
+			});
+			$('.nav_container').addClass('.sticky');
+		}
 		if($(window).scrollTop() < scrollTop){
-			$('nav').removeAttr('style');	
+			$('.nav_container').removeAttr('style');	
+			$('.nav_container').removeClass('.sticky');
 		}
 	})
 	
