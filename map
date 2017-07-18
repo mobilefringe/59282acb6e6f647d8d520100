@@ -77,13 +77,12 @@
             $(".page_header").css({backgroundImage: "url(" + banner + ")"});
         }
         
-         var stores = getStoresList();
+        var stores = getStoresList();
         rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
         show_content();
     
-        
         $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
 		    height: 768,
