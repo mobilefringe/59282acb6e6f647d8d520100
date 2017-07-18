@@ -71,6 +71,12 @@
     }
     
     function renderPage(){
+        var repo = getRepoDetailsByName("Map Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+        
          var stores = getStoresList();
         rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
