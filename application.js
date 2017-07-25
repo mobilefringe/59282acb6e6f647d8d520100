@@ -507,8 +507,8 @@ function renderPromotions(container, template, collection){
             val.store_detail_btn = store_details.slug ;
             val.store_name = store_details.name;
             
-            var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
-            var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
+            
+            var store_logo = store_details.store_front_url_abs;
             
             if(store_front_image != undefined) {
                 val.image_url = "//mallmaverick.com" + store_front_image;
@@ -516,8 +516,10 @@ function renderPromotions(container, template, collection){
             if(store_front_image === undefined){
                 val.image_url = store_logo;
             }
-            if(store_logo.indexOf('missing.png') > 0){
-                val.image_url  = default_image.image_url;
+            if(store_logo != undefined){
+                val.image_url  = store_logo
+            } else {
+                val.image_url = default_image.image_url;
             }
         }
         else{
