@@ -519,8 +519,8 @@ function renderPromotions(container, template, collection){
             val.image_url = default_image.image_url;
         }
         
-        if (val.name.length > 32){
-            val.name_short = val.name.substring(0,30) + "...";
+        if (val.name.length > 20){
+            val.name_short = val.name.substring(0,19) + "...";
         }
         else {
             val.name_short = val.name;
