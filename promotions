@@ -38,9 +38,8 @@
                             <img src="{{image_url}}" alt="img">
                             <div class="info">
                                 <div class="content">
-                                    <h4>{{name_short}}</h4>
-                                    <hr>
-                                    <p>{{dates}}</p>
+                                    <h3>{{name_short}}</h3>
+                                    <h5>{{dates}}</h5>
                                 </div>
                             </div>
                         </a>
