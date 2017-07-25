@@ -534,8 +534,8 @@ function renderPromotions(container, template, collection){
             val.name_short = val.name;
         }
         
-        var store_categories = getStoreDetailsByID(val.promotionable_id).categories;
-        val.cat_list = store_categories.join(',');
+        // var store_categories = getStoreDetailsByID(val.promotionable_id).categories;
+        // val.cat_list = store_categories.join(',');
         
         var show_date = moment(val.show_on_web_date);
         var start = moment(val.start_date).tz(getPropertyTimeZone());
