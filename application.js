@@ -506,8 +506,7 @@ function renderPromotions(container, template, collection){
             var store_details = getStoreDetailsByID(val.promotionable_id);
             val.store_detail_btn = store_details.slug ;
             val.store_name = store_details.name;
-            
-            
+    
             var store_logo = store_details.store_front_url_abs;
             if(store_logo != undefined){
                 val.image_url  = store_logo
@@ -520,17 +519,12 @@ function renderPromotions(container, template, collection){
             val.image_url = default_image.image_url;
         }
         
-        
-
         if (val.name.length > 32){
             val.name_short = val.name.substring(0,30) + "...";
         }
         else {
             val.name_short = val.name;
         }
-        
-        // var store_categories = getStoreDetailsByID(val.promotionable_id).categories;
-        // val.cat_list = store_categories.join(',');
         
         var show_date = moment(val.show_on_web_date);
         var start = moment(val.start_date).tz(getPropertyTimeZone());
