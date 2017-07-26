@@ -169,7 +169,7 @@
             var feature_items = getFeatureList();
             renderFeatureItems();
             
-            setTimeout(function() {
+           
                 var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
                     // init Masonry after all images have loaded
                     $grid_desktop.masonry({
@@ -191,7 +191,7 @@
             
             
                 
-            }, 1000);
+    
             
             
             
@@ -202,7 +202,9 @@
             $(".flex-next").html(" ");
             
             
-            show_content();
+            setTimeout(function() {
+                show_content();
+            }, 500);
             
             if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
