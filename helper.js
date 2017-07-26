@@ -124,7 +124,7 @@ function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name
 		speed: 5
 	});
 }
-
+ 
 function load_more(num){
     var n = parseInt(num);
     for(i = n; i < n + 3; i++){
@@ -140,12 +140,11 @@ function load_more(num){
     $('#num_loaded').val(i);
 }
 
-function render_instagram_single(data){
-    $('.instafeed_single').html(data)
-}
-
-function render_instagram(data){
-    $('#instafeed').html(data)
+function renderFeatureItems(){
+    var items = getFeatureList();
+    $.each(items, function(i, val){
+        $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
+    })
 }
 
 function get_instagram_feed(url, total, size, callback){
@@ -181,7 +180,13 @@ function get_instagram_feed(url, total, size, callback){
     });
 }
 
-// <a class="ig-image" target="_blank" href="{{{link}}}" ><img src="{{{image}}}" alt="{{caption}}" /></a>
+function render_instagram_single(data){
+    $('.instafeed_single').html(data)
+}
+
+function render_instagram(data){
+    $('#instafeed').html(data)
+}
 
 function show_cat_stores(){
     $('.show_cat_stores').click(function(e){
