@@ -203,13 +203,15 @@
                 });
     
             
+            show_content();
+            
             $('.flexslider').flexslider({
                 animation: "slide",
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
             
-            show_content();
+            
             // setTimeout(function() {
                 
             // }, 500);
