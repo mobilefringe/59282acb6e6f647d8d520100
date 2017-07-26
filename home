@@ -169,6 +169,29 @@
             var feature_items = getFeatureList();
             renderFeatureItems();
             
+            // init Masonry
+            var $grid_desktop = $('.grid_desktop').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_desktop.imagesLoaded().progress( function() {
+                $grid_desktop.masonry('layout');
+            });
+            
+            // init Masonry
+            var $grid_mobile = $('.grid_mobile').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_mobile.imagesLoaded().progress( function() {
+                $grid_mobile.masonry('layout');
+            });
+            
             
            
                 // var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
@@ -180,27 +203,18 @@
                 //     });
                 // });
                 
-                var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
-                    // init Masonry after all images have loaded
-                    $grid_mobile.masonry({
-                        columnWidth: '.grid-sizer',
-                        itemSelector: '.grid-item',
-                        originLeft: false,
-                        percentPosition: true
-                    });
-                });
+                // var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
+                //     // init Masonry after all images have loaded
+                //     $grid_mobile.masonry({
+                //         columnWidth: '.grid-sizer',
+                //         itemSelector: '.grid-item',
+                //         originLeft: false,
+                //         percentPosition: true
+                //     });
+                // });
             
             
-                // init Masonry
-                var $grid_desktop = $('.grid_desktop').masonry({
-                    columnWidth: '.grid-sizer',
-                    itemSelector: '.grid-item',
-                    percentPosition: true
-                });
-                // layout Masonry after each image loads
-                $grid_desktop.imagesLoaded().progress( function() {
-                    $grid_desktop.masonry('layout');
-                });
+                
     
             
             show_content();
@@ -210,12 +224,7 @@
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
-            
-            
-            // setTimeout(function() {
-                
-            // }, 500);
-            
+
             if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
                 var popup = getPopups()[0];
