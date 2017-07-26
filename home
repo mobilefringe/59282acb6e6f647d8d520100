@@ -191,32 +191,26 @@
             $grid_mobile.imagesLoaded().progress( function() {
                 $grid_mobile.masonry('layout');
             });
+
+            // var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
+            //     // init Masonry after all images have loaded
+            //     $grid_desktop.masonry({
+            //         columnWidth: '.grid-sizer',
+            //         itemSelector: '.grid-item',
+            //         percentPosition: true
+            //     });
+            // });
             
-            
-           
-                // var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
-                //     // init Masonry after all images have loaded
-                //     $grid_desktop.masonry({
-                //         columnWidth: '.grid-sizer',
-                //         itemSelector: '.grid-item',
-                //         percentPosition: true
-                //     });
-                // });
-                
-                // var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
-                //     // init Masonry after all images have loaded
-                //     $grid_mobile.masonry({
-                //         columnWidth: '.grid-sizer',
-                //         itemSelector: '.grid-item',
-                //         originLeft: false,
-                //         percentPosition: true
-                //     });
-                // });
-            
-            
-                
-    
-            
+            // var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
+            //     // init Masonry after all images have loaded
+            //     $grid_mobile.masonry({
+            //         columnWidth: '.grid-sizer',
+            //         itemSelector: '.grid-item',
+            //         originLeft: false,
+            //         percentPosition: true
+            //     });
+            // });
+
             show_content();
             
             $('.flexslider').flexslider({
