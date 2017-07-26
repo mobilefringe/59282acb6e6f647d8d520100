@@ -188,7 +188,9 @@
                 });
             });
             
-            show_content();
+            setTimeout(function() {
+                show_content();
+            }, 500);
             
             $('.flexslider').flexslider({
                 animation: "slide",
