@@ -169,16 +169,16 @@
             var feature_items = getFeatureList();
             renderFeatureItems();
             
-            show_content();
+            
            
-                var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
-                    // init Masonry after all images have loaded
-                    $grid_desktop.masonry({
-                        columnWidth: '.grid-sizer',
-                        itemSelector: '.grid-item',
-                        percentPosition: true
-                    });
-                });
+                // var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
+                //     // init Masonry after all images have loaded
+                //     $grid_desktop.masonry({
+                //         columnWidth: '.grid-sizer',
+                //         itemSelector: '.grid-item',
+                //         percentPosition: true
+                //     });
+                // });
                 
                 var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
                     // init Masonry after all images have loaded
@@ -191,10 +191,17 @@
                 });
             
             
-                
+                // init Masonry
+                var $grid_desktop = $('.grid_desktop').masonry({
+                    columnWidth: '.grid-sizer',
+                    itemSelector: '.grid-item',
+                    percentPosition: true
+                });
+                // layout Masonry after each image loads
+                $grid_desktop.imagesLoaded().progress( function() {
+                    $grid_desktop.masonry('layout');
+                });
     
-            
-            
             
             $('.flexslider').flexslider({
                 animation: "slide",
@@ -202,7 +209,7 @@
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
             
-            
+            show_content();
             // setTimeout(function() {
                 
             // }, 500);
