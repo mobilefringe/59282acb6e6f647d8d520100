@@ -556,12 +556,10 @@ function renderPromoDetails(container, template, collection){
             val.store_name = store_details.name;
             if (store_details.store_front_url_abs.indexOf('missing.png') > -1){
                 val.image_url = default_image.image_url;
-            }
-            else{
+            } else {
                 val.image_url = store_details.store_front_url_abs;
             }
-        }
-        else{
+        } else {
             val.store_name = mall_name;
             val.image_url = default_image.image_url;
         }
@@ -575,8 +573,7 @@ function renderPromoDetails(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
-        }
-        else{
+        } else {
             val.dates = start.format("MMM D") + " - " + end.format("MMM D")
         }
         var rendered = Mustache.render(template_html,val);
