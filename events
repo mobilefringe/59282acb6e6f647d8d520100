@@ -14,7 +14,7 @@
 <div class="site_container page_content">
     <div class="row">
         <div class="col-md-12">
-            <iframe src="https://player.vimeo.com/video/222242282" width="640" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/222242282" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
     </div>
     <div class="row">
