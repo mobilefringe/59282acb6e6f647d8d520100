@@ -152,7 +152,7 @@
             <h3 class="home_page_title caps">In Our Feed</h3>
         </div>
         <div id="instafeed"></div>
-        <div class="margin_30"></div>
+        <div class="margin_60"></div>
     </div>
 </div>
 <script>
