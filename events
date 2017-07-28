@@ -14,6 +14,12 @@
 <div class="site_container page_content">
     <div class="row">
         <div class="col-md-12">
+            <iframe src="https://player.vimeo.com/video/222242282" width="640" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/222242282">The Gateway Sunday Events Teaser</a> from <a href="https://vimeo.com/user41949350">Bergendi Hatch</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>
         </div>
     </div>
