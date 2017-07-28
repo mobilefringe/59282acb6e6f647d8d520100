@@ -68,6 +68,15 @@
 
 
 <body>
+    <div class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="http://assets.codecloudapp.com/sites/59282acb6e6f647d8d520100/image/png/1501258993000/snapcode.png" class="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="top_bar">
             <div class="site_container">
