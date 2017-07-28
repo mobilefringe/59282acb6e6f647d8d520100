@@ -1,7 +1,4 @@
 <style>
-    a {
-        color: #1ccfc9;
-    }
     .gallery_image {
         max-width: 100%;
     }
