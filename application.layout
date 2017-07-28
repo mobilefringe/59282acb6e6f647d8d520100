@@ -110,13 +110,13 @@
                                 <div class="mobile_site_logo">
                                     <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>
                                 </div>
-                                <li class="menu_item"><a href="#">Shopping</a>
+                                <li class="menu_item"><a href="/directory">Shopping</a>
                                     <ul>
                                         <li class="dropdown_item"><a href="/stores">Directory</a></li>
                                         <li class="dropdown_item"><a href="/map">Center Map</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu_item"><a href="#">Dining</a>
+                                <li class="menu_item"><a href="/dine">Dining</a>
                                     <ul>
                                         <li class="dropdown_item"><a href="/dine">Directory</a></li>
                                         <li class="dropdown_item"><a href="/map">Center Map</a></li>
@@ -124,7 +124,7 @@
                                 </li>
                                 <li class="menu_item"><a href="/showtimes">Showtimes</a></li>
                                 <li class="menu_item"><a href="/events">Calendar</a></li>
-                                <li class="menu_item"><a href="#">Explore</a>
+                                <li class="menu_item"><a href="/hours">Explore</a>
                                     <ul>
                                         <li class="dropdown_item"><a href="/hours">Hours</a></li>
                                         <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
@@ -132,7 +132,7 @@
                                         <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
                                     </ul>
                                 </li>
-                                <li class="menu_item"><a href="#">About</a>
+                                <li class="menu_item"><a href="/gateway">About</a>
                                     <ul>
                                         <li class="dropdown_item"><a href="/gateway">The Gateway</a></li>
                                         <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
