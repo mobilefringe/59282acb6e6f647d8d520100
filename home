@@ -103,7 +103,7 @@
                         <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977122000/10.jpg" alt="SnapChat"/>
                         <div class="info">
                             <div class="content">
-                                <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+                                <i class="fa fa-snapchat-ghost hover_icon" aria-hidden="true"></i>
                                 <h3>@ShopTheGateway</h3>
                             </div>
                         </div>
