@@ -39,6 +39,7 @@
             
             <div class="map light_border">
 			    <div id="zoom_container">
+			        <button type="button" id="map_reset">Reset</button>
                     <img id="png_map" class="png_map" alt="center map" src="" />
                     <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
             	    </div>    
