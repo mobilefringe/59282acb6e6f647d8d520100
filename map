@@ -86,10 +86,7 @@
         
         show_content();
         
-        $("#map_reset").click(function() {
-            $("#png_map").smoothZoom('removeLandmark'); 
-            $("#png_map").smoothZoom({height: 768,width: 768,initial_ZOOM: 0})
-        });
+        
         
         $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
@@ -107,8 +104,12 @@
 			container: 'zoom_container'
 		});
 		
-		show_png_pin(".map_pin_a", "#png_map")
-        
+		show_png_pin(".map_pin_a", "#png_map");
+		
+		$("#map_reset").click(function() {
+            $("#png_map").smoothZoom('removeLandmark'); 
+            $("#png_map").smoothZoom('Reset');
+        });
     }
 
 function show_png_pin(trigger, map){
