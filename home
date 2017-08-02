@@ -97,7 +97,19 @@
                     </a>
                 </div>
             </div>
-            <div class="feature_9 grid-item"></div>
+            <div class="grid-item"> <!--SnapChat-->
+                <div class="social ih-item circle effect19">
+                    <a href="#">
+                        <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977122000/10.jpg" alt="SnapChat"/>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+                                <h3>@ShopTheGateway</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>    
+            </div>
             <div class="grid-item"> <!--FACEBOOK-->
                 <div class="social ih-item circle effect19">
                     <a href="https://www.facebook.com/shopthegateway/">
@@ -111,8 +123,8 @@
                     </a>
                 </div>
             </div>
-            <div class="feature_10 grid-item grid-item--width2"></div>
-            <div class="feature_11 grid-item"></div>
+            <div class="feature_9 grid-item grid-item--width2"></div>
+            <div class="feature_10 grid-item"></div>
         </div>
         <div class="grid grid_mobile visible_phone">
             <div class="grid-sizer"></div>
