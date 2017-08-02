@@ -84,7 +84,11 @@
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
         show_content();
-    
+        
+        $("#map_reset").click(function() {
+            $("#png_map").smoothZoom('removeLandmark'); 
+        });
+        
         $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
 		    height: 768,
