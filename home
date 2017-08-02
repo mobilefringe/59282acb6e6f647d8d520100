@@ -130,7 +130,20 @@
             <div class="grid-sizer"></div>
             <div class="feature_8 grid-item grid-item--width2"></div>
             <div class="feature_7 grid-item grid-item--height2"></div>
-            <div class="feature_9 grid-item grid-item--height2"></div>
+            <div class="feature_9 grid-item"></div>
+            <div class="grid-item"> <!--SnapChat-->
+                <div class="social ih-item circle effect19">
+                    <a href="#" data-toggle="modal" data-target="#snap_modal">
+                        <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977122000/10.jpg" alt="SnapChat"/>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-snapchat-ghost hover_icon" aria-hidden="true"></i>
+                                <h3>@ShopTheGateway</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>    
+            </div>
             <div class="feature_10 grid-item grid-item--width2"></div>
             <div class="grid-item"> <!--INSTAGRAM-->
                 <div class="social ih-item circle effect19">
