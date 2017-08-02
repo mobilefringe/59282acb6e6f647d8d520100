@@ -64,9 +64,8 @@
         Mustache.parse(template_html);   // optional, speeds up future uses
         var store_initial="";
         $.each(collection, function(key, val) {
-                var rendered = Mustache.render(template_html,val);
-                item_rendered.push(rendered);
-            
+            var rendered = Mustache.render(template_html,val);
+            item_rendered.push(rendered);
         });
         
         $(container).show();
@@ -85,8 +84,6 @@
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
         show_content();
-        
-        
         
         $("#png_map").attr("src", getPNGMapURL())
 		$('#png_map').smoothZoom({
