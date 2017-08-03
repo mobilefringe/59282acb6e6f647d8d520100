@@ -424,13 +424,10 @@ function renderPosts(container, template, collection){
         }
         val.description_short = val.description_short.replace("&amp;", "&");
         
-        val.slug = "blog/" + val.slug;
+        val.slug = "posts/" + val.slug;
         
         val.twitter_title = val.title + " via @ShopTheGateway";
-        
-        // var date_blog = new Date(val.publish_date);
-        // val.published_on = get_month(date_blog.getMonth()) + " " + date_blog.getDate() + ", " + date_blog.getFullYear();
-    
+
         val.counter = counter;
         
         var rendered = Mustache.render(template_html,val);
@@ -470,7 +467,7 @@ function renderPostDetails(container, template, collection, blog_posts){
         if(index >= 0 && index < blog_list.length){
           var next_slug = blog_list[index + 1];
             if(next_slug != undefined || next_slug != null){
-                val.next_post = "/blog/" + next_slug;
+                val.next_post = "/posts/" + next_slug;
                 val.next_show = "display: block";
             } else {
                 val.next_show = "display: none";
@@ -479,7 +476,7 @@ function renderPostDetails(container, template, collection, blog_posts){
         if(index >= 0 && index < blog_list.length){
             var prev_slug = blog_list[index - 1];
             if(prev_slug != undefined || prev_slug != null){
-                val.prev_post = "/blog/" + prev_slug;
+                val.prev_post = "/posts/" + prev_slug;
                 val.prev_show = "display: block";
             } else {
                 val.prev_show = "display: none";
