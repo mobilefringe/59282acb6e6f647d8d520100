@@ -93,10 +93,14 @@
             </div>
         </div>
     </div>
-    <!-- DISQUS start -->
-        <div id="disqus_thread"></div>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <!-- DISQUS end -->
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <!-- DISQUS start -->
+            <div id="disqus_thread"></div>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            <!-- DISQUS end -->
+        </div>
+    </div>
     <div class="margin_60"></div>
 </div>
 <script id="gallery_template" type="x-tmpl-mustache/text">
