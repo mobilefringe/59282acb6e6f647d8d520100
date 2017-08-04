@@ -53,8 +53,7 @@
             }
             var slider_images =  getRepoDetailsByName("Leasing Slider Images");
             if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+                
             }
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-leasing.json"
