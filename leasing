@@ -23,7 +23,7 @@
             <script id="leasing_template" type="x-tmpl-mustache/text">
                 <li class="position_relative">
                     <a href="" onclick="{{noLink}}">
-                        <img class="banner_img" alt="banner" src="{{photo_url_abs}}" />
+                        <img class="" alt="banner" src="{{photo_url_abs}}" />
                     </a>
                 </li>
             </script>
