@@ -53,7 +53,7 @@
             }
             var slider_images =  getRepoDetailsByName("Leasing Slider Images");
             if (repo != undefined) {
-                renderBanner('#leasing_template','#leasing_banner',banners);
+                renderBanner('#leasing_template','#leasing_banner',slider_images);
             }
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-leasing.json"
