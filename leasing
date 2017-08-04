@@ -52,7 +52,7 @@
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
             var slider_images =  getRepoDetailsByName("Leasing Slider Images");
-            if (repo != undefined) {
+            if (slider_images != undefined) {
                 renderBanner('#leasing_template','#leasing_banner',slider_images);
             }
             var prefix = get_prefix();
