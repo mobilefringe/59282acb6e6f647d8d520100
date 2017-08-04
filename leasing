@@ -51,7 +51,7 @@
                 var banner = getImageURL(repo.images[0].photo_url);
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
-            
+            var slider_images =  getRepoDetailsByName("Leasing Slider Images");
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-leasing.json"
             $.getJSON(pages_json).done(function(data) {
