@@ -18,6 +18,17 @@
             <div class="thick_line"></div>
         </div>
     </div>
+    <div class="flexslider">
+        <ul class="slides" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li class="position_relative">
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img class="banner_img" alt="banner" src="{{image_url}}" />
+                    </a>
+                </li>
+            </script>
+        </ul>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div id="mm_page_content"></div>    
