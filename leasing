@@ -58,14 +58,14 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
-            $('.flexslider').flexslider({
-                animation: "slide",
-            });
+           
             show_content();
         }
         loadMallDataCached(renderAll); 
     });
     $(window).load (function () {
-        
+         $('.flexslider').flexslider({
+                animation: "slide",
+            });
     });
 </script>
