@@ -22,9 +22,7 @@
         <ul class="slides" id="leasing_banner">
             <script id="leasing_template" type="x-tmpl-mustache/text">
                 <li class="position_relative">
-                    <a href="" onclick="{{noLink}}">
-                        <img class="" alt="banner" src="{{photo_url_abs}}" />
-                    </a>
+                    <img class="" alt="banner" src="{{photo_url_abs}}" />
                 </li>
             </script>
         </ul>
