@@ -41,7 +41,6 @@
         init(e);
         function renderAll(){
             
-            
             var repo = getRepoDetailsByName("Leasing Banner");
             if (repo != undefined) {
                 var banner = getImageURL(repo.images[0].photo_url);
