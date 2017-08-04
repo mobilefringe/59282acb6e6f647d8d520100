@@ -40,6 +40,12 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+            });
+            $(".flex-prev").html(" ");
+            $(".flex-next").html(" ");
+            
             var repo = getRepoDetailsByName("Leasing Banner");
             if (repo != undefined) {
                 var banner = getImageURL(repo.images[0].photo_url);
