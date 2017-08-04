@@ -51,7 +51,7 @@
                 var banner = getImageURL(repo.images[0].photo_url);
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
-            var slider_images =  getRepoDetailsByName("Leasing Slider Images");
+            var slider_images =  getRepoDetailsByName("Leasing Slider Images").images;
             console.log(slider_images);
             if (slider_images != undefined) {
                 renderBanner('#leasing_template','#leasing_banner',slider_images);
