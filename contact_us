@@ -21,12 +21,12 @@
     <div class="row">
         <div class="col-md-6">
             <h4 class="bold">The Gateway Management Office</h4>
-            <h3>18 N Rio Grande Street <br>
+            <h4>18 N Rio Grande Street <br>
                 Salt Lake City, Utah, 84101
-            </h3>
-            <h3 class="bold">Tel: <a href="tel:801-456-0000">801-456-0000</a> <br>
+            </h4>
+            <h4 class="bold">Tel: <a href="tel:801-456-0000">801-456-0000</a> <br>
                 Fax: 801-456-0005
-            </h3>
+            </h4>
             <div id="mm_page_content"></div>
             <div class="margin_20"></div>
         </div>
