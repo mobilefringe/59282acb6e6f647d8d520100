@@ -52,6 +52,7 @@
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
             var slider_images =  getRepoDetailsByName("Leasing Slider Images");
+            console.log(slider_images);
             if (slider_images != undefined) {
                 renderBanner('#leasing_template','#leasing_banner',slider_images);
             }
