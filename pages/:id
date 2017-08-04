@@ -1,3 +1,8 @@
+<style>
+    a {
+    color: #1ccfc9;
+}
+</style>
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
