@@ -1,3 +1,8 @@
+<style>
+    a {
+    color: #1ccfc9;
+}
+</style>
 <!-- GALLERY MODAL -->
 <div class="custom-modal-backdrop"></div>
 <div class="custom_modal">
