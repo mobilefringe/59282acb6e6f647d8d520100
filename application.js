@@ -680,10 +680,17 @@ function renderStoreDetails(container, template, collection, slug){
         } else {
             val.alt_store_front_url = getImageURL(val.store_front_url); 
         }
+        
+        if(val.is_coming_soon_store != false){
+            val.coming_soon_store = "display: block;"
+        } else {
+            val.coming_soon_store = "display: none;"
+        }
         val.category_list = getCategoriesNamesByStoreSlug(slug);
         val.map_x_coordinate = val.x_coordinate - 19;
         val.map_y_coordinate = val.y_coordinate - 58;
         val.property_map = getPropertyDetails().mm_host + getPropertyDetails().map_url;
+        
         if (val.website != null && val.website.length > 0){
             val.show = "display:inline-block";
         }
