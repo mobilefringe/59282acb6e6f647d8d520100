@@ -1,31 +1,24 @@
 <link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
 <script type="text/javascript" src="/fullcalendar.js"></script>
 <link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
-<div class="fluid_row">
-    <div class="row">
-        <div class="col-md-3 mobile_padding">
-            <h3 class="store_list_header">THE LIVING ROOM</h3>
-            <ul class="side_menu hidden_phone">
-                <li><a href="/livingroom/about">About</a></li>
-                <li><a href="/livingroom/the_details">The Details</a></li>
-                <li class="active"><a href="/livingroom/events_calendar">Events Calendar</a></li>
-                <li><a href="/livingroom/book_this_space">Book This Space</a></li>
-                <li><a href="/livingroom/dixie_living_room">#DixieLivingRoom</a></li>
-                <li><a href="/livingroom/faq">FAQ</a></li>
-            </ul>
-            <div class="position_relative show_phone">
-                <a href="#" id="side_dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span id="side_nav_text">Events Calendar</span> <i class="fa fa-caret-down pull-right"></i></a>
-                <ul id="side_nav" class="dropdown-menu" aria-labelledby="cat_dd">
-                    <li><a href="/livingroom/about">About</a></li>
-                    <li><a href="/livingroom/the_details">The Details</a></li>
-                    <li><a href="/livingroom/book_this_space">Book This Space</a></li>
-                    <li><a href="/livingroom/dixie_living_room">#DixieLivingRoom</a></li>
-                    <li><a href="/livingroom/faq">FAQ</a></li>
-                </ul>
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1 id="mm_banner_title"></h1>
+                    <hr>
+                </div>
             </div>
         </div>
-        <div class="col-md-9 contact_rows mobile_padding">
-            <img src="//codecloud.cdn.speedyrails.net/sites/58c6f9856e6f642bbf0b0000/image/jpeg/1490020571000/DX725_LivingRoom_WebBanner_FA.jpg" class="full_width hidden_phone" alt="hours banner">
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+
+
             <div class="margin_20"></div>
             <h3 class="hours_header">Events Calendar</h3>
             <div class="position_relative">
