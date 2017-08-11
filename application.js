@@ -386,10 +386,10 @@ function renderSinglePost(container, template, main_post){
         main_post.post_image = main_post.image_url;
     }
     
-    if(val.title.length > 45){
-        val.title_short = val.title.substring(0, 44) + "...";
+    if(main_post.title.length > 45){
+        main_post.title_short = main_post.title.substring(0, 44) + "...";
     } else {
-        val.title_short = val.title;
+        main_post.title_short = val.title;
     }
         
     if(main_post.body.length > 175){
