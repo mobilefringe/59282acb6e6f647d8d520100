@@ -141,7 +141,7 @@
         var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
         var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
 
-        renderPostDetails("#post_details_container", "#post_details_template", post, sorted_post);
+        renderPostDetails("#post_details_container", "#post_details_template", post, sorted_posts);
         
         var galleries = $('gallery');
         var gallery = [];
