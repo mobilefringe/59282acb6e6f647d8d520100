@@ -381,7 +381,7 @@ function renderSinglePost(container, template, main_post){
     Mustache.parse(template_html);   // optional, speeds up future uses
 
     if (main_post.image_url.indexOf('missing.png') > 0) {
-        main_post.post_image = "";
+        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1502470554000/EventsPlaceholder@2x.jpg";
     } else {
         main_post.post_image = main_post.image_url;
     }
@@ -417,7 +417,7 @@ function renderPosts(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.image_url.indexOf('missing.png') > -1) {
-            val.post_image = "";
+            val.post_image = "//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1502470554000/EventsPlaceholder@2x.jpg";
         } else {
             val.post_image = val.image_url;
         }
