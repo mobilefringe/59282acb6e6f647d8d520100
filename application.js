@@ -385,13 +385,19 @@ function renderSinglePost(container, template, main_post){
     } else {
         main_post.post_image = main_post.image_url;
     }
+    
+    if(val.title.length > 45){
+        val.title_short = val.title.substring(0, 44) + "...";
+    } else {
+        val.title_short = val.title;
+    }
         
     if(main_post.body.length > 175){
         main_post.description_short = main_post.body.substring(0,175) + "...";
-    }
-    else{
+    } else {
         main_post.description_short = main_post.body;
     }
+    
     main_post.description_short = main_post.description_short.replace("&amp;", "&");
     
     main_post.slug = "posts/" + main_post.slug;
