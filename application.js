@@ -416,8 +416,8 @@ function renderPosts(container, template, collection){
             val.post_image = val.image_url;
         }
         
-        if(val.title.length > 50){
-            val.title_short = val.title.substring(0, 50) + "...";
+        if(val.title.length > 45){
+            val.title_short = val.title.substring(0, 44) + "...";
         } else {
             val.title_short = val.title;
         }
