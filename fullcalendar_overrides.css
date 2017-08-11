@@ -1,0 +1,46 @@
+.fc-toolbar .fc-right{
+    float:none;
+}
+
+.fc-toolbar .fc-left{
+    float:none;
+    margin-bottom: 20px;
+    h2{
+        float:none !important;
+    }
+}
+.fc-time{
+    display:none;
+}
+
+.fc-button{
+    margin-right: .75em !important;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #979797;
+}
+
+.fc-today-button{
+    text-transform: capitalize;
+}
+
+.fc-scroller{
+    height:100% !important;
+}
+
+.calendar{
+    margin-bottom:20px;
+}
+
+.fc-today-button{
+    background: #E9B50A;
+    color:#fff;
+    text-shadow:none;
+    &:disabled{
+        background:#aaa;
+    }
+}
+
+.fc-button-group{
+    margin-left:0 !important;
+}
