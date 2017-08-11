@@ -1,0 +1,112 @@
+<link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
+<script type="text/javascript" src="/fullcalendar.js"></script>
+<link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
+<div class="fluid_row">
+    <div class="row">
+        <div class="col-md-3 mobile_padding">
+            <h3 class="store_list_header">THE LIVING ROOM</h3>
+            <ul class="side_menu hidden_phone">
+                <li><a href="/livingroom/about">About</a></li>
+                <li><a href="/livingroom/the_details">The Details</a></li>
+                <li class="active"><a href="/livingroom/events_calendar">Events Calendar</a></li>
+                <li><a href="/livingroom/book_this_space">Book This Space</a></li>
+                <li><a href="/livingroom/dixie_living_room">#DixieLivingRoom</a></li>
+                <li><a href="/livingroom/faq">FAQ</a></li>
+            </ul>
+            <div class="position_relative show_phone">
+                <a href="#" id="side_dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span id="side_nav_text">Events Calendar</span> <i class="fa fa-caret-down pull-right"></i></a>
+                <ul id="side_nav" class="dropdown-menu" aria-labelledby="cat_dd">
+                    <li><a href="/livingroom/about">About</a></li>
+                    <li><a href="/livingroom/the_details">The Details</a></li>
+                    <li><a href="/livingroom/book_this_space">Book This Space</a></li>
+                    <li><a href="/livingroom/dixie_living_room">#DixieLivingRoom</a></li>
+                    <li><a href="/livingroom/faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 contact_rows mobile_padding">
+            <img src="//codecloud.cdn.speedyrails.net/sites/58c6f9856e6f642bbf0b0000/image/jpeg/1490020571000/DX725_LivingRoom_WebBanner_FA.jpg" class="full_width hidden_phone" alt="hours banner">
+            <div class="margin_20"></div>
+            <h3 class="hours_header">Events Calendar</h3>
+            <div class="position_relative">
+                <ul class="event_calendar_header">
+                    <li><span id="closed_event_tile"></span>Closed</li>
+                    <li><span id="private_event_tile"></span>Private Events</li>
+                    <li><span id="public_event_tile"></span>Public Events</li>
+                    <li><span id="dixie_event_tile"></span>Dixie Events</li>
+                </ul>
+                <div class="calendar" id="calendar">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="margin_40"></div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var calendar_events = [];
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+             $.each( events , function( key, val ){
+                 var published_event = {};
+                today = moment();
+                five_months = moment().add('4', 'M').endOf("d");
+                if (today < five_months){
+                    webDate = moment(val.show_on_web_date);
+                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone()) && (val.tags.indexOf("#living_room") >= 0)) {
+                        if(val.tags.indexOf("#public_event") >= 0 || val.tags.indexOf("#dixie_event") >= 0){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            // published_event.title = val.name;
+                            published_event.color = (val.tags.indexOf("#public_event") >= 0 ) ? "#E56717" : "#FBB917";
+                            published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                        }
+                        else if(val.tags.indexOf("#private_event") >= 0  || val.tags.indexOf("#closed") >= 0 ){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            // published_event.title = "Private Event";
+                            published_event.color =  (val.tags.indexOf("#private_event") >= 0 ) ? "#E77471" : "#347235";
+                            // published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                        }
+                        
+                        
+                    }
+                }
+            });
+            show_content();
+            $('#calendar').fullCalendar({
+                header: {
+                    right:  'prev,next'
+                },
+                timezone: getPropertyTimeZone(),
+                events: calendar_events,
+                buttonText: {
+                    prev: "Previous Month",
+                    next: "Next Month"
+                },
+                viewRender: function(view,element) {
+                    var now = new Date();
+                    var end = new Date();
+                    end.setMonth(now.getMonth() + 3); //Adjust as needed
+        
+                    if ( end < view.end) {
+                        $("#calendar .fc-next-button").addClass("fc-state-disabled");
+                        return false;
+                    }
+                    else {
+                        $("#calendar .fc-next-button").removeClass("fc-state-disabled");
+                    }
+        
+                    
+                }
+                
+            })
+            $('#top_nav_living_room').addClass('active_yellow')
+        }
+        loadMallDataCached(renderAll); 
+    })
+</script>
