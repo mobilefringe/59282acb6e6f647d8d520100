@@ -138,9 +138,10 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         var post = getPublishedPostDetailsBySlug(slug);
-        var blog_posts = getBlogDataBySlug("thegateway-blog").posts.reverse();
+        var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
+        var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
 
-        renderPostDetails("#post_details_container", "#post_details_template", post, blog_posts);
+        renderPostDetails("#post_details_container", "#post_details_template", post, sorted_post);
         
         var galleries = $('gallery');
         var gallery = [];
