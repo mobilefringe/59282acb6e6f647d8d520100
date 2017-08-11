@@ -87,10 +87,10 @@
                     <div class="row_fluid">
                         <div class="post_detail_divider">
                             <div class="col-md-6">
-                                <a href="{{prev_post}}" class="red pull-left" style="{{prev_show}}"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490621978000/left.png" class="post_details_arrow" alt=""><span class="post_details_link">Previous Post</span></a>
+                                <a href="{{prev_post}}" class="red pull-left" style="{{prev_show}}"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490621978000/left.png" class="post_details_arrow" alt=""><span class="post_details_link">Next Post</span></a>
                             </div>
                             <div class="col-md-6">
-                                <a href="{{next_post}}" class="red pull-right" style="{{next_show}}"><span class="post_details_link">Next Post</span><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490620798000/right.png" class="post_details_arrow" alt="Right Arrow"></a>
+                                <a href="{{next_post}}" class="red pull-right" style="{{next_show}}"><span class="post_details_link">Previous Post</span><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490620798000/right.png" class="post_details_arrow" alt="Right Arrow"></a>
                             </div>
                         </div>
                     </div>
