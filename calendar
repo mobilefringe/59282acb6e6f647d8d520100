@@ -1,6 +1,14 @@
 <link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
 <script type="text/javascript" src="/fullcalendar.js"></script>
 <link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
+<style>
+    #gateway_title {
+       background: #FBB917;
+    }
+    #discovery_title {
+            background: #E56717;
+    }
+</style>
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
@@ -23,9 +31,9 @@
             <h3 class="details_header caps">Events Calendar</h3>
             <div class="position_relative">
                 <ul class="event_calendar_header">
-                    <li><span id="closed_event_tile"></span>Closed</li>
-                    <li><span id="private_event_tile"></span>Private Events</li>
-                    <li><span id="public_event_tile"></span>Public Events</li>
+                    <li><span id="gateway_tile"></span>Gateway</li>
+                    <li><span id="discovery_tile"></span>Discovery</li>
+                    <li><span id="public_event_tile"></span>Food</li>
                     <li><span id="dixie_event_tile"></span>Dixie Events</li>
                 </ul>
                 <div class="calendar" id="calendar"></div>
