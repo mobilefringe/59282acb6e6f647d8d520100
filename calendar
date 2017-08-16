@@ -31,11 +31,12 @@
                 <div class="calendar" id="calendar">
                     
                 </div>
+                <div class="margin_60"></div>
             </div>
         </div>
     </div>
 </div>
-<div class="margin_60"></div>
+
 <script>
     $(document).ready(function(e){
         init(e);
