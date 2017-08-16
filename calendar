@@ -20,7 +20,7 @@
 
 
             <div class="margin_20"></div>
-            <h3 class="hours_header">Events Calendar</h3>
+            <h3 class="details_header caps">Events Calendar</h3>
             <div class="position_relative">
                 <ul class="event_calendar_header">
                     <li><span id="closed_event_tile"></span>Closed</li>
