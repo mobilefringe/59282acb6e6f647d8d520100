@@ -6,7 +6,10 @@
        background: #FBB917;
     }
     #discovery_title {
-            background: #E56717;
+        background: #E56717;
+    }
+    #food_title {
+        background: #347235;
     }
 </style>
 <div class="page_header">   
@@ -33,7 +36,7 @@
                 <ul class="event_calendar_header">
                     <li><span id="gateway_tile"></span>Gateway</li>
                     <li><span id="discovery_tile"></span>Discovery</li>
-                    <li><span id="public_event_tile"></span>Food</li>
+                    <li><span id="food_tile"></span>Food</li>
                     <li><span id="dixie_event_tile"></span>Dixie Events</li>
                 </ul>
                 <div class="calendar" id="calendar"></div>
@@ -66,8 +69,15 @@
                         if(val.tags.indexOf("discovery") >= 0){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
-                            // published_event.title = val.name;
-                            published_event.color = (val.tags.indexOf("#public_event") >= 0 ) ? "#E56717" : "#FBB917";
+                            published_event.title = val.name;
+                            published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#E56717" : "#E56717";
+                            published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                        } else if(val.tags.indexOf("gateway") >= 0){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            published_event.title = val.name;
+                            published_event.color = (val.tags.indexOf("gateway") >= 0 ) ? "#FBB917" : "#FBB917";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
                         } else if(val.tags.indexOf("#private_event") >= 0  || val.tags.indexOf("#closed") >= 0 ){
