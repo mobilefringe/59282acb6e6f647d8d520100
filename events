@@ -21,30 +21,31 @@
     <div class="margin_60"></div>
     <div class="row">
         <div class="col-md-12">
-            <h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>
+            <!--<h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>-->
+            <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1502913809000/Group 2@2x.png" class="" alt="">
         </div>
     </div>
 </div>
-<div class="wide_container page_content">
-    <div class="row">
-        <div id="events_container">
-            <script id="events_template" type="x-tmpl-mustache/text">
-                <div class="col-xs-6 col-sm-3">
-                    <div class="events ih-item circle effect19">
-                        <a href="/events/{{slug}}">
-                            <img src="{{image_url}}" alt="img">
-                            <div class="info">
-                                <div class="content">
-                                    <h3>{{name_short}}</h3>
-                                    <h5>{{dates}}</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </script>
-        </div>
-    </div>
+<!--<div class="wide_container page_content">-->
+<!--    <div class="row">-->
+<!--        <div id="events_container">-->
+<!--            <script id="events_template" type="x-tmpl-mustache/text">-->
+<!--                <div class="col-xs-6 col-sm-3">-->
+<!--                    <div class="events ih-item circle effect19">-->
+<!--                        <a href="/events/{{slug}}">-->
+<!--                            <img src="{{image_url}}" alt="img">-->
+<!--                            <div class="info">-->
+<!--                                <div class="content">-->
+<!--                                    <h3>{{name_short}}</h3>-->
+<!--                                    <h5>{{dates}}</h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </script>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="margin_60"></div>
 </div>
 <script>
