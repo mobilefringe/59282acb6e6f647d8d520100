@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<div class="margin_40"></div>
+<div class="margin_60"></div>
 <script>
     $(document).ready(function(e){
         init(e);
