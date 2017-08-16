@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <hr>
-                    <h1 id="mm_banner_title"></h1>
+                    <h1>Calendar</h1>
                     <hr>
                 </div>
             </div>
@@ -40,10 +40,16 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            var repo = getRepoDetailsByName("Events Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            
             var calendar_events = [];
             var events = getEventsList().sortBy(function(o){ return o.start_date });
-             $.each( events , function( key, val ){
-                 var published_event = {};
+            $.each( events , function( key, val ){
+                var published_event = {};
                 today = moment();
                 five_months = moment().add('4', 'M').endOf("d");
                 if (today < five_months){
@@ -65,12 +71,12 @@
                             // published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
                         }
-                        
-                        
                     }
                 }
             });
+    
             show_content();
+            
             $('#calendar').fullCalendar({
                 header: {
                     right:  'prev,next'
@@ -93,13 +99,9 @@
                     else {
                         $("#calendar .fc-next-button").removeClass("fc-state-disabled");
                     }
-        
-                    
                 }
-                
-            })
-            $('#top_nav_living_room').addClass('active_yellow')
+            });
         }
         loadMallDataCached(renderAll); 
-    })
+    });
 </script>
