@@ -55,7 +55,7 @@
                 if (today < five_months){
                     webDate = moment(val.show_on_web_date);
                     if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                        if(val.tags.indexOf("#gateway") >= 0){
+                        if(val.tags.indexOf("gateway") >= 0 || val.tags.indexOf("#dixie_event") >= 0){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
                             // published_event.title = val.name;
