@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-12">
             <!--<h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>-->
-            <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1502913809000/Group 2@2x.png" class="" alt="">
+            <img style="max-width: 100%" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1502913809000/Group 2@2x.png" class="" alt="">
         </div>
     </div>
 </div>
