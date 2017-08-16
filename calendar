@@ -28,9 +28,7 @@
                     <li><span id="public_event_tile"></span>Public Events</li>
                     <li><span id="dixie_event_tile"></span>Dixie Events</li>
                 </ul>
-                <div class="calendar" id="calendar">
-                    
-                </div>
+                <div class="calendar" id="calendar"></div>
                 <div class="margin_60"></div>
             </div>
         </div>
