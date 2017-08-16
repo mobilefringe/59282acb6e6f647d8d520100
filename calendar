@@ -47,13 +47,14 @@
             
             var calendar_events = [];
             var events = getEventsList().sortBy(function(o){ return o.start_date });
+            console.log(events);
             $.each( events , function( key, val ){
                 var published_event = {};
                 today = moment();
                 five_months = moment().add('4', 'M').endOf("d");
                 if (today < five_months){
                     webDate = moment(val.show_on_web_date);
-                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone()) && (val.tags.indexOf("#living_room") >= 0)) {
+                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
                         if(val.tags.indexOf("#public_event") >= 0 || val.tags.indexOf("#dixie_event") >= 0){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
@@ -61,8 +62,7 @@
                             published_event.color = (val.tags.indexOf("#public_event") >= 0 ) ? "#E56717" : "#FBB917";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
-                        }
-                        else if(val.tags.indexOf("#private_event") >= 0  || val.tags.indexOf("#closed") >= 0 ){
+                        } else if(val.tags.indexOf("#private_event") >= 0  || val.tags.indexOf("#closed") >= 0 ){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
                             // published_event.title = "Private Event";
