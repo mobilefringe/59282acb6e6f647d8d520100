@@ -59,7 +59,7 @@
 .fc-button-group{
     margin-left:0 !important;
 }
-.fc-prev-button, .fc-next-button {
+.fc .fc-button-group > * {
     font-size: 16px;
 }
 
