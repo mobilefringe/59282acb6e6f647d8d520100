@@ -2,13 +2,13 @@
 <script type="text/javascript" src="/fullcalendar.js"></script>
 <link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
 <style>
-    #plaza_title {
+    #plaza_tile {
        background: #FBB917;
     }
-    #discovery_title {
-        background: #E56717;
+    #discovery_tile {
+        background: #FFA400;
     }
-    #fountain_title {
+    #fountain_tile {
         background: #347235;
     }
     .position_relative {
@@ -94,7 +94,7 @@
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
                             published_event.title = val.name;
-                            published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#E56717" : "#E56717";
+                            published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#FFA400" : "#FFA400";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
                         } else if(val.tags.indexOf("plaza") >= 0){
