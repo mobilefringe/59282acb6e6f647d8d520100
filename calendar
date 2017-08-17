@@ -11,6 +11,15 @@
     #food_title {
         background: #347235;
     }
+    
+    .event_calendar_header li span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+        border-radius: 4px;
+        float: left;
+    }
 </style>
 <div class="page_header">   
     <div class="site_container">
