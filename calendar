@@ -9,7 +9,7 @@
         background: #FFA400;
     }
     #fountain_tile {
-        background: #347235;
+        background: #C14F9D;
     }
     .position_relative {
         position: relative;
@@ -108,7 +108,7 @@
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
                             published_event.title = val.name;
-                            published_event.color =  (val.tags.indexOf("#private_event") >= 0 ) ? "#E77471" : "#347235";
+                            published_event.color =  (val.tags.indexOf("fountain") >= 0 ) ? "#C14F9D" : "#C14F9D";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
                         }
