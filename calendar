@@ -97,19 +97,19 @@
                             published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#E56717" : "#E56717";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
-                        } else if(val.tags.indexOf("gateway") >= 0){
+                        } else if(val.tags.indexOf("plaza") >= 0){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
                             published_event.title = val.name;
-                            published_event.color = (val.tags.indexOf("gateway") >= 0 ) ? "#FBB917" : "#FBB917";
+                            published_event.color = (val.tags.indexOf("plaza") >= 0 ) ? "#FBB917" : "#FBB917";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
-                        } else if(val.tags.indexOf("#private_event") >= 0  || val.tags.indexOf("#closed") >= 0 ){
+                        } else if(val.tags.indexOf("fountain")){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
-                            // published_event.title = "Private Event";
+                            published_event.title = val.name;
                             published_event.color =  (val.tags.indexOf("#private_event") >= 0 ) ? "#E77471" : "#347235";
-                            // published_event.url = "/events/" + val.slug;
+                            published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
                         }
                     }
