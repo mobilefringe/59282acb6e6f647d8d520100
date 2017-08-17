@@ -1,43 +1,43 @@
 <link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
 <script type="text/javascript" src="/fullcalendar.js"></script>
 <link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
-<style>
-    #plaza_tile {
-       background: #007CBA;
-    }
-    #discovery_tile {
-        background: #FFA400;
-    }
-    #fountain_tile {
-        background: #C14F9D;
-    }
-    .position_relative {
-        position: relative;
-    }
-    .event_calendar_header {
-        position: absolute;
-        right: 0;
-        list-style: none;
-        width: calc(100% - 200px);
-        margin-bottom: 0;
-        top: 72px;
-        font-size: 16px;
-    }
-    .event_calendar_header li {
-        margin-left: 20px;
-        float: right;
-        line-height: normal;
-        color: #000;
-    }
-    .event_calendar_header li span {
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-        margin-right: 5px;
-        border-radius: 4px;
-        float: left;
-    }
-</style>
+<!--<style>-->
+<!--    #plaza_tile {-->
+<!--       background: #007CBA;-->
+<!--    }-->
+<!--    #discovery_tile {-->
+<!--        background: #FFA400;-->
+<!--    }-->
+<!--    #fountain_tile {-->
+<!--        background: #C14F9D;-->
+<!--    }-->
+<!--    .position_relative {-->
+<!--        position: relative;-->
+<!--    }-->
+<!--    .event_calendar_header {-->
+<!--        position: absolute;-->
+<!--        right: 0;-->
+<!--        list-style: none;-->
+<!--        width: calc(100% - 200px);-->
+<!--        margin-bottom: 0;-->
+<!--        top: 72px;-->
+<!--        font-size: 16px;-->
+<!--    }-->
+<!--    .event_calendar_header li {-->
+<!--        margin-left: 20px;-->
+<!--        float: right;-->
+<!--        line-height: normal;-->
+<!--        color: #000;-->
+<!--    }-->
+<!--    .event_calendar_header li span {-->
+<!--        display: inline-block;-->
+<!--        width: 18px;-->
+<!--        height: 18px;-->
+<!--        margin-right: 5px;-->
+<!--        border-radius: 4px;-->
+<!--        float: left;-->
+<!--    }-->
+<!--</style>-->
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
