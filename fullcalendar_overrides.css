@@ -5,8 +5,11 @@
 .fc-toolbar .fc-left{
     float:none;
     margin-bottom: 20px;
-    h2{
-        float:none !important;
+    h2 {
+        margin: 0;
+        float: none !important;
+        font-size: 36px;
+        line-height: 44px;
     }
 }
 .fc-time{
