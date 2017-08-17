@@ -1,43 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
 <script type="text/javascript" src="/fullcalendar.js"></script>
 <link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
-<!--<style>-->
-<!--    #plaza_tile {-->
-<!--       background: #007CBA;-->
-<!--    }-->
-<!--    #discovery_tile {-->
-<!--        background: #FFA400;-->
-<!--    }-->
-<!--    #fountain_tile {-->
-<!--        background: #C14F9D;-->
-<!--    }-->
-<!--    .position_relative {-->
-<!--        position: relative;-->
-<!--    }-->
-<!--    .event_calendar_header {-->
-<!--        position: absolute;-->
-<!--        right: 0;-->
-<!--        list-style: none;-->
-<!--        width: calc(100% - 200px);-->
-<!--        margin-bottom: 0;-->
-<!--        top: 72px;-->
-<!--        font-size: 16px;-->
-<!--    }-->
-<!--    .event_calendar_header li {-->
-<!--        margin-left: 20px;-->
-<!--        float: right;-->
-<!--        line-height: normal;-->
-<!--        color: #000;-->
-<!--    }-->
-<!--    .event_calendar_header li span {-->
-<!--        display: inline-block;-->
-<!--        width: 18px;-->
-<!--        height: 18px;-->
-<!--        margin-right: 5px;-->
-<!--        border-radius: 4px;-->
-<!--        float: left;-->
-<!--    }-->
-<!--</style>-->
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
@@ -60,9 +23,9 @@
             <div class="margin_30"></div>
             <div class="position_relative">
                 <ul class="event_calendar_header">
-                    <li><span id="plaza_tile"></span>The Plaza</li>
                     <li><span id="discovery_tile"></span>Discovery Gateway</li>
                     <li><span id="fountain_tile"></span>The Fountain</li>
+                    <li><span id="plaza_tile"></span>The Plaza</li>
                     <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
                 </ul>
                 <div class="calendar" id="calendar"></div>
