@@ -2,13 +2,13 @@
 <script type="text/javascript" src="/fullcalendar.js"></script>
 <link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
 <style>
-    #gateway_title {
+    #plaza_title {
        background: #FBB917;
     }
     #discovery_title {
         background: #E56717;
     }
-    #food_title {
+    #fountain_title {
         background: #347235;
     }
     .position_relative {
@@ -58,10 +58,10 @@
             <h3 class="details_header caps">Events Calendar</h3>
             <div class="position_relative">
                 <ul class="event_calendar_header">
-                    <li><span id="gateway_tile"></span>Gateway</li>
-                    <li><span id="discovery_tile"></span>Discovery</li>
-                    <li><span id="food_tile"></span>Food</li>
-                    <li><span id="dixie_event_tile"></span>Dixie Events</li>
+                    <li><span id="gateway_tile"></span>The Plaza</li>
+                    <li><span id="discovery_tile"></span>Discovery Gateway</li>
+                    <li><span id="food_tile"></span>The Fountain</li>
+                    <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
                 </ul>
                 <div class="calendar" id="calendar"></div>
                 <div class="margin_60"></div>
