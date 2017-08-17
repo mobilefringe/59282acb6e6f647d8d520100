@@ -74,3 +74,11 @@
     content: "\f105";
     margin-left: 5px;
 }
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .fc-next-button.fc-button.fc-state-default.fc-corner-right {
+        margin-right: 0 !important;
+        float: right;
+    }
+}
