@@ -65,3 +65,9 @@
     content: "\f104";
     margin-right: 5px;
 }
+
+.fc-next-button:after {
+    font-family: 'FontAwesome';
+    content: "\f105";
+    margin-left: 5px;
+}
