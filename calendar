@@ -27,6 +27,7 @@
         margin-left: 20px;
         float: right;
         line-height: normal;
+        color: #000;
     }
     .event_calendar_header li span {
         display: inline-block;
