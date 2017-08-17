@@ -11,6 +11,9 @@
     #food_title {
         background: #347235;
     }
+    .position_relative {
+        position: relative;
+    }
     .event_calendar_header {
         position: absolute;
         right: 0;
