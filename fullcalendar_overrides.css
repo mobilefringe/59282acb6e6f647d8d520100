@@ -20,6 +20,8 @@
         font-family: 'LeagueGothic-Regular';
         font-size: 36px;
         line-height: 44px;
+        color: #000;
+        text-transform: uppercase;
     }
 }
 .fc-time{
