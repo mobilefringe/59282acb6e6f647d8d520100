@@ -138,10 +138,3 @@
         loadMallData(renderAll); 
     })
 </script>
-<!--<div style="{{show}}" class="store_initial">-->
-<!--                    <div class="col-xs-6 col-sm-3 col-md-2 cats_row" data-cat="{{cat_list}}">-->
-<!--                        <div class="store_logo_container no_hover" id="{{initial}}">-->
-<!--                            {{initial}}-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
