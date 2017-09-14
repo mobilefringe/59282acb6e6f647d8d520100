@@ -46,8 +46,9 @@
             
             var slider_images =  getRepoDetailsByName("Leasing Slider Images").images;
             console.log(slider_images);
-            if (slider_images != undefined) {
-                renderGeneral('#leasing_banner','#leasing_template',slider_images);
+            if (slider_images != undefined){
+                var img_url = slider_images.image_url;
+                renderGeneral('#leasing_banner', '#leasing_template', img_url);
             }
             
             var prefix = get_prefix();
