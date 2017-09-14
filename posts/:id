@@ -1,0 +1,224 @@
+<style>
+    p a {
+    color: #1ccfc9;
+}
+</style>
+<!-- GALLERY MODAL -->
+<div class="custom-modal-backdrop"></div>
+<div class="custom_modal">
+    <span class="modal_close"><i class="fa fa-times" aria-hidden="true"></i></span>
+    <a class="open_details_modal" id="prev" data-modal-id="id">
+        <i class="fa fa-chevron-left prev_arrow" aria-hidden="true"></i>
+    </a>
+    <a class="open_details_modal" id="next" data-modal-id="id">
+        <i class="fa fa-chevron-right next_arrow" aria-hidden="true"></i>
+    </a>
+    <div class="modal_50">
+        <img class="modal_img" src="http://placehold.it/337x337" />
+    </div>
+    <div class="modal_50">
+        <h4 id="modal_name">Heading</h4>
+        <p id ="modal_desc">desc</p>
+        <div class="sharer_icons">
+            <p class="pull-left">Share This Post:</p>
+            <a id="share_fb" target="_blank" href="#">
+                <img class="modal_share_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
+            </a>
+            <a id="share_twitter" target="_blank" href="#">
+                <img class="modal_share_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
+            </a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- -->
+
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Press</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h3 class="back_btn"><a href="/posts"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1488986031000/left_chevron.png" class="" alt="">BACK</a></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="post_details_container">
+                <script id="post_details_template" type="x-tmpl-mustache/text">
+                    <div class="row_fluid">
+                        <div class="post_details_image">
+                            <img src="{{post_image}}" alt="{{title}}" />
+                        </div>
+                        <div class="details_share_icons hidden_phone">
+                            <a href="http://www.facebook.com/sharer.php?u=http://www.shopthegateway.com/posts/{{slug}}" target="_blank">
+                                <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
+                            </a>
+                            <a href="http://twitter.com/home?status={{twitter_title}} http://www.shopthegateway.com/posts/{{slug}}" target="_blank">
+                                <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog_30 hidden_phone"></div>
+                    <div class="row_fluid">
+                        <h4 class="post_details_title caps bold" title="{{title}}">{{title}}</h4>
+                        <div class="post_details_desc">{{{html_body}}}</div>
+                    </div>
+                    <div class="row_fluid">
+                        <div class="details_share_icons_mobile">
+                            <a href="https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/posts/{{slug}}" target="_blank">
+                                <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
+                            </a>
+                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.shopthegateway.com/posts/{{slug}}" target="_blank">
+                                <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row_fluid">
+                        <div class="post_detail_divider">
+                            <div class="col-md-6">
+                                <a href="{{prev_post}}" class="red pull-left" style="{{prev_show}}"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490621978000/left.png" class="post_details_arrow" alt=""><span class="post_details_link">Next Post</span></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{next_post}}" class="red pull-right" style="{{next_show}}"><span class="post_details_link">Previous Post</span><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490620798000/right.png" class="post_details_arrow" alt="Right Arrow"></a>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <!-- DISQUS start -->
+            <div id="disqus_thread"></div>
+            <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            <!-- DISQUS end -->
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script id="gallery_template" type="x-tmpl-mustache/text">
+    <div class="col-sm-6">
+        <div class="gallery_content mobile_padding">
+            <div class="gallery_image">
+                <a class="open_details_modal" data-modal-id="{{id}}">
+                    <img src="{{gallery_image}}">
+                </a>
+            </div>
+            <div class="gallery_caption bold">{{caption}}</div>
+            <div class="gallery_description">{{{description}}}</div>
+        </div>
+    </div>
+</script>
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPageData);
+    });
+    
+    function renderPageData(){
+        var repo = getRepoDetailsByName("Blog Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+            
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        var post = getPublishedPostDetailsBySlug(slug);
+        var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
+        var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
+
+        renderPostDetails("#post_details_container", "#post_details_template", post, sorted_posts);
+        
+        var galleries = $('gallery');
+        var gallery = [];
+        $.each(galleries, function(key, val) {
+            var container = $(val);
+            var gallery_slug = $(val).attr('source');
+            gallery = getFashionBySlug(gallery_slug).fashion_images;
+            renderGallery(container, "#gallery_template", gallery);
+        });
+        var id_list = [];
+        $.each(gallery, function(key, val) {
+            var id = val.id;
+            id_list.push(val.id);
+        });
+    
+        var window_width = $( window ).width();
+        if (window_width < 769) {
+            $('a').removeClass('open_details_modal');
+        }
+        $('.custom-modal-backdrop').click(function(){
+            $('body').removeClass('gallery_no_scroll');
+            $('.custom_modal').fadeOut();
+            $('.custom-modal-backdrop').fadeOut();
+        });
+        
+        $('.modal_close').click(function(){
+            $('body').removeClass('gallery_no_scroll');
+            $('.custom_modal').fadeOut();
+            $('.custom-modal-backdrop').fadeOut();
+        });
+        
+        var post_title = $('.post_details_title').attr('title');
+
+        $('.open_details_modal').click(function(e){
+            e.preventDefault();
+            $('body').addClass('gallery_no_scroll');
+            
+            var modal_id = $(this).attr('data-modal-id');
+            $.each(gallery, function(fi_i, fi_val){
+                if (fi_val.id == modal_id){
+                    fi = fi_val;
+                }
+            });
+            var current_id = fi.id;
+            var index = id_list.indexOf(current_id);
+            if(index >= 0 && index < id_list.length){
+               var next = id_list[index + 1];
+               $('.next_arrow').show();
+               if(next === undefined) {
+                   $('.next_arrow').hide();
+               }
+            }
+            if(index >= 0 && index < id_list.length){
+               var prev = id_list[index - 1];
+               $('.prev_arrow').show();
+               if(prev === undefined) {
+                   $('.prev_arrow').hide();
+               }
+            }
+            $('.custom-modal-backdrop').fadeIn();
+            $('.custom_modal').fadeIn();
+            $('.modal_img').attr('src', fi.gallery_image);
+            $('#modal_name').html(fi.caption);
+            $('#modal_desc').html(fi.description);
+            $('#share_fb').attr('href', "https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/posts/"+ slug);
+            $('#share_twitter').attr('href', "https://twitter.com/home?status=" + post_title + " via @ShopTheGateway https://www.shopthegateway.com/posts/" + slug);
+            $('#prev').attr('data-modal-id', prev);
+            $('#next').attr('data-modal-id', next);
+        });
+
+        show_content();
+        
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'the-gateway'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }
+</script>
