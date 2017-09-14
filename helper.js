@@ -227,7 +227,6 @@ function show_content(){
     // BANNER MESSAGE
     $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
         var messages = data.messages.bulletin
-        console.log(messages)
         if (messages != undefined){
             if (messages == null){
                 $('.news-ticker').hide();
