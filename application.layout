@@ -228,45 +228,43 @@
         </div>
     </section>
     <footer>
-        <div class="site_container">
-            <div class="row">
-                <div class="col-md-2">
-                    <div id="weather_footer" class="pull-right hidden_phone"></div>
-                    <div id="home_hours_container_footer" class="pull-right">
-                        <script id="home_hours_template_footer" type="x-tmpl-mustache/text">
-                            <p class="open_now">{% raw %}  {% endraw %}</p> 
-                            <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>
-                        </script>
-                    </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div id="weather_footer" class="pull-right hidden_phone"></div>
+                <div id="home_hours_container_footer" class="pull-right">
+                    <script id="home_hours_template_footer" type="x-tmpl-mustache/text">
+                        <p class="open_now">{% raw %}  {% endraw %}</p> 
+                        <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>
+                    </script>
                 </div>
-                <div class="col-md-8">
-                    <div class="site_logo visible_phone">
-                        <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>
-                    </div>
-                    <div class="footer_content visible_phone">
-                        <p class="footer_address">In the heart of downtown Salt Lake City</p>
-                        <p class="footer_phone bold">801-456-0000</p>
-                    </div>
-                    <div class="footer_content hidden_phone">
-                        <p class="fooeter_address">The Gateway is located in the heart of downtown Salt Lake City, along 400 West and 100 South.</p>
-                        <p class="footer_phone bold">801-456-0000</p>
-                    </div>
-                    
-                    <div class="footer_conduct">
-                        <a href="/pages/thegateway-code-of-conduct"><p class="bold line">Code Of Conduct</p></a>
-                    </div>
-                    <div class="footer_terms">
-                        <p>&copy; 2017 THE GATEWAY All Rights Reserved | <a href="/pages/thegateway-privacy-policy">Privacy Policy</a> | <a href="/pages/thegateway-terms-conditions" class="line">Terms & Conditions</a></p>
-                        <p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>
-                    </div>    
+            </div>
+            <div class="col-md-8">
+                <div class="site_logo visible_phone">
+                    <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>
                 </div>
-                <div class="col-md-2">
-                    <div class="footer_social pull-right">
-                        <a href="https://www.facebook.com/shopthegateway/" target="_blank"><div class="social_facebook"></div></a>
-                        <a href="https://www.instagram.com/shopthegateway/" target="_blank"><div class="social_insta"></div></a>
-                        <a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>
-                        <a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
-                    </div>
+                <div class="footer_content visible_phone">
+                    <p class="footer_address">In the heart of downtown Salt Lake City</p>
+                    <p class="footer_phone bold">801-456-0000</p>
+                </div>
+                <div class="footer_content hidden_phone">
+                    <p class="fooeter_address">The Gateway is located in the heart of downtown Salt Lake City, along 400 West and 100 South.</p>
+                    <p class="footer_phone bold">801-456-0000</p>
+                </div>
+                
+                <div class="footer_conduct">
+                    <a href="/pages/thegateway-code-of-conduct"><p class="bold line">Code Of Conduct</p></a>
+                </div>
+                <div class="footer_terms">
+                    <p>&copy; 2017 THE GATEWAY All Rights Reserved | <a href="/pages/thegateway-privacy-policy">Privacy Policy</a> | <a href="/pages/thegateway-terms-conditions" class="line">Terms & Conditions</a></p>
+                    <p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>
+                </div>    
+            </div>
+            <div class="col-md-2">
+                <div class="footer_social pull-right">
+                    <a href="https://www.facebook.com/shopthegateway/" target="_blank"><div class="social_facebook"></div></a>
+                    <a href="https://www.instagram.com/shopthegateway/" target="_blank"><div class="social_insta"></div></a>
+                    <a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>
+                    <a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
                 </div>
             </div>
         </div>
