@@ -283,7 +283,7 @@ function show_content(){
         unit: 'f',
         success: function(weather) {
             // html = '<i class="icon-'+weather.code+'"></i><p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
-            html = '<span><i class="icon-' + weather.code + '"></i>' + weather.temp + '&deg;' + weather.units.temp + '</span>';
+            html = '<i class="icon-' + weather.code + '"></i><span>' + weather.temp + '&deg;' + weather.units.temp + '</span>';
             $("#weather").html(html);
         },
         error: function(error) {
