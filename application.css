@@ -321,7 +321,7 @@ strong, .bold {
         color: #FFF;
     }
     .header_social {
-        padding-top: 10px;
+        // padding-top: 10px;
         padding-right: 15px;
         display: inline-block;
         img {
