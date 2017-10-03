@@ -337,6 +337,9 @@ strong, .bold {
         }
         .fa {
             padding-left: 10px;
+            &:hover {
+                color: $link;
+            }
         }
     }
     #signup {
