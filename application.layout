@@ -96,11 +96,18 @@
                     <!--</div> -->
                     <div class="col-md-6">
                         <div class="header_social pull-right">
-                            <a href="https://www.facebook.com/shopthegateway/" target="_blank"><div class="social_facebook"></div></a>
                             <a href="https://www.instagram.com/shopthegateway/" target="_blank">
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                                 <!--<div class="social_insta"></div>-->
                             </a>
+                            <a href="https://twitter.com/shopthegateway" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com/shopthegateway/" target="_blank">
+                                <!--<div class="social_facebook"></div>-->
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                            
                             <a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>
                             <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
                         </div> 
