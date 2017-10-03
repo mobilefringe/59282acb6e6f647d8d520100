@@ -90,21 +90,21 @@
                             <a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>
                             <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
                         </div> 
-                        <a id="signup" href="#sign_up">Sign Up</a>
+                        
                     </div> 
-                    <div class="col-md-6">
-                        <div class="marquee">
-                            <div class="news-ticker">
-                                <ul class="bulletin" id="bulletin"></ul>
-                            </div>
-                        </div>
-                    </div> 
+                    <!--<div class="col-md-6">-->
+                    <!--    <div class="marquee">-->
+                    <!--        <div class="news-ticker">-->
+                    <!--            <ul class="bulletin" id="bulletin"></ul>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div> -->
                     <div class="col-md-3">
                         <div id="weather" class="pull-right hidden_phone"></div>
                         <div id="home_hours_container" class="pull-right">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
-                                <p class="open_now">{% raw %}{{open}}{% endraw %}</p> 
-                                <p class="todays_hours">{% raw %}{{hours}}{% endraw %}</p>
+                                <p class="open_now">{% raw %}{{open}} {{hours}} {% endraw %}</p> 
+                                <p class="todays_hours">{% raw %}}{% endraw %}</p>
                             </script>
                         </div> 
                     </div> 
