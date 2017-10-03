@@ -335,6 +335,9 @@ strong, .bold {
             color: #fff;
             text-align: center;
         }
+        .fa {
+            padding-left: 10px;
+        }
     }
     #signup {
         font-size: 14px;
