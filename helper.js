@@ -155,7 +155,7 @@ function get_instagram_feed(url, total, size, callback){
     $.getJSON(url).done(function(data) {
         var insta_feed = data.social.instagram
         if(insta_feed != null){
-            main_feed = insta_feed.splice(1,6);
+            main_feed = insta_feed.splice(1,12);
             $.each(main_feed, function(i,v){
                 var feed_obj = {}
                 if(v.caption != null){
