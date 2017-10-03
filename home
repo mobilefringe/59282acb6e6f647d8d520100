@@ -23,58 +23,58 @@
         <!--<div class="site_container">-->
         <!--    <h3 class="home_page_title caps">Explore The Gateway</h3>-->
         <!--</div>-->
-        <div class="grid grid_desktop hidden_phone">
-            <div class="grid-sizer"></div>
-            <div class="feature_0 grid-item grid-item--width2"></div>
-            <div class="feature_1 grid-item"></div>
-            <div class="grid-item"> <!--HOURS-->
-                <div class="hours ih-item circle effect19">
-                    <a href="/hours">
-                        <img src="http://assets.codecloudapp.com/sites/59d29b4b6e6f6437811f0000/image/png/1499787583000/gateway_facebook.png" class="" alt="">
-                        <div class="info" id="home_hours_container_desktop">
-                            <script id="home_hours_template_desktop" type="x-tmpl-mustache/text">
-                                <div class="content">
-                                    <h4 class="bold caps">HOURS</h4>
-                                    <p class="caps">{{day}}</p>
-                                    <p>{{hours}}</p>
-                                    <hr>
-                                </div>
-                            </script>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="feature_3 grid-item"></div>
-            <div class="feature_4 grid-item"></div>
-            <div class="feature_5 grid-item grid-item--width2"></div>
-            <div class="feature_6 grid-item grid-item--width2"></div>
-        </div>
-        <div class="grid grid_mobile visible_phone">
-            <div class="grid-sizer"></div>
-            <div class="feature_0 grid-item grid-item--width2"></div>
-            <div class="feature_1 grid-item"></div>
-            <div class="grid-item"> <!--HOURS MOBILE-->
-                <div class="hours ih-item circle effect19">
-                    <a href="/hours">
-                        <img src="http://assets.codecloudapp.com/sites/59d29b4b6e6f6437811f0000/image/png/1499787583000/gateway_facebook.png" class="" alt="">
-                        <div class="info" id="home_hours_container_mobile">
-                            <script id="home_hours_template_mobile" type="x-tmpl-mustache/text">
-                                <div class="content">
-                                    <h4 class="bold caps">HOURS</h4>
-                                    <p class="caps">{{day}}</p>
-                                    <p>{{hours}}</p>
-                                    <hr>
-                                </div>
-                            </script>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="feature_3 grid-item"></div>
-            <div class="feature_4 grid-item"></div>
-            <div class="feature_5 grid-item grid-item--width2"></div>
-            <div class="feature_6 grid-item grid-item--width2"></div>
-        </div>
+        <!--<div class="grid grid_desktop hidden_phone">-->
+        <!--    <div class="grid-sizer"></div>-->
+        <!--    <div class="feature_0 grid-item grid-item--width2"></div>-->
+        <!--    <div class="feature_1 grid-item"></div>-->
+            <!--<div class="grid-item">-->
+        <!--        <div class="hours ih-item circle effect19">-->
+        <!--            <a href="/hours">-->
+        <!--                <img src="http://assets.codecloudapp.com/sites/59d29b4b6e6f6437811f0000/image/png/1499787583000/gateway_facebook.png" class="" alt="">-->
+        <!--                <div class="info" id="home_hours_container_desktop">-->
+        <!--                    <script id="home_hours_template_desktop" type="x-tmpl-mustache/text">-->
+        <!--                        <div class="content">-->
+        <!--                            <h4 class="bold caps">HOURS</h4>-->
+        <!--                            <p class="caps">{{day}}</p>-->
+        <!--                            <p>{{hours}}</p>-->
+        <!--                            <hr>-->
+        <!--                        </div>-->
+        <!--                    </script>-->
+        <!--                </div>-->
+        <!--            </a>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <div class="feature_3 grid-item"></div>-->
+        <!--    <div class="feature_4 grid-item"></div>-->
+        <!--    <div class="feature_5 grid-item grid-item--width2"></div>-->
+        <!--    <div class="feature_6 grid-item grid-item--width2"></div>-->
+        <!--</div>-->
+        <!--<div class="grid grid_mobile visible_phone">-->
+        <!--    <div class="grid-sizer"></div>-->
+        <!--    <div class="feature_0 grid-item grid-item--width2"></div>-->
+        <!--    <div class="feature_1 grid-item"></div>-->
+            <!--<div class="grid-item"> HOURS MOBILE-->
+        <!--        <div class="hours ih-item circle effect19">-->
+        <!--            <a href="/hours">-->
+        <!--                <img src="http://assets.codecloudapp.com/sites/59d29b4b6e6f6437811f0000/image/png/1499787583000/gateway_facebook.png" class="" alt="">-->
+        <!--                <div class="info" id="home_hours_container_mobile">-->
+        <!--                    <script id="home_hours_template_mobile" type="x-tmpl-mustache/text">-->
+        <!--                        <div class="content">-->
+        <!--                            <h4 class="bold caps">HOURS</h4>-->
+        <!--                            <p class="caps">{{day}}</p>-->
+        <!--                            <p>{{hours}}</p>-->
+        <!--                            <hr>-->
+        <!--                        </div>-->
+        <!--                    </script>-->
+        <!--                </div>-->
+        <!--            </a>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <div class="feature_3 grid-item"></div>-->
+        <!--    <div class="feature_4 grid-item"></div>-->
+        <!--    <div class="feature_5 grid-item grid-item--width2"></div>-->
+        <!--    <div class="feature_6 grid-item grid-item--width2"></div>-->
+        <!--</div>-->
         <div class="margin_30"></div>
         
         <!--<div class="site_container">-->
