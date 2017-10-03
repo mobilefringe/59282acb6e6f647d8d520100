@@ -311,9 +311,6 @@ strong, .bold {
 /* TOP BAR */
 .top_bar {
     width: 100%;
-    // position: fixed;
-    top: 0;
-    // z-index: 99999;
     background: #ddd;
     .top_bar_wrapper {
         padding: 10px 0;
