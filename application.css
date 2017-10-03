@@ -409,6 +409,7 @@ strong, .bold {
 /* DESKTOP NAV */
 #primary_nav {
     margin: 0 auto;
+    padding-top: 30px;
 }
 
 #primary_nav ul {
