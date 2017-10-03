@@ -293,7 +293,8 @@ function show_content(){
     });
     
     var today_hours = getTodaysHours();
-    renderHomeHours('#home_hours_container', '#home_hours_template', today_hours)
+    renderHomeHours('#home_hours_container', '#home_hours_template', today_hours);
+    renderHomeHours('#home_hours_container_footer', '#home_hours_template_footer', today_hours)
 }
 
 function show_png_pin(trigger, map){
