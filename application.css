@@ -398,13 +398,6 @@ strong, .bold {
     background: #FFF;
     transition: background 0.5s ease-in;
 }
-.site_logo {
-    margin: 30px auto 32px;
-    width: 250px;
-    img {
-        max-width: 100%;
-    }
-}
 
 /* DESKTOP NAV */
 #primary_nav {
@@ -478,6 +471,15 @@ strong, .bold {
 #primary_nav ul .menu_item:hover > ul {
 	display: block;
 }
+
+.site_logo {
+    margin: 30px auto 32px;
+    width: 250px;
+    img {
+        max-width: 100%;
+    }
+}
+
 /* *** STICKY NAV *** */
 .nav_container.sticky {
     background: rgba(0,0,0,0.7);
