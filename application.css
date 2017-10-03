@@ -474,7 +474,7 @@ strong, .bold {
 
 .site_logo {
     margin: 30px auto 32px;
-    width: 250px;
+    width: 250px !important;
     img {
         max-width: 100%;
     }
