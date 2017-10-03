@@ -314,11 +314,11 @@ strong, .bold {
     // position: fixed;
     top: 0;
     // z-index: 99999;
-    background: rgba(0,0,0,0.8);
+    background: #ddd;
     .top_bar_wrapper {
         padding: 10px 0;
-        height: 75px;
-        color: #FFF;
+        height: 50px;
+        color: #000;
     }
     .header_social {
         // padding-top: 10px;
