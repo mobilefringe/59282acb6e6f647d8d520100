@@ -577,9 +577,6 @@ strong, .bold {
         // padding: 0 15%;
         color: #000;
     }
-    .home_page_title:after {
-        background: #FFF;
-    }
     div {
         // margin: 25px 0;
         display: inline-block;
