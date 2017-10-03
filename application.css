@@ -578,6 +578,7 @@ strong, .bold {
         bottom: 24px;
     }
     p {
+        margin-bottom: 30px;
         // padding: 0 15%;
         color: #000;
     }
