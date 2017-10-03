@@ -571,7 +571,11 @@ strong, .bold {
     // color: #FFF;
     h3 {
         margin: 0;
+        padding-bottom: 30px;
         font-family: "LeagueGothic-Regular";
+    }
+    .home_page_title:after {
+        bottom: 24px;
     }
     p {
         // padding: 0 15%;
