@@ -1,0 +1,272 @@
+<!-- POP UP -->
+<div class="popup_home hidden_now">
+    <a href="#" target="_blank">
+        <img src="#" alt="pop up" />
+    </a>
+    <i class="fa fa-remove close_popup"></i>
+</div>
+<!-- -->
+<div class="page_content">
+    <div class="flexslider">
+        <ul class="slides" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li class="position_relative">
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img class="banner_img" alt="banner" src="{{image_url}}" />
+                    </a>
+                </li>
+            </script>
+        </ul>
+    </div>
+    <div class="wide_container">
+        <div class="margin_30"></div>
+        <div class="site_container">
+            <h3 class="home_page_title caps">Explore The Gateway</h3>
+        </div>
+        <div class="grid grid_desktop hidden_phone">
+            <div class="grid-sizer"></div>
+            <div class="feature_0 grid-item grid-item--width2"></div>
+            <div class="feature_1 grid-item"></div>
+            <div class="grid-item"> <!--HOURS-->
+                <div class="hours ih-item circle effect19">
+                    <a href="/hours">
+                        <img src="http://assets.codecloudapp.com/sites/59d29b4b6e6f6437811f0000/image/png/1499787583000/gateway_facebook.png" class="" alt="">
+                        <div class="info" id="home_hours_container_desktop">
+                            <script id="home_hours_template_desktop" type="x-tmpl-mustache/text">
+                                <div class="content">
+                                    <h4 class="bold caps">HOURS</h4>
+                                    <p class="caps">{{day}}</p>
+                                    <p>{{hours}}</p>
+                                    <hr>
+                                </div>
+                            </script>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_3 grid-item"></div>
+            <div class="feature_4 grid-item"></div>
+            <div class="feature_5 grid-item grid-item--width2"></div>
+            <div class="feature_6 grid-item grid-item--width2"></div>
+        </div>
+        <div class="grid grid_mobile visible_phone">
+            <div class="grid-sizer"></div>
+            <div class="feature_0 grid-item grid-item--width2"></div>
+            <div class="feature_1 grid-item"></div>
+            <div class="grid-item"> <!--HOURS MOBILE-->
+                <div class="hours ih-item circle effect19">
+                    <a href="/hours">
+                        <img src="http://assets.codecloudapp.com/sites/59d29b4b6e6f6437811f0000/image/png/1499787583000/gateway_facebook.png" class="" alt="">
+                        <div class="info" id="home_hours_container_mobile">
+                            <script id="home_hours_template_mobile" type="x-tmpl-mustache/text">
+                                <div class="content">
+                                    <h4 class="bold caps">HOURS</h4>
+                                    <p class="caps">{{day}}</p>
+                                    <p>{{hours}}</p>
+                                    <hr>
+                                </div>
+                            </script>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_3 grid-item"></div>
+            <div class="feature_4 grid-item"></div>
+            <div class="feature_5 grid-item grid-item--width2"></div>
+            <div class="feature_6 grid-item grid-item--width2"></div>
+        </div>
+        <div class="margin_30"></div>
+        
+        <div class="site_container">
+            <h3 class="home_page_title caps">What's Happening At The Gateway</h3>
+        </div>
+        <div class="grid grid_desktop hidden_phone">
+            <div class="grid-sizer"></div>
+            <div class="feature_7 grid-item grid-item--height2"></div>
+            <div class="feature_8 grid-item grid-item--width2"></div>
+            <div class="grid-item"> <!--INSTAGRAM-->
+                <div class="social ih-item circle effect19">
+                    <a href="https://www.instagram.com/shopthegateway/">
+                        <div class="instafeed_single"></div>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
+                                <h3>@SHOPGATEWAY</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_9 grid-item"></div>
+            <div class="grid-item"> <!--FACEBOOK-->
+                <div class="social ih-item circle effect19">
+                    <a href="https://www.facebook.com/shopthegateway/">
+                        <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977125000/12.jpg" alt="Facebook"/>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-facebook hover_icon" aria-hidden="true"></i>
+                                <h3>SHOPGATEWAY</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature_10 grid-item grid-item--width2"></div>
+            <div class="grid-item"> <!--SnapChat-->
+                <div class="snapchat social ih-item circle effect19">
+                    <a href="#" data-toggle="modal" data-target="#snap_modal">
+                        <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977122000/10.jpg" alt="SnapChat"/>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-snapchat-ghost hover_icon" aria-hidden="true"></i>
+                                <h3>@ShopTheGateway</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>    
+            </div>
+        </div>
+        <div class="grid grid_mobile visible_phone">
+            <div class="grid-sizer"></div>
+            <div class="feature_8 grid-item grid-item--width2"></div>
+            <div class="feature_7 grid-item grid-item--height2"></div>
+            <div class="feature_9 grid-item"></div>
+            <div class="grid-item"> <!--SnapChat-->
+                <div class="snapchat social ih-item circle effect19">
+                    <a href="#" data-toggle="modal" data-target="#snap_modal">
+                        <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977122000/10.jpg" alt="SnapChat"/>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-snapchat-ghost hover_icon" aria-hidden="true"></i>
+                                <h3>@ShopTheGateway</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>    
+            </div>
+            <div class="feature_10 grid-item grid-item--width2"></div>
+            <div class="grid-item"> <!--INSTAGRAM-->
+                <div class="social ih-item circle effect19">
+                    <a href="https://www.instagram.com/shopthegateway/">
+                        <div class="instafeed_single"></div>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-instagram hover_icon" aria-hidden="true"></i>
+                                <h3>@SHOPGATEWAY</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item"> <!--FACEBOOK-->
+                <div class="social ih-item circle effect19">
+                    <a href="https://www.facebook.com/shopthegateway/">
+                        <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/jpeg/1499977125000/12.jpg" alt="Facebook"/>
+                        <div class="info">
+                            <div class="content">
+                                <i class="fa fa-facebook hover_icon" aria-hidden="true"></i>
+                                <h3>SHOPGATEWAY</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="margin_30"></div>
+        
+        <div class="site_container">
+            <h3 class="home_page_title caps">In Our Feed @ShopTheGateway</h3>
+        </div>
+        <div id="instafeed"></div>
+        <div class="margin_60"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var banners = getBanners();
+            renderBanner('#banner_template','#home_banner',banners);
+            
+            var today_hours = getTodaysHours();
+            renderHomeHours('#home_hours_container_desktop', '#home_hours_template_desktop', today_hours);
+            renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
+            
+            var feature_items = getFeatureList();
+            renderFeatureItems();
+            
+            // init Masonry
+            var $grid_desktop = $('.grid_desktop').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_desktop.imagesLoaded().progress( function() {
+                $grid_desktop.masonry('layout');
+            });
+            
+            // init Masonry
+            var $grid_mobile = $('.grid_mobile').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_mobile.imagesLoaded().progress( function() {
+                $grid_mobile.masonry('layout');
+            });
+
+            // var $grid_desktop = $('.grid_desktop').imagesLoaded( function() {
+            //     // init Masonry after all images have loaded
+            //     $grid_desktop.masonry({
+            //         columnWidth: '.grid-sizer',
+            //         itemSelector: '.grid-item',
+            //         percentPosition: true
+            //     });
+            // });
+            
+            // var $grid_mobile = $('.grid_mobile').imagesLoaded( function() {
+            //     // init Masonry after all images have loaded
+            //     $grid_mobile.masonry({
+            //         columnWidth: '.grid-sizer',
+            //         itemSelector: '.grid-item',
+            //         originLeft: false,
+            //         percentPosition: true
+            //     });
+            // });
+
+            show_content();
+            
+            $('.flexslider').flexslider({
+                animation: "slide",
+            });
+            $(".flex-prev").html(" ");
+            $(".flex-next").html(" ");
+
+            if($.cookie("popup_viewed") != "true"){
+                $.cookie("popup_viewed", "true", { expires: 1 });
+                var popup = getPopups()[0];
+                if (popup != undefined){
+                    $('.popup_home a').attr('href', popup.photo_link)
+                    $('.popup_home img').attr('src', '//mallmaverick.cdn.speedyrails.net' + popup.photo_url)
+                    $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+                    $('.popup_home').show()
+                }
+            }
+            $('.close_popup, .custom_backdrop').click(function(){
+                $(".modal-backdrop").remove();
+		        $(".popup_home").remove();
+            });
+        }
+        loadMallData(renderAll); 
+        
+        // function renderFeatureItems(){
+        //     var items = getFeatureList();
+        //     $.each(items, function(i, val){
+        //         $('.feature_' + i).html('<div class="ih-item circle effect19"><a href="'+ val.url +'"><img src="'+ val.image_url +'"alt="'+ val.name +'"><div class="info"><div class="content"><h3>'+ val.name +'</h3></div></div></a></div>')
+        //     })
+        // }
+    })
+</script>
