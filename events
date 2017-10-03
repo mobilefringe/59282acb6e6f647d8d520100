@@ -1,0 +1,113 @@
+<link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
+<script type="text/javascript" src="/fullcalendar.js"></script>
+<link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Calendar</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <iframe src="https://player.vimeo.com/video/222242282?title=0&byline=0&portrait=0" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div class="col-md-12">
+            <div class="margin_30"></div>
+            <div class="position_relative">
+                <ul class="event_calendar_header">
+                    <li><span id="discovery_tile"></span>Discovery Gateway</li>
+                    <li><span id="fountain_tile"></span>The Fountain</li>
+                    <li><span id="plaza_tile"></span>The Plaza</li>
+                    <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
+                </ul>
+                <div class="calendar" id="calendar"></div>
+                <div class="margin_60"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Events Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            
+            var calendar_events = [];
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            console.log(events);
+            $.each( events , function( key, val ){
+                var published_event = {};
+                today = moment();
+                five_months = moment().add('4', 'M').endOf("d");
+                if (today < five_months){
+                    webDate = moment(val.show_on_web_date);
+                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                        if(val.tags.indexOf("discovery") >= 0){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            published_event.title = val.name;
+                            published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#FFA400" : "#FFA400";
+                            published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                        } else if(val.tags.indexOf("plaza") >= 0){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            published_event.title = val.name;
+                            published_event.color = (val.tags.indexOf("plaza") >= 0 ) ? "#007CBA" : "#007CBA";
+                            published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                        } else if(val.tags.indexOf("fountain")){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            published_event.title = val.name;
+                            published_event.color =  (val.tags.indexOf("fountain") >= 0 ) ? "#C14F9D" : "#C14F9D";
+                            published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                        }
+                    }
+                }
+            });
+    
+            show_content();
+            
+            $('#calendar').fullCalendar({
+                header: {
+                    right:  'prev,next'
+                },
+                timezone: getPropertyTimeZone(),
+                events: calendar_events,
+                buttonText: {
+                    prev: "Previous Month",
+                    next: "Next Month"
+                },
+                viewRender: function(view,element) {
+                    var now = new Date();
+                    var end = new Date();
+                    end.setMonth(now.getMonth() + 3); //Adjust as needed
+        
+                    if ( end < view.end) {
+                        $("#calendar .fc-next-button").addClass("fc-state-disabled");
+                        return false;
+                    }
+                    else {
+                        $("#calendar .fc-next-button").removeClass("fc-state-disabled");
+                    }
+                }
+            });
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
