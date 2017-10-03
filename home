@@ -192,6 +192,16 @@
             renderHomeHours('#home_hours_container_desktop', '#home_hours_template_desktop', today_hours);
             renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
             
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/thegateway-home.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            });
+            
             var feature_items = getFeatureList();
             renderFeatureItems();
             
