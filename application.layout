@@ -216,8 +216,8 @@
     </section>
     <section id="sign_up" class="newsletter">
         <div class="site_container">
-            <h3 class="home_page_title caps">Stay Up-To-Date</h3>
-            <p>There’s a lot happening at The Gateway. Sign up for our newsletter so you don’t miss a thing. And trust us, we won’t bother you unless it’s something really important.</p>
+            <h3 class="home_page_title caps">Subscribe to Our Newsletter</h3>
+            <p>There’s a lot happening at The Gateway. Subscribe now so you don't miss a thing.</p>
             <form action="https://mobilefringe.createsend.com/t/d/s/milyku/" method="post" id="subForm">
                 <div>
                     <input id="fieldEmail" name="cm-milyku-milyku" type="email" required/>
