@@ -103,8 +103,8 @@
                         <div id="weather" class="pull-right hidden_phone"></div>
                         <div id="home_hours_container" class="pull-right">
                             <script id="home_hours_template" type="x-tmpl-mustache/text">
-                                <p class="open_now">{% raw %}{{open}} {{hours}} {% endraw %}</p> 
-                                <p class="todays_hours">{% raw %}{% endraw %}</p>
+                                <p class="open_now">{% raw %}  {% endraw %}</p> 
+                                <p class="todays_hours">{% raw %} {{open}} {{hours}} {% endraw %}</p>
                             </script>
                         </div> 
                     </div> 
