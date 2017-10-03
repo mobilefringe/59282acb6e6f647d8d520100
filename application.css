@@ -575,6 +575,7 @@ strong, .bold {
     }
     p {
         // padding: 0 15%;
+        color: #000;
     }
     .home_page_title:after {
         background: #FFF;
