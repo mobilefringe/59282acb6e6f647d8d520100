@@ -285,6 +285,7 @@ function show_content(){
             // html = '<i class="icon-'+weather.code+'"></i><p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
             html = '<i class="icon-' + weather.code + '"></i><span>' + weather.temp + '&deg;' + weather.units.temp + '</span>';
             $("#weather").html(html);
+            $("#weather_footer").html(html);
         },
         error: function(error) {
             $("#weather").html('<p>'+error+'</p>');
