@@ -614,11 +614,11 @@ strong, .bold {
         transition: background 0.3s ease;
         vertical-align: top;
         .fa-arrow-right {
-            color: #000;
+            color: $link;
             transition: all 0.3s ease;
         }
         &:hover {
-            background-color: $link;
+            // background-color: $link;
             .fa-arrow-right {
                 color: #FFF;
             }
