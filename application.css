@@ -420,6 +420,17 @@ strong, .bold {
 	text-align: center;
 }
 
+#primary_nav ul .menu_item {
+	margin: 0;
+	padding: 5px 0;
+	display: inline-block;
+	position: relative;
+    width: 150px;
+    vertical-align: bottom;
+    font-size: 18px;
+    text-align: center;
+}
+
 #primary_nav ul .menu_item a {
     padding: 0 15px;
 	display: block;
@@ -432,15 +443,7 @@ strong, .bold {
 	}
 }
 
-#primary_nav ul .menu_item {
-	margin: 0;
-	padding: 5px 0;
-	display: inline-block;
-	position: relative;
-    width: 150px;
-    font-size: 18px;
-    text-align: center;
-}
+
 
 #primary_nav ul li:hover {
 	background: rgba(0,0,0,0.6);
