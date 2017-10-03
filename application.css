@@ -618,7 +618,7 @@ strong, .bold {
             transition: all 0.3s ease;
         }
         &:hover {
-            // background-color: $link;
+            background-color: $link;
             .fa-arrow-right {
                 color: #FFF;
             }
