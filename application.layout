@@ -230,7 +230,7 @@
     <footer>
         <div class="wide_container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div id="weather_footer" class="pull-right hidden_phone"></div>
                     <div id="home_hours_container_footer" class="pull-right">
                         <script id="home_hours_template_footer" type="x-tmpl-mustache/text">
@@ -239,7 +239,7 @@
                         </script>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="site_logo visible_phone">
                         <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>
                     </div>
@@ -260,7 +260,7 @@
                         <p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>
                     </div>    
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="footer_social pull-right">
                         <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
