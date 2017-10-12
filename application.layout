@@ -90,7 +90,7 @@
                 <!--        </div>-->
                 <!--    </div>-->
                 <!--</div> -->
-                <div class="col-md-6">
+                <div class="col-md-6 hidden_phone">
                     <div class="header_social pull-right">
                         <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
