@@ -522,16 +522,14 @@ function renderPromotions(container, template, collection){
             } else {
                 val.image_url = default_image.image_url;
             }
-        }
-        else{
+        } else {
             val.store_name = mall_name;
             val.image_url = default_image.image_url;
         }
         
         if (val.name.length > 20){
             val.name_short = val.name.substring(0,19) + "...";
-        }
-        else {
+        } else {
             val.name_short = val.name;
         }
         
@@ -540,8 +538,7 @@ function renderPromotions(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
-        }
-        else{
+        } else {
             val.dates = start.format("MMM D") + " - " + end.format("MMM D");
         }
         
@@ -627,9 +624,6 @@ function renderStoreList(container, template, collection, type){
                 val.store_front_url_abs = default_image.image_url;
             } 
             if(val.assets != undefined){
-                // var hover_url = val.assets[0].url;
-                // val.hover_img = getImageURL(hover_url);
-                
                 var hover_url = getAssetURL(val.id);
                 val.hover_img = getImageURL(hover_url);
             
