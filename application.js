@@ -83,8 +83,7 @@ function renderEvents(container, template, collection){
         
         if (val.name.length > 30){
             val.name_short = val.name.substring(0,30) + "...";
-        }
-        else {
+        } else {
             val.name_short = val.name;
         }
         
@@ -93,8 +92,7 @@ function renderEvents(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
-        }
-        else{
+        } else {
             val.dates = start.format("MMM D") + " - " + end.format("MMM D")
         }
         
@@ -122,8 +120,7 @@ function renderEventDetails(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
-        }
-        else{
+        } else {
             val.dates = start.format("MMM D") + " - " + end.format("MMM D")
         }
         
@@ -265,7 +262,6 @@ function renderHours(container, template, collection, type){
                 } else {
                     "Closed";
                 }
-                
                 item_list.push(val);
             }
         });
@@ -279,8 +275,6 @@ function renderHours(container, template, collection, type){
                 var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 val.formatted_date = holiday.format("dddd MMM D YYYY");
                 if (val.open_time && val.close_time && val.is_closed == false){
-                    
-                    
                     var open_time = moment(val.open_time).tz(getPropertyTimeZone());
                     var close_time = moment(val.close_time).tz(getPropertyTimeZone());
                     val.h = open_time.format("h a") + " - " + close_time.format("h a");
@@ -313,8 +307,7 @@ function renderJobs(container, template, collection){
             val.store_name = getStoreDetailsByID(val.jobable_id).name;
             val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
             val.image_url = getStoreDetailsByID(val.jobable_id).store_front_url_abs;
-        }
-        else{
+        } else {
             val.store_name = mall_name;
             val.image_url = default_image.image_url;
         }
@@ -324,8 +317,7 @@ function renderJobs(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
-        }
-        else{
+        } else {
             val.dates = start.format("MMM D") + " - " + end.format("MMM D");
             val.end_date = end.format("MMM D");
         }
@@ -350,12 +342,10 @@ function renderJobDetails(container, template, collection){
             val.store_name = store_details.name;
             if (store_details.store_front_url_abs.indexOf('missing.png') > -1){
                 val.image_url = default_image.image_url;
-            }
-            else{
+            } else {
                 val.image_url = store_details.store_front_url_abs;
             }
-        }
-        else{
+        } else {
             val.store_name = mall_name;
             val.image_url = default_image.image_url;
         }
@@ -365,8 +355,7 @@ function renderJobDetails(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
-        }
-        else{
+        } else {
             val.dates = start.format("MMM D") + " - " + end.format("MMM D")
         }
         var rendered = Mustache.render(template_html,val);
@@ -430,8 +419,7 @@ function renderPosts(container, template, collection){
         
         if(val.body.length > 155){
             val.description_short = val.body.substring(0, 154) + "...";
-        }
-        else{
+        } else {
             val.description_short = val.body;
         }
         val.description_short = val.description_short.replace("&amp;", "&");
@@ -464,8 +452,7 @@ function renderPostDetails(container, template, collection, blog_posts){
         
         if(val.body.length > 100){
             val.description_short = val.body.substring(0,100) + "...";
-        }
-        else{
+        } else {
             val.description_short = val.body;
         }
 
@@ -632,8 +619,11 @@ function renderStoreList(container, template, collection, type){
             }
         }
         
+        if(val.categories != null){
+            val.cat_list = val.categories.join(',')
+        }
+        
         var current_initial = val.name[0];
-        val.cat_list = val.categories.join(',')
         if(store_initial.toLowerCase() == current_initial.toLowerCase()){
             val.initial = "";
             val.show = "display:none;";
