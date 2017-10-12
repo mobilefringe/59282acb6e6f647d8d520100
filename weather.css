@@ -24,6 +24,7 @@
 
 #weather, #weather_footer {
     // margin: 5px auto;
+    margin-top: -3px;
     width: 50px;
     display: inline-block;
     text-align: center;
