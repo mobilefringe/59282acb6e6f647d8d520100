@@ -20,7 +20,7 @@
     </div>
     <div class="wide_container">
         <div class="site_container">
-            <h1>Sure, we have plenty of places to shop, but that’s just one part of the story at The Gateway.</h1>
+            <h2>Sure, we have plenty of places to shop, but that’s just one part of the story at The Gateway.</h2>
             <div id="mm_page_content" class="home_content"></div>
             <a href="#sign_up"><div class="subscribe_btn center caps">Subscribe to Our Newsletter <i class="fa fa-angle-right" aria-hidden="true"></i></div></a>
         </div>
