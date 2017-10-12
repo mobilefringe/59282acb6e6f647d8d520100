@@ -21,7 +21,7 @@
     <div class="wide_container">
         <div class="site_container">
             <div id="mm_page_content" class="home_content"></div>
-            <a href="#sign_up"><div class="subscribe">Subscribe to Our Newsletter</div></a>
+            <a href="#sign_up"><div class="subscribe_btn">Subscribe to Our Newsletter</div></a>
         </div>
         <!--<div class="site_container">-->
         <!--    <h3 class="home_page_title caps">Explore The Gateway</h3>-->
