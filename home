@@ -7,19 +7,21 @@
 </div>
 <!-- -->
 <div class="page_content">
-    <div class="flexslider">
-        <ul class="slides" id="home_banner">
-            <script id="banner_template" type="x-tmpl-mustache/text">
-                <li class="position_relative">
-                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
-                        <img class="banner_img" alt="banner" src="{{image_url}}" />
-                    </a>
-                </li>
-            </script>
-        </ul>
-    </div>
-    <div class="carrot_container">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    <div class="position_relative">
+        <div class="flexslider">
+            <ul class="slides" id="home_banner">
+                <script id="banner_template" type="x-tmpl-mustache/text">
+                    <li class="position_relative">
+                        <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                            <img class="banner_img" alt="banner" src="{{image_url}}" />
+                        </a>
+                    </li>
+                </script>
+            </ul>
+        </div>
+        <div class="carrot_container">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
     </div>
     <div class="site_container">
         <div class="row">
