@@ -16,7 +16,7 @@ function init(e) {
     			});
     			$('.nav_container').addClass('sticky');
     // 			$('.nav_container').fadeIn();
-    			$('.nav_container').slideToggle();
+    			$('.nav_container').slideDown();
     		}
     		if($(window).scrollTop() < scrollTop){
     			$('.nav_container').removeAttr('style');	
