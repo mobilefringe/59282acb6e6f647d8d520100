@@ -18,6 +18,9 @@
             </script>
         </ul>
     </div>
+    <div class="carrot_container">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
     <div class="site_container">
         <div class="row">
             <div class="col-md-12">
