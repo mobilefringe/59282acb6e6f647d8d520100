@@ -269,6 +269,12 @@
                 $(".modal-backdrop").remove();
 		        $(".popup_home").remove();
             });
+            
+            $("#sub_btn").click(function() {
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500);
+            })
         }
         loadMallData(renderAll); 
         
