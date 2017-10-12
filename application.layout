@@ -81,92 +81,94 @@
     </div>
     <header>
         <div class="top_bar">
-            <div class="row top_bar_wrapper">
-                <div class="col-md-6 hidden_phone"></div> 
-                <!--<div class="col-md-6">-->
-                <!--    <div class="marquee">-->
-                <!--        <div class="news-ticker">-->
-                <!--            <ul class="bulletin" id="bulletin"></ul>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div> -->
-                <div class="col-md-6 hidden_phone">
-                    <div class="header_social pull-right">
-                        <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="https://www.facebook.com/shopthegateway/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="modal" data-target="#snap_modal"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
-                        <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-                    </div> 
-                    <div id="weather" class="pull-right hidden_phone"></div>
-                    <div id="home_hours_container" class="pull-right">
-                        <script id="home_hours_template" type="x-tmpl-mustache/text">
-                            <p class="open_now">{% raw %}  {% endraw %}</p> 
-                            <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>
-                        </script>
-                    </div> 
-                </div> 
-                <div class="col-sm-12 visible_phone">
-                    <a href="/"><img class="property_logo" src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
-                </div>
-                <div id="menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="mobile_nav_container visible_phone">
-                    
-                    <nav id="mobile_nav">
-                        <ul>
-                            <div class="mobile_site_logo">
-                                <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
-                            </div>
-                            <li class="menu_item"><a href="#">Shopping</a>
-                                <ul>
-                                    <li class="dropdown_item"><a href="/stores">Directory</a></li>
-                                    <li class="dropdown_item"><a href="/map">Center Map</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu_item"><a href="#">Dining</a>
-                                <ul>
-                                    <li class="dropdown_item"><a href="/dine">Directory</a></li>
-                                    <li class="dropdown_item"><a href="/map">Center Map</a></li>
-                                </ul>    
-                            </li>
-                            <li class="menu_item"><a href="/showtimes">Showtimes</a></li>
-                            <li class="menu_item"><a href="/events">Calendar</a></li>
-                            <li class="menu_item"><a href="#">Explore</a>
-                                <ul>
-                                    <li class="dropdown_item"><a href="/hours">Hours</a></li>
-                                    <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
-                                    <li class="dropdown_item"><a href="/parking">Parking</a></li>
-                                    <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
-                                </ul>
-                            </li>
-                            <li class="menu_item"><a href="#">About</a>
-                                <ul>
-                                    <li class="dropdown_item"><a href="/gateway">The Gateway</a></li>
-                                    <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
-                                    <li class="dropdown_item"><a href="/posts">Press</a></li>
-                                    <li class="dropdown_item"><a href="/leasing">Leasing</a></li>
-                                    <li class="dropdown_item"><a href="/station_41">Station 41</a></li>
-                                    <li class="dropdown_item"><a href="/contact_us">Contact Us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="header_social">
+            <div class="wide_container">
+                <div class="row top_bar_wrapper">
+                    <div class="col-md-6 hidden_phone"></div> 
+                    <!--<div class="col-md-6">-->
+                    <!--    <div class="marquee">-->
+                    <!--        <div class="news-ticker">-->
+                    <!--            <ul class="bulletin" id="bulletin"></ul>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</div> -->
+                    <div class="col-md-6 hidden_phone">
+                        <div class="header_social pull-right">
                             <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="https://www.facebook.com/shopthegateway/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="modal" data-target="#snap_modal"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
                             <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-                            <!--<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>-->
-                            <!--<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>-->
-                            <!--<a href="#" data-toggle="modal" data-target="#snap_modal"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816065000/snapchat_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>-->
-                            <!--<a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816067000/spotify_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>-->
                         </div> 
-                    </nav>
+                        <div id="weather" class="pull-right hidden_phone"></div>
+                        <div id="home_hours_container" class="pull-right">
+                            <script id="home_hours_template" type="x-tmpl-mustache/text">
+                                <p class="open_now">{% raw %}  {% endraw %}</p> 
+                                <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>
+                            </script>
+                        </div> 
+                    </div> 
+                    <div class="col-sm-12 visible_phone">
+                        <a href="/"><img class="property_logo" src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
+                    </div>
+                    <div id="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mobile_nav_container visible_phone">
+                        
+                        <nav id="mobile_nav">
+                            <ul>
+                                <div class="mobile_site_logo">
+                                    <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
+                                </div>
+                                <li class="menu_item"><a href="#">Shopping</a>
+                                    <ul>
+                                        <li class="dropdown_item"><a href="/stores">Directory</a></li>
+                                        <li class="dropdown_item"><a href="/map">Center Map</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu_item"><a href="#">Dining</a>
+                                    <ul>
+                                        <li class="dropdown_item"><a href="/dine">Directory</a></li>
+                                        <li class="dropdown_item"><a href="/map">Center Map</a></li>
+                                    </ul>    
+                                </li>
+                                <li class="menu_item"><a href="/showtimes">Showtimes</a></li>
+                                <li class="menu_item"><a href="/events">Calendar</a></li>
+                                <li class="menu_item"><a href="#">Explore</a>
+                                    <ul>
+                                        <li class="dropdown_item"><a href="/hours">Hours</a></li>
+                                        <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
+                                        <li class="dropdown_item"><a href="/parking">Parking</a></li>
+                                        <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
+                                    </ul>
+                                </li>
+                                <li class="menu_item"><a href="#">About</a>
+                                    <ul>
+                                        <li class="dropdown_item"><a href="/gateway">The Gateway</a></li>
+                                        <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
+                                        <li class="dropdown_item"><a href="/posts">Press</a></li>
+                                        <li class="dropdown_item"><a href="/leasing">Leasing</a></li>
+                                        <li class="dropdown_item"><a href="/station_41">Station 41</a></li>
+                                        <li class="dropdown_item"><a href="/contact_us">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="header_social">
+                                <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/shopthegateway/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                <a href="#" data-toggle="modal" data-target="#snap_modal"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+                                <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+                                <!--<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>-->
+                                <!--<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>-->
+                                <!--<a href="#" data-toggle="modal" data-target="#snap_modal"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816065000/snapchat_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>-->
+                                <!--<a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816067000/spotify_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>-->
+                            </div> 
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
