@@ -15,11 +15,13 @@ function init(e) {
     				top : '0'
     			});
     			$('.nav_container').addClass('sticky');
-    			$('.nav_container').fadeIn();
+    // 			$('.nav_container').fadeIn();
+    			$('.nav_container').slideToggle();
     		}
     		if($(window).scrollTop() < scrollTop){
     			$('.nav_container').removeAttr('style');	
     			$('.nav_container').removeClass('sticky');
+    			$('.nav_container').slideToggle();
     		}
     	})
     }
