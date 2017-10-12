@@ -23,7 +23,7 @@
 }
 
 #weather, #weather_footer {
-    margin: 5px auto;
+    // margin: 5px auto;
     width: 50px;
     display: inline-block;
     text-align: center;
