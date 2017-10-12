@@ -107,7 +107,7 @@
                     </div> 
                 </div> 
                 <div class="col-sm-12 visible_phone">
-                    <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
+                    <a href="/"><img class="property_logo" src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
                 </div>
                 <div id="menu-icon">
                     <span></span>
