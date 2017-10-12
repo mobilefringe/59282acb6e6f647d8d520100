@@ -21,7 +21,7 @@ function init(e) {
     		if($(window).scrollTop() < scrollTop){
     			$('.nav_container').removeAttr('style');	
     			$('.nav_container').removeClass('sticky');
-    // 			$('.nav_container').slideToggle();
+    			$('.nav_container').slideUp();
     		}
     	})
     }
