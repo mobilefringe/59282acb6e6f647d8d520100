@@ -31,9 +31,9 @@
 }
 
 i {
-  color: #FFF;
+  color: #777;
   font-family: weather;
-  font-size: 50px;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   line-height: 0;
@@ -90,8 +90,8 @@ i {
 .icon-47:before { content: "S"; }
 
 #weather span {
-  margin: 0;
-  color: #fff;
+  margin: 5px;
+  color: #777;
   font-size: 14px;
   line-height: 17px;
   font-weight: 300;
