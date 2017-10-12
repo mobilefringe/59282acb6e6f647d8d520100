@@ -22,7 +22,7 @@
     font-style: normal;
 }
 
-#weather {
+#weather, #weather_footer {
     margin: 5px auto;
     width: 50px;
     display: inline-block;
@@ -89,7 +89,7 @@ i {
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
 
-#weather span {
+#weather span, #weather_footer span {
   margin: 5px;
   color: #777;
   font-size: 14px;
@@ -99,12 +99,12 @@ i {
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-#weather ul {
+#weather ul, #weather_footer ul {
   margin: 0;
   padding: 0;
 }
 
-#weather li {
+#weather li, #weather_footer li {
   background: #fff;
   background: rgba(255,255,255,0.90);
   padding: 20px;
