@@ -686,15 +686,19 @@ function renderStoreDetails(container, template, collection, slug){
         } else {
             val.coming_soon_store = "display: none;"
         }
-        val.category_list = getCategoriesNamesByStoreSlug(slug);
+        
+        var cat_list = getCategoriesNamesByStoreSlug(slug);
+        if(cat_list != null){
+            val.category_list = cat_list;
+        }
+        
         val.map_x_coordinate = val.x_coordinate - 19;
         val.map_y_coordinate = val.y_coordinate - 58;
         val.property_map = getPropertyDetails().mm_host + getPropertyDetails().map_url;
         
         if (val.website != null && val.website.length > 0){
             val.show = "display:inline-block";
-        }
-        else{
+        } else {
             val.show = "display:none";
         }
         
@@ -734,7 +738,6 @@ function renderStoreDetailsHours(container, template, collection){
             case 6:
                 val.day = "Saturday";
                 break;
-            
         }
         var open_time = moment(val.open_time).tz(getPropertyTimeZone());
         var close_time = moment(val.close_time).tz(getPropertyTimeZone());
