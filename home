@@ -20,7 +20,9 @@
             </ul>
         </div>
         <div class="carrot_container">
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <span class="animated infinite bounce" >
+                <i class="fa fa-angle-down " aria-hidden="true"></i>
+            </span>
         </div>
     </div>
     <div class="site_container">
