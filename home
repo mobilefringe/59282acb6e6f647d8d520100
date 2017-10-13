@@ -35,27 +35,29 @@
         </div>
     </div>
     <div class="wide_container">
-        <div class="grid grid_desktop hidden_phone">
-            <div class="grid-sizer"></div>
-            <div class="feature_0 grid-item grid-item--height2"></div>
-            <div class="feature_1 grid-item"></div>
-            <div class="feature_2 grid-item grid-item--width2"></div>
-            <div class="feature_3 grid-item"></div>
-            <div class="feature_4 grid-item"></div>
-            <div class="feature_5 grid-item"></div>
-            <div class="feature_6 grid-item"></div>
-            <div class="feature_7 grid-item"></div>
-        </div>
-        <div class="grid grid_mobile visible_phone">
-            <div class="grid-sizer"></div>
-            <div class="feature_2 grid-item grid-item--width2"></div>
-            <div class="feature_0 grid-item grid-item--height2"></div>
-            <div class="feature_1 grid-item"></div>
-            <div class="feature_3 grid-item"></div>
-            <div class="feature_4 grid-item"></div>
-            <div class="feature_5 grid-item"></div>
-            <div class="feature_6 grid-item"></div>
-            <div class="feature_7 grid-item"></div>
+        <div>
+            <div class="grid grid_desktop hidden_phone">
+                <div class="grid-sizer"></div>
+                <div class="feature_0 grid-item grid-item--height2"></div>
+                <div class="feature_1 grid-item"></div>
+                <div class="feature_2 grid-item grid-item--width2"></div>
+                <div class="feature_3 grid-item"></div>
+                <div class="feature_4 grid-item"></div>
+                <div class="feature_5 grid-item"></div>
+                <div class="feature_6 grid-item"></div>
+                <div class="feature_7 grid-item"></div>
+            </div>
+            <div class="grid grid_mobile visible_phone">
+                <div class="grid-sizer"></div>
+                <div class="feature_2 grid-item grid-item--width2"></div>
+                <div class="feature_0 grid-item grid-item--height2"></div>
+                <div class="feature_1 grid-item"></div>
+                <div class="feature_3 grid-item"></div>
+                <div class="feature_4 grid-item"></div>
+                <div class="feature_5 grid-item"></div>
+                <div class="feature_6 grid-item"></div>
+                <div class="feature_7 grid-item"></div>
+            </div>
         </div>
     </div>
     <div class="margin_30"></div>
