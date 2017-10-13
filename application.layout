@@ -163,10 +163,6 @@
                                 <a href="https://www.facebook.com/shopthegateway/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                                 <a href="#" data-toggle="modal" data-target="#snap_modal"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
                                 <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-                                <!--<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>-->
-                                <!--<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>-->
-                                <!--<a href="#" data-toggle="modal" data-target="#snap_modal"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816065000/snapchat_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>-->
-                                <!--<a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816067000/spotify_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>-->
                             </div> 
                         </nav>
                     </div>
@@ -175,9 +171,6 @@
         </div>
         <div class="site_container">
             <div class="nav_container hidden_phone">
-                <!--<div class="site_logo">-->
-                <!--    <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>-->
-                <!--</div>-->
                 <div class="row top_nav hidden_phone">
                     <nav id="primary_nav">
                         <ul>
