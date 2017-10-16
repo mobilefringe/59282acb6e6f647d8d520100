@@ -25,7 +25,7 @@
                 <script id="banner_template" type="x-tmpl-mustache/text">
                     <li class="position_relative">
                         <a href="{{url}}" {{css}} onclick="{{noLink}}">
-                            <div style="background-image{{image_url}}"></div>
+                            <div style="background-image: url{{image_url}}"></div>
                             
                         </a>
                     </li>
