@@ -1,3 +1,12 @@
+<style>
+    .slider_img {
+        background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 540px;
+    }
+</style>
+
 <!-- POP UP -->
 <div class="popup_home hidden_now">
     <a href="#" target="_blank">
@@ -25,7 +34,7 @@
                 <script id="banner_template" type="x-tmpl-mustache/text">
                     <li class="position_relative">
                         <a href="{{url}}" {{css}} onclick="{{noLink}}">
-                            <div style="background-image: url({{image_url}})"></div>
+                            <div class="slider_img" style="background-image: url({{image_url}})"></div>
                             
                         </a>
                     </li>
