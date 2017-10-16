@@ -1,12 +1,3 @@
-<style>
-    .slider_img {
-        background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 830px;
-    }
-</style>
-
 <!-- POP UP -->
 <div class="popup_home hidden_now">
     <a href="#" target="_blank">
