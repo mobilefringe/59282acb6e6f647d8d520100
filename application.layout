@@ -118,7 +118,7 @@
                         <span></span>
                     </div>
                     <div class="mobile_nav_container visible_phone">
-                        <a href="/"><img class="property_logo" src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
+                        <a href="/"><img class="property_logo pull_left" src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
                         <nav id="mobile_nav">
                             <ul>
                                 <div class="mobile_site_logo">
