@@ -84,7 +84,6 @@
         <div class="top_bar">
             <div class="wide_container">
                 <div class="row top_bar_wrapper">
-                    <div class="col-md-6 hidden_phone"></div> 
                     <!--<div class="col-md-6">-->
                     <!--    <div class="marquee">-->
                     <!--        <div class="news-ticker">-->
@@ -92,7 +91,7 @@
                     <!--        </div>-->
                     <!--    </div>-->
                     <!--</div> -->
-                    <div class="col-md-6 hidden_phone">
+                    <div class="col-md-12 hidden_phone pull-right">
                         <div class="header_social pull-right">
                             <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -118,7 +117,6 @@
                         <span></span>
                     </div>
                     <div class="mobile_nav_container visible_phone">
-                        
                         <nav id="mobile_nav">
                             <ul>
                                 <div class="mobile_site_logo">
