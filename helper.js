@@ -146,10 +146,11 @@ function get_instagram_feed(url, total, size, callback){
                 if(v.caption != null){
                     if(v.caption.text.length > 100){
                         feed_obj.caption_short = v.caption.text.substring(0,99) + "...";
+                    } else {
+                        feed_obj.caption_short = v.caption.text;
                     }
-                    // feed_obj.caption = v.caption.text
                 } else {
-                    feed_obj.caption = v.caption.text;
+                    feed_obj.caption = ""
                 }
                 feed_obj.image = v.images[size].url
                 feed_obj.link = v.link
