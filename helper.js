@@ -148,9 +148,8 @@ function get_instagram_feed(url, total, size, callback){
                         feed_obj.caption_short = v.caption.text.substring(0,99) + "...";
                     }
                     // feed_obj.caption = v.caption.text
-                }
-                else{
-                    feed_obj.caption = ""
+                } else {
+                    feed_obj.caption = v.caption.text;
                 }
                 feed_obj.image = v.images[size].url
                 feed_obj.link = v.link
