@@ -33,7 +33,7 @@
             </ul>
         </div>
         <div class="carrot_container">
-            <i class="fa fa-angle-down animated infinite bounce" aria-hidden="true"></i>
+            <i class="fa fa-angle-down animated infinite flash" aria-hidden="true"></i>
         </div>
     </div>
     <div class="site_container">
