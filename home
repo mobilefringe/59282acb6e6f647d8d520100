@@ -134,6 +134,7 @@
             $('.flexslider').flexslider({
                 animation: "slide",
                 direction: "vertical", 
+                reverse: true,
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
