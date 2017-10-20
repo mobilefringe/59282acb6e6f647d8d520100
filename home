@@ -132,8 +132,8 @@
             show_content();
             
             $('.flexslider').flexslider({
-                animation: "fade",
-                // direction: "vertical", 
+                animation: "slide",
+                direction: "vertical", 
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
