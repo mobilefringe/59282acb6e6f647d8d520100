@@ -133,7 +133,7 @@
             
             $('.flexslider').flexslider({
                 animation: "fade",
-                direction: "vertical", 
+                // direction: "vertical", 
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
