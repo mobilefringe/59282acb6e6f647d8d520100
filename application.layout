@@ -206,6 +206,8 @@
                                     <li class="dropdown_item"><a href="/leasing">Leasing</a></li>
                                     <li class="dropdown_item"><a href="/station_41">Station 41</a></li>
                                     <li class="dropdown_item"><a href="/contact_us">Contact Us</a></li>
+                                    <li class="dropdown_item"><a href="/">Office</a></li>
+                                    <li class="dropdown_item"><a href="/">Living</a></li>
                                 </ul>
                             </li>
                         </ul>
