@@ -133,6 +133,7 @@
             
             $('.flexslider').flexslider({
                 animation: "slide",
+                animationSpeed: 400, 
                 direction: "vertical", 
                 reverse: true,
             });
