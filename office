@@ -29,7 +29,7 @@
 $(document).ready(function(e){
     init(e);
     function renderAll(){
-        var repo = getRepoDetailsByName("Gateway Living Banner");
+        var repo = getRepoDetailsByName("Office Banner");
         if (repo != undefined) {
             var banner = getImageURL(repo.images[0].photo_url);
             $(".page_header").css({backgroundImage: "url(" + banner + ")"});
