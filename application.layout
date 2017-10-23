@@ -193,7 +193,7 @@
                                 <ul>
                                     <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
                                     <li class="dropdown_item"><a href="/parking">Parking</a></li>
-                                    <li class="dropdown_item"><a href="/gateway_living">Living</a></li>
+                                    <li class="dropdown_item"><a href="/living">Living</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="/gateway">About</a>
