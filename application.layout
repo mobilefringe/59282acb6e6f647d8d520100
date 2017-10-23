@@ -99,12 +99,12 @@
                             <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
                         </div> 
                         <div id="weather" class="pull-right hidden_phone"></div>
-                        <div id="home_hours_container" class="pull-right">
-                            <script id="home_hours_template" type="x-tmpl-mustache/text">
-                                <p class="open_now">{% raw %}  {% endraw %}</p> 
-                                <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>
-                            </script>
-                        </div> 
+                        <!--<div id="home_hours_container" class="pull-right">-->
+                        <!--    <script id="home_hours_template" type="x-tmpl-mustache/text">-->
+                        <!--        <p class="open_now">{% raw %}  {% endraw %}</p> -->
+                        <!--        <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>-->
+                        <!--    </script>-->
+                        <!--</div> -->
                     </div> 
                     <div class="col-sm-12 visible_phone">
                         <a href="/"><img class="property_logo" src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>
@@ -137,7 +137,7 @@
                                 <li class="menu_item"><a href="/events">Calendar</a></li>
                                 <li class="menu_item"><a href="#">Explore</a>
                                     <ul>
-                                        <li class="dropdown_item"><a href="/hours">Hours</a></li>
+                                        <!--<li class="dropdown_item"><a href="/hours">Hours</a></li>-->
                                         <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
                                         <li class="dropdown_item"><a href="/parking">Parking</a></li>
                                         <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
@@ -237,12 +237,12 @@
         <div class="wide_container">
             <div class="row">
                 <div class="col-md-3 hidden_phone">
-                    <div id="home_hours_container_footer" class="pull-left">
-                        <script id="home_hours_template_footer" type="x-tmpl-mustache/text">
-                            <p class="open_now">{% raw %}  {% endraw %}</p> 
-                            <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>
-                        </script>
-                    </div>
+                    <!--<div id="home_hours_container_footer" class="pull-left">-->
+                    <!--    <script id="home_hours_template_footer" type="x-tmpl-mustache/text">-->
+                    <!--        <p class="open_now">{% raw %}  {% endraw %}</p> -->
+                    <!--        <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>-->
+                    <!--    </script>-->
+                    <!--</div>-->
                     <div id="weather_footer" class="pull-left"></div>
                 </div>
                 <div class="col-md-6">
