@@ -191,9 +191,9 @@
                                 <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1508191989000/logo.png" alt="Property Logo"/></a>
                             </li>
                             <li class="menu_item"><a href="/events">Calendar</a></li>
-                            <li class="menu_item"><a href="/hours">Explore</a>
+                            <li class="menu_item"><a href="/getting_here">Explore</a>
                                 <ul>
-                                    <li class="dropdown_item"><a href="/hours">Hours</a></li>
+                                    <!--<li class="dropdown_item"><a href="/hours">Hours</a></li>-->
                                     <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
                                     <li class="dropdown_item"><a href="/parking">Parking</a></li>
                                     <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
