@@ -52,23 +52,23 @@
             <div class="grid grid_desktop hidden_phone">
                 <div class="grid-sizer"></div>
                 <div class="feature_0 grid-item grid-item--height2"></div>
-                <div class="grid-item">
-                    <div class="ih-item circle effect19">
-                        <a href="">
-                            <video loop autoplay id="bgvid" poster="">
-                                <source src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/video/mp4/1509121457000/gatewayvideo.mp4" type="video/mp4">
-                                <img src="" class="" alt="poster">
-                            </video>
+                <div class=" feature_1 grid-item">
+                    <!--<div class="ih-item circle effect19">-->
+                    <!--    <a href="">-->
+                    <!--        <video loop autoplay id="bgvid" poster="">-->
+                    <!--            <source src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/video/mp4/1509121457000/gatewayvideo.mp4" type="video/mp4">-->
+                    <!--            <img src="" class="" alt="poster">-->
+                    <!--        </video>-->
                             
                             
-                            <div class="info">
-                                <div class="content">
-                                    <h3>Station 41</h3>
-                                </div>
-                            </div>
-                        </a>
+                    <!--        <div class="info">-->
+                    <!--            <div class="content">-->
+                    <!--                <h3>Station 41</h3>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </a>-->
                             
-                    </div>
+                    <!--</div>-->
                 </div>
                 <div class="feature_2 grid-item grid-item--width2"></div>
                 <div class="feature_3 grid-item"></div>
