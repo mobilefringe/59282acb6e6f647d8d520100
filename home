@@ -88,11 +88,7 @@
         function renderAll(){
             var banners = getBanners();
             renderBanner('#banner_template','#home_banner',banners);
-            
-            // var today_hours = getTodaysHours();
-            // renderHomeHours('#home_hours_container_desktop', '#home_hours_template_desktop', today_hours);
-            // renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
-            
+
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-home.json"
             $.getJSON(pages_json).done(function(data) {
@@ -118,16 +114,16 @@
             });
             
             // init Masonry
-            var $grid_mobile = $('.grid_mobile').masonry({
-                columnWidth: '.grid-sizer',
-                itemSelector: '.grid-item',
-                originLeft: false,
-                percentPosition: true
-            });
-            // layout Masonry after each image loads
-            $grid_mobile.imagesLoaded().progress( function() {
-                $grid_mobile.masonry('layout');
-            });
+            // var $grid_mobile = $('.grid_mobile').masonry({
+            //     columnWidth: '.grid-sizer',
+            //     itemSelector: '.grid-item',
+            //     originLeft: false,
+            //     percentPosition: true
+            // });
+            // // layout Masonry after each image loads
+            // $grid_mobile.imagesLoaded().progress( function() {
+            //     $grid_mobile.masonry('layout');
+            // });
 
             show_content();
             
