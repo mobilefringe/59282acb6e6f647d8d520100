@@ -139,7 +139,9 @@
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
-
+            
+            show_content();
+            
             if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
                 var popup = getPopups()[0];
@@ -160,6 +162,7 @@
                     scrollTop: $($.attr(this, 'href')).offset().top
                 }, 1000);
             })
+            
         }
         loadMallData(renderAll); 
         
