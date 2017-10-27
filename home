@@ -130,17 +130,17 @@
                 $grid_desktop.masonry('layout');
             });
             
-            // init Masonry
-            // var $grid_mobile = $('.grid_mobile').masonry({
-            //     columnWidth: '.grid-sizer',
-            //     itemSelector: '.grid-item',
-            //     originLeft: false,
-            //     percentPosition: true
-            // });
-            // // layout Masonry after each image loads
-            // $grid_mobile.imagesLoaded().progress( function() {
-            //     $grid_mobile.masonry('layout');
-            // });
+            init Masonry
+            var $grid_mobile = $('.grid_mobile').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_mobile.imagesLoaded().progress( function() {
+                $grid_mobile.masonry('layout');
+            });
 
             show_content();
             
