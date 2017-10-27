@@ -89,9 +89,9 @@
             var banners = getBanners();
             renderBanner('#banner_template','#home_banner',banners);
             
-            var today_hours = getTodaysHours();
-            renderHomeHours('#home_hours_container_desktop', '#home_hours_template_desktop', today_hours);
-            renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
+            // var today_hours = getTodaysHours();
+            // renderHomeHours('#home_hours_container_desktop', '#home_hours_template_desktop', today_hours);
+            // renderHomeHours('#home_hours_container_mobile', '#home_hours_template_mobile', today_hours);
             
             var prefix = get_prefix();
             var pages_json = prefix + "/pages/thegateway-home.json"
