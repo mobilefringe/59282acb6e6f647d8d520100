@@ -113,7 +113,7 @@
                 $grid_desktop.masonry('layout');
             });
             
-            init Masonry
+            //init Masonry
             var $grid_mobile = $('.grid_mobile').masonry({
                 columnWidth: '.grid-sizer',
                 itemSelector: '.grid-item',
