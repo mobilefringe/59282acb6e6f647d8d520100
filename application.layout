@@ -184,7 +184,13 @@
                                     <li class="dropdown_item"><a href="/map">Center Map</a></li>
                                 </ul> 
                             </li>
-                            <li class="menu_item"><a href="/showtimes">Entertainment</a></li>
+                            <li class="menu_item"><a href="/entertainment">Entertainment</a>
+                                <ul>
+                                    <li class="dropdown_item"><a href="/entertainment">Entertainment</a></li>
+                                    <li class="dropdown_item"><a href="/map">Center Map</a></li>
+                                </ul> 
+                            </li>
+                            <!--<li class="menu_item"><a href="/showtimes">Entertainment</a></li>-->
                             <li class="menu_item site_logo">
                                 <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1508191989000/logo.png" alt="Property Logo"/></a>
                             </li>
