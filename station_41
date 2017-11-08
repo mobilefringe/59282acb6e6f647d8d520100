@@ -94,7 +94,7 @@
             var repo = getRepoDetailsByName("Station41 Banner");
             if (repo != undefined) {
                 var banner = getImageURL(repo.images[0].photo_url);
-                $(".station_header").css({backgroundImage: "url(" + banner + ")"});
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
             
             $('.video_still').click(function(){
