@@ -1,0 +1,178 @@
+<style>
+    .gallery_image {
+        max-width: 100%;
+    }
+    .custom_modal {
+        width: auto;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 555px;
+    }
+    @media (max-width: 768px) {
+        iframe {
+            height: 455px;
+        }
+    } 
+    @media (max-width: 425px) {
+        iframe {
+            height: 215px;
+        }
+    } 
+</style>
+<!-- GALLERY MODAL -->
+<div class="custom-modal-backdrop"></div>
+<div class="custom_modal">
+    <span class="modal_close"><i class="fa fa-times" aria-hidden="true"></i></span>
+    <a class="open_details_modal" id="prev" data-modal-id="id">
+        <i class="fa fa-chevron-left prev_arrow" aria-hidden="true"></i>
+    </a>
+    <a class="open_details_modal" id="next" data-modal-id="id">
+        <i class="fa fa-chevron-right next_arrow" aria-hidden="true"></i>
+    </a>
+    <div class="">
+        <img class="modal_img" src="http://placehold.it/337x337" />
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- -->
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Office</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="center" id="mm_page_content"></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!--<a href="https://vimeo.com/223487697" data-remote="https://player.vimeo.com/video/223487697" data-toggle="lightbox">-->
+                <img class="video_still" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1500064745000/Gateway Video Image.png" alt="Station 41" data-video="https://player.vimeo.com/video/223487697?title=0&byline=0&portrait=0"/>
+            <!--</a>-->
+        </div>
+    </div>
+    <div class="row">
+        <div id="gallery_container">
+            <script id="gallery_template" type="x-tmpl-mustache/text">
+                <div class="col-sm-6 col-md-3">
+                    <div class="gallery_content">
+                        <div class="gallery_image">
+                            <a class="open_details_modal" data-modal-id="{{id}}">
+                                <img src="{{gallery_image}}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="leasing_title center caps">Contact Leasing</h2>  
+            <h4 class="margin_20 center">To explore leasing opportunities at The Gateway, please call:<br class="hidden_phone"> Cushman & Wakefield Commerce at 801-322-2000 or visit <a class="link" href="//www.cushmanwakefield.com/" target="_blank">CushmanWakefield.com</a>.</h4>
+            <div class="thick_line_center"></div>
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Station41 Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".station_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            
+            $('.video_still').click(function(){
+                video = '<iframe class="station_video" src="'+ $(this).attr('data-video') +'"></iframe>';
+                $(this).replaceWith(video);
+            });
+            var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
+            renderGallery("#gallery_container", "#gallery_template", gallery);
+            
+            var id_list = [];
+            $.each(gallery, function(key, val) {
+                var id = val.id;
+                id_list.push(val.id);
+            });
+            
+            var window_width = $( window ).width();
+            if (window_width < 769) {
+                $('a').removeClass('open_details_modal');
+            }
+            $('.custom-modal-backdrop').click(function(){
+                $('body').removeClass('gallery_no_scroll');
+                $('.custom_modal').fadeOut();
+                $('.custom-modal-backdrop').fadeOut();
+            });
+            
+            $('.modal_close').click(function(){
+                $('body').removeClass('gallery_no_scroll');
+                $('.custom_modal').fadeOut();
+                $('.custom-modal-backdrop').fadeOut();
+            });
+        
+            $('.open_details_modal').click(function(e){
+                e.preventDefault();
+                $('body').addClass('gallery_no_scroll');
+                
+                var modal_id = $(this).attr('data-modal-id');
+                $.each(gallery, function(fi_i, fi_val){
+                    if (fi_val.id == modal_id){
+                        fi = fi_val;
+                    }
+                });
+                var current_id = fi.id;
+                var index = id_list.indexOf(current_id);
+                if(index >= 0 && index < id_list.length){
+                   var next = id_list[index + 1];
+                   $('.next_arrow').show();
+                   if(next === undefined) {
+                       $('.next_arrow').hide();
+                   }
+                }
+                if(index >= 0 && index < id_list.length){
+                   var prev = id_list[index - 1];
+                   $('.prev_arrow').show();
+                   if(prev === undefined) {
+                       $('.prev_arrow').hide();
+                   }
+                }
+                $('.custom-modal-backdrop').fadeIn();
+                $('.custom_modal').fadeIn();
+                $('.modal_img').attr('src', fi.gallery_image);
+                $('#modal_name').html(fi.caption);
+                $('#modal_desc').html(fi.description);
+                $('#prev').attr('data-modal-id', prev);
+                $('#next').attr('data-modal-id', next);
+            });
+        
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/thegateway-station41.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
