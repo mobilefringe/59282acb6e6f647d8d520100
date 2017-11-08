@@ -121,24 +121,9 @@
                                 <div class="mobile_site_logo">
                                     <!--<a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>-->
                                 </div>
-                                <li class="menu_item"><a href="#">Shopping</a>
-                                    <ul>
-                                        <li class="dropdown_item"><a href="/stores">Directory</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li class="menu_item"><a href="#">Dining</a>
-                                    <ul>
-                                        <li class="dropdown_item"><a href="/dine">Directory</a></li>
-                                        
-                                    </ul>    
-                                </li>
-                                <li class="menu_item"><a href="#">Entertainment</a>
-                                    <ul>
-                                        <li class="dropdown_item"><a href="/entertainment">Directory</a></li>
-                                    
-                                    </ul> 
-                                </li>
+                                <li class="menu_item"><a href="/stores">Shopping</a></li>
+                                <li class="menu_item"><a href="/dine">Dining</a></li>
+                                <li class="menu_item"><a href="/entertainment">Entertainment</a></li>
                                 <!--<li class="menu_item"><a href="/showtimes">Showtimes</a></li>-->
                                 <li class="menu_item"><a href="/map">Center Map</a></li>
                                 <li class="menu_item"><a href="/events">Calendar</a></li>
