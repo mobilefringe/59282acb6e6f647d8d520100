@@ -98,8 +98,8 @@ $(document).ready(function(e){
         var entertainment = getStoresListByCategoryID(5175);
         var event_venues = getStoresListByCategoryID(5176);
 
-        var dine_list = restaurants.concat(specialty_foods).sortBy(function(o){ return o.name});
-        var sorted_list = _.uniq(dine_list, function(o){ return o.name; });
+        var entertainment_list = entertainment.concat( event_venues).sortBy(function(o){ return o.name});
+        var sorted_list = _.uniq(entertainment_list, function(o){ return o.name; });
         renderStoreList('#store_list_container','#store_list_template', sorted_list, "stores");
         
         show_content();
