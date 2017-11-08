@@ -190,18 +190,18 @@
                                 <ul>
                                     <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
                                     <li class="dropdown_item"><a href="/parking">Parking</a></li>
+                                    <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
+                                    <li class="dropdown_item"><a href="/office">Office</a></li>
                                     <li class="dropdown_item"><a href="/living">Living</a></li>
                                 </ul>
                             </li>
                             <li class="menu_item"><a href="/gateway">About</a>
                                 <ul>
                                     <li class="dropdown_item"><a href="/gateway">The Gateway</a></li>
-                                    <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
                                     <li class="dropdown_item"><a href="/posts">Press</a></li>
                                     <li class="dropdown_item"><a href="/leasing">Leasing</a></li>
                                     <li class="dropdown_item"><a href="/station_41">Station 41</a></li>
                                     <li class="dropdown_item"><a href="/contact_us">Contact Us</a></li>
-                                    <li class="dropdown_item"><a href="/office">Office</a></li>
                                 </ul>
                             </li>
                         </ul>
