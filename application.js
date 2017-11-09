@@ -417,8 +417,8 @@ function renderPosts(container, template, collection){
             val.title_short = val.title;
         }
         
-        if(val.body.length > 155){
-            val.description_short = val.body.substring(0, 154) + "...";
+        if(val.body.length > 145){
+            val.description_short = val.body.substring(0, 144) + "...";
         } else {
             val.description_short = val.body;
         }
