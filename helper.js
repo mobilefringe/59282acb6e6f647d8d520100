@@ -206,7 +206,7 @@ function show_cat_stores(){
 
 function show_content(){
     // $('.page_content').fadeIn();
-    $(".page_content").css('visibility','visible').hide().fadeIn('slow');
+    $(".yield).css('visibility','visible').hide().fadeIn('slow');
     $('.custom_backdrop').remove();
     
     // BANNER MESSAGE
