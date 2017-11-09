@@ -95,7 +95,7 @@ function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name
 				<div class="text">\
 				<strong>' + name + '</strong>\
 			</div>\
-			<img src="//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png" width="40px" height="65px" alt="' + name +'" />\
+			<img src="//www.mallmaverick.com/system/sites/map_markers/000/000/027/original/map_marker.png?1417461836" width="45px" height="59px" alt="marker" />\
 			</div>\
 		</div>'
 		]
