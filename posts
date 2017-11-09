@@ -95,7 +95,7 @@ $(document).ready(function(e){
             
         var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
         console.log(blog_posts)
-        var sorted_posts = blog_posts.sortBy(function(o){ return o.id }).reverse();
+        var sorted_posts = blog_posts.sortBy(function(o){ return o.id });
         var main_post = sorted_posts[0];
         renderSinglePost('#main_post_container', "#main_post_template", main_post);
 
