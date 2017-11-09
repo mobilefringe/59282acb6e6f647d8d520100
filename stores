@@ -109,6 +109,22 @@
             renderGeneral("#category_select", "#category_select_template", categories);
             $('#category_select').prepend('<li class="show_cat_stores" data-id="000" name="All">ALL</li>');
             
+            var categories_list = [];
+            $.each(categories, function(key, val){
+                var category_id = val.id;
+                if(category_id != 5174 && category_id != 5175 && category_id != 5176 && category_id != 5177){
+                    categories_list.push(val);
+                }
+            });
+            console.log(categories_list)
+            // if(categories_list.length > 0){
+            //     renderGeneral("#category_select", "#category_select_template", stores_list);
+            //     $('#category_select').prepend('<li class="show_cat_stores" data-id="000" name="All">ALL</li>');
+            // }
+            
+            
+            
+            
             var store_list = getStoresList();
             renderStoreList('#store_list_container','#store_list_template', store_list, "stores");
             
