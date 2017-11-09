@@ -117,7 +117,7 @@
             });
             console.log(categories_list)
             if(categories_list.length > 0){
-                renderGeneral("#category_select", "#category_select_template", categories);
+                renderGeneral("#category_select", "#category_select_template", categories_list);
                 $('#category_select').prepend('<li class="show_cat_stores" data-id="000" name="All">ALL</li>');
             }
             
