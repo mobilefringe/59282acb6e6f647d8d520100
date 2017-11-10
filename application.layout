@@ -177,7 +177,7 @@
                             </li>
                             <li class="menu_item"><a href="/entertainment">Entertainment</a>
                                 <ul>
-                                    <li class="dropdown_item"><a href="/entertainment">Entertainment</a></li>
+                                    <li class="dropdown_item"><a href="/entertainment">Directory</a></li>
                                     <li class="dropdown_item"><a href="/map">Center Map</a></li>
                                 </ul> 
                             </li>
