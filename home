@@ -131,7 +131,7 @@
                 animation: "slide",
                 animationSpeed: 500, 
                 direction: "vertical", 
-                reverse: false,
+                // reverse: false,
             });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
