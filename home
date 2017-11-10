@@ -127,12 +127,12 @@
 
             show_content();
             
-            $('.flexslider').flexslider({
-                animation: "slide",
-                animationSpeed: 500, 
-                direction: "vertical", 
-                // reverse: false,
-            });
+            // $('.flexslider').flexslider({
+            //     animation: "slide",
+            //     animationSpeed: 500, 
+            //     direction: "vertical", 
+            //     // reverse: false,
+            // });
             $(".flex-prev").html(" ");
             $(".flex-next").html(" ");
             
@@ -169,4 +169,12 @@
         //     })
         // }
     })
+    window.onload = function() {
+       $('.flexslider').flexslider({
+            animation: "slide",
+            animationSpeed: 500, 
+            direction: "vertical", 
+            // reverse: false,
+        });
+    }
 </script>
