@@ -1,0 +1,59 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>The Grand Hall</h1></h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="details_header caps">The Grand Hall</h3>
+            <div class="thick_line"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <iframe src = "https://www.google.com/maps/@40.7691536,-111.9032974,3a,75y,25.92h,90.12t/data=!3m8!1e1!3m6!1sAF1QipN700W_s_16n4A2vTKBsZGXEEf8gp9rJKqpv010!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN700W_s_16n4A2vTKBsZGXEEf8gp9rJKqpv010%3Dw203-h100-k-no-pi-2.9999962-ya329.5-ro0-fo100!7i8704!8i4352" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m0!4v1501700710167!6m8!1m7!1sF%3A-RSRGin7RooI%2FWSRZ0_Om23I%2FAAAAAAAAAAk%2Fz-grqdRZ_dsTTSi-ecXfrO9iPhrYQyttgCLIB!2m2!1d40.7693496!2d-111.9026941!3f96!4f0!5f0.7820865974627469" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    -->
+        </div>
+    </div>
+    <div class="margin_60"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>     
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Grand Hall Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+        
+        var prefix = get_prefix();
+        var pages_json = prefix + "/pages/thegateway-grand-hall.json"
+        $.getJSON(pages_json).done(function(data) {
+            $('#mm_page_content').html(data.body);
+        }).fail(function(jqXHR) {
+            if (jqXHR.status == 404) {
+                $("#404_msg").fadeIn("fast");
+            }
+        });
+        
+        show_content();
+    }
+    loadMallDataCached(renderAll); 
+})
+</script>
