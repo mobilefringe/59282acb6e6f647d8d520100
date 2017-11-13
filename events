@@ -15,11 +15,11 @@
     </div>
 </div>
 <div class="site_container page_content">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <iframe src="https://player.vimeo.com/video/222242282?title=0&byline=0&portrait=0" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-    </div>
+    <!--<div class="row">-->
+    <!--    <div class="col-md-8 col-md-offset-2">-->
+    <!--        <iframe src="https://player.vimeo.com/video/222242282?title=0&byline=0&portrait=0" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+    <!--    </div>-->
+    <!--</div>-->
     <div class="row">
         <div class="col-md-12">
             <div class="margin_30"></div>
