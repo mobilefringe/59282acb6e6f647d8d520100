@@ -1,0 +1,81 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Calendar</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <iframe src="https://player.vimeo.com/video/222242282?title=0&byline=0&portrait=0" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <!--<iframe src="https://player.vimeo.com/video/222242282" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+        </div>
+    </div>
+    <div class="margin_60"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <!--<h3 id="no_events" class="hidden_now">There are currently no events available, please check back again later.</h3>-->
+            <!--<img style="max-width: 100%" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1502913809000/Group 2@2x.png" class="" alt="">-->
+        </div>
+    </div>
+</div>
+<div class="wide_container page_content">
+    <div class="row">
+        <div id="events_container">
+            <script id="events_template" type="x-tmpl-mustache/text">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="events ih-item circle effect19">
+                        <a href="/events/{{slug}}">
+                            <img src="{{image_url}}" alt="img">
+                            <div class="info">
+                                <div class="content">
+                                    <h3>{{name_short}}</h3>
+                                    <h5>{{dates}}</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Events Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+        
+        var events = getEventsList().sortBy(function(o){ return o.start_date });
+        var published_events = [];
+        $.each( events , function( key, val ){
+            today = moment();
+            webDate = moment(val.show_on_web_date)
+            if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                published_events.push(val);
+            } 
+        });
+        if(published_events.length > 0){
+            renderEvents("#events_container","#events_template", published_events);
+        }
+        else{
+            $('#no_events').show();
+        }
+
+        show_content();
+    }
+    loadMallDataCached(renderAll); 
+});
+</script>
