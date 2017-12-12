@@ -78,8 +78,8 @@ function init(e) {
     });
     
     //dynamically changing copyright year
-var current_year = moment().year();
-$("#current_year").text(current_year);
+    var current_year = moment().year();
+    $("#current_year").text(current_year);
 }
 
 function add_landmark(store_x_coordinate, store_y_coordinate, pin_id, store_name){
