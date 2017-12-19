@@ -15,26 +15,29 @@
     </div>
 </div>
 <div class="site_container page_content">
-    <!--<div class="row">-->
-    <!--    <div class="col-md-8 col-md-offset-2">-->
-    <!--        <iframe src="https://player.vimeo.com/video/222242282?title=0&byline=0&portrait=0" width="100%" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="margin_30"></div>
-            <div class="position_relative">
-                <!--<ul class="event_calendar_header">-->
-                <!--    <li><span id="discovery_tile"></span>Discovery Gateway</li>-->
-                <!--    <li><span id="fountain_tile"></span>The Fountain</li>-->
-                <!--    <li><span id="plaza_tile"></span>The Plaza</li>-->
-                    <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
-                <!--</ul>-->
-                <div class="calendar" id="calendar"></div>
-                <div class="margin_60"></div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="eventsCalendar">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="margin_30"></div>
+                    <div class="position_relative">
+                        <!--<ul class="event_calendar_header">-->
+                        <!--    <li><span id="discovery_tile"></span>Discovery Gateway</li>-->
+                        <!--    <li><span id="fountain_tile"></span>The Fountain</li>-->
+                        <!--    <li><span id="plaza_tile"></span>The Plaza</li>-->
+                            <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
+                        <!--</ul>-->
+                        <div class="calendar" id="calendar"></div>
+                        <div class="margin_60"></div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div role="tabpanel" class="tab-pane" id="eventsList">
+        
+        </div>
     </div>
+    
 </div>
 
 <script>
