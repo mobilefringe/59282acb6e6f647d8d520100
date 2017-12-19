@@ -130,13 +130,13 @@
         
             show_content();
             
-            $('#eventsCalendar').hasClass("active"){
+            $('#eventsCalendar').hasClass("active", function(){
                 $('#calendarBtn').hide();    
-            }
+            });
             
-            $('#eventsList').hasClass("active"){
+            $('#eventsList').hasClass("active", function(){
                 $('#listBtn').hide();    
-            }
+            });
             
             $('#calendar').fullCalendar({
                 header: {
