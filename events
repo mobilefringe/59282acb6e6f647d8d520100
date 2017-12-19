@@ -130,10 +130,10 @@
         
             show_content();
             
-            $('#eventsCalendar').hasClass("active", function(){
+            if($('#eventsCalendar').hasClass("active")){
                 console.log("Calendar!")
                 $('#calendarBtn').hide();    
-            });
+            }
             
             $('#eventsList').hasClass("active", function(){
                 $('#listBtn').hide();    
