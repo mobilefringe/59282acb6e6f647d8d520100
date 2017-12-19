@@ -16,8 +16,8 @@
 </div>
 <div class="site_container page_content">
     <div class="events_btns pull-right">
-        <div id="calendarBtn" class="hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
-        <div id="listBtn"><i class="fa fa-list" aria-hidden="true"></i> List</div>    
+        <div id="calendarBtn" class="toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
+        <div id="listBtn" class="toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List</div>    
     </div>
     
 
