@@ -56,7 +56,6 @@
                          
                             <a href="/events/{{slug}}" class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
-                        
                         <div class="col-md-12">
                             <hr>
                         </div>
