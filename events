@@ -42,9 +42,9 @@
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row details-promo-container">
                         <div class="col-md-1">
-                            <p class="details-promo-date">{{day}}</p>
+                            <p class="event_side_date">{{day}}</p>
                             <p class="details-promo-day">{{num}}</p>
-                            <p class="details-promo-date">{{month}}</p>
+                            <p class="event_side_date">{{month}}</p>
                         </div>
                         <div class="col-md-5">
                             <img src="{{image_url}}" class="store_logo" alt="">
