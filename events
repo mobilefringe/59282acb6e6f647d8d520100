@@ -147,15 +147,18 @@
                 e.preventDefault();
             });
         
-            // if($('#eventsCalendar').hasClass("active")){
-            //     $('#listBtn').addClass("active");
-            //     $('#calendarBtn').hide();    
-            // }
+            $('#listBtn').click(function(){
+                $('#calendarBtn').show(); 
+                $('#eventsCalendar').removeClass("active");
+                $('#eventsList').addClass("active");
+            });
             
-            // if($('#eventsList').hasClass("active")){
-            //     $('#calendarBtn').show();  
-            //     $('#listBtn').hide();    
-            // }
+            $('#calendarBtn').click(function() {
+                $('#listBtn').show();
+                $('#eventsList').removeClass("active");
+                $('#eventsCalendar').addClass("active");
+                
+            });
             
             $('#calendar').fullCalendar({
                 header: {
