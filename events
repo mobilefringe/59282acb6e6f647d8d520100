@@ -106,21 +106,21 @@
                 }
             });
             
-             var events = getEventsList().sortBy(function(o){ return o.start_date });
-        var published_events = [];
-        $.each( events , function( key, val ){
-            today = moment();
-            webDate = moment(val.show_on_web_date)
-            if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                published_events.push(val);
-            } 
-        });
-        if(published_events.length > 0){
-            renderEvents("#events_container","#events_template", published_events);
-        }
-        else{
-            $('#no_events').show();
-        }
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var published_events = [];
+            $.each( events , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_events.push(val);
+                } 
+            });
+            if(published_events.length > 0){
+                renderEvents("#events_container","#events_template", published_events);
+            }
+            else{
+                $('#no_events').show();
+            }
         
             show_content();
             
