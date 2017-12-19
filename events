@@ -15,6 +15,10 @@
     </div>
 </div>
 <div class="site_container page_content">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#eventsCalendar" aria-controls="eventsCalendar" role="tab" data-toggle="tab">Calendar</a></li>
+        <li role="presentation"><a href="#eventsList" aria-controls="eventsList" role="tab" data-toggle="tab">List</a></li>
+    </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="eventsCalendar">
             <div class="row">
