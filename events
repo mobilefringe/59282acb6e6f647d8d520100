@@ -131,6 +131,7 @@
             show_content();
             
             $('#eventsCalendar').hasClass("active", function(){
+                console.log("Calendar!")
                 $('#calendarBtn').hide();    
             });
             
