@@ -131,11 +131,12 @@
             show_content();
             
             if($('#eventsCalendar').hasClass("active")){
-                console.log("Calendar!")
+                $('#listBtn').show();
                 $('#calendarBtn').hide();    
             }
             
             if($('#eventsList').hasClass("active")){
+                $('#calendarBtn').show();  
                 $('#listBtn').hide();    
             }
             
