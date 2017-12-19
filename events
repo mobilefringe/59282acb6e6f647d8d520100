@@ -38,7 +38,23 @@
             </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="eventsList">
-            <h1> Hello@!!</h1>
+            <div id="events_container">
+                <script id="events_template" type="x-tmpl-mustache/text">
+                    <div class="col-xs-6 col-sm-3">
+                        <div class="events ih-item circle effect19">
+                            <a href="/events/{{slug}}">
+                                <img src="{{image_url}}" alt="img">
+                                <div class="info">
+                                    <div class="content">
+                                        <h3>{{name_short}}</h3>
+                                        <h5>{{dates}}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </script>
+            </div>
         </div>
     </div>
     
