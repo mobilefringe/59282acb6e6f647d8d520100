@@ -130,15 +130,15 @@
         
             show_content();
             
-            if($('#eventsCalendar').hasClass("active")){
-                $('#listBtn').show();
-                $('#calendarBtn').hide();    
-            }
+            // if($('#eventsCalendar').hasClass("active")){
+            //     $('#listBtn').addClass("active");
+            //     $('#calendarBtn').hide();    
+            // }
             
-            if($('#eventsList').hasClass("active")){
-                $('#calendarBtn').show();  
-                $('#listBtn').hide();    
-            }
+            // if($('#eventsList').hasClass("active")){
+            //     $('#calendarBtn').show();  
+            //     $('#listBtn').hide();    
+            // }
             
             $('#calendar').fullCalendar({
                 header: {
