@@ -42,14 +42,14 @@
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row details-promo-container">
                         <div class="col-md-1">
-                            // <p class="details-promo-date">{{promo.start_date | moment("ddd", timezone)}}</p>
-                            // <p class="details-promo-day">{{promo.start_date | moment("D", timezone)}}</p>
-                            // <p class="details-promo-date">{{promo.start_date | moment("MMM", timezone)}}</p>
+                            <p class="details-promo-date">{{start_date}}</p>
+                            <p class="details-promo-day">{{start_date}}</p>
+                            <p class="details-promo-date">{{start_date}}</p>
                         </div>
                         <div class="col-md-5">
                             <h2 class="details-promo-name">{{name}}</h2> 
-                            <h5 class="details-promo-store">{{store.name}}</h5>
-                            <p class="details-promo-desc">{{promo.description}}</p> 
+                            
+                            <p class="details-promo-desc">{{description}}</p> 
                          
                             <a href="/events/{{slug}}" class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
