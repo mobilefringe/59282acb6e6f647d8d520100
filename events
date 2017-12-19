@@ -51,6 +51,7 @@
                         </div>
                         <div class="col-md-7">
                             <h2 class="event_name">{{name}}</h2> 
+                            <div class="thick_line"></div>
                             <p class="event_dates">{{dates}}</p>
                             <p class="event_desc">{{desc_short}}</p> 
                          
