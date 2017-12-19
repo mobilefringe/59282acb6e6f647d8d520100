@@ -52,7 +52,7 @@
                         <div class="col-md-6">
                             <h2 class="event_name">{{name}}</h2> 
                             <p class="event_dates">{{dates}}</p>
-                            <p class="details-promo-desc">{{desc_short}}</p> 
+                            <p class="event_desc">{{desc_short}}</p> 
                          
                             <a href="/events/{{slug}}" class="event_learn_more">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
