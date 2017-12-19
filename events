@@ -135,9 +135,9 @@
                 $('#calendarBtn').hide();    
             }
             
-            $('#eventsList').hasClass("active", function(){
+            if($('#eventsList').hasClass("active")){
                 $('#listBtn').hide();    
-            });
+            }
             
             $('#calendar').fullCalendar({
                 header: {
