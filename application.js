@@ -98,6 +98,7 @@ function renderEvents(container, template, collection){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("dddd, MMMM Do YYYY")
+            val.day = start.format("ddd")
         } else {
             val.dates = start.format("dddd, MMMM Do YYYY") + " to " + end.format("dddd, MMMM Do YYYY")
         }
