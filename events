@@ -16,9 +16,7 @@
 </div>
 <div class="site_container page_content">
     <div class="row">
-        <div class="col-md-6">
-            
-        </div>
+        <div class="col-md-6"></div>
         <div class="col-md-6">
             <div class="event_btns">
                 <div id="calendarBtn" class="event_toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
