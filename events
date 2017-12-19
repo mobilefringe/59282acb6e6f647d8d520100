@@ -148,12 +148,15 @@
             });
         
             $('#listBtn').click(function(){
+                $('#listBtn').hide();
                 $('#calendarBtn').show(); 
+                
                 $('#eventsCalendar').removeClass("active");
                 $('#eventsList').addClass("active");
             });
             
             $('#calendarBtn').click(function() {
+                $('#calendarBtn').hide();
                 $('#listBtn').show();
                 $('#eventsList').removeClass("active");
                 $('#eventsCalendar').addClass("active");
