@@ -75,7 +75,7 @@ function renderEvents(container, template, collection){
         // else{
             val.store_name = "The Gateway";
             val.image_url = val.event_image_url_abs;
-            val.logo  = default_image.image_url;
+            val.logo  = "//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/jpeg/1513719653000/default_tmb.jpg";
             if(val.image_url.indexOf('missing.png') > 0){
                 val.image_url  = val.logo;
             }
