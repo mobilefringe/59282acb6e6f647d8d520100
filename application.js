@@ -97,9 +97,9 @@ function renderEvents(container, template, collection){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D")
+            val.dates = start.format("dddd, MMMM Do YYYY")
         } else {
-            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
+            val.dates = start.format("dddd, MMMM Do YYYY") + " to " + end.format("dddd, MMMM Do YYYY")
         }
         
         var rendered = Mustache.render(template_html,val);
