@@ -43,7 +43,7 @@
                     <div class="row details-promo-container">
                         <div class="col-md-1">
                             <p class="event_side_date">{{day}}</p>
-                            <p class="details-promo-day">{{num}}</p>
+                            <p class="event_side_day">{{num}}</p>
                             <p class="event_side_date">{{month}}</p>
                         </div>
                         <div class="col-md-5">
