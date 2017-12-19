@@ -22,7 +22,7 @@
         <div class="col-md-6">
             <div class="event_btns">
                 <div id="calendarBtn" class="event_toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
-                <div id="listBtn" class="event_toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List</div>    
+                <div id="listBtn" class="event_toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List View</div>    
             </div>    
         </div>
     </div>
