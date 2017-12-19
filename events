@@ -15,12 +15,12 @@
     </div>
 </div>
 <div class="site_container page_content">
-    <div id="calendarBtn" class="hidden_now">Calendar</div>
-    <div id="listBtn">List</div>
-    <!--<ul class="nav nav-tabs" role="tablist">-->
-    <!--    <li id="calendarBtn" role="presentation"><a href="#eventsCalendar" aria-controls="eventsCalendar" role="tab" data-toggle="tab">Calendar</a></li>-->
-    <!--    <li id="listBtn" role="presentation"><a href="#eventsList" aria-controls="eventsList" role="tab" data-toggle="tab">List</a></li>-->
-    <!--</ul>-->
+    <div class="events_btns pull-right">
+        <div id="calendarBtn" class="hidden_now">Calendar</div>
+        <div id="listBtn">List</div>    
+    </div>
+    
+
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="eventsCalendar">
             <div class="row">
