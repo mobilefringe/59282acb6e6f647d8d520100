@@ -47,15 +47,16 @@
                             <p class="details-promo-date">{{month}}</p>
                         </div>
                         <div class="col-md-5">
+                            <img src="{{image_url}}" class="store_logo" alt="">
+                        </div>
+                        <div class="col-md-6">
                             <h2 class="details-promo-name">{{name}}</h2> 
                             <p>{{dates}}</p>
                             <p class="details-promo-desc">{{desc_short}}</p> 
                          
                             <a href="/events/{{slug}}" class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
-                        <div class="col-md-6">
-                            <img src="{{image_url}}" class="store_logo" alt="">
-                        </div>
+                        
                         <div class="col-md-12">
                             <hr>
                         </div>
