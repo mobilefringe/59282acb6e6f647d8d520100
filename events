@@ -49,7 +49,7 @@
                         <div class="col-md-5">
                             <h2 class="details-promo-name">{{name}}</h2> 
                             
-                            <p class="details-promo-desc">{{description}}</p> 
+                            <p class="details-promo-desc">{{desc_short}}</p> 
                          
                             <a href="/events/{{slug}}" class="details-link">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
