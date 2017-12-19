@@ -1,4 +1,4 @@
-/*Created 2017-05-29  by Caitlin*/
+eve/*Created 2017-05-29  by Caitlin*/
 function renderBanner(banner_template,home_banner,banners){
     var item_list = [];
     var item_rendered = [];
@@ -85,6 +85,12 @@ function renderEvents(container, template, collection){
             val.name_short = val.name.substring(0,30) + "...";
         } else {
             val.name_short = val.name;
+        }
+        
+        if (val.description.length > 200){
+            val.desc_short = val.description.substring(0, 199) + "...";
+        } else {
+            val.desc_short = val.description;
         }
         
         var show_date = moment(val.show_on_web_date);
