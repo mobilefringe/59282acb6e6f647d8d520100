@@ -15,10 +15,18 @@
     </div>
 </div>
 <div class="site_container page_content">
-    <div class="events_btns pull-right">
-        <div id="calendarBtn" class="event_toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
-        <div id="listBtn" class="event_toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List</div>    
+    <div class="row">
+        <div class="col-md-6">
+            
+        </div>
+        <div class="col-md-6">
+            <div class="event_btns">
+                <div id="calendarBtn" class="event_toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
+                <div id="listBtn" class="event_toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List</div>    
+            </div>    
+        </div>
     </div>
+    
     
 
     <div class="tab-content">
