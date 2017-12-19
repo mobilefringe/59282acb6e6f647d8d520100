@@ -54,7 +54,7 @@
                             <p class="event_dates">{{dates}}</p>
                             <p class="event_desc">{{desc_short}}</p> 
                          
-                            <a href="/events/{{slug}}"><p class="event_learn_more">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></p></a>
+                            <a href="/events/{{slug}}" class="event_learn_more">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
                         <div class="col-md-12">
                             <hr>
