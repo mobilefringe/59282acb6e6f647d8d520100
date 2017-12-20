@@ -62,8 +62,9 @@
                             <div class="thick_line"></div>
                             <p class="event_dates">{{dates}}</p>
                             <p class="event_desc">{{desc_short}}</p> 
-                         
-                            <a href="/events/{{slug}}" class="event_learn_more">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            <a href="/events/{{slug}}" class="event_learn_more">
+                                Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            </a>
                         </div>
                         <div class="col-sm-12">
                             <hr>
