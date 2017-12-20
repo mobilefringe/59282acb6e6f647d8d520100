@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="eventsCalendar">
+        <div role="tabpanel" class="tab-pane" id="eventsCalendar">
             <div class="row">
                 <div class="col-md-12">
                     <div class="margin_30"></div>
@@ -156,8 +156,8 @@
                 $('#listBtn').hide();
                 $('#calendarBtn').show(); 
                 $('#eventsCalendar').fadeOut();
-                $('#eventsCalendar').removeClass("active");
-                $('#eventsList').addClass("active");
+                // $('#eventsCalendar').removeClass("active");
+                // $('#eventsList').addClass("active");
                 $('#eventsList').fadeIn();
             });
             
@@ -165,8 +165,8 @@
                 $('#calendarBtn').hide();
                 $('#listBtn').show();
                 $('#eventsList').fadeOut();
-                $('#eventsList').removeClass("active");
-                $('#eventsCalendar').addClass("active");
+                // $('#eventsList').removeClass("active");
+                // $('#eventsCalendar').addClass("active");
                 $('#eventsCalendar').fadeIn();
                 
             });
