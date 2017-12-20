@@ -108,28 +108,28 @@
                 if (today < five_months){
                     webDate = moment(val.show_on_web_date);
                     if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                        if(val.tags.indexOf("discovery") >= 0){
-                            published_event.start = val.start_date;
-                            published_event.end = val.end_date;
-                            published_event.title = val.name;
-                            published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#FFA400" : "#FFA400";
-                            published_event.url = "/events/" + val.slug;
-                            calendar_events.push(published_event);
-                        } else if(val.tags.indexOf("plaza") >= 0){
-                            published_event.start = val.start_date;
-                            published_event.end = val.end_date;
-                            published_event.title = val.name;
-                            published_event.color = (val.tags.indexOf("plaza") >= 0 ) ? "#007CBA" : "#007CBA";
-                            published_event.url = "/events/" + val.slug;
-                            calendar_events.push(published_event);
-                        } else if(val.tags.indexOf("fountain")){
+                        // if(val.tags.indexOf("discovery") >= 0){
+                        //     published_event.start = val.start_date;
+                        //     published_event.end = val.end_date;
+                        //     published_event.title = val.name;
+                        //     published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "#FFA400" : "#FFA400";
+                        //     published_event.url = "/events/" + val.slug;
+                        //     calendar_events.push(published_event);
+                        // } else if(val.tags.indexOf("plaza") >= 0){
+                        //     published_event.start = val.start_date;
+                        //     published_event.end = val.end_date;
+                        //     published_event.title = val.name;
+                        //     published_event.color = (val.tags.indexOf("plaza") >= 0 ) ? "#007CBA" : "#007CBA";
+                        //     published_event.url = "/events/" + val.slug;
+                        //     calendar_events.push(published_event);
+                        // } else if(val.tags.indexOf("fountain")){
                             published_event.start = val.start_date;
                             published_event.end = val.end_date;
                             published_event.title = val.name;
                             published_event.color =  (val.tags.indexOf("fountain") >= 0 ) ? "#C14F9D" : "#C14F9D";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
-                        }
+                        // }
                     }
                 }
             });
