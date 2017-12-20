@@ -136,9 +136,10 @@ function renderEventDetails(container, template, collection){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("dddd, MMMM Do, YYYY")
+            val.start_date = start.format("dddd, MMMM Do, YYYY")
         } else {
-            val.dates = start.format("dddd, MMMM Do, YYYY") + " - " + end.format("dddd, MMMM Do, YYYY")
+            val.start_date = start.format("dddd, MMMM Do, YYYY")
+            val.end_date = " to " + end.format("dddd, MMMM Do, YYYY")
         }
         
         var rendered = Mustache.render(template_html,val);
