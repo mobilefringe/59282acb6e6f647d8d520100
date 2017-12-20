@@ -52,6 +52,7 @@ function renderEvents(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
+    var counter = 1;
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
         // if (val.eventable_type == "Store") {
@@ -105,9 +106,13 @@ function renderEvents(container, template, collection){
             val.dates = start.format("dddd, MMMM Do YYYY") + " to " + end.format("dddd, MMMM Do YYYY")
         }
         
+        val.counter = counter;
+        
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
+        counter = counter + 1;
     });
+    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
