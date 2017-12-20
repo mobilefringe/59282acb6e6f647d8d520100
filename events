@@ -206,9 +206,9 @@
                 var id = i.toString();
                 $('#show_' + id ).fadeIn();
             }
-            var posts = getBlogDataBySlug('thegateway-blog').posts;
-            var total_posts = posts.length;
-            if(i >= total_posts){
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var total_events = events.length;
+            if(i >= total_events){
                 $('#loaded_posts').hide();
                 $('#all_loaded').show();
             }
