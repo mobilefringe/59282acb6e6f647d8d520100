@@ -103,7 +103,7 @@ function renderEvents(container, template, collection){
             val.num = start.format("D")
             val.month = start.format("MMM")
         } else {
-            val.dates = start.format("dddd, MMMM Do YYYY") + " to " + end.format("dddd, MMMM Do YYYY")
+            val.dates = start.format("ddd, MMM Do YYYY") + " to " + end.format("dddd, MMMM Do YYYY")
         }
         
         val.counter = counter;
