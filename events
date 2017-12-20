@@ -129,7 +129,7 @@
                             published_event.color =  (val.tags.indexOf("fountain") >= 0 ) ? "#C14F9D" : "#C14F9D";
                             published_event.url = "/events/" + val.slug;
                             calendar_events.push(published_event);
-                        // }
+                        }
                     }
                 }
             });
