@@ -104,6 +104,9 @@ function renderEvents(container, template, collection){
             val.month = start.format("MMM")
         } else {
             val.dates = start.format("ddd, MMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
+            val.day = start.format("ddd")
+            val.num = start.format("D")
+            val.month = start.format("MMM")
         }
         
         val.counter = counter;
