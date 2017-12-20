@@ -1,4 +1,4 @@
-eve/*Created 2017-05-29  by Caitlin*/
+/*Created 2017-05-29  by Caitlin*/
 function renderBanner(banner_template,home_banner,banners){
     var item_list = [];
     var item_rendered = [];
