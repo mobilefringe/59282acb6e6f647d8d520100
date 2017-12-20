@@ -166,6 +166,7 @@
                 $('#eventsList').fadeOut();
                 $('#eventsList').removeClass("active");
                 $('#eventsCalendar').addClass("active");
+                $('#eventsCalendar').fadeIn();
                 
             });
             
