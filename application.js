@@ -98,12 +98,12 @@ function renderEvents(container, template, collection){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("dddd, MMMM Do YYYY")
+            val.dates = start.format("dddd, MMMM Do, YYYY")
             val.day = start.format("ddd")
             val.num = start.format("D")
             val.month = start.format("MMM")
         } else {
-            val.dates = start.format("ddd, MMM Do YYYY") + " to " + end.format("dddd, MMMM Do YYYY")
+            val.dates = start.format("ddd, MMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
         }
         
         val.counter = counter;
