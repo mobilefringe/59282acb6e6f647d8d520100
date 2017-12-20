@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-sm-6 col-md-7">
                             <h2 class="event_name">{{name}}</h2> 
-                            <div class="thick_line"></div>
+                            <div class="event_thick_line"></div>
                             <p class="event_dates">{{dates}}</p>
                             <p class="event_desc">{{desc_short}}</p> 
                             <a href="/events/{{slug}}" class="event_learn_more">
