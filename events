@@ -151,7 +151,9 @@
                 load_more(i);
                 e.preventDefault();
             });
-        
+            
+            $('#eventsCalendar').fadeIn();
+            
             $('#listBtn').click(function(){
                 $('#listBtn').hide();
                 $('#calendarBtn').show(); 
