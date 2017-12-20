@@ -41,9 +41,11 @@
         </div>
         <div role="tabpanel" class="tab-pane" id="eventsList">
 
-            <h3 class="details_header caps">Events</h3>
-            <div class="thick_line"></div>
-            <div class="margin_30"></div>
+            
+            <div class="margin_30">
+                <h3 class="details_header caps">Events</h3>
+            <div class="thick_line"></div>    
+            </div>
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row event_container hidden_now" id="show_{{counter}}">
