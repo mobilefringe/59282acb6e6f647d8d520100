@@ -164,6 +164,7 @@
                 $('#calendarBtn').hide();
                 $('#listBtn').show();
                 $('#eventsList').removeClass("active");
+                $('#eventsList').fadeOut();
                 $('#eventsCalendar').addClass("active");
                 
             });
