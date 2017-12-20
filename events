@@ -49,15 +49,15 @@
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row event_container hidden_now" id="show_{{counter}}">
-                        <div class="col-md-1">
+                        <div class="col-sm-1">
                             <p class="event_side_date">{{day}}</p>
                             <p class="event_side_day">{{num}}</p>
                             <p class="event_side_date">{{month}}</p>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-4">
                             <img src="{{image_url}}" class="store_logo" alt="">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-sm-7">
                             <h2 class="event_name">{{name}}</h2> 
                             <div class="thick_line"></div>
                             <p class="event_dates">{{dates}}</p>
@@ -65,7 +65,7 @@
                          
                             <a href="/events/{{slug}}" class="event_learn_more">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-sm-12">
                             <hr>
                         </div>
                     </div>
