@@ -49,7 +49,7 @@
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row event_container hidden_now" id="show_{{counter}}">
-                        <div class="col-sm-1">
+                        <div class="col-sm-1 hidden_phone">
                             <p class="event_side_date">{{day}}</p>
                             <p class="event_side_day">{{num}}</p>
                             <p class="event_side_date">{{month}}</p>
