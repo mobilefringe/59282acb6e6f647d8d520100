@@ -158,8 +158,6 @@
                 $('#listBtn').hide();
                 $('#calendarBtn').show(); 
                 $('#eventsCalendar').fadeOut();
-                // $('#eventsCalendar').removeClass("active");
-                // $('#eventsList').addClass("active");
                 $('#eventsList').fadeIn();
             });
             
@@ -167,10 +165,7 @@
                 $('#calendarBtn').hide();
                 $('#listBtn').show();
                 $('#eventsList').fadeOut();
-                // $('#eventsList').removeClass("active");
-                // $('#eventsCalendar').addClass("active");
                 $('#eventsCalendar').fadeIn();
-                
             });
             
             $('#calendar').fullCalendar({
