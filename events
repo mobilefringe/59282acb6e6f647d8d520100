@@ -49,9 +49,9 @@
                     <div class="thick_line"></div>
                 </div>
             </div>
-            <div id="events_container hidden_now" id="show_{{counter}}">
+            <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
-                    <div class="row event_container">
+                    <div class="row event_container hidden_now" id="show_{{counter}}">
                         <div class="col-md-1">
                             <p class="event_side_date">{{day}}</p>
                             <p class="event_side_day">{{num}}</p>
