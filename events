@@ -158,6 +158,7 @@
                 $('#eventsCalendar').fadeOut();
                 $('#eventsCalendar').removeClass("active");
                 $('#eventsList').addClass("active");
+                $('#eventsList').fadeIn();
             });
             
             $('#calendarBtn').click(function() {
