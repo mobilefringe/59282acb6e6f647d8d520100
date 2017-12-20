@@ -49,7 +49,7 @@
                     <div class="thick_line"></div>
                 </div>
             </div>
-            <div id="events_container">
+            <div id="events_container hidden_now" id="show_{{counter}}">
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row event_container">
                         <div class="col-md-1">
@@ -96,10 +96,9 @@
                 var banner = getImageURL(repo.images[0].photo_url);
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
-            
+            // CALENDAR 
             var calendar_events = [];
             var events = getEventsList().sortBy(function(o){ return o.start_date });
-            console.log(events);
             $.each( events , function( key, val ){
                 var published_event = {};
                 today = moment();
@@ -133,6 +132,7 @@
                 }
             });
             
+            // LIST VIEW
             var events = getEventsList().sortBy(function(o){ return o.start_date });
             var published_events = [];
             $.each( events , function( key, val ){
@@ -199,6 +199,22 @@
                 }
             });
         }
+        
+        function load_more(num){
+            var n = parseInt(num);
+            for(i = n; i < n + 3; i++){
+                var id = i.toString();
+                $('#show_' + id ).fadeIn();
+            }
+            var posts = getBlogDataBySlug('thegateway-blog').posts;
+            var total_posts = posts.length;
+            if(i >= total_posts){
+                $('#loaded_posts').hide();
+                $('#all_loaded').show();
+            }
+            $('#num_loaded').val(i);
+        }
+
         loadMallDataCached(renderAll); 
     });
 </script>
