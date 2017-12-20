@@ -517,7 +517,8 @@ temporary rendered events).
 .fc-event {
 	position: relative; /* for resize handle and other inner positioning */
 	display: block; /* make the <a> tag block */
-	font-size: .85em;
+	/*font-size: .85em;*/
+	font-size: .75em;
 	line-height: 1.3;
 	border-radius: 3px;
 	border: 1px solid #3a87ad; /* default BORDER color */
