@@ -102,6 +102,7 @@ function renderEvents(container, template, collection){
             val.day = start.format("ddd")
             val.num = start.format("D")
             val.month = start.format("MMM")
+            val.show_date = "display: none;"
         } else {
             val.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
             val.day = start.format("ddd")
