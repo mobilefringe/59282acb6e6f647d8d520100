@@ -40,9 +40,12 @@
             </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="eventsList">
-            <div class="margin_30">
-                <h3 class="details_header caps">Events</h3>
-            <div class="thick_line"></div>    
+            <div class="row margin_30">
+                <div class="col-md-10">
+                    <h3 class="details_header caps">Events</h3>
+                    <div class="thick_line"></div>        
+                </div>
+                
             </div>
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
