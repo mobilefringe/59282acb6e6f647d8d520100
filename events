@@ -54,10 +54,10 @@
                                 <p class="event_side_date">{{month}}</p>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-4">
                             <img src="{{image_url}}" class="event_image" alt="">
                         </div>
-                        <div class="col-sm-6 col-md-8">
+                        <div class="col-sm-6 col-md-7">
                             <h2 class="event_name">{{name}}</h2> 
                             <div class="event_thick_line"></div>
                             <p class="event_dates">{{dates}}</p>
