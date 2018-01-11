@@ -79,6 +79,16 @@ $(document).ready(function(e){
     init(e);
     
     function renderAll(){
+        var prefix = get_prefix();
+        var pages_json = prefix + "/pages/thegateway-press-page.json"
+        $.getJSON(pages_json).done(function(data) {
+            $('#mm_page_content').html(data.body);
+        }).fail(function(jqXHR) {
+            if (jqXHR.status == 404) {
+                $("#404_msg").fadeIn("fast");
+            }
+        });
+            
         var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
         var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
         var main_post = sorted_posts[0];
