@@ -1,0 +1,222 @@
+<link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
+<script type="text/javascript" src="/fullcalendar.js"></script>
+<link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Calendar</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+
+    <div class="event_btns">
+        <div id="calendarBtn" class="event_toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
+        <div id="listBtn" class="event_toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List View</div>    
+    </div>    
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="eventsCalendar">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="margin_30"></div>
+                    <div class="position_relative">
+                        <!--<ul class="event_calendar_header">-->
+                        <!--    <li><span id="discovery_tile"></span>Discovery Gateway</li>-->
+                        <!--    <li><span id="fountain_tile"></span>The Fountain</li>-->
+                        <!--    <li><span id="plaza_tile"></span>The Plaza</li>-->
+                            <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
+                        <!--</ul>-->
+                        <div class="calendar" id="calendar"></div>
+                        <div class="margin_60"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="eventsList">
+            <div class="row margin_30">
+                <div class="col-md-6">
+                    <h3 class="details_header caps">Events</h3>
+                    <div class="thick_line"></div>        
+                </div>
+            </div>
+            <div id="events_container">
+                <script id="events_template" type="x-tmpl-mustache/text">
+                    <div class="row event_container hidden_now" id="show_{{counter}}">
+                        <div class="col-md-1 hidden_phone">
+                            <div class="pull-left">
+                                <p class="event_side_date">{{day}}</p>
+                                <p class="event_side_day">{{num}}</p>
+                                <p class="event_side_date">{{month}}</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <img src="{{image_url}}" class="event_image" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-7">
+                            <h2 class="event_name">{{name}}</h2> 
+                            <div class="event_thick_line"></div>
+                            <p class="event_dates" style="{{show_date}}">{{dates}}</p>
+                            <p class="event_desc">{{desc_short}}</p> 
+                            <a href="/events/{{slug}}" class="event_learn_more">
+                                Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col-sm-12">
+                            <hr>
+                        </div>
+                    </div>
+                </script>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="hidden" value="1" id="num_loaded" />
+                    <p class="hidden_now" id ="all_loaded">No More Events</p>
+                    <p class="" id="loaded_posts">
+                        <a href="#" class="red" id="load_more_posts">
+                            <span class="post_details_link">Load More</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Events Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            // CALENDAR 
+            var calendar_events = [];
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            $.each( events , function( key, val ){
+                var published_event = {};
+                today = moment();
+                five_months = moment().add('4', 'M').endOf("d");
+                if (today < five_months){
+                    webDate = moment(val.show_on_web_date);
+                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                        // if(val.tags.indexOf("discovery") >= 0){
+                            published_event.start = val.start_date;
+                            published_event.end = val.end_date;
+                            published_event.title = val.name;
+                            published_event.color = (val.tags.indexOf("discovery") >= 0 ) ? "transparent" : "transparent";
+                            published_event.url = "/events/" + val.slug;
+                            calendar_events.push(published_event);
+                    //     } else if(val.tags.indexOf("plaza") >= 0){
+                    //         published_event.start = val.start_date;
+                    //         published_event.end = val.end_date;
+                    //         published_event.title = val.name;
+                    //         published_event.color = (val.tags.indexOf("plaza") >= 0 ) ? "#007CBA" : "#007CBA";
+                    //         published_event.url = "/events/" + val.slug;
+                    //         calendar_events.push(published_event);
+                    //     } else if(val.tags.indexOf("fountain")){
+                    //         published_event.start = val.start_date;
+                    //         published_event.end = val.end_date;
+                    //         published_event.title = val.name;
+                    //         published_event.color =  (val.tags.indexOf("fountain") >= 0 ) ? "#C14F9D" : "#C14F9D";
+                    //         published_event.url = "/events/" + val.slug;
+                    //         calendar_events.push(published_event);
+                    //     }
+                    // }
+                }
+            });
+            
+            // LIST VIEW
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var published_events = [];
+            $.each( events , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_events.push(val);
+                } 
+            });
+            if(published_events.length > 0){
+                renderEvents("#events_container","#events_template", published_events);
+            } else {
+                $('#no_events').show();
+            }
+        
+            show_content();
+            
+            load_more(1);
+            
+            $('#load_more_posts').click(function(e){
+                var i = $('#num_loaded').val();
+                load_more(i);
+                e.preventDefault();
+            });
+            
+            $('#eventsCalendar').fadeIn();
+            
+            $('#listBtn').click(function(){
+                $('#listBtn').hide();
+                $('#calendarBtn').show(); 
+                $('#eventsCalendar').fadeOut();
+                $('#eventsList').fadeIn();
+            });
+            
+            $('#calendarBtn').click(function() {
+                $('#calendarBtn').hide();
+                $('#listBtn').show();
+                $('#eventsList').fadeOut();
+                $('#eventsCalendar').fadeIn();
+            });
+            
+            $('#calendar').fullCalendar({
+                header: {
+                    right:  'prev,next'
+                },
+                timezone: getPropertyTimeZone(),
+                events: calendar_events,
+                buttonText: {
+                    prev: "Previous Month",
+                    next: "Next Month"
+                },
+                viewRender: function(view,element) {
+                    var now = new Date();
+                    var end = new Date();
+                    end.setMonth(now.getMonth() + 3); //Adjust as needed
+        
+                    if ( end < view.end) {
+                        $("#calendar .fc-next-button").addClass("fc-state-disabled");
+                        return false;
+                    }
+                    else {
+                        $("#calendar .fc-next-button").removeClass("fc-state-disabled");
+                    }
+                }
+            });
+        }
+        
+        function load_more(num){
+            var n = parseInt(num);
+            for(i = n; i < n + 3; i++){
+                var id = i.toString();
+                $('#show_' + id ).fadeIn();
+            }
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var total_events = events.length;
+            if(i >= total_events){
+                $('#loaded_posts').hide();
+                $('#all_loaded').show();
+            }
+            $('#num_loaded').val(i);
+        }
+
+        loadMallDataCached(renderAll); 
+    });
+</script>
