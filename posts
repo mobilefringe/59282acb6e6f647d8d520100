@@ -79,12 +79,6 @@ $(document).ready(function(e){
     init(e);
     
     function renderAll(){
-        var repo = getRepoDetailsByName("Blog Banner");
-        if (repo != undefined) {
-            var banner = getImageURL(repo.images[0].photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-        }
-            
         var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
         var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
         var main_post = sorted_posts[0];
