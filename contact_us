@@ -1,0 +1,86 @@
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="inside_header caps">Contact Us</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="bold">The Gateway Management Office</h4>
+            <h4>18 N Rio Grande Street <br>
+                Salt Lake City, Utah, 84101
+            </h4>
+            <h4 class="bold">Tel: <a href="tel:801-456-0000">801-456-0000</a> <br>
+                Fax: 801-456-0005
+            </h4><br>
+            <div id="mm_page_content"></div>
+            <div class="margin_20"></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <h4 class="center caps margin_30">Contact Us for Questions, Comments, and more Information</h4>
+            <form name="contact_form" id="contact_form" method="post">
+                <input name="name" id="name" class="form-control" type="text" value="" placeholder="Your Name" required>
+                <input name="email" id="email" class="form-control" type="text" value="" placeholder="Your Email" required>
+                <input name="subject" id="subject" class="form-control" type="text" placeholder="Subject" required>
+                <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
+                <button id="submit" class="contact_btn" type="submit">SUBMIT</button>
+            </form>
+            <br>
+            <div id="send_contact_success" class="alert alert-success hidden_now" role="alert">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span class="sr-only">Success</span>
+                Thank you for contacting us. A member from our team will contact you shortly.
+             </div>
+             <div id="send_contact_error" class="alert alert-danger hidden_now" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                There was an error when trying to submit your request. Please ensure you have entered a valid email address and subject and please try again.
+             </div>
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var repo = getRepoDetailsByName("Contact Us Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+        
+        var prefix = get_prefix();
+        var pages_json = prefix + "/pages/thegateway-contact-us.json"
+        $.getJSON(pages_json).done(function(data) {
+            $('#mm_page_content').html(data.body);
+        }).fail(function(jqXHR) {
+            if (jqXHR.status == 404) {
+                $("#404_msg").fadeIn("fast");
+            }
+        }); 
+        show_content();
+        
+        $('#contact_form').submit(function(e) {
+            values = [];
+            values = JSON.stringify($('#contact_form').serializeArray());
+            e.preventDefault();
+            $.ajax({
+                url : "/api/v1/contact_us",
+                type: "POST",
+                data : {authenticity_token: '<%=form_authenticity_token%>' ,
+                form_data:values},
+                success: function(data, textStatus, jqXHR) {
+                    $('#send_contact_success').fadeIn();
+                    $('#contact_form').find("input[type=text], textarea").val("");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#send_contact_error').fadeIn();
+                }
+            });
+		});
+    }
+    loadMallDataCached(renderAll); 
+})
+</script>
