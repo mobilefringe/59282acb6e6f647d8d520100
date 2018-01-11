@@ -909,6 +909,7 @@ footer {
 }
 
 /* INSIDE PAGES */
+.border_bottom: 1px solid #000
 .page_header {
     margin: 0 auto;
     margin-bottom: 60px;
