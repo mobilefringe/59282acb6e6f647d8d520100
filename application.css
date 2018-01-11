@@ -1317,18 +1317,15 @@ footer {
     font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
     color: $link;
 }
-
 #store_search::-ms-input-placeholder {
     font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
     color: $link;
 }
-
 #store_search::-moz-placeholder {
     font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
     color: $link;
     opacity: 1;
 }
-
 #store_search:focus {
     // background: rgba(0, 0, 0, 0.6);
     // background: rgba(255, 255, 255, 0.3);
@@ -1403,7 +1400,7 @@ footer {
     padding: 10px 0 10px 0;
     position: relative;
     font-size: 20px;
-    color: #fff;
+    color: $link;
     text-align: center;
     transition: all 0.3s ease;
     &:hover {
@@ -1414,7 +1411,7 @@ footer {
     content: " ";
     height: 3px;
     width: 84px;
-    background: #fff;
+    background: $link;
     position: absolute;
     left: 50%;
     bottom: 10px;
