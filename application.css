@@ -1338,8 +1338,7 @@ footer {
     position: absolute;
     top: 62px;
     z-index: 9;
-    // background: rgba(0,0,0,0.6);
-    background: rgba(255, 255, 255, .9);
+    background: rgba(28, 208, 201, .9);
     h4 {
         padding: 5px 0;
         font-size: 20px;
