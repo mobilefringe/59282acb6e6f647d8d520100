@@ -1281,7 +1281,8 @@ footer {
 
 /* STORE DIRECTORY */
 .directory_header hr {
-    border-top: 4.5px solid $link;
+    margin-bottom: 60px;
+    border-top: 1px solid $link;
 }
 .store_search {
     position: relative;
