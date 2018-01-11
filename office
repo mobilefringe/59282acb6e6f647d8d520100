@@ -84,16 +84,11 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
-            var repo = getRepoDetailsByName("Station41 Banner");
-            if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-            }
-            
             $('.video_still').click(function(){
                 video = '<iframe class="station_video" src="'+ $(this).attr('data-video') +'"></iframe>';
                 $(this).replaceWith(video);
             });
+            
             var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
             renderGallery("#gallery_container", "#gallery_template", gallery);
             
@@ -107,6 +102,7 @@
             if (window_width < 769) {
                 $('a').removeClass('open_details_modal');
             }
+            
             $('.custom-modal-backdrop').click(function(){
                 $('body').removeClass('gallery_no_scroll');
                 $('.custom_modal').fadeOut();
@@ -163,6 +159,8 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
+            
+            $(".nav_container").addClass("border_bottom");
             
             show_content();
         }
