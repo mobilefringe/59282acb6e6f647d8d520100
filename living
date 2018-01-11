@@ -15,12 +15,6 @@
 $(document).ready(function(e){
     init(e);
     function renderAll(){
-        var repo = getRepoDetailsByName("Gateway Living Banner");
-        if (repo != undefined) {
-            var banner = getImageURL(repo.images[0].photo_url);
-            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
-        }
-        
         var prefix = get_prefix();
         var pages_json = prefix + "/pages/thegateway-living-at-the-gateway.json"
         $.getJSON(pages_json).done(function(data) {
@@ -31,6 +25,7 @@ $(document).ready(function(e){
             }
         });
         
+        $(".nav_container").addClass("border_bottom");
         show_content();
     }
     loadMallDataCached(renderAll); 
