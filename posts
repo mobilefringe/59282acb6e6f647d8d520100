@@ -1,0 +1,111 @@
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <h1>Press</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="main_post_container">
+                <script id="main_post_template" type="x-tmpl-mustache">
+                    <div class="main_post_container">
+                        <div class="main_post_image_container">
+                            <img src="{{post_image}}" alt="{{title}}">
+                        </div>
+                        <div class="main_post_content">
+                            <div class="main_post_share_icons">
+                                <a href="https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/{{slug}}" target="_blank">
+                                    <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
+                                </a>
+                                <a href="https://twitter.com/home?status={{twitter_title}} https://www.shopthegateway.com/{{slug}}" target="_blank">
+                                    <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
+                                </a>
+                            </div>
+                            <a href="{{slug}}"><h4 class="main_post_header caps">{{title_short}}</h4></a>
+                            <div class="post_text">{{description_short}}</div>
+                            <a class="main_read_more link" href="{{slug}}">Read More</a>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="margin_30 hidden_phone"></div>
+    <div class="row hidden_phone">
+        <div class="col-md-10 col-md-offset-1">
+            <h4 class="previous_title caps">Previous</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="posts_container">
+                <script id="posts_template" type="x-tmpl-mustache">
+                    <div class="post_container hidden_now" id="show_{{counter}}">
+                        <div class="post_image_container">
+                            <img src="{{post_image}}" alt="{{title}}">
+                        </div>
+                        <div class="post_content">
+                            <div class="post_share_icons">
+                                <a href="https://www.facebook.com/sharer.php?u=https://www.shopthegateway.com/{{slug}}" target="_blank">
+                                    <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
+                                </a>
+                                <a href="https://twitter.com/home?status={{twitter_title}} https://www.shopthegateway.com/{{slug}}" target="_blank">
+                                    <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
+                                </a>
+                            </div>
+                            <a href="{{slug}}"><h4 class="post_header caps">{{title_short}}</h4></a>
+                            <div class="post_text">{{description_short}}</div>
+                            <a class="post_read_more link" href="{{slug}}">Read More</a>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <input type="hidden" value="1" id="num_loaded" />
+            <p class="hidden_now" id ="all_loaded">No More Posts</p>
+            <p class="" id="loaded_posts">
+                <a href="#" class="red" id="load_more_posts"><span class="post_details_link">Load More</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            </p>
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+
+<script>
+$(document).ready(function(e){
+    init(e);
+    
+    function renderAll(){
+        var repo = getRepoDetailsByName("Blog Banner");
+        if (repo != undefined) {
+            var banner = getImageURL(repo.images[0].photo_url);
+            $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+        }
+            
+        var blog_posts = getBlogDataBySlug("thegateway-blog").posts;
+        var sorted_posts = blog_posts.sortBy(function(o){ return o.publish_date }).reverse();
+        var main_post = sorted_posts[0];
+        renderSinglePost('#main_post_container', "#main_post_template", main_post);
+
+        var posts = sorted_posts.splice(1);
+        renderPosts('#posts_container', '#posts_template', posts);
+        
+        show_content();
+        
+        load_more(1);
+            
+        $('#load_more_posts').click(function(e){
+            var i = $('#num_loaded').val();
+            load_more(i);
+            e.preventDefault();
+        });
+    }
+
+    loadMallDataCached(renderAll);
+});
+</script>
