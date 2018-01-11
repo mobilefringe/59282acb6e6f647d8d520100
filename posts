@@ -93,6 +93,8 @@ $(document).ready(function(e){
         var posts = sorted_posts.splice(1);
         renderPosts('#posts_container', '#posts_template', posts);
         
+        $(".nav_container").addClass("border_bottom");
+        
         show_content();
         
         load_more(1);
