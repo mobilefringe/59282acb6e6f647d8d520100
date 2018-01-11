@@ -1,0 +1,63 @@
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="inside_header caps">Leasing</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="details_header caps">Leasing</h3>
+            <div class="thick_line"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>    
+        </div>
+    </div>
+    <div class="margin_60"></div>
+    <div class="leasing flexslider">
+        <ul class="slides" id="leasing_banner">
+            <script id="leasing_template" type="x-tmpl-mustache/text">
+                <li class="position_relative">
+                    <img class="" alt="banner" src="{{image_url}}" />
+                </li>
+            </script>
+        </ul>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Leasing Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            
+            var slider_images =  getRepoDetailsByName("Leasing Slider Images").images;
+            if (slider_images != undefined){
+                renderGeneral('#leasing_banner', '#leasing_template', slider_images);
+            }
+            
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/thegateway-leasing.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+           
+            show_content();
+            
+            $('.flexslider').flexslider({
+                animation: "slide",
+            });
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
