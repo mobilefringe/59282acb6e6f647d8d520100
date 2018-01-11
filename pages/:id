@@ -1,0 +1,61 @@
+<style>
+    #mm_page_content a {
+    color: #1ccfc9;
+}
+</style>
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1 id="mm_banner_title"></h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 id="mm_page_title" class="details_header caps"></h3>
+            <div class="thick_line"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>    
+        </div>     
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Generic Page Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/" + slug + ".json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_banner_title').html(data.title);
+                $('#mm_page_title').html(data.title);
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+            
+            show_content();
+        }
+        loadMallDataCached(renderAll); 
+    });
+</script>
