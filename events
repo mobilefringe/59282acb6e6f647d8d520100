@@ -130,7 +130,7 @@
                     //         published_event.url = "/events/" + val.slug;
                     //         calendar_events.push(published_event);
                     //     }
-                    // }
+                    }
                 }
             });
             
