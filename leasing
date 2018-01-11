@@ -46,6 +46,8 @@
                 }
             }); 
            
+            $(".nav_container").addClass("border_bottom");
+            
             show_content();
             
             $('.flexslider').flexslider({
