@@ -20,7 +20,7 @@
             </ul>
         </div>
         <div class="carrot_container">
-            <a href="#carrot">
+            <a id="carrot" href="#homeContent">
                 <i class="fa fa-angle-down animated infinite pulse" aria-hidden="true"></i>
             </a>
         </div>
@@ -28,7 +28,7 @@
     <div class="site_container">
         <div class="row">
             <div class="col-md-12">
-                <div id="carrot" class="home_content_container">
+                <div id="homeContent" class="home_content_container">
                     <h1 class="home_content_title">Sure, we have plenty of places to shop, but that’s just one part of the story at The Gateway.</h1>
                     <div id="mm_page_content" class="home_content"></div>
                     <a id="sub_btn" href="#sign_up"><div class="subscribe_btn center caps">Subscribe to Our Newsletter <i class="fa fa-angle-right" aria-hidden="true"></i></div></a>
@@ -139,6 +139,12 @@
                 $(".modal-backdrop").remove();
 		        $(".popup_home").remove();
             });
+            
+            $("#carrot").click(function() {
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+            })
             
             $("#sub_btn").click(function() {
                 $('html, body').animate({
