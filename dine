@@ -32,7 +32,8 @@
             </div>
         </div> 
     </div>
-    <hr>
+</div>
+<div class="site_container page_content">
     <div class="row">
         <div id="store_list_container">
             <script id="store_list_template" type="x-tmpl-mustache/text">
