@@ -941,6 +941,12 @@ footer {
     margin: 0 auto 24px auto;
     background-color: $primary;
 }
+.inside_header {
+    font-family: "LeagueGothic-Regular";
+    font-size: 50px;
+    line-height: 60px;
+    color: #000;
+}
 #mm_page_content a {
     color: $social;
 }
