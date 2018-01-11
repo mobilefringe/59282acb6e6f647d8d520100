@@ -1,0 +1,181 @@
+<div class="page_header no_margin">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Dining</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="directory_header">
+        <div class="site_container">
+            <div class="row bold">
+                <div class="col-sm-6 col-md-4">
+                    <div class="store_search" >
+                        <label class="">
+                            <input type="text" placeholder="Find Your Store" id="store_search" />
+                            <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496082956000/search_icon.png" class="pull-right" id="store_search_img" alt="">
+                            <i id="close_search_results" class="fa fa-times-circle hidden_now"></i>
+                        </label>
+                        <div class="search_results" id="store_search_results"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="dropdown category_selector">
+                        <a id="store_cat_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sort By Category <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
+                        <ul class="dropdown-menu cat_list" aria-labelledby="dropdownMenu1" id="category_select">
+                            <script id="category_select_template" type="x-tmpl-mustache/text">
+    				            <li class="show_cat_stores" data-id="{{id}}" name="{{name}}">{{name}}</li>
+    				        </script>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 hidden_phone">
+                    <a class="directory_link" href="/map">
+                        <div class="promotions_header_container directory_btn">View Map</div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 hidden_phone">
+                    <div class="alpha_list">
+                        <!--<a href="#7">#</a>-->
+                        <a href="#A">A</a>
+                        <a href="#B">B</a>
+                        <a href="#C">C</a>
+                        <a href="#D">D</a>
+                        <a href="#E">E</a>
+                        <a href="#F">F</a>
+                        <a href="#G">G</a>
+                        <a href="#H">H</a>
+                        <a href="#I">I</a>
+                        <a href="#J">J</a>
+                        <a href="#K">K</a>
+                        <a href="#L">L</a>
+                        <a href="#M">M</a>
+                        <a href="#N">N</a>
+                        <a href="#O">O</a>
+                        <a href="#P">P</a>
+                        <a href="#Q">Q</a>
+                        <a href="#R">R</a>
+                        <a href="#S">S</a>
+                        <a href="#T">T</a>
+                        <a href="#U">U</a>
+                        <a href="#V">V</a>
+                        <a href="#W">W</a>
+                        <a href="#X">X</a>
+                        <a href="#Y">Y</a>
+                        <a href="#Z">Z</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div id="store_list_container">
+            <script id="store_list_template" type="x-tmpl-mustache/text">
+                <div class="col-xs-6 col-sm-3 col-md-2 cats_row" data-cat="{{cat_list}}">
+                    <div class="store_logo_container" id="{{initial}}">
+                        <a href="/stores/{{slug}}">
+                            <img class="store_img" style="{{initial_img}}" src="{{store_front_url_abs}}"/>
+                            <img class="store_hover" style="{{initial_img}}" src="{{hover_img}}"/>
+                            <div class="store_coming_soon" style="{{coming_soon_store}}">
+                                <div class="new_store">Coming soon</div>
+                            </div>
+                            <div class="store_list_promos">
+                                <span class="promo_exist" style="{{job_exist}}"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000358000/jobs.png" class="" alt=""> {{job_list}}</span>
+                                <span class="promo_exist" style="{{promotion_exist}}"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000371000/promotions.png" class="" alt=""> {{promotion_list}}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var repo = getRepoDetailsByName("Stores Banner");
+            if (repo != undefined) {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+            }
+            
+            var categories = getStoreCategories().sortBy(function(o){ return o.name});
+            var stores_list = [];
+            $.each(categories, function(key, val){
+                var category_id = val.id;
+                if(category_id != 5174 && category_id != 5175 && category_id != 5176 && category_id != 5177){
+                    stores_list.push(val);
+                }
+            });
+            
+            if(stores_list.length > 0){
+                renderGeneral("#category_select", "#category_select_template", stores_list);
+                $('#category_select').prepend('<li class="show_cat_stores" data-id="000" name="All">ALL</li>');
+            }
+            
+            var category_list = [];
+            $.each(stores_list, function(key, val){
+                var category_id = parseInt(val.id, 10);
+                category_list.push(category_id)
+            });
+
+            var all_stores = getStoresList();
+            var shops = [];
+            $.each(all_stores, function(key, val){
+                if(val.categories != null){
+                    var store_categories = val.categories;
+                    if(findOne(store_categories, category_list)){
+                        shops.push(val)
+                    }
+                }
+            });
+            
+            var store_list = _.uniq(shops, function(o){ return o.name; });
+            if(store_list.length > 0){
+                renderStoreList('#store_list_container','#store_list_template', store_list, "stores");
+            }
+            
+            // var categories = getStoreCategories().sortBy(function(o){ return o.name});
+            // renderGeneral("#category_select", "#category_select_template", categories);
+            // $('#category_select').prepend('<li class="show_cat_stores" data-id="000" name="All">ALL</li>');
+            
+            // var store_list = getStoresList();
+            // renderStoreList('#store_list_container','#store_list_template', store_list, "stores");
+            
+            show_content();
+            store_search();
+            show_cat_stores();
+            
+            var window_width = $( window ).width();
+            if (window_width > 769) {
+                $(".store_logo_container").hover(function() {
+                    $(".store_img", this).hide();
+                    $(".store_hover", this).show();
+                }, function() {
+                    $(".store_img", this).show();
+                    $(".store_hover", this).hide();
+                });
+            }
+            
+        }
+        loadMallData(renderAll); 
+    })
+    
+    var findOne = function (haystack, arr) {
+        return arr.some(function (v) {
+            return haystack.indexOf(v) >= 0;
+        });
+    }
+</script>
