@@ -5,6 +5,11 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>    
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div id="main_post_container">
                 <script id="main_post_template" type="x-tmpl-mustache">
