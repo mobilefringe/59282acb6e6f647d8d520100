@@ -6,12 +6,6 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h3 class="details_header caps">Leasing</h3>
-            <div class="thick_line"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
             <div id="mm_page_content"></div>    
         </div>
     </div>
