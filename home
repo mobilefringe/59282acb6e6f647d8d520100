@@ -1,0 +1,152 @@
+<!-- POP UP -->
+<div class="popup_home hidden_now">
+    <a href="#" target="_blank">
+        <img src="#" alt="pop up" />
+    </a>
+    <i class="fa fa-remove close_popup"></i>
+</div>
+<!-- -->
+<div class="page_content">
+    <div class="position_relative">
+        <div class="flexslider">
+            <ul class="slides" id="home_banner">
+                <script id="banner_template" type="x-tmpl-mustache/text">
+                    <li class="position_relative">
+                        <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                            <div class="slider_img" style="background-image: url({{image_url}})"></div>
+                        </a>
+                    </li>
+                </script>
+            </ul>
+        </div>
+        <div class="carrot_container">
+            <a href="#carrot">
+                <i class="fa fa-angle-down animated infinite pulse" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div class="site_container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carrot" class="home_content_container">
+                    <h1 class="home_content_title">Sure, we have plenty of places to shop, but that’s just one part of the story at The Gateway.</h1>
+                    <div id="mm_page_content" class="home_content"></div>
+                    <a id="sub_btn" href="#sign_up"><div class="subscribe_btn center caps">Subscribe to Our Newsletter <i class="fa fa-angle-right" aria-hidden="true"></i></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wide_container">
+        <div>
+            <div class="grid grid_desktop hidden_phone">
+                <div class="grid-sizer"></div>
+                <div class="feature_0 grid-item grid-item--height2"></div>
+                <div class="feature_1 grid-item"></div>
+                <div class="feature_2 grid-item grid-item--width2"></div>
+                <div class="feature_3 grid-item"></div>
+                <div class="feature_4 grid-item"></div>
+                <div class="feature_5 grid-item"></div>
+                <div class="feature_6 grid-item"></div>
+                <div class="feature_7 grid-item"></div>
+            </div>
+            <div class="grid grid_mobile visible_phone">
+                <div class="grid-sizer"></div>
+                <div class="feature_2 grid-item grid-item--width2"></div>
+                <div class="feature_0 grid-item grid-item--height2"></div>
+                <div class="feature_1 grid-item"></div>
+                <div class="feature_3 grid-item"></div>
+                <div class="feature_4 grid-item"></div>
+                <div class="feature_5 grid-item"></div>
+                <div class="feature_6 grid-item"></div>
+                <div class="feature_7 grid-item"></div>
+            </div>
+        </div>
+    </div>
+    <div class="margin_30"></div>
+    <div class="site_container">
+        <h3 class="home_page_title caps">In Our Feed @ShopTheGateway</h3>
+    </div>
+    <div class="wide_container">
+        <div id="instafeed"></div>
+    </div>
+    <div class="margin_30"></div>
+</div>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll(){
+            var banners = getBanners();
+            renderBanner('#banner_template','#home_banner',banners);
+
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/thegateway-home.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            });
+            
+            var feature_items = getFeatureList();
+            renderFeatureItems();
+            
+            // init Masonry
+            var $grid_desktop = $('.grid_desktop').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_desktop.imagesLoaded().progress( function() {
+                $grid_desktop.masonry('layout');
+            });
+            
+            //init Masonry
+            var $grid_mobile = $('.grid_mobile').masonry({
+                columnWidth: '.grid-sizer',
+                itemSelector: '.grid-item',
+                originLeft: false,
+                percentPosition: true
+            });
+            // layout Masonry after each image loads
+            $grid_mobile.imagesLoaded().progress( function() {
+                $grid_mobile.masonry('layout');
+            });
+
+            $('.flexslider').flexslider({
+                animation: "slide",
+                animationSpeed: 500, 
+                direction: "vertical", 
+                // reverse: false,
+            });
+            $(".flex-prev").html(" ");
+            $(".flex-next").html(" ");
+            
+            show_content();
+            
+            if($.cookie("popup_viewed") != "true"){
+                $.cookie("popup_viewed", "true", { expires: 1 });
+                var popup = getPopups()[0];
+                if (popup != undefined){
+                    $('.popup_home a').attr('href', popup.photo_link)
+                    $('.popup_home img').attr('src', '//mallmaverick.cdn.speedyrails.net' + popup.photo_url)
+                    $('<div class="modal-backdrop custom_backdrop"></div>').appendTo(document.body);
+                    $('.popup_home').show()
+                }
+            }
+            $('.close_popup, .custom_backdrop').click(function(){
+                $(".modal-backdrop").remove();
+		        $(".popup_home").remove();
+            });
+            
+            $("#sub_btn").click(function() {
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+            })
+        }
+        
+        loadMallData(renderAll); 
+    });
+</script>
