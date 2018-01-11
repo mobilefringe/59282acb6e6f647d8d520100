@@ -1472,7 +1472,7 @@ footer {
 }
 
 .store_logo_container:hover {
-    background: $social;
+    background: $link;
     .store_coming_soon {
         background-image: url(//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1501873798000/RectangleWhite.png);
     }
