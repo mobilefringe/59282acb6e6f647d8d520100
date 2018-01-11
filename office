@@ -49,13 +49,6 @@
         </div>
     </div>
     <div class="margin_60"></div>
-    <!--<div class="row">-->
-    <!--    <div class="col-md-12">-->
-            <!--<a href="https://vimeo.com/223487697" data-remote="https://player.vimeo.com/video/223487697" data-toggle="lightbox">-->
-    <!--            <img class="video_still" src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1500064745000/Gateway Video Image.png" alt="Station 41" data-video="https://player.vimeo.com/video/223487697?title=0&byline=0&portrait=0"/>-->
-            <!--</a>-->
-    <!--    </div>-->
-    <!--</div>-->
     <div class="row">
         <div id="gallery_container">
             <script id="gallery_template" type="x-tmpl-mustache/text">
@@ -74,7 +67,7 @@
     <div class="row">
         <div class="col-md-12">
             <h2 class="leasing_title center caps">Contact Leasing</h2>  
-            <h4 class="margin_20 center">To explore leasing opportunities at The Gateway, please call:<br class="hidden_phone"> Cushman & Wakefield Commerce at 801-322-2000 or visit <a class="link" href="//www.cushmanwakefield.com/" target="_blank">CushmanWakefield.com</a>.</h4>
+            <p class="margin_20 center">To explore leasing opportunities at The Gateway, please call:<br class="hidden_phone"> Cushman & Wakefield Commerce at 801-322-2000 or visit <a class="link" href="//www.cushmanwakefield.com/" target="_blank">CushmanWakefield.com</a>.</p>
             <div class="thick_line_center"></div>
         </div>
     </div>
