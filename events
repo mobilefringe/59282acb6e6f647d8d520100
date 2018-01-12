@@ -98,6 +98,7 @@
                 var banner = getImageURL(repo.images[0].photo_url);
                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});
             }
+            
             // CALENDAR 
             var calendar_events = [];
             var events = getEventsList().sortBy(function(o){ return o.start_date });
