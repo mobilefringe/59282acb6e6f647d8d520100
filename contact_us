@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="press_content" id="header_content"></div>    
+            <div class="press_content hidden_now" id="header_content"></div>    
         </div>
     </div>
     <div class="row">
@@ -53,7 +53,11 @@ $(document).ready(function(e){
         var prefix = get_prefix();
         var pages_json = prefix + "/pages/thegateway-contact-us-description.json"
         $.getJSON(pages_json).done(function(data) {
-            $('#header_content').html(data.body);
+            if(data.body != ""){
+                $('#header_content').html(data.body);
+            } else {
+                
+            }
             console.log(data.body)
         }).fail(function(jqXHR) {
             if (jqXHR.status == 404) {
