@@ -104,9 +104,6 @@
                     <div class="mobile_nav_container visible_phone">
                         <nav id="mobile_nav">
                             <ul>
-                                <div class="mobile_site_logo">
-                                    <!--<a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1507820953000/gatewaylogonew.png" alt="Property Logo"/></a>-->
-                                </div>
                                 <li class="menu_item"><a href="/stores">Shopping</a></li>
                                 <li class="menu_item"><a href="/dine">Dining</a></li>
                                 <li class="menu_item"><a href="/entertainment">Entertainment</a></li>
