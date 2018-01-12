@@ -237,7 +237,7 @@
                     </div>
                     
                     <div class="footer_conduct">
-                        <a href="/pages/thegateway-code-of-conduct"><p class="line">Code Of Conduct</p></a>
+                        <a href="/code_of_conduct"><p class="line">Code Of Conduct</p></a>
                     </div>
                     <div class="footer_terms">
                         <p>&copy; <span id="current_year"></span> THE GATEWAY All Rights Reserved | <a href="/pages/thegateway-privacy-policy">Privacy Policy</a> | <a href="/pages/thegateway-terms-conditions" class="line">Terms & Conditions</a></p>
