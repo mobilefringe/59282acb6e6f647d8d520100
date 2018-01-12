@@ -63,7 +63,7 @@ $(document).ready(function(e){
         var prefix = get_prefix();
         var pages_json = prefix + "/pages/thegateway-contact-us.json"
         $.getJSON(pages_json).done(function(data) {
-            $('#mm_page_content').html(data.body);
+            $('#header_content').html(data.body);
         }).fail(function(jqXHR) {
             if (jqXHR.status == 404) {
                 $("#404_msg").fadeIn("fast");
