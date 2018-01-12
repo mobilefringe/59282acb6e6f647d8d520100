@@ -1,0 +1,34 @@
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="inside_header caps">Living</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content"></div>     
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script>
+$(document).ready(function(e){
+    init(e);
+    function renderAll(){
+        var prefix = get_prefix();
+        var pages_json = prefix + "/pages/thegateway-code-of-conduct.json"
+        $.getJSON(pages_json).done(function(data) {
+            $('#mm_page_content').html(data.body);
+        }).fail(function(jqXHR) {
+            if (jqXHR.status == 404) {
+                $("#404_msg").fadeIn("fast");
+            }
+        });
+        
+        $(".nav_container").addClass("border_bottom");
+        
+        show_content();
+    }
+    loadMallDataCached(renderAll); 
+})
+</script>
