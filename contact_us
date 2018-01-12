@@ -55,8 +55,7 @@ $(document).ready(function(e){
         $.getJSON(pages_json).done(function(data) {
             if(data.body != ""){
                 $('#header_content').html(data.body);
-            } else {
-                
+                $('#header_content').show();
             }
             console.log(data.body)
         }).fail(function(jqXHR) {
