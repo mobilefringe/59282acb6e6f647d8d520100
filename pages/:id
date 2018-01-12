@@ -36,8 +36,12 @@
         function renderAll(){
             var repo = getRepoDetailsByName("Generic Page Banner");
             if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+                try {
+                    var banner = getImageURL(repo.images[0].photo_url);
+                    $(".page_header").css({backgroundImage: "url(" + banner + ")"});    
+                } catch(err) {
+                    console.log(err);
+                }
             }
             
             var pathArray = window.location.pathname.split( '/' );
