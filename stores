@@ -75,8 +75,12 @@
         function renderAll(){
             var repo = getRepoDetailsByName("Stores Banner");
             if (repo != undefined) {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+                try {
+                    var banner = getImageURL(repo.images[0].photo_url);
+                    $(".page_header").css({backgroundImage: "url(" + banner + ")"});    
+                } catch(err) {
+                    console.log(err);
+                }
             }
             
             var categories = getStoreCategories().sortBy(function(o){ return o.name});
