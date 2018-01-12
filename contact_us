@@ -54,6 +54,7 @@ $(document).ready(function(e){
         var pages_json = prefix + "/pages/thegateway-contact-us-description.json"
         $.getJSON(pages_json).done(function(data) {
             $('#header_content').html(data.body);
+            console.log(data.body)
         }).fail(function(jqXHR) {
             if (jqXHR.status == 404) {
                 $("#404_msg").fadeIn("fast");
