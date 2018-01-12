@@ -1,3 +1,8 @@
+<style>
+    #mm_page_content a {
+    color: #1ccfc9;
+}
+</style>
 <div class="site_container page_content">
     <div class="row">
         <div class="col-md-12">
