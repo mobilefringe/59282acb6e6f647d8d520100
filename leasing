@@ -27,7 +27,11 @@
         function renderAll(){
             var slider_images =  getRepoDetailsByName("Leasing Slider Images").images;
             if (slider_images != undefined){
-                renderGeneral('#leasing_banner', '#leasing_template', slider_images);
+                try {
+                    renderGeneral('#leasing_banner', '#leasing_template', slider_images);    
+                } catch(err) {
+                    console.log(err);
+                }
             }
             
             var prefix = get_prefix();
