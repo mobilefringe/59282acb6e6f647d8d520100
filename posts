@@ -89,7 +89,7 @@ $(document).ready(function(e){
         $.getJSON(pages_json).done(function(data) {
             if(data.body != ""){
                 $('#mm_page_content').html(data.body);
-                $('#header_content').show();
+                $('#mm_page_content').show();
             }
         }).fail(function(jqXHR) {
             if (jqXHR.status == 404) {
