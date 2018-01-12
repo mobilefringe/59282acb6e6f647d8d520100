@@ -83,7 +83,7 @@
             });
             
             var gallery = getFashionBySlug("thegateway-station-41").fashion_images;
-            (if gallery != null){
+            if(gallery != null){
                 try {
                         renderGallery("#gallery_container", "#gallery_template", gallery);
                     } catch(err) {
