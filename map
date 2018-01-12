@@ -1,0 +1,147 @@
+<div class="page_header">   
+    <div class="site_container">
+        <div class="header_content">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1>Center Map</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+<div class="site_container page_content">
+    <div class="row">
+        <div class="col-md-4  hidden_phone">
+            <div class="map_directory">
+                <h3 class="map_title caps">Directory</h3>
+                <div id="stores_container" class="directory_list">
+                {%raw%}
+                    <script id="stores_template" type="x-tmpl-mustache/text">
+                        <a class="map_pin_a caps" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}">{{name}}</a>
+                    </script>
+                {%endraw%}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="visible_phone">
+                <div class="map_dropdown dropdown">
+                    <a id="store_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select a Store <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
+                    <ul class="dropdown-menu map_list" aria-labelledby="dropdownMenu2" id="stores_mobile_container">
+                        <script id="stores_mobile_template" type="x-tmpl-mustache/text">
+                            <li><a class="map_pin_a" href="#" store_id="{{id}}" store_name="{{name}}" store_x_coordinate="{{x_coordinate}}" store_y_coordinate="{{y_coordinate}}"><h5 class="directory_name caps">{{name}}</h5></a></li>
+				        </script>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="map light_border">
+                <button type="button" id="map_reset">RESET MAP</button>
+			    <div id="zoom_container">
+			        
+                    <img id="png_map" class="png_map" alt="center map" src="" />
+                    <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
+            	    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin_60"></div>
+</div>
+<script src="//codecloud.cdn.speedyrails.net/sites/59035a6c6e6f645a5b420000/application/x-javascript/1503602727000/smoothZoomA24.js"></script>
+<script>
+    $(document).ready(function(e){
+        init(e);
+        loadMallDataCached(renderPage);
+    })
+    
+    function rr(container, template, collection, type){
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        Mustache.parse(template_html);   // optional, speeds up future uses
+        var store_initial="";
+        $.each(collection, function(key, val) {
+            var rendered = Mustache.render(template_html,val);
+            item_rendered.push(rendered);
+        });
+        
+        $(container).show();
+        $(container).html(item_rendered.join(''));
+    }
+    
+    function renderPage(){
+        var repo = getRepoDetailsByName("Map Banner");
+        if (repo != undefined) {
+            try {
+                var banner = getImageURL(repo.images[0].photo_url);
+                $(".page_header").css({backgroundImage: "url(" + banner + ")"});    
+            } catch(err) {
+                console.log(err);
+            }
+        }
+        
+        var stores = getStoresList();
+        rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
+        renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
+        
+        show_content();
+        
+        $("#png_map").attr("src", getPNGMapURL())
+		$('#png_map').smoothZoom({
+		    height: 768,
+		    width: 768,
+		    initial_ZOOM: 0,
+			zoom_MIN: 0,
+			zoom_MAX: 200,
+			responsive: true,
+		    responsive_maintain_ratio: true,
+			zoom_BUTTONS_SHOW : 'YES',
+			pan_BUTTONS_SHOW : 'NO',
+			pan_LIMIT_BOUNDARY : 'NO',
+			button_ALIGN: "top right",
+			container: 'zoom_container'
+		});
+		
+		show_png_pin(".map_pin_a", "#png_map");
+		
+		$("#map_reset").click(function() {
+            $("#png_map").smoothZoom('removeLandmark'); 
+            $("#png_map").smoothZoom('Reset');
+        });
+    }
+
+function show_png_pin(trigger, map){
+    $(trigger).click(function(e) {
+        e.preventDefault()
+        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+        
+        var zoomData = $(map).smoothZoom('getZoomData');
+        x_coord = parseInt($(this).attr('store_x_coordinate'));
+        y_coord = parseInt($(this).attr('store_y_coordinate'));
+        
+        name = $(this).text();
+        $(map).smoothZoom('removeLandmark')
+        if (isMobile) {
+            $(map).smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:200});    
+        } else {
+            $(map).smoothZoom('focusTo', {x:x_coord, y:y_coord, zoom:200});
+        }
+        
+        $(map).smoothZoom('addLandmark', 
+			[
+			'<div class="item mark" data-show-at-zoom="0" data-position="'+x_coord+','+y_coord+'">\
+				<div>\
+					<div class="text">\
+					<span>'+ name+ '</span>\
+				</div>\
+				<img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496847563000/map_marker.png" width="45px" height="60px" alt="marker" />\
+				</div>\
+			</div>'
+			]
+		);
+    });
+}
+</script>
