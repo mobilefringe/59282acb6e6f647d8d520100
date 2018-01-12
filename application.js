@@ -76,7 +76,6 @@ function renderEvents(container, template, collection){
         // else{
             val.store_name = "The Gateway";
             val.image_url = val.event_image_url_abs;
-            console.log(val.event_image_url_abs)
             val.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
             if(val.image_url.indexOf('missing.png') > 0){
                 val.image_url  = val.logo;
@@ -129,11 +128,16 @@ function renderEventDetails(container, template, collection){
     Mustache.parse(template_html); 
     item_list.push(collection);
     $.each( item_list , function( key, val ) {
-        val.image_url = getImageURL(val.event_image_url);
-        if(val.image_url.indexOf('missing.png') > 0){
+        if(val.event_image_url.indexOf('missing.png') > 0){
             val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg"
-            // val.image_show = "display:none";
+        } else {
+            val.image_url = getImageURL(val.event_image_url);
         }
+        // val.image_url = getImageURL(val.event_image_url);
+        // if(val.image_url.indexOf('missing.png') > 0){
+        //     val.image_url = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg"
+        //     // val.image_show = "display:none";
+        // }
         
         var show_date = moment(val.show_on_web_date);
         var start = moment(val.start_date).tz(getPropertyTimeZone());
@@ -150,6 +154,7 @@ function renderEventDetails(container, template, collection){
     });
     $(container).html(item_rendered.join(''));
 }
+
 
 function renderGallery(container, template, collection){
     var item_list = [];
