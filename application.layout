@@ -110,13 +110,11 @@
                                 <li class="menu_item"><a href="/stores">Shopping</a></li>
                                 <li class="menu_item"><a href="/dine">Dining</a></li>
                                 <li class="menu_item"><a href="/entertainment">Entertainment</a></li>
-                                <!--<li class="menu_item"><a href="/showtimes">Showtimes</a></li>-->
                                 <li class="menu_item"><a href="/map">Center Map</a></li>
                                 <li class="menu_item"><a href="/events">Calendar</a></li>
                                 <li class="menu_item"><a href="#">Explore</a>
                                     <ul>
                                         <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
-                                        <!--<li class="dropdown_item"><a href="/parking">Parking</a></li>-->
                                         <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
                                         <li class="dropdown_item"><a href="/office">Office</a></li>
                                         <li class="dropdown_item"><a href="/living">Living</a></li>
