@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="press_content" id="mm_page_content"></div>    
+            <div class="press_content" id="header_content"></div>    
         </div>
     </div>
     <div class="row">
