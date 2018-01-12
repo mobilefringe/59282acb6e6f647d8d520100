@@ -133,7 +133,6 @@
                             </ul>
                             <div class="header_social">
                                 <a href="https://www.instagram.com/shopthegateway/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="https://twitter.com/shopthegateway" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <a href="https://www.facebook.com/shopthegateway/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                                 <a href="#" data-toggle="modal" data-target="#snap_modal"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
                                 <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
@@ -167,7 +166,6 @@
                                     <li class="dropdown_item"><a href="/map">Center Map</a></li>
                                 </ul> 
                             </li>
-                            <!--<li class="menu_item"><a href="/showtimes">Entertainment</a></li>-->
                             <li class="menu_item site_logo">
                                 <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59d29b4b6e6f6437811f0000/image/png/1508191989000/logo.png" alt="Property Logo"/></a>
                             </li>
@@ -175,7 +173,6 @@
                             <li class="menu_item"><a href="/getting_here">Explore</a>
                                 <ul>
                                     <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
-                                    <!--<li class="dropdown_item"><a href="/parking">Parking</a></li>-->
                                     <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
                                     <li class="dropdown_item"><a href="/office">Office</a></li>
                                     <li class="dropdown_item"><a href="/living">Living</a></li>
@@ -215,12 +212,6 @@
         <div class="wide_container">
             <div class="row">
                 <div class="col-md-3 hidden_phone">
-                    <!--<div id="home_hours_container_footer" class="pull-left">-->
-                    <!--    <script id="home_hours_template_footer" type="x-tmpl-mustache/text">-->
-                    <!--        <p class="open_now">{% raw %}  {% endraw %}</p> -->
-                    <!--        <p class="todays_hours caps">{% raw %} {{open}} {{hours}} {% endraw %}</p>-->
-                    <!--    </script>-->
-                    <!--</div>-->
                     <div id="weather_footer" class="pull-left"></div>
                 </div>
                 <div class="col-md-6">
@@ -235,7 +226,6 @@
                         <p class="fooeter_address">The Gateway is located in the heart of downtown Salt Lake City, along 400 West and 100 South.</p>
                         <p class="footer_phone bold">801-456-0000</p>
                     </div>
-                    
                     <div class="footer_conduct">
                         <a href="/code_of_conduct"><p class="line">Code Of Conduct</p></a>
                     </div>
