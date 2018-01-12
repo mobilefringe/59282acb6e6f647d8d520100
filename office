@@ -86,10 +86,9 @@
             if(gallery != null){
                 try {
                         renderGallery("#gallery_container", "#gallery_template", gallery);
-                    } catch(err) {
-                        console.log(err);
-                    }
-                
+                } catch(err) {
+                    console.log(err);
+                }
             }
             
             var id_list = [];
