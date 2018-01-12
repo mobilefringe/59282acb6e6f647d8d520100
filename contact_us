@@ -5,6 +5,11 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-12">
+            <div class="press_content" id="mm_page_content"></div>    
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
             <h4 class="bold">The Gateway Management Office</h4>
             <h4>18 N Rio Grande Street <br>
