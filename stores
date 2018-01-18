@@ -1,25 +1,19 @@
-<div class="page_header no_margin">   
+<div class="page_header">   
     <div class="site_container">
         <div class="header_content">
             <div class="row">
                 <div class="col-md-12">
                     <hr>
-                    <h1>Stores</h1>
+                    <h1>Shopping</h1>
                     <hr>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<div>
-    <div class="directory_header">
-        <div class="site_container">
             <div class="row bold">
                 <div class="col-sm-6 col-md-4">
                     <div class="store_search" >
                         <label class="">
                             <input type="text" placeholder="Find Your Store" id="store_search" />
-                            <img src="//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/png/1515697846000/searchicon@2x.png" class="pull-right" id="store_search_img" alt="">
+                            <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496082956000/search_icon.png" class="pull-right" id="store_search_img" alt="">
                             <i id="close_search_results" class="fa fa-times-circle hidden_now"></i>
                         </label>
                         <div class="search_results" id="store_search_results"></div>
@@ -27,7 +21,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="dropdown category_selector">
-                        <a id="store_cat_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sort By Category <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/png/1515706054000/arrow@2x.png" alt=""></span></a>
+                        <a id="store_cat_list" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sort By Category <span class="dropdown_arrow"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489097373000/Expand Arrow.png" alt=""></span></a>
                         <ul class="dropdown-menu cat_list" aria-labelledby="dropdownMenu1" id="category_select">
                             <script id="category_select_template" type="x-tmpl-mustache/text">
     				            <li class="show_cat_stores" data-id="{{id}}" name="{{name}}">{{name}}</li>
@@ -42,7 +36,6 @@
                 </div>
             </div>
         </div>
-        <hr>
     </div>  
 </div>
 <div class="site_container page_content">
