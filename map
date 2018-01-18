@@ -83,7 +83,7 @@
     
     function renderPage(){
         var prefix = get_prefix();
-        var pages_json = prefix + "/pages/thegateway-press-page.json"
+        var pages_json = prefix + "/pages/thegateway-map.json"
         $.getJSON(pages_json).done(function(data) {
             if(data.body != ""){
                 $('#mm_page_content').html(data.body);
