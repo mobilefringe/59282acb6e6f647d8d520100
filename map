@@ -1,18 +1,29 @@
-<div class="page_header">   
-    <div class="site_container">
-        <div class="header_content">
-            <div class="row">
-                <div class="col-md-12">
-                    <hr>
-                    <h1>Center Map</h1>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </div>  
-</div>
 <div class="site_container page_content">
     <div class="row">
+        <div class="col-md-12">
+            <h1 class="inside_header caps">Office</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mm_page_content" class="center"></div>
+        </div>
+    </div>
+    <div class="margin_60"></div>
+    <div class="row">
+        <div id="gallery_container">
+            <script id="gallery_template" type="x-tmpl-mustache/text">
+                <div class="col-sm-6 col-md-3">
+                    <div class="gallery_content">
+                        <div class="gallery_image">
+                            <a class="open_details_modal" data-modal-id="{{id}}">
+                                <img src="{{gallery_image}}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
         <div class="col-md-4  hidden_phone">
             <div class="map_directory">
                 <h3 class="map_title caps">Directory</h3>
