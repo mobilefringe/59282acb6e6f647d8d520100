@@ -86,6 +86,8 @@
         rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
         
+        $(".nav_container").addClass("border_bottom");
+        
         show_content();
         
         $("#png_map").attr("src", getPNGMapURL())
