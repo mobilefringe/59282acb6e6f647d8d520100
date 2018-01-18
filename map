@@ -47,11 +47,9 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="map light_border">
                 <button type="button" id="map_reset">RESET MAP</button>
 			    <div id="zoom_container">
-			        
                     <img id="png_map" class="png_map" alt="center map" src="" />
                     <div class="landmarks" data-show-at-zoom="100" data-allow-drag="true">
             	    </div>    
@@ -84,16 +82,6 @@
     }
     
     function renderPage(){
-        var repo = getRepoDetailsByName("Map Banner");
-        if (repo != undefined) {
-            try {
-                var banner = getImageURL(repo.images[0].photo_url);
-                $(".page_header").css({backgroundImage: "url(" + banner + ")"});    
-            } catch(err) {
-                console.log(err);
-            }
-        }
-        
         var stores = getStoresList();
         rr('#stores_container','#stores_template', stores, "stores", "A", "Z");
         renderGeneral('#stores_mobile_container','#stores_mobile_template', stores);
