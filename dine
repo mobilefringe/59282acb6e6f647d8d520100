@@ -1,40 +1,33 @@
-<div class="page_header no_margin">   
+<div class="page_header">   
     <div class="site_container">
         <div class="header_content">
-            <div class="row">
+            <div class="row margin_90">
                 <div class="col-md-12">
                     <hr>
-                    <h1>Dining</h1>
+                    <h1>DINE</h1>
                     <hr>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<div>
-    <div class="directory_header">
-        <div class="site_container">
             <div class="row bold">
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="store_search" >
                         <label class="">
-                            <input type="text" placeholder="Find Your Restaurant" id="store_search" />
-                            <img src="//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/png/1515697846000/searchicon@2x.png" class="pull-right" id="store_search_img" alt="">
+                            <input type="text" placeholder="Find Your Store" id="store_search" />
+                            <img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496082956000/search_icon.png" class="pull-right" id="store_search_img" alt="">
                             <i id="close_search_results" class="fa fa-times-circle hidden_now"></i>
                         </label>
                         <div class="search_results" id="store_search_results"></div>
                     </div>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-sm-6 col-md-4"></div>
                 <div class="col-md-4 hidden_phone">
-                    <a href="/map" class="directory_link">
+                    <a class="directory_link" href="/map">
                         <div class="promotions_header_container directory_btn">View Map</div>
                     </a>
                 </div>
-            </div> 
+            </div>
         </div>
-        <hr>
-    </div>
+    </div>  
 </div>
 <div class="site_container page_content">
     <div class="row">
