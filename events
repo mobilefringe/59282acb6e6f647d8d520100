@@ -104,39 +104,48 @@
             }
             
             var events = getEventsList().sortBy(function(o){ return o.start_date });
-            
-            // CALENDAR 
-            var calendar_events = [];
+            console.log(events)
+            var today = moment();
+            var three_months = moment().add('3', 'M').endOf("d");
+            var eventsThreeMonths = [];
             $.each( events , function( key, val ){
-                var published_event = {};
-                today = moment();
-                five_months = moment().add('3', 'M').endOf("d");
-                if (today < five_months){
-                    webDate = moment(val.show_on_web_date);
-                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                        published_event.start = val.start_date;
-                        published_event.end = val.end_date;
-                        published_event.title = val.name;
-                        published_event.url = "/events/" + val.slug;
-                        calendar_events.push(published_event);
-                    }
+                if (today < three_months){
+                    eventsThreeMonths.push(val);
                 }
             });
+            console.log(eventsThreeMonths);
+            // CALENDAR 
+            // var calendar_events = [];
+            // $.each( events , function( key, val ){
+            //     var published_event = {};
+            //     today = moment();
+            //     three_months = moment().add('3', 'M').endOf("d");
+            //     if (today < three_months){
+            //         webDate = moment(val.show_on_web_date);
+            //         if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+            //             published_event.start = val.start_date;
+            //             published_event.end = val.end_date;
+            //             published_event.title = val.name;
+            //             published_event.url = "/events/" + val.slug;
+            //             calendar_events.push(published_event);
+            //         }
+            //     }
+            // });
             
-            // LIST VIEW
-            var published_events = [];
-            $.each( events , function( key, val ){
-                today = moment();
-                webDate = moment(val.show_on_web_date)
-                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                    published_events.push(val);
-                } 
-            });
-            if(published_events.length > 0){
-                renderEvents("#events_container","#events_template", published_events);
-            } else {
-                $('#no_events').show();
-            }
+            // // LIST VIEW
+            // var published_events = [];
+            // $.each( events , function( key, val ){
+            //     today = moment();
+            //     webDate = moment(val.show_on_web_date)
+            //     if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+            //         published_events.push(val);
+            //     } 
+            // });
+            // if(published_events.length > 0){
+            //     renderEvents("#events_container","#events_template", published_events);
+            // } else {
+            //     $('#no_events').show();
+            // }
             
             show_content();
             
