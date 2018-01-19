@@ -124,7 +124,7 @@
             
             // CALENDAR 
             var calendar_events = [];
-            $.each( events , function( key, val ){
+            $.each( eventsThreeMonths , function( key, val ){
                 var published_event = {};
                 // today = moment();
                 // three_months = moment().add('3', 'M').endOf("d");
