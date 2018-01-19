@@ -103,9 +103,10 @@
                 }
             }
             
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            
             // CALENDAR 
             var calendar_events = [];
-            var events = getEventsList().sortBy(function(o){ return o.start_date });
             $.each( events , function( key, val ){
                 var published_event = {};
                 today = moment();
@@ -123,27 +124,20 @@
             });
             
             // LIST VIEW
-            $('#listBtn').click(function(){
-                $('#listBtn').hide();
-                $('#calendarBtn').show(); 
-                $('#eventsCalendar').fadeOut();
-                $('#eventsList').fadeIn();
-            
-                var events = getEventsList().sortBy(function(o){ return o.start_date });
-                var published_events = [];
-                $.each( events , function( key, val ){
-                    today = moment();
-                    webDate = moment(val.show_on_web_date)
-                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                        published_events.push(val);
-                    } 
-                });
-                if(published_events.length > 0){
-                    renderEvents("#events_container","#events_template", published_events);
-                } else {
-                    $('#no_events').show();
-                }
+            var published_events = [];
+            $.each( events , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_events.push(val);
+                } 
             });
+            if(published_events.length > 0){
+                renderEvents("#events_container","#events_template", published_events);
+            } else {
+                $('#no_events').show();
+            }
+            
             show_content();
             
             load_more(1);
@@ -156,12 +150,12 @@
             
             $('#eventsCalendar').fadeIn();
             
-            // $('#listBtn').click(function(){
-            //     $('#listBtn').hide();
-            //     $('#calendarBtn').show(); 
-            //     $('#eventsCalendar').fadeOut();
-            //     $('#eventsList').fadeIn();
-            // });
+            $('#listBtn').click(function(){
+                $('#listBtn').hide();
+                $('#calendarBtn').show(); 
+                $('#eventsCalendar').fadeOut();
+                $('#eventsList').fadeIn();
+            });
             
             $('#calendarBtn').click(function() {
                 $('#calendarBtn').hide();
