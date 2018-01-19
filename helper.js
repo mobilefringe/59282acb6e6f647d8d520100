@@ -214,21 +214,21 @@ function show_content(){
     $('.custom_backdrop').remove();
     
     // BANNER MESSAGE
-    $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
-        var messages = data.messages.bulletin
-        if (messages != undefined){
-            if (messages == null){
-                $('.news-ticker').hide();
-            } else {
-                $.each(messages, function(key ,val){
-                    $('#bulletin').append('<li class="caps"><strong>' + val.messages[0].title + ' </strong>'  + val.messages[0].body +  '</li>')
-                });
-            $('.news-ticker').show();
-            }
-        } else {
-            $('.news-ticker').hide();
-        }
-    });
+    // $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
+    //     var messages = data.messages.bulletin
+    //     if (messages != undefined){
+    //         if (messages == null){
+    //             $('.news-ticker').hide();
+    //         } else {
+    //             $.each(messages, function(key ,val){
+    //                 $('#bulletin').append('<li class="caps"><strong>' + val.messages[0].title + ' </strong>'  + val.messages[0].body +  '</li>')
+    //             });
+    //         $('.news-ticker').show();
+    //         }
+    //     } else {
+    //         $('.news-ticker').hide();
+    //     }
+    // });
 
     // MARQUEE SCROLL EFFECT 
     $(function(){
