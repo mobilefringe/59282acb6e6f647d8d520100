@@ -1,8 +1,8 @@
 function init(e) {
     $('<div class="modal-backdrop custom_backdrop"><div class="loader">Loading...</div></div>').appendTo(document.body);
     
-    // get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 1, 'standard_resolution', render_instagram_single);
-    // get_instagram_feed("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 12, 'standard_resolution', render_instagram);
+    get_instagram("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 1, 'standard_resolution', render_instagram_single);
+    get_instagram_feed("//thegateway.mallmaverick.com/api/v3/thegateway/social.json", 12, 'standard_resolution', render_instagram);
     
     // jQuery(document).ready(function ($) {
     var window_width = $( window ).width();
@@ -213,7 +213,7 @@ function show_content(){
     $(".yield").css('visibility','visible').hide().fadeIn('slow');
     $('.custom_backdrop').remove();
     
-    // BANNER MESSAGE
+    // BANNER MESSAGE IS CURRENTLY NOT BEING USED
     // $.getJSON("//thegateway.mallmaverick.com/api/v3/thegateway/messages.json").done(function(data){
     //     var messages = data.messages.bulletin
     //     if (messages != undefined){
