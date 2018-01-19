@@ -107,6 +107,7 @@
             console.log(events)
             var today = moment();
             var three_months = moment().add('3', 'M').endOf("d");
+            console.log(three_months)
             var eventsThreeMonths = [];
             $.each( events , function( key, val ){
                 if(today < three_months) {
