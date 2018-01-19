@@ -104,23 +104,23 @@
             }
             
             // CALENDAR 
-            // var calendar_events = [];
-            // var events = getEventsList().sortBy(function(o){ return o.start_date });
-            // $.each( events , function( key, val ){
-            //     var published_event = {};
-            //     today = moment();
-            //     five_months = moment().add('3', 'M').endOf("d");
-            //     if (today < five_months){
-            //         webDate = moment(val.show_on_web_date);
-            //         if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-            //             published_event.start = val.start_date;
-            //             published_event.end = val.end_date;
-            //             published_event.title = val.name;
-            //             published_event.url = "/events/" + val.slug;
-            //             calendar_events.push(published_event);
-            //         }
-            //     }
-            // });
+            var calendar_events = [];
+            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            $.each( events , function( key, val ){
+                var published_event = {};
+                today = moment();
+                five_months = moment().add('3', 'M').endOf("d");
+                if (today < five_months){
+                    webDate = moment(val.show_on_web_date);
+                    if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                        published_event.start = val.start_date;
+                        published_event.end = val.end_date;
+                        published_event.title = val.name;
+                        published_event.url = "/events/" + val.slug;
+                        calendar_events.push(published_event);
+                    }
+                }
+            });
             
             // LIST VIEW
             $('#listBtn').click(function(){
