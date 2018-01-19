@@ -116,7 +116,7 @@
                         var end_Date = moment(val.end_date);
                         if(end_Date <= three_months){
                             eventsThreeMonths.push(val);
-                        
+                        }
                     }
                 }
             });
