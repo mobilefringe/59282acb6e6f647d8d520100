@@ -109,7 +109,7 @@
             $.each( events , function( key, val ){
                 var published_event = {};
                 today = moment();
-                five_months = moment().add('4', 'M').endOf("d");
+                five_months = moment().add('3', 'M').endOf("d");
                 if (today < five_months){
                     webDate = moment(val.show_on_web_date);
                     if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
