@@ -140,14 +140,14 @@
             // });
             
             // // LIST VIEW
-            var listViewEvents = [];
-            $.each( events , function( key, val ){
-                today = moment();
-                webDate = moment(val.show_on_web_date)
-                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                    published_events.push(val);
-                } 
-            });
+            // var listViewEvents = [];
+            // $.each( events , function( key, val ){
+            //     today = moment();
+            //     webDate = moment(val.show_on_web_date)
+            //     if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+            //         published_events.push(val);
+            //     } 
+            // });
             if(eventsThreeMonths.length > 0){
                 renderEvents("#events_container","#events_template", eventsThreeMonths);
             } else {
