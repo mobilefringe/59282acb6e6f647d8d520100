@@ -38,6 +38,11 @@
                     <div class="thick_line"></div>        
                 </div>
             </div>
+            <div id="no_events" class="row hidden_now">
+                <div class="col-md-12">
+                    <p>There are no published Events at this time. Please check back soon.</p>    
+                </div>
+            </div>
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
                     <div class="row event_container hidden_now" id="show_{{counter}}">
@@ -125,7 +130,7 @@
                 calendar_events.push(published_event);
             });
             
-            // // LIST VIEW
+            // LIST VIEW
             if(eventsThreeMonths.length > 0){
                 renderEvents("#events_container","#events_template", eventsThreeMonths);
             } else {
