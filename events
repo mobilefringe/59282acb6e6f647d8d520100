@@ -15,24 +15,16 @@
     </div>
 </div>
 <div class="site_container page_content">
-
     <div class="event_btns">
         <div id="calendarBtn" class="event_toggle_btn hidden_now"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</div>
         <div id="listBtn" class="event_toggle_btn"><i class="fa fa-list" aria-hidden="true"></i> List View</div>    
     </div>    
-
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane" id="eventsCalendar">
             <div class="row">
                 <div class="col-md-12">
                     <div class="margin_30"></div>
                     <div class="position_relative">
-                        <!--<ul class="event_calendar_header">-->
-                        <!--    <li><span id="discovery_tile"></span>Discovery Gateway</li>-->
-                        <!--    <li><span id="fountain_tile"></span>The Fountain</li>-->
-                        <!--    <li><span id="plaza_tile"></span>The Plaza</li>-->
-                            <!--<li><span id="dixie_event_tile"></span>Dixie Events</li>-->
-                        <!--</ul>-->
                         <div class="calendar" id="calendar"></div>
                         <div class="margin_60"></div>
                     </div>
@@ -126,18 +118,11 @@
             var calendar_events = [];
             $.each( eventsThreeMonths , function( key, val ){
                 var published_event = {};
-                // today = moment();
-                // three_months = moment().add('3', 'M').endOf("d");
-                // if (today < three_months){
-                //     webDate = moment(val.show_on_web_date);
-                //     if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                        published_event.start = val.start_date;
-                        published_event.end = val.end_date;
-                        published_event.title = val.name;
-                        published_event.url = "/events/" + val.slug;
-                        calendar_events.push(published_event);
-                    // }
-                // }
+                published_event.start = val.start_date;
+                published_event.end = val.end_date;
+                published_event.title = val.name;
+                published_event.url = "/events/" + val.slug;
+                calendar_events.push(published_event);
             });
             
             // // LIST VIEW
