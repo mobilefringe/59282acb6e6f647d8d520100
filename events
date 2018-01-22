@@ -102,6 +102,8 @@
             
             var three_months = moment().add('3', 'M').endOf("d");
             var events = getEventsList().filter(function(o){ return o.end_date <= three_months });
+            var newArray = homes.filter(function (el) {
+
             console.log(events)
             
             
