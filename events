@@ -143,8 +143,8 @@
             // });
             
             // LIST VIEW
-            if(eventsThreeMonths.length > 0){
-                renderEvents("#events_container","#events_template", eventsThreeMonths);
+            if(filteredEvents.length > 0){
+                renderEvents("#events_container","#events_template", filteredEvents);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
