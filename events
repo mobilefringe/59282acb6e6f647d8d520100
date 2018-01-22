@@ -141,14 +141,20 @@
             //     published_event.url = "/events/" + val.slug;
             //     calendar_events.push(published_event);
             // });
+            $.map( filteredEvents, function( val, i ) {
+                published_event.start = val.start_date;
+                published_event.end = val.end_date;
+                published_event.title = val.name;
+                published_event.url = "/events/" + val.slug;
+            });
             
             // LIST VIEW
-            // if(filteredEvents.length > 0){
-            //     renderEvents("#events_container","#events_template", filteredEvents);
-            // } else {
-            //     $('#no_events').show();
-            //     $('#loadMoreEvents').hide();
-            // }
+            if(filteredEvents.length > 0){
+                renderEvents("#events_container","#events_template", filteredEvents);
+            } else {
+                $('#no_events').show();
+                $('#loadMoreEvents').hide();
+            }
             
             show_content();
             
@@ -181,7 +187,7 @@
                     right:  'prev,next'
                 },
                 timezone: getPropertyTimeZone(),
-                events: calendar_events,
+                events: filteredEvents,
                 buttonText: {
                     prev: "Previous Month",
                     next: "Next Month"
