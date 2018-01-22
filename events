@@ -203,7 +203,6 @@
             console.log(filteredEvents)
             // LIST VIEW
             if(filteredEvents.length > 0){
-                var showEvents = 3;
                 var eventsToShow = _.slice(filteredEvents, [0], [3])
                 renderEvents("#events_container","#events_template", eventsToShow);
             } else {
@@ -213,11 +212,11 @@
             
             show_content();
             
-            load_more(1);
+            load_more(1, filteredEvents);
             
             $('#load_more_posts').click(function(e){
                 var i = $('#num_loaded').val();
-                load_more(i);
+                load_more(i, filteredEvents);
                 e.preventDefault();
             });
             
@@ -263,13 +262,17 @@
             });
         }
         
-        function load_more(num, ){
+        function load_more(num, filteredEvents){
             var n = parseInt(num);
             for(i = n; i < n + 3; i++){
                 var id = i.toString();
                 $('#show_' + id ).fadeIn();
             }
-            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            // var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var showEvents = 3;
+            var eventsToShow = _.slice(filteredEvents, [sliceStart], [sliceEnd])
+            renderEvents("#events_container","#events_template", eventsToShow);
+                
             var total_events = events.length;
             if(i >= total_events){
                 $('#loaded_posts').hide();
