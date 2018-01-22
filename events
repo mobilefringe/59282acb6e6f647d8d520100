@@ -101,7 +101,7 @@
             }
             
             var today = moment().tz(getPropertyTimeZone());
-            var three_months = moment().add('2', 'M').endOf("d").format();
+            var three_months = moment().add('3', 'M').endOf("d").format();
             // var filteredEvents = getEventsList().filter( function(o) { 
             var filteredEvents = _.filter(getEventsList(), function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
