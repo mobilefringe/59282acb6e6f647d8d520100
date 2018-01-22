@@ -92,12 +92,12 @@ function renderEvents(container, template, collection){
         //     val.month = start.format("MMM")
         // }
         
-        val.counter = counter;
+        //val.counter = counter;
         
         var rendered = Mustache.render(template_html,val);
         console.log(rendered);
         item_rendered.push(rendered);
-        counter = counter + 1;
+        //counter = counter + 1;
         //console.log("Counter: " + counter);
     });
     $(container).show();
