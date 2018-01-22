@@ -263,6 +263,7 @@
         }
         
         function load_more(num, filteredEvents){
+            console.log(filteredEvents)
             var n = parseInt(num);
             for(i = n; i < n + 3; i++){
                 var id = i.toString();
