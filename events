@@ -219,8 +219,8 @@
             //load_more(1, filteredEvents, sliceStart, sliceEnd);
             
             $('#load_more_posts').click(function(e){
-                var i = $('#num_loaded').val();
-                load_more(i, filteredEvents, sliceStart, sliceEnd);
+                //var i = $('#num_loaded').val();
+                load_more(filteredEvents, sliceStart, sliceEnd);
                 e.preventDefault();
             });
             
@@ -266,26 +266,17 @@
             });
         }
         
-        function load_more(num, filteredEvents){
-            console.log(filteredEvents)
-            var n = parseInt(num);
-            // for(i = n; i < n + 3; i++){
-            //     var id = i.toString();
-            //     $('#show_' + id ).fadeIn();
-            // }
-            // var events = getEventsList().sortBy(function(o){ return o.start_date });
-            var showEvents = 3;
-            sliceStart = sliceStart + 3;
-            sliceEnd = sliceEnd + 3;
+        function load_more(filteredEvents, start, end){
+            sliceStart = start + 3;
+            sliceEnd = end + 3;
             var eventsToShow = _.slice(filteredEvents, [sliceStart], [sliceEnd])
             renderEvents("#events_container","#events_template", eventsToShow);
-                
             var total_events = filteredEvents.length;
-            if(i >= total_events){
+            if(sliceEnd >= total_events){
                 $('#loaded_posts').hide();
                 $('#all_loaded').show();
             }
-            $('#num_loaded').val(i);
+            //$('#num_loaded').val(i);
         }
 
         loadMallDataCached(renderAll); 
