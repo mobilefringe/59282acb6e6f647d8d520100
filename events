@@ -142,10 +142,10 @@
             //     calendar_events.push(published_event);
             // });
             $.map( filteredEvents, function( val, i ) {
-                published_event.start = val.start_date;
-                published_event.end = val.end_date;
-                published_event.title = val.name;
-                published_event.url = "/events/" + val.slug;
+                val.start = val.start_date;
+                val.end = val.end_date;
+                val.title = val.name;
+                val.url = "/events/" + val.slug;
             });
             
             // LIST VIEW
