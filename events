@@ -103,7 +103,7 @@
             var three_months = moment().add('3', 'M').endOf("d").format();
             var events = getEventsList()
             var filteredEvents = getEventsList().filter(function(o){ return o.end_date <= three_months });
-            
+            console.log(filteredEvents)
 
             var eventsThreeMonths = [];
             $.each( filteredEvents , function( key, val ){
