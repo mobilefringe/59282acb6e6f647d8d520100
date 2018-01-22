@@ -104,7 +104,6 @@
             var events = getEventsList()
             var filteredEvents = events.filter(function(o){ return o.end_date <= three_months });
 
-
             console.log(events)
             console.log(filteredEvents)
             
