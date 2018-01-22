@@ -56,7 +56,7 @@ function renderEvents(container, template, collection){
     Mustache.parse(template_html); 
     // $.each( collection , function( key, val ) {
     _.forEach( collection , function( val ) {
-        console.log('Val ' + val);
+        console.table('Val ' + val);
         // val.store_name = "The Gateway";
         // val.image_url = val.event_image_url_abs;
         // val.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
