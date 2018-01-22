@@ -104,16 +104,31 @@
             var today = moment().tz(getPropertyTimeZone());
             var three_months = moment().add('3', 'M').endOf("d");
             var eventsThreeMonths = [];
+            // $.each( events , function( key, val ){
+            //     var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+            //     if(today <= three_months && today >= webDate) {
+            //         var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
+            //         if(end_Date <= three_months){
+            //             eventsThreeMonths.push(val);
+            //         }
+            //     }
+            // });
+            
+            
             $.each( events , function( key, val ){
                 var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-                if(today <= three_months && today >= webDate) {
-                    var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
-                    if(end_Date <= three_months){
-                        eventsThreeMonths.push(val);
+                if(today <= three_months) {
+                    var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+                    if(today >= webDate) {
+                        var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
+                        if(end_Date <= three_months){
+                            eventsThreeMonths.push(val);
+                        }
                     }
                 }
             });
-            
+             
+             
             // CALENDAR 
             var calendar_events = [];
             $.each( eventsThreeMonths , function( key, val ){
