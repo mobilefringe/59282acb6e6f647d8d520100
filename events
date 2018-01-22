@@ -193,7 +193,8 @@
             //         val.month = start.format("MMM")
             //     }
             // });
-
+            
+            console.log(filteredEvents)
             // LIST VIEW
             if(filteredEvents.length > 0){
                 renderEvents("#events_container","#events_template", filteredEvents);
