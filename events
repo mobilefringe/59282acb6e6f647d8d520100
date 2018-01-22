@@ -205,7 +205,7 @@
             var sliceEnd = 3;
             if(filteredEvents.length > 0){
                 var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
-                console.log('Sliced Array ' + eventstoShow)
+                console.log('Sliced Array ' + eventsToShow)
                 renderEvents("#events_container","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
