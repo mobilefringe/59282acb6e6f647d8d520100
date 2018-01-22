@@ -143,12 +143,12 @@
             // });
             
             // LIST VIEW
-            if(filteredEvents.length > 0){
-                renderEvents("#events_container","#events_template", filteredEvents);
-            } else {
-                $('#no_events').show();
-                $('#loadMoreEvents').hide();
-            }
+            // if(filteredEvents.length > 0){
+            //     renderEvents("#events_container","#events_template", filteredEvents);
+            // } else {
+            //     $('#no_events').show();
+            //     $('#loadMoreEvents').hide();
+            // }
             
             show_content();
             
