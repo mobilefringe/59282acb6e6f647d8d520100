@@ -215,7 +215,7 @@
             
             show_content();
             
-            load_more(1, filteredEvents, sliceStart, sliceEnd);
+            //load_more(1, filteredEvents, sliceStart, sliceEnd);
             
             $('#load_more_posts').click(function(e){
                 var i = $('#num_loaded').val();
