@@ -54,7 +54,9 @@ function renderEvents(container, template, collection){
     var template_html = $(template).html();
     var counter = 1;
     Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
+    // $.each( collection , function( key, val ) {
+    _.forEach( collection , function( val ) {
+        console.log('Val ' + val);
         // val.store_name = "The Gateway";
         // val.image_url = val.event_image_url_abs;
         // val.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
@@ -95,6 +97,7 @@ function renderEvents(container, template, collection){
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
         counter = counter + 1;
+        console.log("Counter: " + counter);
     });
     $(container).show();
     $(container).html(item_rendered.join(''));
