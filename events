@@ -101,7 +101,6 @@
             }
             
             var events = getEventsList().sortBy(function(o){ return o.start_date });
-            console.log(events)
             var eventsThreeMonths = [];
             $.each( events , function( key, val ){
                 var today = moment().tz(getPropertyTimeZone());
@@ -114,7 +113,6 @@
                     }
                 }
             });
-            console.log(eventsThreeMonths)
 
             // CALENDAR 
             var calendar_events = [];
