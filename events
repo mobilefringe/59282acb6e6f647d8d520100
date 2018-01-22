@@ -269,7 +269,7 @@
         function load_more(filteredEvents, start, end){
             sliceStart = start + 3;
             sliceEnd = end + 3;
-            var eventsToShow = _.slice(filteredEvents, [sliceStart], [sliceEnd])
+            var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
             console.log(eventsToShow);
             renderEvents("#events_container","#events_template", eventsToShow);
             var total_events = filteredEvents.length;
