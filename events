@@ -102,45 +102,13 @@
             
             var today = moment().tz(getPropertyTimeZone());
             var three_months = moment().add('3', 'M').endOf("d").format();
-            
-            var filteredEvents = getEventsList().filter(function(o){ 
+            var filteredEvents = getEventsList().filter( function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
                 return o.end_date <= three_months && today >= webDate
-                
             });
             console.log(filteredEvents)
 
-            // var eventsThreeMonths = [];
-            // $.each( filteredEvents , function( key, val ){
-            //     var today = moment().tz(getPropertyTimeZone());
-            //     var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-            //     if (today >= webDate){
-            //         eventsThreeMonths.push(val);
-            //     }
-            // });
-            // console.log(eventsThreeMonths)
-            // $.each( events , function( key, val ){
-            //     var today = moment().tz(getPropertyTimeZone());
-            //     var three_months = moment().add('3', 'M').endOf("d");
-            //     var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-            //     if (today < three_months && today >= webDate){
-            //         var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
-            //         if(end_Date <= three_months){
-            //             eventsThreeMonths.push(val);
-            //         }
-            //     }
-            // });
-
             // CALENDAR 
-            // var calendar_events = [];
-            // $.each( eventsThreeMonths , function( key, val ){
-            //     var published_event = {};
-            //     published_event.start = val.start_date;
-            //     published_event.end = val.end_date;
-            //     published_event.title = val.name;
-            //     published_event.url = "/events/" + val.slug;
-            //     calendar_events.push(published_event);
-            // });
             $.map( filteredEvents, function( val, i ) {
                 val.start = val.start_date;
                 val.end = val.end_date;
