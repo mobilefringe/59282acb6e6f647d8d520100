@@ -115,7 +115,7 @@
                 val.title = val.name;
                 val.url = "/events/" + val.slug;
             });
-            
+            console.log(filteredEvents)
             // LIST VIEW
             if(filteredEvents.length > 0){
                 renderEvents("#events_container","#events_template", filteredEvents);
