@@ -48,6 +48,7 @@ function renderContest(container, template, collection){
 }
 
 function renderEvents(container, template, collection){
+    console.log("Func renderEvents");
     var mall_name = getPropertyDetails().name;
     var item_list = [];
     var item_rendered = [];
