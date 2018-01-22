@@ -45,7 +45,7 @@
             </div>
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
-                    <div class="row event_container hidden_now" id="show_{{counter}}">
+                    <div class="row event_container">
                         <div class="col-md-1 hidden_phone">
                             <div class="pull-left">
                                 <p class="event_side_date">{{day}}</p>
@@ -273,7 +273,6 @@
             //     var id = i.toString();
             //     $('#show_' + id ).fadeIn();
             // }
-            $('#show_').fadeIn();
             // var events = getEventsList().sortBy(function(o){ return o.start_date });
             var showEvents = 3;
             sliceStart = sliceStart + 3;
