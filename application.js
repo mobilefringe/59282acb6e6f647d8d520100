@@ -55,32 +55,12 @@ function renderEvents(container, template, collection){
     var counter = 1;
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
-        // if (val.eventable_type == "Store") {
-        //     var store_details = getStoreDetailsByID(val.eventable_id);
-        //     val.store_detail_btn = store_details.slug ;
-        //     val.store_name = store_details.name;
-            
-        //     // var store_front_image = getStoreDetailsBySlug(val.store_detail_btn).gallery;
-        //     // var store_logo = getStoreDetailsBySlug(val.store_detail_btn).store_front_url_abs;
-            
-        //     // if(store_front_image != undefined) {
-        //     //     val.image_url = "//mallmaverick.com" + store_front_image;
-        //     // }
-        //     // if(store_front_image === undefined){
-        //     //     val.image_url = store_logo;
-        //     // }
-        //     // if(store_logo.indexOf('missing.png') > 0){
-        //     //     val.image_url  = default_image.image_url;
-        //     // }
-        // }
-        // else{
-            val.store_name = "The Gateway";
-            val.image_url = val.event_image_url_abs;
-            val.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
-            if(val.image_url.indexOf('missing.png') > 0){
-                val.image_url  = val.logo;
-            }
-        // }
+        val.store_name = "The Gateway";
+        val.image_url = val.event_image_url_abs;
+        val.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
+        if(val.image_url.indexOf('missing.png') > 0){
+            val.image_url  = val.logo;
+        }
         
         if (val.name.length > 30){
             val.name_short = val.name.substring(0,30) + "...";
