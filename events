@@ -102,6 +102,7 @@
             
             var events = getEventsList().sortBy(function(o){ return o.start_date });
             console.log(events)
+            var eventsThreeMonths = [];
             $.each( events , function( key, val ){
                 var today = moment().tz(getPropertyTimeZone());
                 var three_months = moment().add('3', 'M').endOf("d");
