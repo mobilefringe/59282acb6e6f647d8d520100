@@ -269,10 +269,11 @@
         function load_more(num, filteredEvents){
             console.log(filteredEvents)
             var n = parseInt(num);
-            for(i = n; i < n + 3; i++){
-                var id = i.toString();
-                $('#show_' + id ).fadeIn();
-            }
+            // for(i = n; i < n + 3; i++){
+            //     var id = i.toString();
+            //     $('#show_' + id ).fadeIn();
+            // }
+            $('#show_').fadeIn();
             // var events = getEventsList().sortBy(function(o){ return o.start_date });
             var showEvents = 3;
             sliceStart = sliceStart + 3;
