@@ -203,7 +203,7 @@
             console.log(filteredEvents)
             // LIST VIEW
             if(filteredEvents.length > 0){
-                renderContest("#events_container","#events_template", filteredEvents);
+                renderEvents("#events_container","#events_template", filteredEvents);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
