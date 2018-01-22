@@ -103,13 +103,21 @@
             var three_months = moment().add('3', 'M').endOf("d").format();
             var events = getEventsList()
             var filteredEvents = getEventsList().filter(function(o){ return o.end_date <= three_months });
+            
 
-            console.log(events)
-            console.log(filteredEvents)
+            var eventsThreeMonths = [];
+            $.each( filteredEvents , function( key, val ){
+                var today = moment().tz(getPropertyTimeZone());
+                // var three_months = moment().add('3', 'M').endOf("d");
+                var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+                if (today >= webDate){
+                    // var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
+                    // if(end_Date <= three_months){
+                        eventsThreeMonths.push(val);
+                    // }
+                }
+            });
             
-            
-            // var events = getEventsList().sortBy(function(o){ return o.start_date });
-            // var eventsThreeMonths = [];
             // $.each( events , function( key, val ){
             //     var today = moment().tz(getPropertyTimeZone());
             //     var three_months = moment().add('3', 'M').endOf("d");
