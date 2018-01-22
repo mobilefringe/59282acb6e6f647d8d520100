@@ -267,7 +267,8 @@
                 var id = i.toString();
                 $('#show_' + id ).fadeIn();
             }
-            var events = getEventsList().sortBy(function(o){ return o.start_date });
+            // var events = getEventsList().sortBy(function(o){ return o.start_date });
+            var events = filteredEvents;
             var total_events = events.length;
             if(i >= total_events){
                 $('#loaded_posts').hide();
