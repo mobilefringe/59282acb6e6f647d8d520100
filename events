@@ -108,13 +108,10 @@
                 var three_months = moment().add('3', 'M').endOf("d");
                 var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
                 if (today < three_months && today >= webDate){
-                    // var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-                    // if (today >= webDate) {
-                        var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
-                        if(end_Date <= three_months){
-                            eventsThreeMonths.push(val);
-                        }
-                    // }
+                    var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
+                    if(end_Date <= three_months){
+                        eventsThreeMonths.push(val);
+                    }
                 }
             });
             console.log(eventsThreeMonths)
