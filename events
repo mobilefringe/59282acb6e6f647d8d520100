@@ -203,7 +203,8 @@
             console.log(filteredEvents)
             // LIST VIEW
             if(filteredEvents.length > 0){
-                renderEvents("#events_container","#events_template", filteredEvents);
+                var showEvents = 3;
+                renderEvents("#events_container","#events_template", filteredEvents, showEvents);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
@@ -261,7 +262,7 @@
             });
         }
         
-        function load_more(num){
+        function load_more(num, ){
             var n = parseInt(num);
             for(i = n; i < n + 3; i++){
                 var id = i.toString();
