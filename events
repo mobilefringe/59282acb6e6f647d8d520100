@@ -100,19 +100,24 @@
                 }
             }
             
-            var events = getEventsList().sortBy(function(o){ return o.start_date });
-            var eventsThreeMonths = [];
-            $.each( events , function( key, val ){
-                var today = moment().tz(getPropertyTimeZone());
-                var three_months = moment().add('3', 'M').endOf("d");
-                var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-                if (today < three_months && today >= webDate){
-                    var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
-                    if(end_Date <= three_months){
-                        eventsThreeMonths.push(val);
-                    }
-                }
-            });
+            var three_months = moment().add('3', 'M').endOf("d");
+            var events = getEventsList().sortBy(function(o){ return o.enddate <= threemonths });
+            console.log(events)
+            
+            
+            // var events = getEventsList().sortBy(function(o){ return o.start_date });
+            // var eventsThreeMonths = [];
+            // $.each( events , function( key, val ){
+            //     var today = moment().tz(getPropertyTimeZone());
+            //     var three_months = moment().add('3', 'M').endOf("d");
+            //     var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+            //     if (today < three_months && today >= webDate){
+            //         var end_Date = moment(val.end_date).tz(getPropertyTimeZone());
+            //         if(end_Date <= three_months){
+            //             eventsThreeMonths.push(val);
+            //         }
+            //     }
+            // });
 
             // CALENDAR 
             var calendar_events = [];
