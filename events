@@ -106,7 +106,6 @@
                 var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
                 return o.end_date <= three_months && today >= webDate
             });
-            console.log(filteredEvents)
 
             // CALENDAR 
             $.map( filteredEvents, function( val, i ) {
@@ -115,7 +114,7 @@
                 val.title = val.name;
                 val.url = "/events/" + val.slug;
             });
-            console.log(filteredEvents)
+
             // LIST VIEW
             if(filteredEvents.length > 0){
                 renderEvents("#events_container","#events_template", filteredEvents);
