@@ -151,9 +151,9 @@
                 return o.end_date <= three_months && today >= webDate
             });
             
-            filteredEvents = _.filter(filteredEvents, function(o) { return o.start_date });
+            filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
             
-            
+            console.log(filteredEvents)
             
             
             // CALENDAR 
