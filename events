@@ -204,7 +204,8 @@
             // LIST VIEW
             if(filteredEvents.length > 0){
                 var showEvents = 3;
-                renderEvents("#events_container","#events_template", filteredEvents, showEvents);
+                var eventsToShow = _.slice(filteredEvents, [0], [3])
+                renderEvents("#events_container","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
