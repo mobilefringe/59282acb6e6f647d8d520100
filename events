@@ -152,7 +152,7 @@
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
             
-            console.log(filteredEvents)
+            console.log('Filtered Events: ' + filteredEvents)
             
             
             // CALENDAR 
@@ -200,13 +200,12 @@
             //     }
             // });
             
-            console.log(filteredEvents)
             // LIST VIEW
-            sliceStart = 0;
-            sliceEnd = 3;
+            var sliceStart = 0;
+            var sliceEnd = 3;
             if(filteredEvents.length > 0){
-                var eventsToShow = _.slice(filteredEvents, [sliceStart], [sliceEnd])
-                console.log(eventsToShow)
+                var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
+                console.log('Sliced Array ' + eventstoShow)
                 renderEvents("#events_container","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
