@@ -102,10 +102,11 @@
             
             var three_months = moment().add('3', 'M').endOf("d");
             var events = getEventsList()
-            // .filter(function(o){ return o.end_date <= three_months });
+            var filteredEvents = events.filter(function(o){ return o.end_date <= three_months });
 
 
             console.log(events)
+            console.log(filteredEvents)
             
             
             // var events = getEventsList().sortBy(function(o){ return o.start_date });
