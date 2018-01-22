@@ -87,6 +87,8 @@
 </div>
 
 <script>
+    var sliceStart;
+    var sliceEnd;
     $(document).ready(function(e){
         init(e);
         function renderAll(){
@@ -201,8 +203,8 @@
             // });
             
             // LIST VIEW
-            var sliceStart = 0;
-            var sliceEnd = 3;
+            sliceStart = 0;
+            sliceEnd = 3;
             if(filteredEvents.length > 0){
                 var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
                 console.log('Sliced Array ' + eventsToShow)
