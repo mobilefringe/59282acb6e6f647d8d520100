@@ -104,6 +104,7 @@
             $.each( events , function( key, val ){
                 var today = moment().tz(getPropertyTimeZone());
                 var three_months = moment().add('3', 'M').endOf("d");
+                console.log(three_months)
                 if (today < three_months){
                     var webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
                     if (today >= webDate) {
