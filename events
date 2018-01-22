@@ -105,7 +105,7 @@
             
             var filteredEvents = getEventsList().filter(function(o){ 
                 var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
-                return o.end_date <= three_months && today >= webDate) 
+                return o.end_date <= three_months && today >= webDate
                 
             });
             console.log(filteredEvents)
