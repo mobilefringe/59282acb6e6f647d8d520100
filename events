@@ -278,7 +278,7 @@
             var eventsToShow = _.slice(filteredEvents, [sliceStart], [sliceEnd])
             renderEvents("#events_container","#events_template", eventsToShow);
                 
-            var total_events = events.length;
+            var total_events = filteredEvents.length;
             if(i >= total_events){
                 $('#loaded_posts').hide();
                 $('#all_loaded').show();
