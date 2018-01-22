@@ -57,7 +57,6 @@ $(document).ready(function(e){
                 $('#header_content').html(data.body);
                 $('#header_content').show();
             }
-            console.log(data.body)
         }).fail(function(jqXHR) {
             if (jqXHR.status == 404) {
                 $("#404_msg").fadeIn("fast");
