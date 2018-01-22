@@ -54,8 +54,8 @@ function renderEvents(container, template, collection){
     var template_html = $(template).html();
     var counter = 1;
     Mustache.parse(template_html); 
-    // $.each( collection , function( key, val ) {
-    _.forEach( collection , function( val ) {
+    $.each( collection , function( key, val ) {
+   // _.forEach( collection , function( val ) {
         console.table(val);
         // val.store_name = "The Gateway";
         // val.image_url = val.event_image_url_abs;
