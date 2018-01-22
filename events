@@ -120,23 +120,23 @@
             // });
 
             // CALENDAR 
-            var calendar_events = [];
-            $.each( eventsThreeMonths , function( key, val ){
-                var published_event = {};
-                published_event.start = val.start_date;
-                published_event.end = val.end_date;
-                published_event.title = val.name;
-                published_event.url = "/events/" + val.slug;
-                calendar_events.push(published_event);
-            });
+            // var calendar_events = [];
+            // $.each( eventsThreeMonths , function( key, val ){
+            //     var published_event = {};
+            //     published_event.start = val.start_date;
+            //     published_event.end = val.end_date;
+            //     published_event.title = val.name;
+            //     published_event.url = "/events/" + val.slug;
+            //     calendar_events.push(published_event);
+            // });
             
             // LIST VIEW
-            if(eventsThreeMonths.length > 0){
-                renderEvents("#events_container","#events_template", eventsThreeMonths);
-            } else {
-                $('#no_events').show();
-                $('#loadMoreEvents').hide();
-            }
+            // if(eventsThreeMonths.length > 0){
+            //     renderEvents("#events_container","#events_template", eventsThreeMonths);
+            // } else {
+            //     $('#no_events').show();
+            //     $('#loadMoreEvents').hide();
+            // }
             
             show_content();
             
