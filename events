@@ -141,13 +141,9 @@
                 }
                 
                 var show_date = moment(o.show_on_web_date);
-                // var start = moment(o.start_date).tz(propertyTz);
                 var start = moment(o.start_date).tz(propertyTz);
-                o.starting = moment(o.start_date).tz(propertyTz).format();
-                // var end = moment(o.end_date).tz(propertyTz);
                 var end = moment(o.end_date).tz(propertyTz);
-                o.ending = moment(o.end_date).tz(propertyTz).format();
-                o.end_date = moment(o.end_date).tz(propertyTz).format();
+                // o.end_date = moment(o.end_date).tz(propertyTz).format();
                 if (start.format("DMY") == end.format("DMY")){
                     o.dates = start.format("dddd, MMMM Do, YYYY")
                     o.day = start.format("ddd")
