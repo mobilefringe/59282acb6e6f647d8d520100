@@ -107,7 +107,7 @@
                 }
             }
             
-            var today = moment().tz(propertyTz));
+            var today = moment().tz(propertyTz);
             var three_months = moment().add('3', 'M').endOf("d").format();
             var eventsList = getEventsList();
             
