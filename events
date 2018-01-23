@@ -111,50 +111,50 @@
             
             //var _events = getEventsList();
             
-            var _mappedEvents = _.map(getEventsList(), function(o){
-                var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
+            // var _mappedEvents = _.map(getEventsList(), function(o){
+            //     var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
                 
-                o.start = o.start_date;
-                o.end = o.end_date;
-                o.title = o.name;
-                o.url = "/events/" + o.slug;
+            //     o.start = o.start_date;
+            //     o.end = o.end_date;
+            //     o.title = o.name;
+            //     o.url = "/events/" + o.slug;
                 
                 
-                o.store_name = "The Gateway";
-                o.image_url = "https://mallmaverick.cdn.speedyrails.net" + o.event_image_url;
-                o.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
-                if(o.image_url.indexOf('missing.png') > 0){
-                    o.image_url  = o.logo;
-                }
+            //     o.store_name = "The Gateway";
+            //     o.image_url = "https://mallmaverick.cdn.speedyrails.net" + o.event_image_url;
+            //     o.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
+            //     if(o.image_url.indexOf('missing.png') > 0){
+            //         o.image_url  = o.logo;
+            //     }
                 
-                if (o.name.length > 30){
-                    o.name_short = o.name.substring(0,30) + "...";
-                } else {
-                    o.name_short = o.name;
-                }
+            //     if (o.name.length > 30){
+            //         o.name_short = o.name.substring(0,30) + "...";
+            //     } else {
+            //         o.name_short = o.name;
+            //     }
                 
-                if (o.description.length > 200){
-                    o.desc_short = o.description.substring(0, 199) + "...";
-                } else {
-                    o.desc_short = o.description;
-                }
+            //     if (o.description.length > 200){
+            //         o.desc_short = o.description.substring(0, 199) + "...";
+            //     } else {
+            //         o.desc_short = o.description;
+            //     }
                 
-                var show_date = moment(o.show_on_web_date);
-                var start = moment(o.start_date).tz(getPropertyTimeZone());
-                var end = moment(o.end_date).tz(getPropertyTimeZone());
-                if (start.format("DMY") == end.format("DMY")){
-                    o.dates = start.format("dddd, MMMM Do, YYYY")
-                    o.day = start.format("ddd")
-                    o.num = start.format("D")
-                    o.month = start.format("MMM")
-                    o.show_date = "display: none;"
-                } else {
-                    o.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
-                    o.day = start.format("ddd")
-                    o.num = start.format("D")
-                    o.month = start.format("MMM")
-                }
-            });
+            //     var show_date = moment(o.show_on_web_date);
+            //     var start = moment(o.start_date).tz(getPropertyTimeZone());
+            //     var end = moment(o.end_date).tz(getPropertyTimeZone());
+            //     if (start.format("DMY") == end.format("DMY")){
+            //         o.dates = start.format("dddd, MMMM Do, YYYY")
+            //         o.day = start.format("ddd")
+            //         o.num = start.format("D")
+            //         o.month = start.format("MMM")
+            //         o.show_date = "display: none;"
+            //     } else {
+            //         o.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
+            //         o.day = start.format("ddd")
+            //         o.num = start.format("D")
+            //         o.month = start.format("MMM")
+            //     }
+            // });
             
             var filteredEvents = _.filter(getEventsList(), function(o) { 
                 /*
