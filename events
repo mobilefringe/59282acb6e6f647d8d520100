@@ -97,6 +97,7 @@
         //init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
+            console.log(repo);
             /*
             if (repo != undefined) {
                 try {
