@@ -47,15 +47,34 @@ function renderContest(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
+// function renderEvents(container, template, collection){
+//     var mall_name = getPropertyDetails().name;
+//     var item_list = [];
+//     var item_rendered = [];
+//     var template_html = $(template).html();
+//     Mustache.parse(template_html); 
+//     collection.forEach(function( el ) {
+//         var rendered = Mustache.render(template_html,el);
+//         item_rendered.push(rendered);
+//     });
+//     $(container).show();
+//     $(container).html(item_rendered.join(''));
+// }
+
 function renderEvents(container, template, collection){
     var mall_name = getPropertyDetails().name;
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
+    var counter = 1;
     Mustache.parse(template_html); 
-    collection.forEach(function( el ) {
-        var rendered = Mustache.render(template_html,el);
+    $.each( collection , function( key, val ) {
+        
+        val.counter = counter;
+        
+        var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
+        counter = counter + 1;
     });
     $(container).show();
     $(container).html(item_rendered.join(''));
