@@ -150,7 +150,7 @@
                     o.month = start.format("MMM")
                 }
                 
-                return today >= webDate && o.end_date <= three_months
+                return today >= webDate && o.start_date <= three_months
             });
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
