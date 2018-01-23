@@ -45,7 +45,7 @@
             </div>
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
-                    <div class="row event_container hidden_now" id="show_{{counter}}">
+                    <div class="row event_container">
                         <div class="col-md-1 hidden_phone">
                             <div class="pull-left">
                                 <p class="event_side_date">{{day}}</p>
@@ -70,6 +70,9 @@
                         </div>
                     </div>
                 </script>
+                <div id="events_subcontainer">
+                    
+                </div>
             </div>
             <div id="loadMoreEvents" class="row">
                 <div class="col-md-12">
@@ -86,35 +89,37 @@
     </div>
 </div>
 
-
 <script>
+    var sliceStart;
+    var sliceEnd;
+    var counter = 0;
     $(document).ready(function(e){
+        var propertyTz = getPropertyTimeZone();
         init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
             if (repo != undefined) {
                 try {
                     var banner = getImageURL(repo.images[0].photo_url);
-                    $(".page_header").css({backgroundImage: "url(" + banner + ")"});
+                    $(".page_header").css({backgroundImage: "url(" + banner + ")"});    
                 } catch(err) {
                     console.log(err);
                 }
             }
             
-            var propertyTz = getPropertyTimeZone();
             var today = moment().tz(propertyTz);
             var three_months = moment().add('3', 'M').endOf("d").format();
             var eventsList = getEventsList();
+            
             var filteredEvents = eventsList.filter(function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(propertyTz);
-                console.log(propertyTz)
-                //CALENDAR VIEW
-                o.start = moment(o.start_date).tz(propertyTz);
-                o.end = moment(o.end_date).tz(propertyTz);
+                
+                o.start = o.start_date;
+                o.end = o.end_date;
                 o.title = o.name;
                 o.url = "/events/" + o.slug;
                 
-                //LIST VIEW
+                
                 o.store_name = "The Gateway";
                 o.image_url = "https://mallmaverick.cdn.speedyrails.net" + o.event_image_url;
                 o.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
@@ -149,29 +154,27 @@
                     o.num = start.format("D")
                     o.month = start.format("MMM")
                 }
-                
-                return today >= webDate && o.start_date <= three_months && o.start_date >= today
+                return o.end_date <= three_months && today >= webDate
             });
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
-            console.log(filteredEvents)
             
             
             // LIST VIEW
+            sliceStart = 0;
+            sliceEnd = 3;
             if(filteredEvents.length > 0){
-                renderEvents("#events_container","#events_template", filteredEvents);
+                var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
+                renderEvents("#events_subcontainer","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
             }
-        
+            
             show_content();
             
-            load_more(1, filteredEvents);
-            
             $('#load_more_posts').click(function(e){
-                var i = $('#num_loaded').val();
-                load_more(i, filteredEvents);
+                load_more(filteredEvents, sliceStart, sliceEnd);
                 e.preventDefault();
             });
             
@@ -205,181 +208,32 @@
                     var now = new Date();
                     var end = new Date();
                     end.setMonth(now.getMonth() + 3); //Adjust as needed
+        
                     if ( end < view.end) {
                         $("#calendar .fc-next-button").addClass("fc-state-disabled");
                         return false;
-                    } else {
+                    }
+                    else {
                         $("#calendar .fc-next-button").removeClass("fc-state-disabled");
                     }
                 }
             });
         }
         
-        function load_more(num, filteredEvents){
-            console.log(filteredEvents)
-            var n = parseInt(num);
-            for(i = n; i < n + 3; i++){
-                var id = i.toString();
-                $('#show_' + id ).fadeIn();
-            }
-            var events = filteredEvents;
-            var total_events = events.length;
-            if(i >= total_events){
+        function load_more(filteredEvents, start, end){
+            counter = counter + 1;
+            sliceStart = start + 3;
+            sliceEnd = end + 3;
+            var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
+            console.log(eventsToShow);
+            renderEvents("#events_subcontainer","#events_template", eventsToShow);
+            var total_events = eventsToShow.length;
+            if(total_events == 0){
                 $('#loaded_posts').hide();
                 $('#all_loaded').show();
             }
-            $('#num_loaded').val(i);
         }
 
         loadMallDataCached(renderAll); 
     });
-</script>
-
-<script>
-    // var sliceStart;
-    // var sliceEnd;
-    // var counter = 0;
-    // $(document).ready(function(e){
-    //     var propertyTz = getPropertyTimeZone();
-    //     init(e);
-    //     function renderAll(){
-    //         var repo = getRepoDetailsByName("Events Banner");
-    //         if (repo != undefined) {
-    //             try {
-    //                 var banner = getImageURL(repo.images[0].photo_url);
-    //                 $(".page_header").css({backgroundImage: "url(" + banner + ")"});    
-    //             } catch(err) {
-    //                 console.log(err);
-    //             }
-    //         }
-            
-    //         var today = moment().tz(propertyTz);
-    //         var three_months = moment().add('3', 'M').endOf("d").format();
-    //         var eventsList = getEventsList();
-            
-    //         var filteredEvents = eventsList.filter(function(o) { 
-    //             var webDate = moment(o.show_on_web_date).tz(propertyTz);
-                
-    //             o.start = o.start_date;
-    //             o.end = o.end_date;
-    //             o.title = o.name;
-    //             o.url = "/events/" + o.slug;
-                
-                
-    //             o.store_name = "The Gateway";
-    //             o.image_url = "https://mallmaverick.cdn.speedyrails.net" + o.event_image_url;
-    //             o.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
-    //             if(o.image_url.indexOf('missing.png') > 0){
-    //                 o.image_url  = o.logo;
-    //             }
-                
-    //             if (o.name.length > 30){
-    //                 o.name_short = o.name.substring(0,30) + "...";
-    //             } else {
-    //                 o.name_short = o.name;
-    //             }
-                
-    //             if (o.description.length > 200){
-    //                 o.desc_short = o.description.substring(0, 199) + "...";
-    //             } else {
-    //                 o.desc_short = o.description;
-    //             }
-                
-    //             var show_date = moment(o.show_on_web_date);
-    //             var start = moment(o.start_date).tz(propertyTz);
-    //             var end = moment(o.end_date).tz(propertyTz);
-    //             if (start.format("DMY") == end.format("DMY")){
-    //                 o.dates = start.format("dddd, MMMM Do, YYYY")
-    //                 o.day = start.format("ddd")
-    //                 o.num = start.format("D")
-    //                 o.month = start.format("MMM")
-    //                 o.show_date = "display: none;"
-    //             } else {
-    //                 o.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
-    //                 o.day = start.format("ddd")
-    //                 o.num = start.format("D")
-    //                 o.month = start.format("MMM")
-    //             }
-    //             return o.end_date <= three_months && today >= webDate
-    //         });
-            
-    //         filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
-            
-            
-    //         // LIST VIEW
-    //         sliceStart = 0;
-    //         sliceEnd = 3;
-    //         if(filteredEvents.length > 0){
-    //             var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
-    //             renderEvents("#events_subcontainer","#events_template", eventsToShow);
-    //         } else {
-    //             $('#no_events').show();
-    //             $('#loadMoreEvents').hide();
-    //         }
-            
-    //         show_content();
-            
-    //         $('#load_more_posts').click(function(e){
-    //             load_more(filteredEvents, sliceStart, sliceEnd);
-    //             e.preventDefault();
-    //         });
-            
-    //         $('#eventsCalendar').fadeIn();
-            
-    //         $('#listBtn').click(function(){
-    //             $('#listBtn').hide();
-    //             $('#calendarBtn').show(); 
-    //             $('#eventsCalendar').fadeOut();
-    //             $('#eventsList').fadeIn();
-    //         });
-            
-    //         $('#calendarBtn').click(function() {
-    //             $('#calendarBtn').hide();
-    //             $('#listBtn').show();
-    //             $('#eventsList').fadeOut();
-    //             $('#eventsCalendar').fadeIn();
-    //         });
-            
-    //         $('#calendar').fullCalendar({
-    //             header: {
-    //                 right:  'prev,next'
-    //             },
-    //             timezone: getPropertyTimeZone(),
-    //             events: filteredEvents,
-    //             buttonText: {
-    //                 prev: "Previous Month",
-    //                 next: "Next Month"
-    //             },
-    //             viewRender: function(view,element) {
-    //                 var now = new Date();
-    //                 var end = new Date();
-    //                 end.setMonth(now.getMonth() + 3); //Adjust as needed
-        
-    //                 if ( end < view.end) {
-    //                     $("#calendar .fc-next-button").addClass("fc-state-disabled");
-    //                     return false;
-    //                 }
-    //                 else {
-    //                     $("#calendar .fc-next-button").removeClass("fc-state-disabled");
-    //                 }
-    //             }
-    //         });
-    //     }
-        
-    //     function load_more(filteredEvents, start, end){
-    //         counter = counter + 1;
-    //         sliceStart = start + 3;
-    //         sliceEnd = end + 3;
-    //         var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
-    //         console.log(eventsToShow);
-    //         renderEvents("#events_subcontainer","#events_template", eventsToShow);
-    //         var total_events = eventsToShow.length;
-    //         if(total_events == 0){
-    //             $('#loaded_posts').hide();
-    //             $('#all_loaded').show();
-    //         }
-    //     }
-
-    //     loadMallDataCached(renderAll); 
-    // });
 </script>
