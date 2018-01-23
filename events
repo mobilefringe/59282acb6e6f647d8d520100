@@ -94,7 +94,8 @@
     var sliceEnd;
     var counter = 0;
     $(document).ready(function(e){
-        //init(e);
+        var propertyTz = getPropertyTimeZone();
+        init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
             if (repo != undefined) {
@@ -106,12 +107,12 @@
                 }
             }
             
-            var today = moment().tz(getPropertyTimeZone());
+            var today = moment().tz(propertyTz));
             var three_months = moment().add('3', 'M').endOf("d").format();
             var eventsList = getEventsList();
             
-            var filteredEvents = eventsList.map(function(o) { 
-                //var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
+            var filteredEvents = eventsList.filter(function(o) { 
+                var webDate = moment(o.show_on_web_date).tz(propertyTz);
                 
                 o.start = o.start_date;
                 o.end = o.end_date;
@@ -122,7 +123,6 @@
                 o.store_name = "The Gateway";
                 o.image_url = "https://mallmaverick.cdn.speedyrails.net" + o.event_image_url;
                 o.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
-                /*
                 if(o.image_url.indexOf('missing.png') > 0){
                     o.image_url  = o.logo;
                 }
@@ -140,8 +140,8 @@
                 }
                 
                 var show_date = moment(o.show_on_web_date);
-                var start = moment(o.start_date).tz(getPropertyTimeZone());
-                var end = moment(o.end_date).tz(getPropertyTimeZone());
+                var start = moment(o.start_date).tz(propertyTz);
+                var end = moment(o.end_date).tz(propertyTz);
                 if (start.format("DMY") == end.format("DMY")){
                     o.dates = start.format("dddd, MMMM Do, YYYY")
                     o.day = start.format("ddd")
@@ -154,12 +154,10 @@
                     o.num = start.format("D")
                     o.month = start.format("MMM")
                 }
-                */
-                
                 return o.end_date <= three_months && today >= webDate
             });
             
-            /*
+            
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
             
@@ -267,7 +265,6 @@
                     }
                 }
             });
-            */
         }
         
         function load_more(filteredEvents, start, end){
