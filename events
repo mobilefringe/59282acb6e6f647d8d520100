@@ -114,8 +114,8 @@
             var filteredEvents = eventsList.filter(function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(propertyTz);
                 
-                o.start = o.start_date;
-                o.end = o.end_date;
+                o.start = moment(o.start_date).tz(propertyTz).format();
+                o.end = moment(o.end_date).tz(propertyTz).format();
                 o.title = o.name;
                 o.url = "/events/" + o.slug;
                 
