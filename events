@@ -1,6 +1,6 @@
-<!--<link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>-->
-<!--<script type="text/javascript" src="/fullcalendar.js"></script>-->
-<!--<link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>-->
+<link rel="stylesheet" type="text/css" href="/fullcalendar.css"/>
+<script type="text/javascript" src="/fullcalendar.js"></script>
+<link rel="stylesheet" type="text/css" href="/fullcalendar_overrides.css"/>
 <div class="page_header">   
     <div class="site_container">
         <div class="header_content">
@@ -118,7 +118,7 @@
                 
                 
                 o.store_name = "The Gateway";
-                o.image_url = o.event_image_url_abs;
+                o.image_url = "https://mallmaverick.cdn.speedyrails.net" + o.event_image_url;
                 o.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
                 if(o.image_url.indexOf('missing.png') > 0){
                     o.image_url  = o.logo;
