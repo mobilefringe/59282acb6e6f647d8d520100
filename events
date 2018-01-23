@@ -143,7 +143,6 @@
                 var show_date = moment(o.show_on_web_date);
                 var start = moment(o.start_date).tz(propertyTz);
                 var end = moment(o.end_date).tz(propertyTz);
-                // o.end_date = moment(o.end_date).tz(propertyTz).format();
                 if (start.format("DMY") == end.format("DMY")){
                     o.dates = start.format("dddd, MMMM Do, YYYY")
                     o.day = start.format("ddd")
@@ -160,9 +159,7 @@
             });
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
-            console.log(filteredEvents)
-            
-            
+
             // LIST VIEW
             sliceStart = 0;
             sliceEnd = 3;
