@@ -93,9 +93,8 @@
     var sliceStart;
     var sliceEnd;
     var counter = 0;
-    /*
     $(document).ready(function(e){
-        init(e);
+        //init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
             if (repo != undefined) {
@@ -280,5 +279,4 @@
 
         loadMallDataCached(renderAll); 
     });
-    */
 </script>
