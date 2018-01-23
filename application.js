@@ -48,58 +48,14 @@ function renderContest(container, template, collection){
 }
 
 function renderEvents(container, template, collection){
-    console.log("Func renderEvents");
     var mall_name = getPropertyDetails().name;
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
-    //var counter = 1;
     Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
-   // _.forEach( collection , function( val ) {
-        console.table(val);
-        // val.store_name = "The Gateway";
-        // val.image_url = val.event_image_url_abs;
-        // val.logo  = "//codecloud.cdn.speedyrails.net/sites/5a57a7d06e6f6428f0080000/image/jpeg/1513719653000/default_tmb.jpg";
-        // if(val.image_url.indexOf('missing.png') > 0){
-        //     val.image_url  = val.logo;
-        // }
-        
-        // if (val.name.length > 30){
-        //     val.name_short = val.name.substring(0,30) + "...";
-        // } else {
-        //     val.name_short = val.name;
-        // }
-        
-        // if (val.description.length > 200){
-        //     val.desc_short = val.description.substring(0, 199) + "...";
-        // } else {
-        //     val.desc_short = val.description;
-        // }
-        
-        // var show_date = moment(val.show_on_web_date);
-        // var start = moment(val.start_date).tz(getPropertyTimeZone());
-        // var end = moment(val.end_date).tz(getPropertyTimeZone());
-        // if (start.format("DMY") == end.format("DMY")){
-        //     val.dates = start.format("dddd, MMMM Do, YYYY")
-        //     val.day = start.format("ddd")
-        //     val.num = start.format("D")
-        //     val.month = start.format("MMM")
-        //     val.show_date = "display: none;"
-        // } else {
-        //     val.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
-        //     val.day = start.format("ddd")
-        //     val.num = start.format("D")
-        //     val.month = start.format("MMM")
-        // }
-        
-        //val.counter = counter;
-        //Mustache.clearCache(); 
-        var rendered = Mustache.render(template_html,val);
-        console.log(rendered);
+    collection.forEach(function( el ) {
+        var rendered = Mustache.render(template_html,el);
         item_rendered.push(rendered);
-        //counter = counter + 1;
-        //console.log("Counter: " + counter);
     });
     $(container).show();
     $(container).html(item_rendered.join(''));
