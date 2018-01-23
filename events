@@ -212,7 +212,7 @@
             if(filteredEvents.length > 0){
                 var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
                 console.log('Sliced Array ' + eventsToShow);
-                renderEvents("#events_container","#events_template", eventsToShow);
+                renderEvents("#events_subcontainer","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
@@ -276,7 +276,7 @@
             sliceEnd = end + 3;
             var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
             console.log(eventsToShow);
-            renderEvents("#events_container","#events_template", eventsToShow);
+            renderEvents("#events_subcontainer","#events_template", eventsToShow);
             var total_events = filteredEvents.length;
             if(sliceEnd >= total_events){
                 $('#loaded_posts').hide();
