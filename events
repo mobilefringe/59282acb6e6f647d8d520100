@@ -94,7 +94,7 @@
     var sliceEnd;
     var counter = 0;
     $(document).ready(function(e){
-        init(e);
+        //init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
             if (repo != undefined) {
@@ -214,7 +214,7 @@
                 $('#loadMoreEvents').hide();
             }
             
-            //show_content();
+            show_content();
             
             $('#load_more_posts').click(function(e){
                 load_more(filteredEvents, sliceStart, sliceEnd);
