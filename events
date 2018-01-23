@@ -208,7 +208,7 @@
             sliceEnd = 3;
             if(filteredEvents.length > 0){
                 var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
-                renderEvents("#events_subcontainer","#events_template", eventsToShow);
+                //renderEvents("#events_subcontainer","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
