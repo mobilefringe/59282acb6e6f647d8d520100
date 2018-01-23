@@ -94,8 +94,8 @@ function renderEvents(container, template, collection){
         // }
         
         //val.counter = counter;
-        
-        var rendered = Mustache.to_html(template_html,val);
+        Mustache.clearCache(); 
+        var rendered = Mustache.render(template_html,val);
         console.log(rendered);
         item_rendered.push(rendered);
         //counter = counter + 1;
