@@ -140,8 +140,8 @@
                 }
                 
                 var show_date = moment(o.show_on_web_date);
-                var start = moment(o.start_date).tz(propertyTz);
-                var end = moment(o.end_date).tz(propertyTz);
+                var start = moment(o.start_date).tz(propertyTz).format("DMY");
+                var end = moment(o.end_date).tz(propertyTz).format("DMY");
                 console.log("Start", start, "End", end)
                 if (start.format("DMY") == end.format("DMY")){
                     o.dates = start.format("dddd, MMMM Do, YYYY")
