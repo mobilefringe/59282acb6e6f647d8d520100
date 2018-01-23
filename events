@@ -94,7 +94,7 @@
     var sliceEnd;
     var counter = 0;
     $(document).ready(function(e){
-        var propertyTz = getPropertyTimeZone();
+        
         init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
@@ -107,6 +107,7 @@
                 }
             }
             
+            var propertyTz = getPropertyTimeZone();
             var today = moment().tz(propertyTz);
             var three_months = moment().add('3', 'M').endOf("d").format();
             var eventsList = getEventsList();
