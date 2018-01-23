@@ -110,7 +110,7 @@
             var three_months = moment().add('3', 'M').endOf("d").format();
             var eventsList = getEventsList();
             
-            var filteredEvents = _.filter(eventsList.slice(0,3), function(o) { 
+            var filteredEvents = eventsList.map(function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
                 
                 o.start = o.start_date;
@@ -156,6 +156,8 @@
                 
                 return o.end_date <= three_months && today >= webDate
             });
+            
+            /*
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
             
@@ -263,6 +265,7 @@
                     }
                 }
             });
+            */
         }
         
         function load_more(filteredEvents, start, end){
