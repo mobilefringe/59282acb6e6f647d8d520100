@@ -45,7 +45,7 @@
             </div>
             <div id="events_container">
                 <script id="events_template" type="x-tmpl-mustache/text">
-                    <div class="row event_container_{{counter}}">
+                    <div class="row event_container">
                         <div class="col-md-1 hidden_phone">
                             <div class="pull-left">
                                 <p class="event_side_date">{{day}}</p>
