@@ -158,6 +158,7 @@
             });
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
+            console.log(filteredEvents)
             
             
             // LIST VIEW
