@@ -166,7 +166,7 @@
         
             show_content();
             
-            load_more(1);
+            load_more(1, filteredEvents);
             
             $('#load_more_posts').click(function(e){
                 var i = $('#num_loaded').val();
