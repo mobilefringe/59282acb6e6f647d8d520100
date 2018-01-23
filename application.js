@@ -53,7 +53,7 @@ function renderEvents(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
-    var counter = 1;
+    //var counter = 1;
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
    // _.forEach( collection , function( val ) {
