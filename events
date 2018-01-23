@@ -169,11 +169,11 @@
         
             show_content();
             
-            load_more(1);
+            // load_more(1);
             
             $('#load_more_posts').click(function(e){
                 var i = $('#num_loaded').val();
-                load_more(i);
+                load_more(i, filteredEvents);
                 e.preventDefault();
             });
             
@@ -219,7 +219,7 @@
             });
         }
         
-        function load_more(num){
+        function load_more(num, filteredEvents){
             var n = parseInt(num);
             for(i = n; i < n + 3; i++){
                 var id = i.toString();
