@@ -107,7 +107,7 @@
             var eventsList = getEventsList();
             var filteredEvents = eventsList.filter(function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(propertyTz);
-                
+                console.log(propertyTz)
                 //CALENDAR VIEW
                 o.start = o.start_date;
                 o.end = o.end_date;
