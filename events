@@ -158,7 +158,7 @@
             
             // LIST VIEW
             if(filteredEvents.length > 0){
-                renderEvents("#events_subcontainer","#events_template", filteredEvents);
+                renderEvents("#events_container","#events_template", filteredEvents);
             } else {
                 $('#no_events').show();
                 $('#loadMoreEvents').hide();
