@@ -108,7 +108,6 @@
             
             var today = moment().tz(getPropertyTimeZone());
             var three_months = moment().add('3', 'M').endOf("d").format();
-            // var filteredEvents = getEventsList().filter( function(o) { 
             var filteredEvents = _.filter(getEventsList(), function(o) { 
                 var webDate = moment(o.show_on_web_date).tz(getPropertyTimeZone());
                 
@@ -157,8 +156,6 @@
             });
             
             filteredEvents = _.orderBy(filteredEvents, function(o) { return o.start_date });
-            
-            console.log('Filtered Events: ' + filteredEvents)
             
             
             // CALENDAR 
@@ -211,7 +208,6 @@
             sliceEnd = 3;
             if(filteredEvents.length > 0){
                 var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
-                console.log('Sliced Array ' + eventsToShow);
                 renderEvents("#events_subcontainer","#events_template", eventsToShow);
             } else {
                 $('#no_events').show();
@@ -220,10 +216,7 @@
             
             show_content();
             
-            //load_more(1, filteredEvents, sliceStart, sliceEnd);
-            
             $('#load_more_posts').click(function(e){
-                //var i = $('#num_loaded').val();
                 load_more(filteredEvents, sliceStart, sliceEnd);
                 e.preventDefault();
             });
@@ -277,12 +270,11 @@
             var eventsToShow = filteredEvents.slice(sliceStart, sliceEnd)
             console.log(eventsToShow);
             renderEvents("#events_subcontainer","#events_template", eventsToShow);
-            var total_events = filteredEvents.length;
-            if(sliceEnd >= total_events){
+            var total_events = eventsToShow.length;
+            if(total_events == 0){
                 $('#loaded_posts').hide();
                 $('#all_loaded').show();
             }
-            //$('#num_loaded').val(i);
         }
 
         loadMallDataCached(renderAll); 
