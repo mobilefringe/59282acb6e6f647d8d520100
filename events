@@ -147,18 +147,17 @@
                 var end = moment(o.end_date).tz(propertyTz).format();
                 o.ending = moment(o.end_date).tz(propertyTz).format();
                 o.end_date = moment(o.end_date).tz(propertyTz).format();
-                // if (start.format("DMY") == end.format("DMY")){
-                if (start == end){
-                    o.dates = moment(start).format("dddd, MMMM Do, YYYY")
-                    o.day = moment(start).format("ddd")
-                    o.num = moment(start).format("D")
-                    o.month = moment(start).format("MMM")
+                if (start.format("DMY") == end.format("DMY")){
+                    o.dates = start.format("dddd, MMMM Do, YYYY")
+                    o.day = start.format("ddd")
+                    o.num = start.format("D")
+                    o.month = start.format("MMM")
                     o.show_date = "display: none;"
                 } else {
-                    // o.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
-                    // o.day = start.format("ddd")
-                    // o.num = start.format("D")
-                    // o.month = start.format("MMM")
+                    o.dates = start.format("dddd, MMMM Do, YYYY") + " to " + end.format("dddd, MMMM Do, YYYY")
+                    o.day = start.format("ddd")
+                    o.num = start.format("D")
+                    o.month = start.format("MMM")
                 }
                 return today >= webDate && o.end_date <= three_months 
             });
