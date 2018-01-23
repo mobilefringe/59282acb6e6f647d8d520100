@@ -277,6 +277,6 @@
             }
         }
 
-        //loadMallDataCached(renderAll); 
+        loadMallData(renderAll); 
     });
 </script>
