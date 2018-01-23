@@ -54,7 +54,6 @@ function renderEvents(container, template, collection){
     var item_rendered = [];
     var template_html = $(template).html();
     //var counter = 1;
-    $("#events_container").attr("id","events_container_");
     Mustache.parse(template_html); 
     $.each( collection , function( key, val ) {
    // _.forEach( collection , function( val ) {
