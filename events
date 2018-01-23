@@ -204,12 +204,10 @@
                     var now = new Date();
                     var end = new Date();
                     end.setMonth(now.getMonth() + 3); //Adjust as needed
-        
                     if ( end < view.end) {
                         $("#calendar .fc-next-button").addClass("fc-state-disabled");
                         return false;
-                    }
-                    else {
+                    } else {
                         $("#calendar .fc-next-button").removeClass("fc-state-disabled");
                     }
                 }
