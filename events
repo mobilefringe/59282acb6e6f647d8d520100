@@ -97,6 +97,7 @@
         //init(e);
         function renderAll(){
             var repo = getRepoDetailsByName("Events Banner");
+            /*
             if (repo != undefined) {
                 try {
                     var banner = getImageURL(repo.images[0].photo_url);
@@ -261,6 +262,7 @@
                     }
                 }
             });
+            */
         }
         
         function load_more(filteredEvents, start, end){
@@ -277,6 +279,6 @@
             }
         }
 
-        loadMallData(renderAll); 
+        loadMallDataCached(renderAll); 
     });
 </script>
