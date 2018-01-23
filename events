@@ -109,8 +109,8 @@
                 var webDate = moment(o.show_on_web_date).tz(propertyTz);
                 console.log(propertyTz)
                 //CALENDAR VIEW
-                o.start = o.start_date;
-                o.end = o.end_date;
+                o.start = moment(o.start_date).tz(propertyTz);
+                o.end = moment(o.end_date).tz(propertyTz);
                 o.title = o.name;
                 o.url = "/events/" + o.slug;
                 
